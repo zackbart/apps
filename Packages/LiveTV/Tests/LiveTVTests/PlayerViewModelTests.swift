@@ -238,6 +238,39 @@ struct PlayerViewModelTests {
         if case .reconnecting = vm.state { Issue.record("recovered but still reconnecting") }
     }
 
+    @Test func dismissIsIdempotent_closeStreamCalledOnce() async {
+        let host = MockPlayerHost()
+        let net = MockNetworkMonitor()
+        let ch = channel("c6")
+        let pb = playback("http://x/m.m3u8", liveStreamId: "ls-6")
+        var closedIds: [String] = []
+        let vm = PlayerViewModel(
+            initialChannel: ch,
+            channels: [ch],
+            serverURL: serverURL,
+            program: nil,
+            openStream: { _, _ in pb },
+            closeStream: { id in closedIds.append(id) },
+            host: host,
+            networkMonitor: net
+        )
+        await waitForState(vm) { if case .splash = $0 { return true }; return false }
+
+        // Call dismiss() twice — simulates Menu-press + onDisappear both firing.
+        vm.dismiss()
+        vm.dismiss()
+
+        // Let the async close task execute.
+        try? await Task.sleep(nanoseconds: 200_000_000)
+
+        // closeStream must have been called exactly once.
+        #expect(closedIds == ["ls-6"])
+        // host.tearDown() must have been called exactly once.
+        #expect(host.torndownCount == 1)
+        // networkMonitor.stop() must have been called exactly once.
+        #expect(net.stoppedCount == 1)
+    }
+
     @Test func dismissCallsCloseStreamAndStopsNetwork() async {
         let host = MockPlayerHost()
         let net = MockNetworkMonitor()

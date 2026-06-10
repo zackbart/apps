@@ -31,7 +31,8 @@ struct OnNowModelTests {
         ])
         mock.liveTvRecordingsResult = .success([])
 
-        let model = OnNowModel(client: mock)
+        let store = EPGStore(client: mock)
+        let model = OnNowModel(client: mock, store: store)
         await model.load()
 
         guard case .loaded(let content) = model.state else {
@@ -48,7 +49,8 @@ struct OnNowModelTests {
         let mock = FakeJellyfinClient()
         mock.currentServerURL_ = nil
 
-        let model = OnNowModel(client: mock)
+        let store = EPGStore(client: mock)
+        let model = OnNowModel(client: mock, store: store)
         await model.load()
         guard case .failed(let message) = model.state else {
             Issue.record("Expected failed state, got \(model.state)")

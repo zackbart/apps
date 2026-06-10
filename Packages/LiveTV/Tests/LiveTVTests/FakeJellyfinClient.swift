@@ -25,6 +25,10 @@ final class FakeJellyfinClient: JellyfinClientAPI, @unchecked Sendable {
     private(set) var lastChannelFilters: LiveTvChannelFilters?
     private(set) var lastAddCurrentProgram: Bool?
 
+    // MARK: - Call counters
+    private(set) var liveTvChannelsCallCount: Int = 0
+    private(set) var liveTvChannelsFilteredCallCount: Int = 0
+
     func setServerURL(_ url: URL?) async { currentServerURL_ = url }
     func currentServerURL() async -> URL? { currentServerURL_ }
     func setAccessToken(_ token: String?) async {}
@@ -50,7 +54,8 @@ final class FakeJellyfinClient: JellyfinClientAPI, @unchecked Sendable {
     func latestItems(parentId: String?, limit: Int) async throws -> [BaseItemDto] { [] }
 
     func liveTvChannels() async throws -> [LiveTvChannel] {
-        try liveTvChannelsResult.get()
+        liveTvChannelsCallCount += 1
+        return try liveTvChannelsResult.get()
     }
 
     func liveTvPrograms(
@@ -68,6 +73,7 @@ final class FakeJellyfinClient: JellyfinClientAPI, @unchecked Sendable {
         filters: LiveTvChannelFilters,
         addCurrentProgram: Bool
     ) async throws -> [LiveTvChannel] {
+        liveTvChannelsFilteredCallCount += 1
         lastChannelFilters = filters
         lastAddCurrentProgram = addCurrentProgram
         if let result = liveTvFilteredChannelsResult {
@@ -97,6 +103,11 @@ final class FakeJellyfinClient: JellyfinClientAPI, @unchecked Sendable {
     }
 
     func liveTvOpenStream(channelId: String) async throws -> LiveStreamPlayback {
+        lastOpenStreamChannelId = channelId
+        return try liveTvOpenStreamResult.get()
+    }
+
+    func liveTvOpenStream(channelId: String, forceTranscoding: Bool) async throws -> LiveStreamPlayback {
         lastOpenStreamChannelId = channelId
         return try liveTvOpenStreamResult.get()
     }

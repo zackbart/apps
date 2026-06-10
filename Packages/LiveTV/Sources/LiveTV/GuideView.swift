@@ -52,29 +52,35 @@ public struct GuideView: View {
 
     @ViewBuilder
     private var content: some View {
-        switch model.state {
-        case .loading:
-            loadingState
-        case .loaded(let snapshot):
-            if snapshot.isEmpty {
-                emptyState
-            } else {
-                GuideGridView(
-                    content: snapshot,
-                    onWatchChannel: onWatchChannel,
-                    onSelectProgram: onSelectProgram,
-                    lastWatchedChannelId: $lastWatchedChannelId
-                )
+        Group {
+            switch model.state {
+            case .loading:
+                loadingState
+            case .loaded(let snapshot):
+                if snapshot.isEmpty {
+                    emptyState
+                } else {
+                    GuideGridView(
+                        content: snapshot,
+                        onWatchChannel: onWatchChannel,
+                        onSelectProgram: onSelectProgram,
+                        lastWatchedChannelId: $lastWatchedChannelId
+                    )
+                }
+            case .failed(let message):
+                failedView(message)
             }
-        case .failed(let message):
-            failedView(message)
         }
+        .animation(.easeInOut(duration: 0.3), value: isLoading)
+    }
+
+    private var isLoading: Bool {
+        if case .loading = model.state { return true }
+        return false
     }
 
     private var loadingState: some View {
-        ProgressView()
-            .controlSize(.large)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        GuideSkeletonView()
     }
 
     private var emptyState: some View {
@@ -110,5 +116,74 @@ public struct GuideView: View {
         }
         .padding(40)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+// MARK: - Guide skeleton
+
+private struct GuideSkeletonView: View {
+    private let rowCount = 8
+
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            HStack(alignment: .top, spacing: 0) {
+                // Channel column placeholder
+                channelColumnSkeleton
+
+                // Program lane placeholder
+                programLaneSkeleton
+            }
+        }
+        .scrollClipDisabled()
+        .focusable(false)
+        .allowsHitTesting(false)
+        .transition(.opacity)
+    }
+
+    private var channelColumnSkeleton: some View {
+        VStack(spacing: 0) {
+            // Time header spacer
+            Color.clear.frame(height: GuideLayout.timeHeaderHeight)
+            ForEach(0..<rowCount, id: \.self) { _ in
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(LiveTVTheme.surface)
+                    .frame(
+                        width: GuideLayout.channelColumnWidth - 24,
+                        height: GuideLayout.rowHeight - 16
+                    )
+                    .redacted(reason: .placeholder)
+                    .padding(.horizontal, 12)
+                    .frame(height: GuideLayout.rowHeight)
+            }
+        }
+        .frame(width: GuideLayout.channelColumnWidth)
+    }
+
+    private var programLaneSkeleton: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            // Time header placeholder
+            RoundedRectangle(cornerRadius: 6)
+                .fill(LiveTVTheme.surface)
+                .frame(height: GuideLayout.timeHeaderHeight - 16)
+                .redacted(reason: .placeholder)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            ForEach(0..<rowCount, id: \.self) { rowIndex in
+                HStack(spacing: 8) {
+                    ForEach(0..<4, id: \.self) { cellIndex in
+                        let width: CGFloat = cellIndex % 3 == 0 ? 320 : 200
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(LiveTVTheme.surface)
+                            .frame(width: width, height: GuideLayout.rowHeight - 16)
+                            .redacted(reason: .placeholder)
+                    }
+                }
+                .padding(.horizontal, 8)
+                .frame(height: GuideLayout.rowHeight)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

@@ -3,11 +3,6 @@ import NukeUI
 import JellyfinAPI
 import DesignSystem
 
-// Phase D: bouncy spring used for focus animations across the guide. Defined
-// here so channel cells, program cells, and tab pills all share the same
-// motion personality.
-private let liveTVFocusSpring: Animation = .spring(response: 0.4, dampingFraction: 0.7)
-
 /// The actual EPG grid: sticky channel column + horizontally-scrolling time
 /// grid + a sticky "focused program" detail strip at the bottom that shows
 /// the title, time, and overview of whatever cell currently has focus.
@@ -183,8 +178,6 @@ private struct ChannelRowHeader: View {
             .padding(.vertical, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .scaleEffect(isFocused ? 1.02 : 1.0)
-        .animation(liveTVFocusSpring, value: isFocused)
         #if os(tvOS)
         .buttonStyle(.card)
         #else
@@ -318,8 +311,6 @@ private struct FocusableProgramCell: View {
         Button(action: onSelect) {
             content
         }
-        .scaleEffect(isFocused ? 1.02 : 1.0)
-        .animation(liveTVFocusSpring, value: isFocused)
         #if os(tvOS)
         .buttonStyle(.card)
         #else
@@ -329,61 +320,52 @@ private struct FocusableProgramCell: View {
         .focusedValue(\.focusedGuideProgram, isFocused ? program : nil)
     }
 
+    // Static content lives OUTSIDE any TimelineView so @FocusState changes
+    // are reflected immediately. Only the time-dependent overlay (airing-now
+    // tint, progress bar, LIVE badge) uses its own periodic TimelineView.
     private var content: some View {
-        TimelineView(.periodic(from: .now, by: 60)) { context in
-            let now = context.date
-            let isAiringNow: Bool = {
-                guard let start = program.startDate, let end = program.endDate else { return false }
-                return now >= start && now < end
-            }()
-            let progress = LiveTvFormat.progressFraction(start: program.startDate, end: program.endDate, now: now)
+        ZStack(alignment: .topLeading) {
+            // Focus-driven background tint — responds to @FocusState instantly.
+            focusBackground
 
-            ZStack(alignment: .topLeading) {
-                background(isAiringNow: isAiringNow)
-                VStack(alignment: .leading, spacing: 4) {
-                    HStack(spacing: 6) {
-                        if isAiringNow {
-                            LiveBadge(label: "LIVE")
-                        }
-                        if program.isPremiere == true {
-                            tag("PREMIERE", color: .pink)
-                        } else if program.isRepeat == true {
-                            tag("REPEAT", color: .gray)
-                        }
-                    }
-                    Text(program.name)
-                        .font(.headline)
-                        .lineLimit(2)
-                        .foregroundStyle(.primary.opacity(isFocused ? 1.0 : 0.9))
-                    if let timeRange = LiveTvFormat.timeRange(start: program.startDate, end: program.endDate) {
-                        Text(timeRange)
-                            .font(.caption.monospacedDigit())
-                            .foregroundStyle(.secondary)
+            // Static text content: title and time range never change per minute.
+            VStack(alignment: .leading, spacing: 4) {
+                // Badge row placeholder — LIVE badge is rendered in the overlay
+                // below so it stays in sync with the time-keyed airing state.
+                // Premiere/Repeat tags are static metadata and live here.
+                HStack(spacing: 6) {
+                    if program.isPremiere == true {
+                        tag("PREMIERE", color: .pink)
+                    } else if program.isRepeat == true {
+                        tag("REPEAT", color: .gray)
                     }
                 }
-                .padding(12)
 
-                if isAiringNow, let progress {
-                    GeometryReader { geo in
-                        Rectangle()
-                            .fill(Color.red.opacity(0.6))
-                            .frame(width: geo.size.width * progress, height: 3)
-                            .frame(maxHeight: .infinity, alignment: .bottom)
-                    }
+                Text(program.name)
+                    .font(.headline)
+                    .lineLimit(2)
+                    .foregroundStyle(.primary.opacity(isFocused ? 1.0 : 0.9))
+                if let timeRange = LiveTvFormat.timeRange(start: program.startDate, end: program.endDate) {
+                    Text(timeRange)
+                        .font(.caption.monospacedDigit())
+                        .foregroundStyle(.secondary)
                 }
             }
+            .padding(12)
+
+            // Time-dependent overlay: airing-now background tint, LIVE badge,
+            // and progress bar — each rebuild once per minute at most.
+            ProgramLiveOverlay(program: program)
         }
         .frame(width: width, height: GuideLayout.rowHeight, alignment: .topLeading)
         .padding(.horizontal, 2)
     }
 
+    // Focus-tint layer — reads isFocused directly, never inside a closure.
     @ViewBuilder
-    private func background(isAiringNow: Bool) -> some View {
-        let baseColor: Color = isAiringNow
-            ? Color.accentColor.opacity(isFocused ? 0.55 : 0.30)
-            : Color.white.opacity(isFocused ? 0.18 : 0.08)
+    private var focusBackground: some View {
         RoundedRectangle(cornerRadius: 8)
-            .fill(baseColor)
+            .fill(Color.white.opacity(isFocused ? 0.18 : 0.08))
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(isFocused ? .white.opacity(0.6) : .white.opacity(0.10), lineWidth: 1)
@@ -397,6 +379,57 @@ private struct FocusableProgramCell: View {
             .padding(.horizontal, 6)
             .padding(.vertical, 2)
             .background(color, in: Capsule())
+    }
+}
+
+// MARK: - Live overlay (time-dependent parts only)
+
+/// Renders the airing-now background tint, LIVE badge, and progress bar.
+/// Contains its own small TimelineView so only these time-driven elements
+/// rebuild on the periodic tick — the surrounding static cell content is
+/// unaffected.
+private struct ProgramLiveOverlay: View {
+    let program: LiveTvProgram
+
+    var body: some View {
+        TimelineView(.periodic(from: .now, by: 60)) { context in
+            let now = context.date
+            let isAiringNow: Bool = {
+                guard let start = program.startDate, let end = program.endDate else { return false }
+                return now >= start && now < end
+            }()
+            let progress = LiveTvFormat.progressFraction(
+                start: program.startDate,
+                end: program.endDate,
+                now: now
+            )
+
+            ZStack(alignment: .topLeading) {
+                // Airing-now background tint layer (below the badge/progress).
+                if isAiringNow {
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.accentColor.opacity(0.30))
+                }
+
+                // LIVE badge in the top-left badge row position.
+                if isAiringNow {
+                    HStack(spacing: 6) {
+                        LiveBadge(label: "LIVE")
+                    }
+                    .padding(12)
+                }
+
+                // Progress bar pinned to the bottom.
+                if isAiringNow, let progress {
+                    GeometryReader { geo in
+                        Rectangle()
+                            .fill(LiveTVTheme.live.opacity(0.8))
+                            .frame(width: geo.size.width * progress, height: 3)
+                            .frame(maxHeight: .infinity, alignment: .bottom)
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -501,8 +534,6 @@ private struct FilterPill: View {
             .padding(.vertical, 10)
             .background(background, in: Capsule())
         }
-        .scaleEffect(isFocused ? 1.02 : 1.0)
-        .animation(liveTVFocusSpring, value: isFocused)
         #if os(tvOS)
         .buttonStyle(.card)
         #else

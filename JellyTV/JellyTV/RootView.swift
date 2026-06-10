@@ -9,7 +9,6 @@
 import SwiftUI
 import JellyfinAPI
 import Settings
-import Library
 import LiveTV
 
 struct RootView: View {
@@ -56,34 +55,14 @@ private struct SignInFlowView: View {
     }
 }
 
-/// Post sign-in: TabView with the Library home and the Live TV experience.
-/// Live TV defaults to its own three-tab shell (On Now / Guide / Recordings)
-/// inside this top-level tab. The per-tab models are held in `@State` so
-/// loaded content survives `body` re-evaluations.
+/// Post sign-in: the Live TV experience IS the app — `LiveTVRootView` owns
+/// the two-tab shell (Home / Live).
 private struct SignedInRootView: View {
     let user: UserDto
     let sessionStore: SessionStore
 
-    @State private var homeModel: HomeModel
-
-    init(user: UserDto, sessionStore: SessionStore) {
-        self.user = user
-        self.sessionStore = sessionStore
-        _homeModel = State(initialValue: HomeModel(client: sessionStore.client))
-    }
-
     var body: some View {
-        TabView {
-            HomeView(model: homeModel)
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }
-
-            LiveTVRootView(client: sessionStore.client)
-                .tabItem {
-                    Label("Live TV", systemImage: "antenna.radiowaves.left.and.right")
-                }
-        }
+        LiveTVRootView(client: sessionStore.client)
     }
 }
 

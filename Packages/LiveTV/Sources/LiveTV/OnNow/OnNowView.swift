@@ -24,13 +24,16 @@ public struct OnNowView: View {
         self.onSelectProgram = onSelectProgram
     }
 
+    private var isLoading: Bool {
+        if case .loading = model.state { return true }
+        return false
+    }
+
     public var body: some View {
         Group {
             switch model.state {
             case .loading:
-                ProgressView()
-                    .controlSize(.large)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                OnNowSkeleton()
             case .loaded(let content):
                 if content.isEmpty {
                     emptyState
@@ -41,6 +44,7 @@ public struct OnNowView: View {
                 failedView(message)
             }
         }
+        .animation(.easeInOut(duration: 0.3), value: isLoading)
         .background(LiveTVTheme.background)
         .task {
             if case .loading = model.state {
@@ -433,10 +437,6 @@ private struct ChannelTile: View {
                 }
                 .frame(width: 360, height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 14)
-                        .stroke(isFocused ? .white.opacity(0.7) : .clear, lineWidth: 2)
-                )
 
                 HStack(spacing: 6) {
                     if let number = channel.number, !number.isEmpty {
@@ -536,10 +536,6 @@ private struct ProgramTile: View {
                 tileBody
                     .frame(width: 320, height: 180)
                     .clipShape(RoundedRectangle(cornerRadius: 14))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(isFocused ? .white.opacity(0.7) : .clear, lineWidth: 2)
-                    )
                 Text(program.name)
                     .font(.subheadline.weight(.medium))
                     .lineLimit(2)
@@ -656,10 +652,6 @@ private struct RecordingTile: View {
                 }
                 .frame(width: 320, height: 180)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 14)
-                        .stroke(isFocused ? .white.opacity(0.7) : .clear, lineWidth: 2)
-                )
 
                 Text(item.name)
                     .font(.subheadline.weight(.medium))
@@ -705,6 +697,67 @@ private struct ShelfHeader: View {
                 .font(.title3.weight(.semibold))
         }
         .padding(.horizontal, 60)
+    }
+}
+
+// MARK: - Skeleton loading state
+
+private struct OnNowSkeleton: View {
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 50) {
+                // Hero placeholder (matches OnNowHero's 560pt height)
+                RoundedRectangle(cornerRadius: 0)
+                    .fill(LiveTVTheme.surface)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 560)
+                    .redacted(reason: .placeholder)
+
+                // Shelf row 1
+                skeletonShelf(tileWidth: 360, tileHeight: 200)
+
+                // Shelf row 2
+                skeletonShelf(tileWidth: 360, tileHeight: 200)
+
+                Spacer(minLength: 60)
+            }
+            .padding(.vertical, 30)
+        }
+        .scrollClipDisabled()
+        .focusable(false)
+        .allowsHitTesting(false)
+        .transition(.opacity)
+    }
+
+    @ViewBuilder
+    private func skeletonShelf(tileWidth: CGFloat, tileHeight: CGFloat) -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            // ShelfHeader placeholder
+            HStack(spacing: 10) {
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(LiveTVTheme.surface)
+                    .frame(width: 20, height: 20)
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(LiveTVTheme.surface)
+                    .frame(width: 160, height: 22)
+            }
+            .padding(.horizontal, 60)
+            .redacted(reason: .placeholder)
+
+            // Tile row
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 24) {
+                    ForEach(0..<5, id: \.self) { _ in
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(LiveTVTheme.surface)
+                            .frame(width: tileWidth, height: tileHeight)
+                            .redacted(reason: .placeholder)
+                    }
+                }
+                .padding(.horizontal, 60)
+            }
+            .scrollClipDisabled()
+        }
     }
 }
 

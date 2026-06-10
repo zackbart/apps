@@ -61,9 +61,11 @@ public final class OnNowModel {
 
     public private(set) var state: State = .loading
     private let client: any JellyfinClientAPI
+    private let store: EPGStore
 
-    public init(client: any JellyfinClientAPI) {
+    public init(client: any JellyfinClientAPI, store: EPGStore) {
         self.client = client
+        self.store = store
     }
 
     public func load() async {
@@ -77,27 +79,27 @@ public final class OnNowModel {
         }
 
         do {
-            async let onNowTask = client.liveTvChannels(
+            async let onNowTask = store.channels(
                 filters: LiveTvChannelFilters(isAiringNow: true, sortBy: "SortName", sortOrder: "Ascending", limit: 60),
                 addCurrentProgram: true
             )
-            async let moviesTask = client.liveTvChannels(
+            async let moviesTask = store.channels(
                 filters: LiveTvChannelFilters(isMovie: true, isAiringNow: true, limit: 24),
                 addCurrentProgram: true
             )
-            async let sportsTask = client.liveTvChannels(
+            async let sportsTask = store.channels(
                 filters: LiveTvChannelFilters(isSports: true, isAiringNow: true, limit: 24),
                 addCurrentProgram: true
             )
-            async let newsTask = client.liveTvChannels(
+            async let newsTask = store.channels(
                 filters: LiveTvChannelFilters(isNews: true, isAiringNow: true, limit: 24),
                 addCurrentProgram: true
             )
-            async let kidsTask = client.liveTvChannels(
+            async let kidsTask = store.channels(
                 filters: LiveTvChannelFilters(isKids: true, isAiringNow: true, limit: 24),
                 addCurrentProgram: true
             )
-            async let favoritesTask = client.liveTvChannels(
+            async let favoritesTask = store.channels(
                 filters: LiveTvChannelFilters(isFavorite: true, sortBy: "SortName", sortOrder: "Ascending", limit: 24),
                 addCurrentProgram: true
             )

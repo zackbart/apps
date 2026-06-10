@@ -136,6 +136,10 @@ public final class AVKitPlayerHost: NSObject, PlayerHost {
         }
 
         let item = AVPlayerItem(url: url)
+        // Reduce initial buffering to ~2s so the first frame appears quickly.
+        // Keep automaticallyWaitsToMinimizeStalling at its default (true) —
+        // changing it to false conflicts with the bufferEmpty reconnect logic.
+        item.preferredForwardBufferDuration = 2.0
         player.replaceCurrentItem(with: item)
 
         statusObservation = item.observe(\.status, options: [.new]) { [weak self] item, _ in

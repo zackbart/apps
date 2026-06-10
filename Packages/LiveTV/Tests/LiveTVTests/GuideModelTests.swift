@@ -57,7 +57,8 @@ struct GuideModelTests {
             makeProgram(id: "p3", channelId: "ch-2", startOffset: 0, durationMinutes: 30, from: now),
         ])
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.load()
 
         guard case .loaded(let content) = model.state else {
@@ -87,7 +88,8 @@ struct GuideModelTests {
             makeProgram(id: "should-not-appear", channelId: "ch-1", startOffset: 0, durationMinutes: 30, from: now)
         ])
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.load()
 
         guard case .loaded(let content) = model.state else {
@@ -104,7 +106,8 @@ struct GuideModelTests {
         let mock = FakeJellyfinClient()
         mock.liveTvChannelsResult = .failure(JellyfinError.network(URLError(.notConnectedToInternet)))
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.load()
 
         guard case .failed(let message) = model.state else {
@@ -119,7 +122,8 @@ struct GuideModelTests {
         let mock = FakeJellyfinClient()
         mock.liveTvChannelsResult = .failure(JellyfinError.unauthenticated)
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.load()
 
         guard case .failed(let message) = model.state else {
@@ -134,7 +138,8 @@ struct GuideModelTests {
         let mock = FakeJellyfinClient()
         mock.currentServerURL_ = nil
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.load()
 
         guard case .failed(let message) = model.state else {
@@ -157,7 +162,8 @@ struct GuideModelTests {
             makeProgram(id: "future", channelId: "ch-1", startOffset: 60 * 60, durationMinutes: 30, from: now),
         ])
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.load()
 
         guard case .loaded(let content) = model.state else {
@@ -178,7 +184,8 @@ struct GuideModelTests {
         mock.liveTvFilteredChannelsResult = .success([makeChannel(id: "sports", name: "ESPN")])
         mock.liveTvProgramsResult = .success([])
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.applyFilter(.sports)
 
         guard case .loaded(let content) = model.state else {
@@ -200,7 +207,8 @@ struct GuideModelTests {
             makeProgram(id: "orphan", channelId: "ch-99", startOffset: 0, durationMinutes: 30, from: now),
         ])
 
-        let model = GuideModel(client: mock, now: { now })
+        let store = EPGStore(client: mock, now: { now })
+        let model = GuideModel(client: mock, store: store, now: { now })
         await model.load()
 
         guard case .loaded(let content) = model.state else {

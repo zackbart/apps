@@ -61,13 +61,16 @@ public final class GuideModel {
     public private(set) var categoryFilter: GuideCategory = .all
 
     private let client: any JellyfinClientAPI
+    private let store: EPGStore
     private let now: @Sendable () -> Date
 
     public init(
         client: any JellyfinClientAPI,
+        store: EPGStore,
         now: @escaping @Sendable () -> Date = { Date() }
     ) {
         self.client = client
+        self.store = store
         self.now = now
     }
 
@@ -97,9 +100,9 @@ public final class GuideModel {
         do {
             let channels: [LiveTvChannel]
             if filter == .all {
-                channels = try await client.liveTvChannels()
+                channels = try await store.channels()
             } else {
-                channels = try await client.liveTvChannels(
+                channels = try await store.channels(
                     filters: filter.channelFilters,
                     addCurrentProgram: false
                 )

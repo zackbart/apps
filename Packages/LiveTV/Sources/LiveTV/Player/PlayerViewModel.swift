@@ -96,6 +96,10 @@ public final class PlayerViewModel {
     private var reconnectTimeoutTask: Task<Void, Never>?
     private var hudHideTask: Task<Void, Never>?
     private var observationTasks: [Task<Void, Never>] = []
+    /// The Task created in init to tune the initial channel. Cancelled on dismiss.
+    private var initTuneTask: Task<Void, Never>?
+    /// Guard against re-entrant dismiss() calls (Menu press + onDisappear backstop).
+    private var isDismissed: Bool = false
 
     /// Keeps in-flight closeStream tasks alive past view-dealloc so the
     /// server-side session is actually torn down. Tasks remove themselves
@@ -131,7 +135,7 @@ public final class PlayerViewModel {
         self.state = .idle
 
         startObservers()
-        Task { await tune(initialChannel, isUserInitiated: true) }
+        initTuneTask = Task { await tune(initialChannel, isUserInitiated: true) }
     }
 
     // MARK: - Public API
@@ -187,7 +191,15 @@ public final class PlayerViewModel {
     /// Tear everything down — called on view dismiss. Schedules the close
     /// call on a long-lived task, stops the network monitor, tears down the
     /// player host.
+    ///
+    /// Idempotent: safe to call multiple times (Menu-press handler + onDisappear
+    /// backstop may both fire). Only the first call performs teardown.
     public func dismiss() {
+        guard !isDismissed else { return }
+        isDismissed = true
+
+        initTuneTask?.cancel()
+        initTuneTask = nil
         debounceTask?.cancel()
         reconnectTimeoutTask?.cancel()
         hudHideTask?.cancel()

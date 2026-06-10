@@ -16,9 +16,7 @@ struct ChannelSplashView: View {
     let program: LiveTvProgram?
 
     @State private var topColor: Color = LiveTVTheme.surface
-    @State private var pulseDot: Int = 0
-
-    private let pulseTimer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    @State private var pulsing: Bool = false
 
     var body: some View {
         ZStack {
@@ -48,9 +46,7 @@ struct ChannelSplashView: View {
         .task(id: channel.id) {
             await loadDominantColor()
         }
-        .onReceive(pulseTimer) { _ in
-            pulseDot = (pulseDot + 1) % 3
-        }
+        .onAppear { pulsing = true }
     }
 
     private var backgroundGradient: some View {
@@ -104,9 +100,14 @@ struct ChannelSplashView: View {
                     Circle()
                         .fill(LiveTVTheme.accent)
                         .frame(width: 10, height: 10)
-                        .opacity(pulseDot == i ? 1.0 : 0.3)
-                        .scaleEffect(pulseDot == i ? 1.3 : 1.0)
-                        .animation(.easeInOut(duration: 0.3), value: pulseDot)
+                        .opacity(pulsing ? 1.0 : 0.3)
+                        .scaleEffect(pulsing ? 1.3 : 1.0)
+                        .animation(
+                            .easeInOut(duration: 0.5)
+                                .repeatForever(autoreverses: true)
+                                .delay(Double(i) * 0.18),
+                            value: pulsing
+                        )
                 }
             }
             Text("Tuning\u{2026}")

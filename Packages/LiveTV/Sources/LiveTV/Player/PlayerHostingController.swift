@@ -17,6 +17,11 @@ import AVFoundation
 final class PlayerHostingController: AVPlayerViewController {
     var onChannelUp: (() -> Void)?
     var onChannelDown: (() -> Void)?
+    /// Called when the user presses the Menu button, before the press is
+    /// forwarded to `super` (which dismisses the AVPlayerViewController).
+    /// Wire this to `PlayerViewModel.dismiss()` + the SwiftUI `onDismiss`
+    /// callback so the live stream is torn down before the view disappears.
+    var onDismissRequested: (() -> Void)?
 
     private var priorAudioSessionCategory: AVAudioSession.Category?
 
@@ -63,6 +68,10 @@ final class PlayerHostingController: AVPlayerViewController {
             case .downArrow:
                 onChannelDown?()
                 handled.insert(press)
+            case .menu:
+                // Initiate teardown BEFORE forwarding to super so the stream
+                // closes before AVPlayerViewController dismisses the view.
+                onDismissRequested?()
             default:
                 break
             }

@@ -107,6 +107,11 @@ private struct TVOSPlayerHost: View {
         .task {
             await ensureViewModel()
         }
+        .onDisappear {
+            // Backstop: if any dismissal path bypasses onDismissRequested
+            // (e.g. programmatic sheet dismissal), dismiss() is idempotent.
+            viewModel?.dismiss()
+        }
         .onChange(of: viewModel?.state) { _, newState in
             if let channel = newState?.channel {
                 onChannelChanged(channel)
@@ -178,6 +183,13 @@ private struct TVOSPlayerHost: View {
         // Wire channel up/down from the host controller to the view model.
         host.onChannelUp = { [weak vm] in vm?.channelUp() }
         host.onChannelDown = { [weak vm] in vm?.channelDown() }
+        // Wire Menu-button dismiss so the stream is closed before the
+        // AVPlayerViewController disappears. dismiss() is idempotent, so
+        // the .onDisappear backstop is safe to also call it.
+        host.controller.onDismissRequested = { [weak vm] in
+            vm?.dismiss()
+            onDismiss()
+        }
         viewModel = vm
     }
 }

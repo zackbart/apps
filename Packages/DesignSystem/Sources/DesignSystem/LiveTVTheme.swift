@@ -1,32 +1,36 @@
 import SwiftUI
 
-/// Warm sports-broadcast palette for the Live TV experience. Deep navy-charcoal
-/// background, broadcast-amber accent, broadcast-red live indicator. Plain
-/// SwiftUI `Color` constants — no Asset Catalog indirection (tvOS-only single
-/// theme, dark-mode-always).
+/// Low-key "Marquee" palette: one warm-gray ink on near-black, nothing else.
+/// The serif typography and the native focus lift carry the design — the only
+/// chromatic color on screen is the desaturated brick-red live indicator.
+/// Plain SwiftUI `Color` constants — no Asset Catalog indirection (tvOS-only
+/// single theme, dark-mode-always).
 public enum LiveTVTheme {
-    /// Deepest background — full-bleed page background.
-    public static let background = Color(red: 0.05, green: 0.07, blue: 0.12)
+    /// The single ink. Warm gray-white (#E8E5DF) — everything legible is a
+    /// tint of this.
+    public static let ink = Color(red: 0.910, green: 0.898, blue: 0.875)
 
-    /// Slightly lifted surface for cards / overlays. Combine with `background`
-    /// underneath to suggest depth.
-    public static let surface = Color.white.opacity(0.04)
+    /// Deepest background — full-bleed page background (#09090A).
+    public static let background = Color(red: 0.035, green: 0.035, blue: 0.039)
 
-    /// Focus and emphasis accent — warm broadcast amber. Use for focused
-    /// borders, channel-cell glow, primary action buttons (Retry, etc.).
-    public static let accent = Color(red: 1.00, green: 0.74, blue: 0.27)
+    /// Slightly lifted surface for cards / overlays / selected rows.
+    public static let surface = ink.opacity(0.06)
 
-    /// "On air" red — exclusively for the LIVE badge, the now-line, and other
-    /// "this is happening right now" affordances. Don't use for general
-    /// emphasis (that's `accent`).
-    public static let live = Color(red: 1.00, green: 0.27, blue: 0.20)
+    /// Focus and emphasis accent — pale ink. Monochrome by design: focused
+    /// borders and primary actions read as "lighter", never as a new color.
+    public static let accent = ink.opacity(0.85)
 
-    /// Body text. White on the dark background.
-    public static let text = Color.white
+    /// "On air" indicator — desaturated brick red (#B3473D), exclusively for
+    /// the live dot, the now-line, and other "happening right now"
+    /// affordances. The one color in the system.
+    public static let live = Color(red: 0.702, green: 0.278, blue: 0.239)
 
-    /// De-emphasized body text — captions, time-ranges, secondary metadata.
-    public static let secondaryText = Color.white.opacity(0.65)
+    /// Body text.
+    public static let text = ink
+
+    /// De-emphasized text — captions, time-ranges, secondary metadata.
+    public static let secondaryText = ink.opacity(0.45)
 
     /// Hairline divider between rows / sections.
-    public static let divider = Color.white.opacity(0.08)
+    public static let divider = ink.opacity(0.16)
 }

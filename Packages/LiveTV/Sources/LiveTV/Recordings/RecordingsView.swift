@@ -10,13 +10,16 @@ public struct RecordingsView: View {
         self.model = model
     }
 
+    private var isLoading: Bool {
+        if case .loading = model.state { return true }
+        return false
+    }
+
     public var body: some View {
         Group {
             switch model.state {
             case .loading:
-                ProgressView()
-                    .controlSize(.large)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                RecordingsSkeleton()
             case .loaded(let content):
                 if content.isEmpty {
                     emptyState
@@ -27,6 +30,7 @@ public struct RecordingsView: View {
                 failedView(message)
             }
         }
+        .animation(.easeInOut(duration: 0.3), value: isLoading)
         .task {
             if case .loading = model.state {
                 await model.load()
@@ -115,6 +119,53 @@ public struct RecordingsView: View {
     }
 }
 
+// MARK: - Skeleton loading state
+
+private struct RecordingsSkeleton: View {
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 50) {
+                skeletonSection
+                skeletonSection
+                Spacer(minLength: 60)
+            }
+            .padding(.vertical, 30)
+        }
+        .scrollClipDisabled()
+        .focusable(false)
+        .allowsHitTesting(false)
+        .transition(.opacity)
+    }
+
+    private var skeletonSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 10) {
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(LiveTVTheme.surface)
+                    .frame(width: 20, height: 20)
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(LiveTVTheme.surface)
+                    .frame(width: 160, height: 22)
+            }
+            .padding(.horizontal, 60)
+            .redacted(reason: .placeholder)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 24) {
+                    ForEach(0..<4, id: \.self) { _ in
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(LiveTVTheme.surface)
+                            .frame(width: 360, height: 200)
+                            .redacted(reason: .placeholder)
+                    }
+                }
+                .padding(.horizontal, 60)
+            }
+            .scrollClipDisabled()
+        }
+    }
+}
+
 // MARK: - Sections
 
 private struct RecordingGrid: View {
@@ -176,10 +227,6 @@ private struct RecordingCard: View {
                 }
                 .frame(width: 360, height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 14)
-                        .stroke(isFocused ? .white.opacity(0.7) : .clear, lineWidth: 2)
-                )
                 Text(item.name)
                     .font(.subheadline.weight(.medium))
                     .lineLimit(2)
