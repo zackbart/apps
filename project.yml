@@ -28,5 +28,9 @@ targets:
         INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.entertainment"
         INFOPLIST_KEY_LSUIElement: YES          # menu-bar utility, no Dock icon
         INFOPLIST_KEY_NSHumanReadableCopyright: "MIT Licensed"
+        # Location prompt for sites that need it (e.g. YouTube TV) — bridged to
+        # CoreLocation by GeoBridge. Non-sandboxed, so the usage string is enough.
+        INFOPLIST_KEY_NSLocationUsageDescription: "Windo shares your location with sites that request it, like YouTube TV."
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Windo shares your location with sites that request it, like YouTube TV."
         ENABLE_HARDENED_RUNTIME: YES            # required for notarization
         CODE_SIGN_STYLE: Automatic              # CI overrides to Manual + Developer ID

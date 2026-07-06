@@ -2,6 +2,7 @@ import Cocoa
 import WebKit
 import Carbon.HIToolbox
 import CoreImage
+import CoreLocation
 
 private let ciContext = CIContext(options: nil)
 
@@ -88,6 +89,133 @@ let kFullscreenShim = """
   (d.head || d.documentElement).appendChild(s);
 })();
 """
+
+// WKWebView's built-in geolocation is unreliable on macOS (needs private UI-delegate
+// SPI and often just denies). So we shim navigator.geolocation the same way we shim
+// fullscreen: override the JS methods, post requests to native (GeoBridge answers with
+// a real CLLocationManager), and resolve back through window.__windoGeo* callbacks.
+// Sites like YouTube TV that gate content on location now get a real fix.
+let kGeoShim = """
+(function () {
+  if (window.__windoGeo) return; window.__windoGeo = true;
+  var cbs = {}, next = 1;
+  function post(o) { try { window.webkit.messageHandlers.windoGeo.postMessage(o); } catch (e) {} }
+  var g = navigator.geolocation;
+  if (!g) { g = {}; try { navigator.geolocation = g; } catch (e) {} }
+  // Own properties shadow the (non-writable) prototype methods — reliable as long
+  // as the instance isn't frozen, which it isn't.
+  g.getCurrentPosition = function (ok, err, options) {
+    var id = next++; cbs[id] = { ok: ok, err: err, watch: false };
+    post({ id: id, watch: false, options: options || {} });
+  };
+  g.watchPosition = function (ok, err, options) {
+    var id = next++; cbs[id] = { ok: ok, err: err, watch: true };
+    post({ id: id, watch: true, options: options || {} });
+    return id;
+  };
+  g.clearWatch = function (id) { post({ clear: id }); delete cbs[id]; };
+  window.__windoGeoResolve = function (id, coords) {
+    var cb = cbs[id]; if (!cb) return;
+    cb.ok({ coords: coords, timestamp: Date.now() });
+    if (!cb.watch) delete cbs[id];   // one-shot: native stops after the first fix
+  };
+  window.__windoGeoReject = function (id, code, message) {
+    var cb = cbs[id]; if (!cb) return;
+    delete cbs[id];
+    if (cb.err) cb.err({ code: code, message: message, PERMISSION_DENIED: 1, POSITION_UNAVAILABLE: 2, TIMEOUT: 3 });
+  };
+})();
+"""
+
+// Bridges the page's navigator.geolocation (via kGeoShim) to macOS CoreLocation.
+// One shared CLLocationManager serves every tab; requests carry the WKWebView they
+// came from so replies land in the right page. macOS shows the location-consent
+// prompt on first use (needs NSLocation*UsageDescription in Info.plist).
+final class GeoBridge: NSObject, CLLocationManagerDelegate, WKScriptMessageHandler {
+    private let manager = CLLocationManager()
+    private struct Req { weak var webView: WKWebView?; let id: Int; let watch: Bool }
+    private var pending: [Req] = []
+    private var updating = false
+
+    override init() {
+        super.init()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+    }
+
+    func userContentController(_ c: WKUserContentController, didReceive m: WKScriptMessage) {
+        guard m.name == "windoGeo", let body = m.body as? [String: Any] else { return }
+        if let clearId = body["clear"] as? Int {          // clearWatch()
+            pending.removeAll { $0.id == clearId }
+            stopIfIdle()
+            return
+        }
+        guard let id = body["id"] as? Int, let wv = m.webView else { return }
+        pending.append(Req(webView: wv, id: id, watch: (body["watch"] as? Bool) ?? false))
+        switch manager.authorizationStatus {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()       // prompt; resolved in didChangeAuthorization
+        case .authorized, .authorizedAlways, .authorizedWhenInUse:
+            startUpdating()
+        case .denied, .restricted:
+            fail(code: 1, message: "User denied Geolocation")
+        @unknown default:
+            fail(code: 2, message: "Location unavailable")
+        }
+    }
+
+    private func startUpdating() {
+        guard !updating, !pending.isEmpty else { return }
+        updating = true
+        manager.startUpdatingLocation()
+    }
+    private func stopIfIdle() {
+        if pending.isEmpty { manager.stopUpdatingLocation(); updating = false }
+    }
+
+    func locationManagerDidChangeAuthorization(_ m: CLLocationManager) {
+        switch m.authorizationStatus {
+        case .authorized, .authorizedAlways, .authorizedWhenInUse: startUpdating()
+        case .denied, .restricted: fail(code: 1, message: "User denied Geolocation")
+        default: break
+        }
+    }
+
+    func locationManager(_ m: CLLocationManager, didUpdateLocations locs: [CLLocation]) {
+        guard let loc = locs.last else { return }
+        let c = loc.coordinate
+        // Negative course/speed mean "invalid" in CoreLocation → null in the JS coords.
+        let coords = "{latitude:\(c.latitude),longitude:\(c.longitude),accuracy:\(loc.horizontalAccuracy),"
+            + "altitude:\(loc.altitude),altitudeAccuracy:\(loc.verticalAccuracy),"
+            + "heading:\(loc.course >= 0 ? String(loc.course) : "null"),"
+            + "speed:\(loc.speed >= 0 ? String(loc.speed) : "null")}"
+        for req in pending {
+            req.webView?.evaluateJavaScript("window.__windoGeoResolve(\(req.id), \(coords))")
+        }
+        pending.removeAll { !$0.watch }   // one-shots done; watches keep streaming
+        stopIfIdle()
+    }
+
+    func locationManager(_ m: CLLocationManager, didFailWithError e: Error) {
+        fail(code: 2, message: e.localizedDescription)   // POSITION_UNAVAILABLE
+    }
+
+    // JS PositionError codes: 1 PERMISSION_DENIED, 2 POSITION_UNAVAILABLE, 3 TIMEOUT.
+    private func fail(code: Int, message: String) {
+        let msg = jsString(message)
+        for req in pending {
+            req.webView?.evaluateJavaScript("window.__windoGeoReject(\(req.id), \(code), \(msg))")
+        }
+        pending.removeAll()
+        stopIfIdle()
+    }
+
+    private func jsString(_ s: String) -> String {
+        "\"" + s.replacingOccurrences(of: "\\", with: "\\\\")
+                .replacingOccurrences(of: "\"", with: "\\\"")
+                .replacingOccurrences(of: "\n", with: " ") + "\""
+    }
+}
 
 struct Favorite: Codable { var name: String; var url: String }
 
@@ -268,6 +396,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
         pageFullscreen = fs
     }
 
+    let geoBridge = GeoBridge()   // shared across tabs; bridges navigator.geolocation → CoreLocation
     var window: NSWindow!
     var tabs: [Tab] = []
     var activeIndex = 0
@@ -342,6 +471,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
         cfg.userContentController.addUserScript(
             WKUserScript(source: kFullscreenShim, injectionTime: .atDocumentStart, forMainFrameOnly: false))
         cfg.userContentController.add(self, name: "windo")   // fullscreen state ← shim
+        cfg.userContentController.addUserScript(
+            WKUserScript(source: kGeoShim, injectionTime: .atDocumentStart, forMainFrameOnly: false))
+        cfg.userContentController.add(geoBridge, name: "windoGeo")   // geolocation ← shim
         let wv = WKWebView(frame: webContainer.bounds, configuration: cfg)
         wv.autoresizingMask = [.width, .height]
         wv.customUserAgent = kUserAgent
