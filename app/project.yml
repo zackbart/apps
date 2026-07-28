@@ -34,3 +34,14 @@ targets:
           INFOPLIST_KEY_CFBundleDisplayName: "Barr Debug"
           PRODUCT_BUNDLE_IDENTIFIER: com.cursorkittens.Barr.debug
           PRODUCT_NAME: BarrDebug
+  BarrTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: Barr
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cursorkittens.BarrTests
+        GENERATE_INFOPLIST_FILE: YES
