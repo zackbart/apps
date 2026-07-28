@@ -4,11 +4,14 @@ import SwiftUI
 @MainActor
 final class ShelfPanel: NSPanel {
     private let model: ShelfModel
-    private let hostingView: NSHostingView<ShelfView>
+    private let hostingController: NSHostingController<ShelfView>
+    private var resizeGeneration = 0
 
     init(model: ShelfModel) {
         self.model = model
-        self.hostingView = NSHostingView(rootView: ShelfView(model: model))
+        self.hostingController = NSHostingController(
+            rootView: ShelfView(model: model)
+        )
         super.init(
             contentRect: NSRect(x: 0, y: 0, width: 320, height: 68),
             styleMask: [.borderless, .nonactivatingPanel, .fullSizeContentView],
@@ -26,7 +29,19 @@ final class ShelfPanel: NSPanel {
         isFloatingPanel = true
         hidesOnDeactivate = false
         becomesKeyOnlyIfNeeded = true
-        contentView = hostingView
+        contentViewController = hostingController
+    }
+
+    func scheduleResizeToFit() {
+        resizeGeneration += 1
+        let generation = resizeGeneration
+        DispatchQueue.main.async { [weak self] in
+            guard
+                let self,
+                generation == self.resizeGeneration
+            else { return }
+            self.resizeToFit()
+        }
     }
 
     @discardableResult
@@ -40,6 +55,7 @@ final class ShelfPanel: NSPanel {
             return false
         }
 
+        resizeGeneration += 1
         resizeToFit(on: screen)
         let minimumX = screen.visibleFrame.minX + 8
         let maximumX = max(minimumX, screen.visibleFrame.maxX - frame.width - 8)
@@ -73,7 +89,7 @@ final class ShelfPanel: NSPanel {
         }
     }
 
-    func resizeToFit(on targetScreen: NSScreen? = nil) {
+    private func resizeToFit(on targetScreen: NSScreen? = nil) {
         let sizingScreen = targetScreen ?? (isVisible ? screen : nil) ?? NSScreen.main
         let screenWidth = max((sizingScreen?.visibleFrame.width ?? 800) - 32, 200)
         let desiredWidth: CGFloat
@@ -93,7 +109,15 @@ final class ShelfPanel: NSPanel {
             desiredHeight = 66
         }
 
-        setContentSize(NSSize(width: min(desiredWidth, screenWidth), height: desiredHeight))
+        let desiredSize = NSSize(
+            width: min(desiredWidth, screenWidth),
+            height: desiredHeight
+        )
+        guard
+            abs(frame.width - desiredSize.width) > 0.5 ||
+            abs(frame.height - desiredSize.height) > 0.5
+        else { return }
+        setContentSize(desiredSize)
     }
 
     override var canBecomeKey: Bool { true }

@@ -31,16 +31,27 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private let collapsedStorageLength: CGFloat = 2
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Construct the SwiftUI host and let its initial layout finish before
+        // macOS begins laying out the Control Center-hosted status-item scenes.
+        // Interleaving those two layout passes re-enters AppKit on macOS 26.
+        if model.movedItemKeys.isEmpty {
+            model.setManaging(true)
+        }
+        shelfPanel = ShelfPanel(model: model)
+        DispatchQueue.main.async { [weak self] in
+            self?.finishApplicationLaunch()
+        }
+    }
+
+    private func finishApplicationLaunch() {
         configureStatusItems()
         startupReconciliationComplete = model.movedItemKeys.isEmpty
         refreshScannerExclusions()
-        shelfPanel = ShelfPanel(model: model)
-        shelfPanel.resizeToFit()
         model.onItemsChanged = { [weak self] in
             self?.itemsChanged()
         }
         model.onLayoutChanged = { [weak self] in
-            self?.shelfPanel.resizeToFit()
+            self?.shelfPanel.scheduleResizeToFit()
         }
         model.onRefreshCompleted = { [weak self] in
             self?.refreshCompleted()
@@ -80,9 +91,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             object: nil
         )
 
-        if model.movedItemKeys.isEmpty {
-            model.setManaging(true)
-        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { [weak self] in
             self?.refreshScannerExclusions()
             self?.model.refresh()
@@ -103,12 +111,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         _ sender: NSApplication,
         hasVisibleWindows flag: Bool
     ) -> Bool {
+        guard statusItem != nil else { return true }
         showShelf()
         return true
     }
 
     private func itemsChanged() {
-        shelfPanel.resizeToFit()
+        shelfPanel.scheduleResizeToFit()
         if startupReconciliationComplete {
             updateStorageState()
         } else {
