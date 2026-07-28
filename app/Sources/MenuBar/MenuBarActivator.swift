@@ -93,6 +93,7 @@ enum MenuBarActivator {
 
     private static func fallbackClick(_ item: MenuBarItem) -> Bool {
         guard item.isOnScreen else { return false }
+        guard let originalCursorPosition = CGEvent(source: nil)?.location else { return false }
         let point = CGPoint(x: item.frame.midX, y: item.frame.midY)
         guard
             let down = CGEvent(mouseEventSource: nil, mouseType: .leftMouseDown, mouseCursorPosition: point, mouseButton: .left),
@@ -102,6 +103,14 @@ enum MenuBarActivator {
         }
         down.post(tap: .cghidEventTap)
         up.post(tap: .cghidEventTap)
+
+        // Posting a mouse event at another point also moves the global cursor.
+        // AXPress normally avoids that, but this fallback is required for menu
+        // extras that do not expose a pressable accessibility element. Put the
+        // user's pointer back immediately so activating an item from Barr does
+        // not make it appear to vanish at a display edge.
+        Thread.sleep(forTimeInterval: 0.03)
+        CGWarpMouseCursorPosition(originalCursorPosition)
         return true
     }
 

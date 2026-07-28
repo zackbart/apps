@@ -51,13 +51,6 @@ enum MenuBarMover {
         Thread.sleep(forTimeInterval: 0.08)
         up.post(tap: .cghidEventTap)
 
-        // Restore immediately after releasing the drag. Hiding the cursor
-        // around this operation used macOS's process-global hide counter and
-        // could strand the cursor after overlapping moves or display changes.
-        // Restoring before the next display frame also avoids a visible jump
-        // to the menu-bar insertion point.
-        CGWarpMouseCursorPosition(originalCursorPosition)
-
         if let safetyUp = event(
             source: source,
             type: .leftMouseUp,
@@ -68,7 +61,12 @@ enum MenuBarMover {
         ) {
             safetyUp.post(tap: .cghidEventTap)
         }
+
+        // CGEventPost queues the releases in WindowServer. Restoring before
+        // that queue drains lets the delayed release move the pointer back to
+        // the menu bar after our restore. Make the warp the final operation.
         Thread.sleep(forTimeInterval: 0.05)
+        CGWarpMouseCursorPosition(originalCursorPosition)
         return true
     }
 
