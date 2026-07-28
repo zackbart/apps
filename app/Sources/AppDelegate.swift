@@ -29,6 +29,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var persistedItemReconciliationInProgress = false
     private var runningApplicationsGeneration = 0
     private var environmentRefreshGeneration = 0
+    private var foregroundBundleIdentifier: String?
+    private var stableStorageLength: CGFloat?
     private var resolvedStatusWindowIDs = [String: CGWindowID]()
     private let collapsedStorageLength: CGFloat = 2
 
@@ -47,6 +49,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func finishApplicationLaunch() {
         configureStatusItems()
+        foregroundBundleIdentifier =
+            NSWorkspace.shared.frontmostApplication?.bundleIdentifier
         startupReconciliationComplete = model.movedItemKeys.isEmpty
         model.onItemsChanged = { [weak self] in
             self?.itemsChanged()
@@ -119,7 +123,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         hasVisibleWindows flag: Bool
     ) -> Bool {
         guard statusItem != nil else { return true }
-        showShelf()
+        // Reopening an accessory app leaves Finder (or the launcher) in the
+        // foreground. Its activation notification can arrive after this
+        // delegate callback and close a shelf that was just shown. Let that
+        // notification settle before presenting the drawer.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { [weak self] in
+            self?.showShelf()
+        }
         return true
     }
 
@@ -248,10 +258,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                         break
                     }
 
-                    let targetPoint = CGPoint(
-                        x: anchorFrame.minX - 1,
-                        y: anchorFrame.midY
-                    )
+                    let targetPoint = self.parkingTarget(in: anchorFrame)
                     guard MenuBarMover.move(
                         windowID: currentItem.windowID,
                         sourcePID: currentItem.ownerPID,
@@ -301,22 +308,39 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func activateFromShelf(_ item: MenuBarItem) {
+        returnHiddenItemNow()
+        closeShelf()
+
+        // Most status items expose AXPress even while their hosted window is
+        // parked offscreen. Prefer that path because it opens the app's menu
+        // without reordering a single menu-bar window. Synthetic reveal/repark
+        // remains below for unusual items that do not expose a press action.
+        if MenuBarActivator.activate(item) {
+#if DEBUG
+            barrActivationLogger.notice(
+                "Activation target=\(item.storageKey, privacy: .public) direct=true activated=true"
+            )
+#endif
+            model.activationFailed = false
+            return
+        }
+
         guard
             let controlWindowID = windowID(for: statusItem),
             let controlFrame = PrivateWindowServer.frame(of: controlWindowID)
         else {
-            model.activationFailed = !MenuBarActivator.activate(item)
+            model.activationFailed = true
             return
         }
 
-        returnHiddenItemNow()
-        closeShelf()
         let revealPoint = CGPoint(x: controlFrame.minX - 1, y: controlFrame.midY)
 
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            let currentItem = MenuBarScanner.scan(captureImages: false).first {
-                $0.storageKey == item.storageKey
-            } ?? item
+            let scannedItems = MenuBarScanner.scan(captureImages: false)
+            let currentItem =
+                scannedItems.first { $0.windowID == item.windowID } ??
+                scannedItems.first { $0.storageKey == item.storageKey } ??
+                item
             let moved = MenuBarMover.move(
                 windowID: currentItem.windowID,
                 sourcePID: currentItem.ownerPID,
@@ -325,9 +349,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             )
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
                 guard let self else { return }
-                let revealedItem = MenuBarScanner.scan(captureImages: false).first {
+                let revealedCandidates = MenuBarScanner.scan(captureImages: false).filter {
                     $0.storageKey == item.storageKey
-                } ?? currentItem
+                }
+                let revealedItem =
+                    revealedCandidates.min {
+                        abs($0.frame.midX - revealPoint.x) <
+                            abs($1.frame.midX - revealPoint.x)
+                    } ??
+                    currentItem
                 let activated = moved && MenuBarActivator.activate(revealedItem)
 #if DEBUG
                 barrActivationLogger.notice(
@@ -344,9 +374,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                     return
                 }
                 if activated {
-                    self.armReturn(item: item)
+                    // Carry the exact Control Center proxy that was revealed.
+                    // Multiple proxy windows can share an app identity, and
+                    // falling back to the first storage-key match can re-park
+                    // a stale proxy while leaving the live icon visible.
+                    self.armReturn(item: revealedItem)
                 } else {
-                    self.parkItem(item)
+                    self.parkItem(revealedItem)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         self.showShelf()
                     }
@@ -371,7 +405,44 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 30, execute: fallback)
     }
 
-    private func parkItem(_ originalItem: MenuBarItem, attempt: Int = 0) {
+    private func parkItem(
+        _ originalItem: MenuBarItem,
+        attempt: Int = 0,
+        anchorPrepared: Bool = false
+    ) {
+        guard
+            let initialAnchorWindowID = windowID(for: storageAnchor),
+            let initialAnchorFrame = PrivateWindowServer.frame(of: initialAnchorWindowID),
+            let anchorScreen = storageAnchor.button?.window?.screen ?? NSScreen.main
+        else {
+            retryParking(originalItem, attempt: attempt)
+            return
+        }
+
+        let insertionX = anchorScreen.frame.minX + 8
+        if !anchorPrepared, initialAnchorFrame.minX < insertionX {
+            // WindowServer will not accept a drop beside the off-display edge
+            // of an expanded spacer. Shorten it only enough to expose a valid
+            // insertion point. Keeping almost all of its width prevents it
+            // from crossing neighboring status items and changing its order.
+            let amountToExpose = insertionX - initialAnchorFrame.minX
+            let preparedLength = max(
+                collapsedStorageLength,
+                storageAnchor.length - amountToExpose
+            )
+            storageUpdateGeneration += 1
+            storageAnchor.length = preparedLength
+            refreshScannerExclusions()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) { [weak self] in
+                self?.parkItem(
+                    originalItem,
+                    attempt: attempt,
+                    anchorPrepared: true
+                )
+            }
+            return
+        }
+
         guard
             let anchorWindowID = windowID(for: storageAnchor),
             let anchorFrame = PrivateWindowServer.frame(of: anchorWindowID)
@@ -380,21 +451,56 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        let targetPoint = CGPoint(x: anchorFrame.minX - 1, y: anchorFrame.midY)
+        let targetPoint = parkingTarget(in: anchorFrame)
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            let currentItem = MenuBarScanner.scan(captureImages: false).first {
-                $0.storageKey == originalItem.storageKey
-            } ?? originalItem
+            let scannedItems = MenuBarScanner.scan(captureImages: false)
+            let currentItem =
+                scannedItems.first { $0.windowID == originalItem.windowID } ??
+                scannedItems.first { $0.storageKey == originalItem.storageKey } ??
+                originalItem
+#if DEBUG
+            barrActivationLogger.notice(
+                """
+                Park start target=\(originalItem.storageKey, privacy: .public) \
+                preferredWindow=\(originalItem.windowID) currentWindow=\(currentItem.windowID) \
+                targetPoint=\(NSStringFromPoint(targetPoint), privacy: .public)
+                """
+            )
+#endif
             let attempted = MenuBarMover.move(
                 windowID: currentItem.windowID,
                 sourcePID: currentItem.ownerPID,
                 beside: anchorWindowID,
                 at: targetPoint
             )
-            Thread.sleep(forTimeInterval: 0.12)
-            let parked = attempted && MenuBarScanner.scan(captureImages: false).first {
-                $0.storageKey == originalItem.storageKey
-            }.map { $0.frame.midX < anchorFrame.midX } == true
+
+            var parkedItem: MenuBarItem?
+            var parked = false
+            if attempted {
+                for delay in [0.18, 0.32, 0.5] where !parked {
+                    Thread.sleep(forTimeInterval: delay)
+                    let parkedCandidates = MenuBarScanner.scan(captureImages: false).filter {
+                        $0.storageKey == originalItem.storageKey
+                    }
+                    parkedItem = parkedCandidates.min {
+                        abs($0.frame.midX - targetPoint.x) <
+                            abs($1.frame.midX - targetPoint.x)
+                    }
+                    parked = parkedItem.map {
+                        $0.frame.midX < anchorFrame.midX
+                    } == true
+                }
+            }
+#if DEBUG
+            barrActivationLogger.notice(
+                """
+                Park result target=\(originalItem.storageKey, privacy: .public) \
+                attempted=\(attempted) parked=\(parked) \
+                observedWindow=\(parkedItem?.windowID ?? 0) \
+                observedFrame=\(parkedItem.map { NSStringFromRect($0.frame) } ?? "none", privacy: .public)
+                """
+            )
+#endif
 
             DispatchQueue.main.async {
                 guard let self else { return }
@@ -409,7 +515,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func retryParking(_ item: MenuBarItem, attempt: Int) {
-        guard attempt < 2 else {
+        guard attempt < 1 else {
             model.refresh(captureImages: false)
             return
         }
@@ -486,7 +592,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 """
             )
 #endif
-            let targetPoint = CGPoint(x: anchorFrame.minX - 1, y: anchorFrame.midY)
+            let targetPoint = moveToBarr
+                ? parkingTarget(in: anchorFrame)
+                : CGPoint(x: anchorFrame.minX - 1, y: anchorFrame.midY)
             DispatchQueue.global(qos: .userInitiated).async {
                 let baselineItems = MenuBarScanner.scan(captureImages: false)
                 let baselineSystemKeys = Set(
@@ -592,11 +700,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let generation = storageUpdateGeneration
         let keepShelfOpen = shelfPanel?.isVisible == true
 
-        // Do not expand the anchor for an optimistic move. If Barr only
-        // remembers items whose apps are no longer running, barrItems contains
-        // the pending item before it has physically moved. Expanding here can
-        // make the anchor unresolvable and cause that first move to fail.
         guard model.hasVisiblePersistedBarrItems else {
+            stableStorageLength = nil
             if abs(storageAnchor.length - collapsedStorageLength) > 0.5 {
                 storageAnchor.length = collapsedStorageLength
                 refreshScannerExclusions()
@@ -605,30 +710,62 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        // The anchor's right edge stays fixed as its width changes. Extending it
-        // from that edge to just beyond the screen's left edge parks every item
-        // on its left without measuring, collapsing, or reshuffling the lane.
+        configureStableStorage(
+            generation: generation,
+            keepShelfOpen: keepShelfOpen
+        )
+    }
+
+    private func configureStableStorage(
+        generation: Int,
+        keepShelfOpen: Bool
+    ) {
+        if let stableStorageLength {
+            if abs(storageAnchor.length - stableStorageLength) > 1 {
+                storageAnchor.length = stableStorageLength
+                refreshScannerExclusions()
+            }
+            repositionShelfIfNeeded(keepOpen: keepShelfOpen)
+            return
+        }
+
+        // Size the parking lane once per display environment. Recomputing it
+        // from every transient frame is the feedback loop that made the menu
+        // bar walk and blink.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) { [weak self] in
             guard
                 let self,
+                generation == self.storageUpdateGeneration,
                 let windowID = self.windowID(for: self.storageAnchor),
                 let anchorFrame = PrivateWindowServer.frame(of: windowID),
                 let screen = self.storageAnchor.button?.window?.screen ?? NSScreen.main
             else { return }
 
-            guard generation == self.storageUpdateGeneration else { return }
-            let desiredLength = min(
-                max(self.collapsedStorageLength, anchorFrame.maxX - screen.frame.minX + 8),
+            let length = min(
+                max(
+                    self.collapsedStorageLength,
+                    anchorFrame.maxX - screen.frame.minX + 64
+                ),
                 screen.frame.width + 8
             )
-            if abs(self.storageAnchor.length - desiredLength) > 1 {
-                self.storageAnchor.length = desiredLength
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            self.stableStorageLength = length
+            if abs(self.storageAnchor.length - length) > 1 {
+                self.storageAnchor.length = length
                 self.refreshScannerExclusions()
-                self.repositionShelfIfNeeded(keepOpen: keepShelfOpen)
             }
+            self.repositionShelfIfNeeded(keepOpen: keepShelfOpen)
         }
+    }
+
+    nonisolated private func parkingTarget(in anchorFrame: CGRect) -> CGPoint {
+        // The event is explicitly targeted at the anchor window. Keep the
+        // release inside its leading half: releasing just outside a narrow
+        // status item can be normalized to its trailing edge, which leaves the
+        // item on the visible side of the parking boundary.
+        CGPoint(
+            x: anchorFrame.minX + min(1, anchorFrame.width / 4),
+            y: anchorFrame.midY
+        )
     }
 
     private func repositionShelfIfNeeded(keepOpen: Bool) {
@@ -906,22 +1043,38 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = nil
     }
 
-    @objc private func environmentChanged() {
+    @objc private func environmentChanged(_ notification: Notification) {
         returnHiddenItemNow()
         closeShelf()
         resolvedStatusWindowIDs.removeAll()
+
+        // Moving between Spaces does not change the storage geometry. Reusing
+        // the captured length avoids a needless collapse/expand flash. A real
+        // display topology change already rebuilds the system menu bar, so
+        // reset to the narrow boundary and capture one new stable length after
+        // that transition settles.
+        if notification.name == NSApplication.didChangeScreenParametersNotification {
+            stableStorageLength = nil
+            storageUpdateGeneration += 1
+            storageAnchor.length = collapsedStorageLength
+            refreshScannerExclusions()
+        }
         scheduleEnvironmentRefresh(delays: [0.15, 0.65])
     }
 
     @objc private func foregroundApplicationChanged(_ notification: Notification) {
         let application = notification.userInfo?[NSWorkspace.applicationUserInfoKey]
             as? NSRunningApplication
+        let bundleIdentifier = application?.bundleIdentifier
         switch application?.bundleIdentifier {
         case "com.cursorkittens.Barr", "com.cursorkittens.Barr.debug":
             return
         default:
             break
         }
+
+        guard bundleIdentifier != foregroundBundleIdentifier else { return }
+        foregroundBundleIdentifier = bundleIdentifier
 
         // The foreground app controls the width of the native application-menu
         // lane. Re-evaluate Barr after that layout settles, and never leave a
