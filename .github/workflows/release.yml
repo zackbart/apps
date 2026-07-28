@@ -72,6 +72,15 @@ jobs:
         working-directory: app
         run: xcodegen generate
 
+      - name: Test
+        run: |
+          xcodebuild test \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO
+
       - name: Archive
         run: |
           xcodebuild archive \

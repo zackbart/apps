@@ -258,7 +258,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                         break
                     }
 
-                    let targetPoint = self.parkingTarget(in: anchorFrame)
+                    let targetPoint = MenuBarMoveGeometry.pointImmediatelyLeft(
+                        of: anchorFrame
+                    )
                     guard MenuBarMover.move(
                         windowID: currentItem.windowID,
                         sourcePID: currentItem.ownerPID,
@@ -311,20 +313,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         returnHiddenItemNow()
         closeShelf()
 
-        // Most status items expose AXPress even while their hosted window is
-        // parked offscreen. Prefer that path because it opens the app's menu
-        // without reordering a single menu-bar window. Synthetic reveal/repark
-        // remains below for unusual items that do not expose a press action.
-        if MenuBarActivator.activate(item) {
-#if DEBUG
-            barrActivationLogger.notice(
-                "Activation target=\(item.storageKey, privacy: .public) direct=true activated=true"
-            )
-#endif
-            model.activationFailed = false
-            return
-        }
-
         guard
             let controlWindowID = windowID(for: statusItem),
             let controlFrame = PrivateWindowServer.frame(of: controlWindowID)
@@ -333,7 +321,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        let revealPoint = CGPoint(x: controlFrame.minX - 1, y: controlFrame.midY)
+        let revealPoint = MenuBarMoveGeometry.pointImmediatelyLeft(
+            of: controlFrame
+        )
 
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let scannedItems = MenuBarScanner.scan(captureImages: false)
@@ -419,17 +409,19 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        let insertionX = anchorScreen.frame.minX + 8
-        if !anchorPrepared, initialAnchorFrame.minX < insertionX {
+        if
+            !anchorPrepared,
+            let preparedLength = MenuBarMoveGeometry.preparedAnchorLength(
+                currentLength: storageAnchor.length,
+                anchorFrame: initialAnchorFrame,
+                screenFrame: anchorScreen.frame,
+                collapsedLength: collapsedStorageLength
+            )
+        {
             // WindowServer will not accept a drop beside the off-display edge
             // of an expanded spacer. Shorten it only enough to expose a valid
             // insertion point. Keeping almost all of its width prevents it
             // from crossing neighboring status items and changing its order.
-            let amountToExpose = insertionX - initialAnchorFrame.minX
-            let preparedLength = max(
-                collapsedStorageLength,
-                storageAnchor.length - amountToExpose
-            )
             storageUpdateGeneration += 1
             storageAnchor.length = preparedLength
             refreshScannerExclusions()
@@ -451,7 +443,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        let targetPoint = parkingTarget(in: anchorFrame)
+        let targetPoint = MenuBarMoveGeometry.pointImmediatelyLeft(
+            of: anchorFrame
+        )
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let scannedItems = MenuBarScanner.scan(captureImages: false)
             let currentItem =
@@ -558,6 +552,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func changeMembership(
         of item: MenuBarItem,
         moveToBarr: Bool,
+        anchorPrepared: Bool = false,
         completion: @escaping (Bool) -> Void
     ) {
         guard PermissionCenter.isAccessibilityGranted else {
@@ -568,6 +563,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { [weak self] in
             guard let self else { return }
+
+            if
+                moveToBarr,
+                !anchorPrepared,
+                self.prepareStorageAnchorForInsertion()
+            {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.changeMembership(
+                        of: item,
+                        moveToBarr: true,
+                        anchorPrepared: true,
+                        completion: completion
+                    )
+                }
+                return
+            }
+
             self.refreshScannerExclusions()
             guard let (anchorWindowID, anchorFrame) = self.membershipAnchor(
                 for: item,
@@ -592,9 +604,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 """
             )
 #endif
-            let targetPoint = moveToBarr
-                ? parkingTarget(in: anchorFrame)
-                : CGPoint(x: anchorFrame.minX - 1, y: anchorFrame.midY)
+            let targetPoint = MenuBarMoveGeometry.pointImmediatelyLeft(
+                of: anchorFrame
+            )
             DispatchQueue.global(qos: .userInitiated).async {
                 let baselineItems = MenuBarScanner.scan(captureImages: false)
                 let baselineSystemKeys = Set(
@@ -694,6 +706,35 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
+    /// Temporarily exposes the leading edge of an expanded parking boundary so
+    /// WindowServer receives an on-screen destination immediately to its left.
+    /// `updateStorageState()` restores the stable expanded length after the
+    /// membership transaction completes.
+    private func prepareStorageAnchorForInsertion() -> Bool {
+        guard
+            let anchorWindowID = windowID(for: storageAnchor),
+            let anchorFrame = PrivateWindowServer.frame(of: anchorWindowID),
+            let anchorScreen = storageAnchor.button?.window?.screen ?? NSScreen.main
+        else {
+            return false
+        }
+
+        guard
+            let preparedLength = MenuBarMoveGeometry.preparedAnchorLength(
+                currentLength: storageAnchor.length,
+                anchorFrame: anchorFrame,
+                screenFrame: anchorScreen.frame,
+                collapsedLength: collapsedStorageLength
+            )
+        else {
+            return false
+        }
+        storageUpdateGeneration += 1
+        storageAnchor.length = preparedLength
+        refreshScannerExclusions()
+        return true
+    }
+
     private func updateStorageState() {
         guard storageAnchor != nil else { return }
         storageUpdateGeneration += 1
@@ -744,7 +785,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             let length = min(
                 max(
                     self.collapsedStorageLength,
-                    anchorFrame.maxX - screen.frame.minX + 64
+                    anchorFrame.maxX - screen.frame.minX + 8
                 ),
                 screen.frame.width + 8
             )
@@ -755,17 +796,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             }
             self.repositionShelfIfNeeded(keepOpen: keepShelfOpen)
         }
-    }
-
-    nonisolated private func parkingTarget(in anchorFrame: CGRect) -> CGPoint {
-        // The event is explicitly targeted at the anchor window. Keep the
-        // release inside its leading half: releasing just outside a narrow
-        // status item can be normalized to its trailing edge, which leaves the
-        // item on the visible side of the parking boundary.
-        CGPoint(
-            x: anchorFrame.minX + min(1, anchorFrame.width / 4),
-            y: anchorFrame.midY
-        )
     }
 
     private func repositionShelfIfNeeded(keepOpen: Bool) {

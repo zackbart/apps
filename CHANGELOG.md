@@ -2,6 +2,26 @@
 
 All notable changes to Barr are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+- Restored deterministic WindowServer menu-bar moves by picking items up from
+  the required offscreen sentinel instead of the user's cursor position.
+- Dropped items immediately beside Barr's control and parking boundary rather
+  than inside those windows, where macOS could leave them on the wrong side.
+- Removed direct activation of offscreen status items. Barr now reveals the
+  original item before activating it, then returns that exact hosted window.
+- Reduced the parking lane to the minimum offscreen overscan so moving and
+  restoring an item does less menu-bar layout work.
+
+## [0.0.7] - 2026-07-28
+
+### Changed
+
+- Added foreground-app and display-aware menu-bar reconciliation, coalesced
+  shelf sizing, and cursor restoration around synthetic menu-bar events.
+
 ## [0.0.6] - 2026-07-24
 
 ### Changed
@@ -78,6 +98,8 @@ All notable changes to Barr are documented here.
 
 - Initial signed and notarized release.
 
+[Unreleased]: https://github.com/zackbart/barr/compare/v0.0.7...HEAD
+[0.0.7]: https://github.com/zackbart/barr/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/zackbart/barr/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/zackbart/barr/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/zackbart/barr/compare/v0.0.3...v0.0.4
