@@ -46,7 +46,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func finishApplicationLaunch() {
         configureStatusItems()
         startupReconciliationComplete = model.movedItemKeys.isEmpty
-        refreshScannerExclusions()
         model.onItemsChanged = { [weak self] in
             self?.itemsChanged()
         }
