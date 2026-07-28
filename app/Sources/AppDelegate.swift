@@ -906,12 +906,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // gateway to every parked item, so restore it to the highest visible
         // status-item priority every time the process starts.
         setPreferredPosition(0, autosaveName: "BarrControl", force: true)
-#if DEBUG
-        let controlLength: CGFloat = 76
-#else
-        let controlLength = NSStatusItem.squareLength
-#endif
-        statusItem = NSStatusBar.system.statusItem(withLength: controlLength)
+        // Keep this variable-length even though the release control contains
+        // only an icon. On macOS 26, a square-length status item can disappear
+        // when Control Center re-hosts its remote status-item scene after launch.
+        statusItem = NSStatusBar.system.statusItem(
+            withLength: NSStatusItem.variableLength
+        )
         statusItem.autosaveName = "BarrControl"
 #if DEBUG
         statusItem.button?.image = NSImage(
