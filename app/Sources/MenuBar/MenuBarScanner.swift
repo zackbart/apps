@@ -54,7 +54,9 @@ enum MenuBarScanner {
                 // once Barr parks them beyond the screen edge. Their IDs and
                 // private frames remain valid, so keep using that exact window
                 // instead of relabelling a visible neighbor with similar geometry.
-                let candidate = available.first { $0.windowID == previousID } ?? rawWindow(previousID)
+                let candidate =
+                    available.first { $0.windowID == previousID } ??
+                    rawWindow(previousID, assumeOnScreen: false)
                 guard let candidate, matchCost(candidate.frame, source.frame) <= 320 else {
                     windowIDBySourceKey.removeValue(forKey: source.sourceKey)
                     return nil
@@ -147,19 +149,31 @@ enum MenuBarScanner {
             result[CGWindowID(number.uint32Value)] = description
         }
         return windowIDs.compactMap {
-            rawWindow($0, description: descriptionsByID[$0])
+            rawWindow(
+                $0,
+                description: descriptionsByID[$0],
+                assumeOnScreen: true
+            )
         }
-    }
-
-    private static func rawWindow(_ windowID: CGWindowID) -> RawWindow? {
-        let values = [windowID] as CFArray
-        let description = (CGWindowListCreateDescriptionFromArray(values) as? [[CFString: Any]])?.first
-        return rawWindow(windowID, description: description)
     }
 
     private static func rawWindow(
         _ windowID: CGWindowID,
-        description: [CFString: Any]?
+        assumeOnScreen: Bool
+    ) -> RawWindow? {
+        let values = [windowID] as CFArray
+        let description = (CGWindowListCreateDescriptionFromArray(values) as? [[CFString: Any]])?.first
+        return rawWindow(
+            windowID,
+            description: description,
+            assumeOnScreen: assumeOnScreen
+        )
+    }
+
+    private static func rawWindow(
+        _ windowID: CGWindowID,
+        description: [CFString: Any]?,
+        assumeOnScreen: Bool
     ) -> RawWindow? {
         let describedFrame = (description?[kCGWindowBounds] as? NSDictionary)
             .flatMap(CGRect.init(dictionaryRepresentation:))
@@ -171,7 +185,7 @@ enum MenuBarScanner {
             ownerName: description?[kCGWindowOwnerName] as? String ?? "Menu bar app",
             title: description?[kCGWindowName] as? String,
             frame: frame,
-            isOnScreen: description?[kCGWindowIsOnscreen] as? Bool ?? true
+            isOnScreen: description?[kCGWindowIsOnscreen] as? Bool ?? assumeOnScreen
         )
     }
 
@@ -246,12 +260,27 @@ enum MenuBarScanner {
                 noStatusItemCheckedAt.removeValue(forKey: app.processIdentifier)
             }
             let useBundleIdentity = !systemStatusProvider && children.count == 1
+            let childTitles = children.map {
+                statusItemName($0.0, useSystemFallbacks: systemStatusProvider)
+            }
+            let rawIdentifiers = children.map {
+                axString($0.0, attribute: kAXIdentifierAttribute as CFString)
+                    .flatMap {
+                        $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                            ? nil
+                            : $0
+                    }
+            }
+            let disambiguatedIdentifiers =
+                MenuBarItemIdentity.disambiguatedStableIdentifiers(
+                    rawIdentifiers: rawIdentifiers,
+                    titles: childTitles
+                )
 
-            return children.map { pair in
+            return children.enumerated().map { index, pair in
                 let (child, frame) = pair
-                let title = statusItemName(child, useSystemFallbacks: systemStatusProvider)
-                let rawIdentifier = axString(child, attribute: kAXIdentifierAttribute as CFString)
-                    .flatMap { $0.isEmpty ? nil : $0 }
+                let title = childTitles[index]
+                let rawIdentifier = rawIdentifiers[index]
                 let stableIdentifier: String?
                 if systemStatusProvider {
                     stableIdentifier = statusItemIdentifier(child)
@@ -260,7 +289,7 @@ enum MenuBarScanner {
                 } else if useBundleIdentity {
                     stableIdentifier = ""
                 } else {
-                    stableIdentifier = title
+                    stableIdentifier = disambiguatedIdentifiers[index]
                 }
 
                 return AccessibilitySource(

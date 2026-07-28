@@ -122,8 +122,14 @@ enum MenuBarActivator {
 
     private static func elementAttribute(_ element: AXUIElement, _ attribute: CFString) -> AXUIElement? {
         var value: CFTypeRef?
-        guard AXUIElementCopyAttributeValue(element, attribute, &value) == .success else { return nil }
-        return (value as! AXUIElement?)
+        guard
+            AXUIElementCopyAttributeValue(element, attribute, &value) == .success,
+            let value,
+            CFGetTypeID(value) == AXUIElementGetTypeID()
+        else {
+            return nil
+        }
+        return unsafeDowncast(value as AnyObject, to: AXUIElement.self)
     }
 
     private static func elementArrayAttribute(_ element: AXUIElement, _ attribute: CFString) -> [AXUIElement] {
@@ -154,8 +160,14 @@ enum MenuBarActivator {
 
     private static func valueAttribute(_ element: AXUIElement, _ attribute: CFString) -> AXValue? {
         var value: CFTypeRef?
-        guard AXUIElementCopyAttributeValue(element, attribute, &value) == .success else { return nil }
-        return value as! AXValue?
+        guard
+            AXUIElementCopyAttributeValue(element, attribute, &value) == .success,
+            let value,
+            CFGetTypeID(value) == AXValueGetTypeID()
+        else {
+            return nil
+        }
+        return unsafeDowncast(value as AnyObject, to: AXValue.self)
     }
 
     private static func stringAttribute(_ element: AXUIElement, _ attribute: CFString) -> String? {

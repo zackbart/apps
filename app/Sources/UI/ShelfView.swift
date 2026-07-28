@@ -28,32 +28,42 @@ struct ShelfView: View {
     }
 
     private var shelf: some View {
-        HStack(spacing: 4) {
-            ScrollView(.horizontal, showsIndicators: false) {
-                iconRow(items: model.barrItems, action: model.activate)
+        VStack(spacing: 0) {
+            if model.activationFailed {
+                errorBanner("That item didn’t open. Try it again.")
             }
 
-            Divider()
-                .frame(height: 24)
+            HStack(spacing: 4) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    iconRow(items: model.barrItems, action: model.activate)
+                }
 
-            Button {
-                model.setManaging(true)
-            } label: {
-                Image(systemName: "slider.horizontal.3")
-                    .font(.system(size: 15, weight: .medium))
-                    .frame(
-                        width: MenuBarItem.iconHitTarget,
-                        height: MenuBarItem.iconHitTarget
-                    )
+                Divider()
+                    .frame(height: 24)
+
+                Button {
+                    model.setManaging(true)
+                } label: {
+                    Image(systemName: "slider.horizontal.3")
+                        .font(.system(size: 15, weight: .medium))
+                        .frame(
+                            width: MenuBarItem.iconHitTarget,
+                            height: MenuBarItem.iconHitTarget
+                        )
+                }
+                .buttonStyle(ShelfButtonStyle())
+                .help("Choose menu bar apps")
             }
-            .buttonStyle(ShelfButtonStyle())
-            .help("Choose menu bar apps")
+            .padding(.horizontal, 7)
         }
-        .padding(.horizontal, 7)
     }
 
     private var manager: some View {
         VStack(spacing: 0) {
+            if model.membershipChangeFailed {
+                errorBanner("Barr couldn’t move that item. Try it again.")
+            }
+
             laneHeader("In Barr", detail: "Click to return") {
                 Button("Done") { model.setManaging(false) }
                     .controlSize(.small)
@@ -76,7 +86,7 @@ struct ShelfView: View {
                     "System items",
                     isOn: Binding(
                         get: { model.showsSystemItems },
-                        set: model.setShowsSystemItems
+                        set: { model.setShowsSystemItems($0) }
                     )
                 )
                 .font(.system(size: 10))
@@ -133,7 +143,7 @@ struct ShelfView: View {
                 "Open at Login",
                 isOn: Binding(
                     get: { model.opensAtLogin },
-                    set: model.setOpensAtLogin
+                    set: { model.setOpensAtLogin($0) }
                 )
             )
             .labelsHidden()
@@ -183,6 +193,18 @@ struct ShelfView: View {
         }
         .padding(.horizontal, 12)
         .frame(height: 48)
+    }
+
+    private func errorBanner(_ text: String) -> some View {
+        HStack(spacing: 6) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .foregroundStyle(.orange)
+            Text(text)
+                .font(.system(size: 10, weight: .medium))
+            Spacer()
+        }
+        .padding(.horizontal, 10)
+        .frame(height: 26)
     }
 
     private func iconRow(

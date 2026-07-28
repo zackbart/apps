@@ -2,7 +2,7 @@ import AppKit
 import CoreGraphics
 
 enum MenuBarMover {
-    private static let targetedWindowField = CGEventField(rawValue: 0x33)!
+    private static let targetedWindowField = CGEventField(rawValue: 0x33)
     private static let offscreenStartPoint = CGPoint(x: 20_000, y: 20_000)
     private static let moveLock = NSLock()
 
@@ -19,6 +19,7 @@ enum MenuBarMover {
         moveLock.lock()
         defer { moveLock.unlock() }
 
+        guard let targetedWindowField else { return false }
         guard let source = CGEventSource(stateID: .hidSystemState) else { return false }
         guard let originalCursorPosition = CGEvent(source: nil)?.location else { return false }
         let permitted: CGEventFilterMask = [
@@ -37,6 +38,7 @@ enum MenuBarMover {
                 point: offscreenStartPoint,
                 windowID: windowID,
                 targetPID: sourcePID,
+                targetedWindowField: targetedWindowField,
                 flags: .maskCommand
             ),
             let up = event(
@@ -45,6 +47,7 @@ enum MenuBarMover {
                 point: targetPoint,
                 windowID: anchorWindowID,
                 targetPID: sourcePID,
+                targetedWindowField: targetedWindowField,
                 flags: []
             )
         else { return false }
@@ -87,6 +90,7 @@ enum MenuBarMover {
         point: CGPoint,
         windowID: CGWindowID,
         targetPID: pid_t,
+        targetedWindowField: CGEventField,
         flags: CGEventFlags
     ) -> CGEvent? {
         guard let event = CGEvent(

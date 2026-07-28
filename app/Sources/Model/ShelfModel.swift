@@ -11,7 +11,8 @@ final class ShelfModel: ObservableObject {
     @Published private(set) var canCaptureScreen = PermissionCenter.canCaptureScreen
     @Published private(set) var canUseAccessibility = PermissionCenter.isAccessibilityGranted
     @Published private(set) var screenCaptureNeedsRestart = false
-    @Published var activationFailed = false
+    @Published private(set) var activationFailed = false
+    @Published private(set) var membershipChangeFailed = false
     @Published private(set) var showsSystemItems: Bool
     @Published private(set) var opensAtLogin: Bool
     @Published private(set) var loginItemRequiresApproval: Bool
@@ -22,7 +23,8 @@ final class ShelfModel: ObservableObject {
     var onRefreshCompleted: (() -> Void)?
     var onActivate: ((MenuBarItem) -> Void)?
     var onRestart: (() -> Void)?
-    var onMembershipChange: ((MenuBarItem, Bool, @escaping (Bool) -> Void) -> Void)?
+    var onMembershipChange:
+        ((MenuBarItem, Bool, @escaping @MainActor @Sendable (Bool) -> Void) -> Void)?
     private var refreshInProgress = false
     private var refreshRequested = false
     private var refreshRequestedCaptureImages = false
@@ -89,10 +91,9 @@ final class ShelfModel: ObservableObject {
         }
         updatePermissionState(refreshWhenReady: false)
 
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+        DispatchQueue.global(qos: .userInitiated).async { [self] in
             let found = MenuBarScanner.scan(captureImages: captureImages)
             DispatchQueue.main.async {
-                guard let self else { return }
                 self.migrateLegacyKeys(using: found)
                 let existingItems = Dictionary(
                     self.items.map { ($0.storageKey, $0) },
@@ -139,8 +140,14 @@ final class ShelfModel: ObservableObject {
             PermissionCenter.requestAccessibility()
             return
         }
-        activationFailed = false
+        setActivationFailed(false)
         onActivate?(item)
+    }
+
+    func setActivationFailed(_ failed: Bool) {
+        guard activationFailed != failed else { return }
+        activationFailed = failed
+        onLayoutChanged?()
     }
 
     func moveToBarr(_ item: MenuBarItem) {
@@ -216,6 +223,7 @@ final class ShelfModel: ObservableObject {
 
     private func changeMembership(of item: MenuBarItem, moveToBarr: Bool) {
         guard pendingMembershipChange == nil, let onMembershipChange else { return }
+        setMembershipChangeFailed(false)
         pendingMembershipChange = PendingMembershipChange(
             itemKey: item.storageKey,
             moveToBarr: moveToBarr
@@ -231,10 +239,18 @@ final class ShelfModel: ObservableObject {
                     self.movedItemKeys.remove(item.storageKey)
                 }
                 UserDefaults.standard.set(self.movedItemKeys.sorted(), forKey: "BarrMovedItemKeys")
+            } else {
+                self.setMembershipChangeFailed(true)
             }
             self.pendingMembershipChange = nil
             self.onItemsChanged?()
         }
+    }
+
+    private func setMembershipChangeFailed(_ failed: Bool) {
+        guard membershipChangeFailed != failed else { return }
+        membershipChangeFailed = failed
+        onLayoutChanged?()
     }
 
     private func isInBarr(_ itemKey: String) -> Bool {

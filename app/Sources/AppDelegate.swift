@@ -13,13 +13,21 @@ private let barrActivationLogger = Logger(
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    private struct PendingItemReturn {
+        let item: MenuBarItem
+        let baselineWindowIDs: Set<CGWindowID>
+        let armedAt: TimeInterval
+        var interfaceWindowIDs: Set<CGWindowID>
+    }
+
     private let model = ShelfModel()
     private var statusItem: NSStatusItem!
     private var storageAnchor: NSStatusItem!
-    private var shelfPanel: ShelfPanel!
+    private var shelfPanel: ShelfPanel?
     private var returnMonitor: Any?
     private var returnFallback: DispatchWorkItem?
-    private var pendingReturn: (() -> Void)?
+    private var pendingReturn: PendingItemReturn?
+    private var returnCheckGeneration = 0
     private var shelfGlobalDismissMonitor: Any?
     private var shelfLocalDismissMonitor: Any?
     private var storageUpdateGeneration = 0
@@ -35,13 +43,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private let collapsedStorageLength: CGFloat = 2
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        // Construct the SwiftUI host and let its initial layout finish before
-        // macOS begins laying out the Control Center-hosted status-item scenes.
-        // Interleaving those two layout passes re-enters AppKit on macOS 26.
         if model.movedItemKeys.isEmpty {
             model.setManaging(true)
         }
-        shelfPanel = ShelfPanel(model: model)
         DispatchQueue.main.async { [weak self] in
             self?.finishApplicationLaunch()
         }
@@ -56,7 +60,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             self?.itemsChanged()
         }
         model.onLayoutChanged = { [weak self] in
-            self?.shelfPanel.scheduleResizeToFit()
+            self?.shelfPanel?.scheduleResizeToFit()
         }
         model.onRefreshCompleted = { [weak self] in
             self?.refreshCompleted()
@@ -106,8 +110,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             self?.refreshScannerExclusions()
             self?.model.refresh()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) { [weak self] in
-            self?.requestStartupShelf()
+        if
+            model.movedItemKeys.isEmpty ||
+            !model.canCaptureScreen ||
+            !model.canUseAccessibility
+        {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) { [weak self] in
+                self?.requestStartupShelf()
+            }
         }
     }
 
@@ -134,7 +144,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func itemsChanged() {
-        shelfPanel.scheduleResizeToFit()
+        shelfPanel?.scheduleResizeToFit()
         if startupReconciliationComplete {
             updateStorageState()
         } else {
@@ -236,7 +246,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func reconcile(
         _ persistedItems: [MenuBarItem],
         beside anchorWindowID: CGWindowID,
-        completion: @escaping (Bool) -> Void
+        completion: @escaping @MainActor @Sendable (Bool) -> Void
     ) {
         DispatchQueue.global(qos: .userInitiated).async {
             var movedAnyItem = false
@@ -288,8 +298,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
 
+            let didMoveAnyItem = movedAnyItem
             DispatchQueue.main.async {
-                completion(movedAnyItem)
+                completion(didMoveAnyItem)
             }
         }
     }
@@ -317,7 +328,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             let controlWindowID = windowID(for: statusItem),
             let controlFrame = PrivateWindowServer.frame(of: controlWindowID)
         else {
-            model.activationFailed = true
+            model.setActivationFailed(true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { [weak self] in
+                self?.showShelf(refreshItems: false)
+            }
             return
         }
 
@@ -325,7 +339,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             of: controlFrame
         )
 
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+        DispatchQueue.global(qos: .userInitiated).async { [self] in
             let scannedItems = MenuBarScanner.scan(captureImages: false)
             let currentItem =
                 scannedItems.first { $0.windowID == item.windowID } ??
@@ -338,7 +352,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 at: revealPoint
             )
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
-                guard let self else { return }
                 let revealedCandidates = MenuBarScanner.scan(captureImages: false).filter {
                     $0.storageKey == item.storageKey
                 }
@@ -348,7 +361,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                             abs($1.frame.midX - revealPoint.x)
                     } ??
                     currentItem
-                let activated = moved && MenuBarActivator.activate(revealedItem)
+                let itemIsActuallyVisible =
+                    revealedItem.isOnScreen &&
+                    PrivateWindowServer.menuBarWindowIDs().contains(revealedItem.windowID)
+                let baselineWindowIDs = PrivateWindowServer.onScreenWindowIDs(
+                    ownedBy: revealedItem.ownerPID
+                )
+                let activated =
+                    moved &&
+                    itemIsActuallyVisible &&
+                    MenuBarActivator.activate(revealedItem)
 #if DEBUG
                 barrActivationLogger.notice(
                     """
@@ -358,8 +380,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                     """
                 )
 #endif
-                self.model.activationFailed = !activated
-                guard moved else {
+                self.model.setActivationFailed(!activated)
+                guard moved, itemIsActuallyVisible else {
                     self.showShelf()
                     return
                 }
@@ -368,7 +390,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                     // Multiple proxy windows can share an app identity, and
                     // falling back to the first storage-key match can re-park
                     // a stale proxy while leaving the live icon visible.
-                    self.armReturn(item: revealedItem)
+                    self.armReturn(
+                        item: revealedItem,
+                        baselineWindowIDs: baselineWindowIDs
+                    )
                 } else {
                     self.parkItem(revealedItem)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -379,20 +404,87 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    private func armReturn(item: MenuBarItem) {
-        pendingReturn = { [weak self] in self?.parkItem(item) }
+    private func armReturn(
+        item: MenuBarItem,
+        baselineWindowIDs: Set<CGWindowID>
+    ) {
+        pendingReturn = PendingItemReturn(
+            item: item,
+            baselineWindowIDs: baselineWindowIDs,
+            armedAt: ProcessInfo.processInfo.systemUptime,
+            interfaceWindowIDs: []
+        )
 
         returnMonitor = NSEvent.addGlobalMonitorForEvents(
             matching: [.leftMouseDown, .rightMouseDown, .keyDown]
         ) { [weak self] _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                self?.returnHiddenItemNow()
+            DispatchQueue.main.async {
+                self?.scheduleReturnCheck(after: 0.35)
             }
         }
 
-        let fallback = DispatchWorkItem { [weak self] in self?.returnHiddenItemNow() }
+        let fallback = DispatchWorkItem { [weak self] in
+            self?.attemptReturnHiddenItem()
+        }
         returnFallback = fallback
         DispatchQueue.main.asyncAfter(deadline: .now() + 30, execute: fallback)
+    }
+
+    private func scheduleReturnCheck(after delay: TimeInterval) {
+        guard pendingReturn != nil else { return }
+        returnCheckGeneration += 1
+        let generation = returnCheckGeneration
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            guard
+                let self,
+                generation == self.returnCheckGeneration
+            else {
+                return
+            }
+            self.attemptReturnHiddenItem()
+        }
+    }
+
+    private func attemptReturnHiddenItem() {
+        guard var pendingReturn else { return }
+
+        if pendingReturn.interfaceWindowIDs.isEmpty {
+            let currentWindowIDs = PrivateWindowServer.onScreenWindowIDs(
+                ownedBy: pendingReturn.item.ownerPID
+            )
+            pendingReturn.interfaceWindowIDs =
+                currentWindowIDs
+                    .subtracting(pendingReturn.baselineWindowIDs)
+            self.pendingReturn = pendingReturn
+        }
+
+        if
+            pendingReturn.interfaceWindowIDs.contains(where: {
+                PrivateWindowServer.interfaceWindowIsVisible(
+                    $0,
+                    ownedBy: pendingReturn.item.ownerPID
+                )
+            })
+        {
+            // Pop-up menus and app-owned popovers must remain attached to the
+            // original status item for their entire lifetime. Check again after
+            // the interface closes instead of yanking the item away on its first
+            // click.
+            scheduleReturnCheck(after: 0.6)
+            return
+        }
+
+        let armedDuration =
+            ProcessInfo.processInfo.systemUptime - pendingReturn.armedAt
+        if pendingReturn.interfaceWindowIDs.isEmpty, armedDuration < 0.8 {
+            // Some menu extras create their interface a few frames after AXPress.
+            // Give that window enough time to appear before treating the click as
+            // a menu that has already closed.
+            scheduleReturnCheck(after: 0.2)
+            return
+        }
+
+        returnHiddenItemNow()
     }
 
     private func parkItem(
@@ -446,7 +538,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let targetPoint = MenuBarMoveGeometry.pointImmediatelyLeft(
             of: anchorFrame
         )
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+        DispatchQueue.global(qos: .userInitiated).async { [self] in
             let scannedItems = MenuBarScanner.scan(captureImages: false)
             let currentItem =
                 scannedItems.first { $0.windowID == originalItem.windowID } ??
@@ -496,9 +588,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             )
 #endif
 
+            let itemWasParked = parked
             DispatchQueue.main.async {
-                guard let self else { return }
-                if parked {
+                if itemWasParked {
                     self.updateStorageState()
                     self.model.refresh(captureImages: false)
                 } else {
@@ -525,9 +617,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         returnFallback?.cancel()
         returnFallback = nil
-        let action = pendingReturn
+        returnCheckGeneration += 1
+        let item = pendingReturn?.item
         pendingReturn = nil
-        action?()
+        if let item {
+            parkItem(item)
+        }
     }
 
     private func restartApplication() {
@@ -553,7 +648,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         of item: MenuBarItem,
         moveToBarr: Bool,
         anchorPrepared: Bool = false,
-        completion: @escaping (Bool) -> Void
+        completion: @escaping @MainActor @Sendable (Bool) -> Void
     ) {
         guard PermissionCenter.isAccessibilityGranted else {
             PermissionCenter.requestAccessibility()
@@ -698,8 +793,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 }
 #endif
 
+                let moveSucceeded = moved
                 DispatchQueue.main.async {
-                    completion(moved)
+                    completion(moveSucceeded)
                     self.model.refresh()
                 }
             }
@@ -800,7 +896,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func repositionShelfIfNeeded(keepOpen: Bool) {
         guard keepOpen, let button = statusItem.button else { return }
-        shelfPanel.show(relativeTo: button)
+        shelfPanel?.show(relativeTo: button)
     }
 
     private func configureStatusItems() {
@@ -810,7 +906,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // gateway to every parked item, so restore it to the highest visible
         // status-item priority every time the process starts.
         setPreferredPosition(0, autosaveName: "BarrControl", force: true)
-        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+#if DEBUG
+        let controlLength: CGFloat = 76
+#else
+        let controlLength = NSStatusItem.squareLength
+#endif
+        statusItem = NSStatusBar.system.statusItem(withLength: controlLength)
         statusItem.autosaveName = "BarrControl"
 #if DEBUG
         statusItem.button?.image = NSImage(
@@ -981,7 +1082,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func toggleShelf() {
-        shelfPanel.isVisible ? closeShelf() : showShelf()
+        shelfPanel?.isVisible == true ? closeShelf() : showShelf()
     }
 
     private func showShelf(attempt: Int = 0, refreshItems: Bool = true) {
@@ -994,6 +1095,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             retryShowingShelf(after: attempt)
             return
         }
+        let shelfPanel = shelfPanel ?? {
+            let panel = ShelfPanel(model: model)
+            self.shelfPanel = panel
+            return panel
+        }()
         if shelfPanel.show(relativeTo: button) {
             installShelfDismissMonitors()
         } else {
@@ -1107,9 +1213,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         foregroundBundleIdentifier = bundleIdentifier
 
         // The foreground app controls the width of the native application-menu
-        // lane. Re-evaluate Barr after that layout settles, and never leave a
-        // temporarily revealed item exposed across the transition.
-        returnHiddenItemNow()
+        // lane. If a revealed item opened an app-owned window, keep its status
+        // item in place until that interface closes or loses focus.
+        if pendingReturn != nil {
+            scheduleReturnCheck(after: 0.2)
+        } else {
+            returnHiddenItemNow()
+        }
         closeShelf()
         scheduleEnvironmentRefresh(delays: [0.2])
     }

@@ -14,6 +14,20 @@ All notable changes to Barr are documented here.
   original item before activating it, then returns that exact hosted window.
 - Reduced the parking lane to the minimum offscreen overscan so moving and
   restoring an item does less menu-bar layout work.
+- Verified that a temporarily restored item is genuinely on screen before
+  clicking it instead of treating missing WindowServer metadata as success.
+- Kept restored items in place while their menu, popover, or app-owned window
+  remains open, then returned them after the interface closes.
+- Prevented malformed Accessibility attributes from crashing activation.
+- Kept normal login launches quiet once Barr is configured while continuing to
+  show setup and permission guidance when it is needed.
+- Deferred the SwiftUI shelf window until it is actually needed and made the
+  release status control fixed-width to reduce launch-time AppKit layout work.
+- Added visible feedback when activation or membership changes fail.
+- Gave multiple unnamed or identically titled items from one app distinct,
+  persistent identities instead of collapsing them into one shelf entry.
+- Removed strict-concurrency diagnostics from the app target so background
+  scans and main-thread completions have explicit isolation boundaries.
 
 ## [0.0.7] - 2026-07-28
 
