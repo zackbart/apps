@@ -28,6 +28,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var startupShelfRequested = false
     private var persistedItemReconciliationInProgress = false
     private var runningApplicationsGeneration = 0
+    private var environmentRefreshGeneration = 0
+    private var resolvedStatusWindowIDs = [String: CGWindowID]()
     private let collapsedStorageLength: CGFloat = 2
 
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -79,6 +81,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             name: NSWorkspace.didTerminateApplicationNotification,
             object: nil
         )
+        NSWorkspace.shared.notificationCenter.addObserver(
+            self,
+            selector: #selector(foregroundApplicationChanged),
+            name: NSWorkspace.didActivateApplicationNotification,
+            object: nil
+        )
 
         if model.movedItemKeys.isEmpty {
             model.setManaging(true)
@@ -123,6 +131,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         if startupReconciliationComplete {
+            updateStorageState()
             reconcileNewlyVisiblePersistedItems()
             presentStartupShelfIfReady()
             return
@@ -716,7 +725,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func windowID(for item: NSStatusItem?) -> CGWindowID? {
-        guard let button = item?.button, let window = button.window else { return nil }
+        guard
+            let item,
+            let button = item.button,
+            let window = button.window
+        else { return nil }
 
         let number = window.windowNumber
         if
@@ -724,28 +737,60 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             let windowID = CGWindowID(exactly: number),
             PrivateWindowServer.frame(of: windowID) != nil
         {
+            if let autosaveName = item.autosaveName {
+                resolvedStatusWindowIDs[autosaveName] = windowID
+            }
             return windowID
         }
 
         // Tahoe hosts status items in another process, so NSWindow.windowNumber
-        // can be -1. Resolve our item from its horizontal screen geometry.
+        // can be -1. Resolve our item from its geometry on the display that
+        // actually hosts the AppKit status button.
         let buttonFrame = window.convertToScreen(button.convert(button.bounds, to: nil))
-        let maximumScore = max(100, buttonFrame.width * 0.2)
-        return PrivateWindowServer.menuBarWindowIDs()
+        let displayBounds = (window.screen ?? NSScreen.main).flatMap(
+            StatusWindowGeometry.quartzDisplayBounds
+        )
+        let liveWindowIDs = PrivateWindowServer.menuBarWindowIDs()
+
+        if
+            let autosaveName = item.autosaveName,
+            let cachedWindowID = resolvedStatusWindowIDs[autosaveName],
+            liveWindowIDs.contains(cachedWindowID),
+            let cachedFrame = PrivateWindowServer.frame(of: cachedWindowID),
+            StatusWindowGeometry.matches(
+                frame: cachedFrame,
+                buttonFrame: buttonFrame,
+                displayBounds: displayBounds
+            )
+        {
+            return cachedWindowID
+        }
+
+        let match = liveWindowIDs
             .compactMap { windowID -> (CGWindowID, CGFloat)? in
                 guard
                     let frame = PrivateWindowServer.frame(of: windowID),
                     frame.width > 0,
-                    abs(frame.height - buttonFrame.height) < 20
+                    StatusWindowGeometry.matches(
+                        frame: frame,
+                        buttonFrame: buttonFrame,
+                        displayBounds: displayBounds
+                    )
                 else {
                     return nil
                 }
-                let score = abs(frame.midX - buttonFrame.midX) + abs(frame.width - buttonFrame.width) * 2
+                let score =
+                    abs(frame.midX - buttonFrame.midX) +
+                    abs(frame.width - buttonFrame.width) * 0.5
                 return (windowID, score)
             }
-            .filter { $0.1 < maximumScore }
             .min { $0.1 < $1.1 }?
             .0
+
+        if let autosaveName = item.autosaveName {
+            resolvedStatusWindowIDs[autosaveName] = match
+        }
+        return match
     }
 
     @objc private func statusItemPressed(_ sender: Any?) {
@@ -854,9 +899,43 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func environmentChanged() {
+        returnHiddenItemNow()
         closeShelf()
-        refreshScannerExclusions()
-        model.refresh(captureImages: false)
+        resolvedStatusWindowIDs.removeAll()
+        scheduleEnvironmentRefresh(delays: [0.15, 0.65])
+    }
+
+    @objc private func foregroundApplicationChanged(_ notification: Notification) {
+        let application = notification.userInfo?[NSWorkspace.applicationUserInfoKey]
+            as? NSRunningApplication
+        switch application?.bundleIdentifier {
+        case "com.cursorkittens.Barr", "com.cursorkittens.Barr.debug":
+            return
+        default:
+            break
+        }
+
+        // The foreground app controls the width of the native application-menu
+        // lane. Re-evaluate Barr after that layout settles, and never leave a
+        // temporarily revealed item exposed across the transition.
+        returnHiddenItemNow()
+        closeShelf()
+        scheduleEnvironmentRefresh(delays: [0.2])
+    }
+
+    private func scheduleEnvironmentRefresh(delays: [TimeInterval]) {
+        environmentRefreshGeneration += 1
+        let generation = environmentRefreshGeneration
+        for delay in delays {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                guard
+                    let self,
+                    generation == self.environmentRefreshGeneration
+                else { return }
+                self.refreshScannerExclusions()
+                self.model.refresh(captureImages: false)
+            }
+        }
     }
 
     @objc private func runningApplicationsChanged(_ notification: Notification) {
