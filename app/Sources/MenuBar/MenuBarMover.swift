@@ -3,17 +3,22 @@ import CoreGraphics
 
 enum MenuBarMover {
     private static let targetedWindowField = CGEventField(rawValue: 0x33)!
-    private static let harmlessOffscreenPoint = CGPoint(x: 20_000, y: 20_000)
+    private static let moveLock = NSLock()
 
-    /// Reorders a status item without dragging the pointer through the notch.
+    /// Reorders a status item without leaving the user's pointer at the drag
+    /// destination. WindowServer treats these events as one global mouse
+    /// stream, so only one synthetic drag may be in flight at a time.
     static func move(
         windowID: CGWindowID,
         sourcePID: pid_t,
         beside anchorWindowID: CGWindowID,
         at targetPoint: CGPoint
     ) -> Bool {
+        moveLock.lock()
+        defer { moveLock.unlock() }
+
         guard let source = CGEventSource(stateID: .combinedSessionState) else { return false }
-        let originalCursorPosition = CGEvent(source: nil)?.location
+        guard let originalCursorPosition = CGEvent(source: nil)?.location else { return false }
         let permitted: CGEventFilterMask = [
             .permitLocalMouseEvents,
             .permitLocalKeyboardEvents,
@@ -27,7 +32,7 @@ enum MenuBarMover {
             let down = event(
                 source: source,
                 type: .leftMouseDown,
-                point: harmlessOffscreenPoint,
+                point: originalCursorPosition,
                 windowID: windowID,
                 targetPID: sourcePID,
                 flags: .maskCommand
@@ -42,29 +47,28 @@ enum MenuBarMover {
             )
         else { return false }
 
-        CGDisplayHideCursor(CGMainDisplayID())
-        defer {
-            if let originalCursorPosition {
-                CGWarpMouseCursorPosition(originalCursorPosition)
-            }
-            CGDisplayShowCursor(CGMainDisplayID())
-        }
         down.post(tap: .cghidEventTap)
         Thread.sleep(forTimeInterval: 0.08)
         up.post(tap: .cghidEventTap)
-        Thread.sleep(forTimeInterval: 0.05)
+
+        // Restore immediately after releasing the drag. Hiding the cursor
+        // around this operation used macOS's process-global hide counter and
+        // could strand the cursor after overlapping moves or display changes.
+        // Restoring before the next display frame also avoids a visible jump
+        // to the menu-bar insertion point.
+        CGWarpMouseCursorPosition(originalCursorPosition)
 
         if let safetyUp = event(
             source: source,
             type: .leftMouseUp,
-            point: targetPoint,
+            point: originalCursorPosition,
             windowID: anchorWindowID,
             targetPID: sourcePID,
             flags: []
         ) {
             safetyUp.post(tap: .cghidEventTap)
         }
-        Thread.sleep(forTimeInterval: 0.02)
+        Thread.sleep(forTimeInterval: 0.05)
         return true
     }
 
