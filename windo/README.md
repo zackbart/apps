@@ -63,11 +63,11 @@ pill (bottom-left) expands on hover.
 Tag-driven. Bump `MARKETING_VERSION` in `project.yml`, commit, then:
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag windo-v0.1.7
+git push origin windo-v0.1.7
 ```
 
-CI (`.github/workflows/release.yml`) builds on `macos-26`, signs with Developer ID,
+The repository release workflow builds on `macos-26`, signs with Developer ID,
 notarizes + staples, publishes a `Windo-<version>.dmg` to GitHub Releases, and
 bumps the Homebrew cask in `zackbart/homebrew-tap`.
 

@@ -77,17 +77,16 @@ Mac App Store. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Releasing
 
-Releases are tag-driven. Push a `v*` tag to build, sign, notarize, and publish a
-stable `Barr.dmg` asset:
+Releases are tag-driven. Push a `barr-v*` tag to build, sign, notarize, publish
+a `Barr-<version>.dmg` asset, and update Homebrew:
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag barr-v0.1.0
+git push origin barr-v0.1.0
 ```
 
 The release workflow expects the same Apple signing secrets used by the other
-Cursor Kittens macOS apps. GitHub secrets are repository-scoped, so add these
-to `zackbart/barr` before pushing the first tag:
+native macOS apps. Add these to `zackbart/apps` before pushing the first tag:
 
 - `BUILD_CERTIFICATE_BASE64`
 - `P12_PASSWORD`

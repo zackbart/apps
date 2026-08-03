@@ -1,9 +1,15 @@
-name: CI
+name: Barr CI
 
 on:
   pull_request:
+    paths:
+      - "barr/**"
+      - ".github/workflows/barr-ci.yml"
   push:
     branches: [main]
+    paths:
+      - "barr/**"
+      - ".github/workflows/barr-ci.yml"
 
 permissions:
   contents: read
@@ -18,13 +24,13 @@ jobs:
         run: brew install xcodegen
 
       - name: Generate Xcode project
-        working-directory: app
+        working-directory: barr/app
         run: xcodegen generate
 
       - name: Test
         run: |
           xcodebuild test \
-            -project app/Barr.xcodeproj \
+            -project barr/app/Barr.xcodeproj \
             -scheme Barr \
             -configuration Debug \
             -destination 'platform=macOS' \

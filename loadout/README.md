@@ -87,8 +87,7 @@ The Xcode project is generated — edit `project.yml`, not the `.xcodeproj`.
 
 ## Releasing
 
-Releases are **tag-driven, and tags are the *only* thing that runs CI** — there are no
-push/PR build triggers. Pushing a `v*` tag runs `.github/workflows/release.yml`, which builds,
+Releases are **tag-driven**. Pushing a `loadout-v*` tag runs the repository release workflow, which builds,
 signs (Developer ID), notarizes, and publishes a notarized `.dmg` to GitHub Releases.
 
 **Tags are only cut from a release-bump merge — never off a random commit:**
@@ -97,8 +96,8 @@ signs (Developer ID), notarizes, and publishes a notarized `.dmg` to GitHub Rele
 2. Tag that merge commit and push the tag:
 
 ```bash
-git tag v0.0.1
-git push origin v0.0.1
+git tag loadout-v0.1.3
+git push origin loadout-v0.1.3
 ```
 
 CI injects the version from the tag at build time, so the `project.yml` bump is just the human
