@@ -1,0 +1,36 @@
+# XcodeGen project definition — the maintained source of truth. Generate with:
+#
+#     brew install xcodegen
+#     xcodegen generate && open Windo.xcodeproj
+#
+# Windo — a floating, always-on-top web window for watching video over other apps.
+name: Windo
+options:
+  bundleIdPrefix: dev.zackbart
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "26.0"          # NSGlassEffectView (Liquid Glass) requires macOS 26
+targets:
+  Windo:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.zackbart.windo
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_VERSION: "5.0"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Windo
+        INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.entertainment"
+        INFOPLIST_KEY_LSUIElement: YES          # menu-bar utility, no Dock icon
+        INFOPLIST_KEY_NSHumanReadableCopyright: "MIT Licensed"
+        # Location prompt for sites that need it (e.g. YouTube TV) — bridged to
+        # CoreLocation by GeoBridge. Non-sandboxed, so the usage string is enough.
+        INFOPLIST_KEY_NSLocationUsageDescription: "Windo shares your location with sites that request it, like YouTube TV."
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Windo shares your location with sites that request it, like YouTube TV."
+        ENABLE_HARDENED_RUNTIME: YES            # required for notarization
+        CODE_SIGN_STYLE: Automatic              # CI overrides to Manual + Developer ID
