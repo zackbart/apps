@@ -29,8 +29,8 @@ Play muted, looping video wallpapers behind your desktop across any number of di
 Clone the repo and open in Xcode, or build from the command line:
 
 ```bash
-git clone https://github.com/zackbart/livewall.git
-cd livewall
+git clone https://github.com/zackbart/apps.git
+cd apps/livewall
 xcodebuild -scheme livewall -configuration Debug build
 ```
 

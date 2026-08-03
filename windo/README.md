@@ -1,21 +1,21 @@
 <p align="center">
-  <a href="https://github.com/zackbart/windo">
+  <a href="https://github.com/zackbart/apps/tree/main/windo">
     <img src="https://shieldcn.dev/header/graph.svg?title=Windo&subtitle=floating+always-on-top+web+window+for+macOS&logo=apple&mode=light&align=center&font=geist-mono&border=false" alt="Windo">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zackbart/windo/releases/latest/download/Windo.dmg">
+  <a href="https://github.com/zackbart/apps/releases/download/legacy-windo-v0.1.6/Windo.dmg">
     <img src="https://shieldcn.dev/badge/Download-Windo.dmg-blue.svg?logo=apple&size=lg" alt="Download the latest Windo.dmg">
   </a>
-  <a href="https://github.com/zackbart/windo/releases/latest">
-    <img src="https://shieldcn.dev/github/release/zackbart/windo.svg" alt="Latest release">
+  <a href="https://github.com/zackbart/apps/releases/tag/legacy-windo-v0.1.6">
+    <img src="https://shieldcn.dev/badge/Release-0.1.6-blue.svg" alt="Latest Windo release">
   </a>
-  <a href="https://github.com/zackbart/windo/blob/main/LICENSE">
-    <img src="https://shieldcn.dev/github/license/zackbart/windo.svg" alt="License">
+  <a href="https://github.com/zackbart/apps/blob/main/windo/LICENSE">
+    <img src="https://shieldcn.dev/badge/License-MIT-blue.svg" alt="MIT license">
   </a>
-  <a href="https://github.com/zackbart/windo/stargazers">
-    <img src="https://shieldcn.dev/github/stars/zackbart/windo.svg" alt="Stars">
+  <a href="https://github.com/zackbart/apps/stargazers">
+    <img src="https://shieldcn.dev/github/stars/zackbart/apps.svg" alt="Stars">
   </a>
 </p>
 
@@ -27,7 +27,7 @@ that tints to the video, global hotkey, favorites, opacity, and compact mode.
 
 ## Install
 
-Grab the latest `.dmg` from [Releases](https://github.com/zackbart/windo/releases/latest), or install via Homebrew:
+Grab the `.dmg` from the [latest Windo release](https://github.com/zackbart/apps/releases/tag/legacy-windo-v0.1.6), or install via Homebrew:
 
 ```bash
 brew install --cask zackbart/tap/windo

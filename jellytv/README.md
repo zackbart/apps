@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://github.com/zackbart/jellytv">
+  <a href="https://github.com/zackbart/apps/tree/main/jellytv">
     <img src="https://shieldcn.dev/header/graph.svg?title=JellyTV&subtitle=native+tvOS+Jellyfin+client+built+for+Live+TV&logo=jellyfin&mode=light&align=center&font=geist-mono&border=false" alt="JellyTV">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zackbart/jellytv/stargazers">
-    <img src="https://shieldcn.dev/github/stars/zackbart/jellytv.svg" alt="Stars">
+  <a href="https://github.com/zackbart/apps/stargazers">
+    <img src="https://shieldcn.dev/github/stars/zackbart/apps.svg" alt="Stars">
   </a>
 </p>
 
