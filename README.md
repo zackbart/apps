@@ -39,5 +39,5 @@ The workflow requires these repository Actions secrets:
 - `AC_API_ISSUER_ID`
 - `HOMEBREW_TAP_TOKEN`
 
-Historical releases remain available from the apps' former standalone
-repositories.
+Historical releases and assets are preserved here under `legacy-<app>-v*`
+tags. See [LEGACY.md](LEGACY.md) for the migration map.

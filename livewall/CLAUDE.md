@@ -96,7 +96,7 @@ Do not name a free function `presentError` — it shadows `NSResponder.presentEr
 - Do **not** call `AppErrorPresenter.shared.present(...)` directly from a non-main context.
 
 ### Not a git repo → now is
-The repo was originally not under git. Initial commit is `bf7d244`. Remote: `origin → https://github.com/zackbart/livewall.git`. The `.gitignore` excludes Xcode user state, build products, `.motif/` workflow state, and `.claude/`.
+The app was originally not under git. Its initial commit is `bf7d244`; it now lives in the `livewall/` directory of `https://github.com/zackbart/apps.git`. The `.gitignore` excludes Xcode user state, build products, `.motif/` workflow state, and `.claude/`.
 
 ### Deliberately NOT doing
 - No lock-screen wallpaper feature (requires a separate macOS 26 API surface)

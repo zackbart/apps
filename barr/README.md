@@ -1,21 +1,21 @@
 <p align="center">
-  <a href="https://github.com/zackbart/barr">
+  <a href="https://github.com/zackbart/apps/tree/main/barr">
     <img src="https://shieldcn.dev/header/graph.svg?title=Barr&subtitle=a+second+home+for+your+macOS+menu+bar+apps&logo=apple&mode=light&align=center&font=geist-mono&border=false" alt="Barr">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/zackbart/barr/releases/latest/download/Barr.dmg">
+  <a href="https://github.com/zackbart/apps/releases/download/legacy-barr-v0.0.9/Barr.dmg">
     <img src="https://shieldcn.dev/badge/Download-Barr.dmg-blue.svg?logo=apple&size=lg" alt="Download the latest Barr.dmg">
   </a>
-  <a href="https://github.com/zackbart/barr/releases/latest">
-    <img src="https://shieldcn.dev/github/release/zackbart/barr.svg" alt="Latest release">
+  <a href="https://github.com/zackbart/apps/releases/tag/legacy-barr-v0.0.9">
+    <img src="https://shieldcn.dev/badge/Release-0.0.9-blue.svg" alt="Latest Barr release">
   </a>
-  <a href="https://github.com/zackbart/barr/blob/main/LICENSE">
-    <img src="https://shieldcn.dev/github/license/zackbart/barr.svg" alt="License">
+  <a href="https://github.com/zackbart/apps/blob/main/barr/LICENSE">
+    <img src="https://shieldcn.dev/badge/License-MIT-blue.svg" alt="MIT license">
   </a>
-  <a href="https://github.com/zackbart/barr/stargazers">
-    <img src="https://shieldcn.dev/github/stars/zackbart/barr.svg" alt="Stars">
+  <a href="https://github.com/zackbart/apps/stargazers">
+    <img src="https://shieldcn.dev/github/stars/zackbart/apps.svg" alt="Stars">
   </a>
 </p>
 
@@ -44,7 +44,7 @@ brew tap zackbart/tap
 brew install --cask barr
 ```
 
-Or grab the latest `Barr.dmg` from [Releases](https://github.com/zackbart/barr/releases/latest).
+Or grab `Barr.dmg` from the [latest Barr release](https://github.com/zackbart/apps/releases/tag/legacy-barr-v0.0.9).
 Barr is a menu-bar utility (`LSUIElement`) and does not appear in the Dock.
 
 ## Repo layout

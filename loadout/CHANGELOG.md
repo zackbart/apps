@@ -46,6 +46,6 @@ All notable changes to Loadout are documented here. Format follows
 - Tag-driven release pipeline: notarized Developer ID `.dmg` published to GitHub
   Releases, with a Homebrew cask in `zackbart/homebrew-tap`.
 
-[0.0.3]: https://github.com/zackbart/loadout/releases/tag/v0.0.3
-[0.0.2]: https://github.com/zackbart/loadout/releases/tag/v0.0.2
-[0.0.1]: https://github.com/zackbart/loadout/releases/tag/v0.0.1
+[0.0.3]: https://github.com/zackbart/apps/releases/tag/legacy-loadout-v0.0.3
+[0.0.2]: https://github.com/zackbart/apps/releases/tag/legacy-loadout-v0.0.2
+[0.0.1]: https://github.com/zackbart/apps/releases/tag/legacy-loadout-v0.0.1

@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/zackbart/herdr-ios/stargazers">
-    <img src="https://shieldcn.dev/github/stars/zackbart/herdr-ios.svg" alt="Stars">
+  <a href="https://github.com/zackbart/apps/stargazers">
+    <img src="https://shieldcn.dev/github/stars/zackbart/apps.svg" alt="Stars">
   </a>
 </p>
 
