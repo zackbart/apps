@@ -1,0 +1,60 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Xcode user data
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.pbxuser
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+
+# Xcode build
+build/
+DerivedData/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+Packages/*/.build/
+Packages/*/.swiftpm/
+
+# CocoaPods (not using, but just in case)
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Env
+.env
+.env.local
+*.local
+
+# Motif workflow state
+.motif/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~

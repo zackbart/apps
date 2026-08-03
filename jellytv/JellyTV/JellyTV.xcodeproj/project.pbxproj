@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8321AB32F8554190046BB1A /* JellyfinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = D8321AB22F8554190046BB1A /* JellyfinAPI */; };
+		D8321AB62F85542C0046BB1A /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = D8321AB52F85542C0046BB1A /* DesignSystem */; };
+		D8321AB92F8554390046BB1A /* Library in Frameworks */ = {isa = PBXBuildFile; productRef = D8321AB82F8554390046BB1A /* Library */; };
+		D8321ABC2F8554460046BB1A /* Persistence in Frameworks */ = {isa = PBXBuildFile; productRef = D8321ABB2F8554460046BB1A /* Persistence */; };
+		D8321ABF2F8554530046BB1A /* Player in Frameworks */ = {isa = PBXBuildFile; productRef = D8321ABE2F8554530046BB1A /* Player */; };
+		D8321AC22F85545F0046BB1A /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = D8321AC12F85545F0046BB1A /* Settings */; };
+		D8CC7A6B2F857D9300B0060A /* LiveTV in Frameworks */ = {isa = PBXBuildFile; productRef = D8CC7A6A2F857D9300B0060A /* LiveTV */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D8EF31792F8478A60082D493 /* JellyTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JellyTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D8EF317B2F8478A60082D493 /* JellyTV */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = JellyTV;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8EF31762F8478A60082D493 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8321ABF2F8554530046BB1A /* Player in Frameworks */,
+				D8321ABC2F8554460046BB1A /* Persistence in Frameworks */,
+				D8321AB92F8554390046BB1A /* Library in Frameworks */,
+				D8321AC22F85545F0046BB1A /* Settings in Frameworks */,
+				D8321AB32F8554190046BB1A /* JellyfinAPI in Frameworks */,
+				D8CC7A6B2F857D9300B0060A /* LiveTV in Frameworks */,
+				D8321AB62F85542C0046BB1A /* DesignSystem in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8EF31702F8478A60082D493 = {
+			isa = PBXGroup;
+			children = (
+				D8EF317B2F8478A60082D493 /* JellyTV */,
+				D8EF317A2F8478A60082D493 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8EF317A2F8478A60082D493 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8EF31792F8478A60082D493 /* JellyTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8EF31782F8478A60082D493 /* JellyTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8EF31842F8478A60082D493 /* Build configuration list for PBXNativeTarget "JellyTV" */;
+			buildPhases = (
+				D8EF31752F8478A60082D493 /* Sources */,
+				D8EF31762F8478A60082D493 /* Frameworks */,
+				D8EF31772F8478A60082D493 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D8EF317B2F8478A60082D493 /* JellyTV */,
+			);
+			name = JellyTV;
+			packageProductDependencies = (
+				D8321AB22F8554190046BB1A /* JellyfinAPI */,
+				D8321AB52F85542C0046BB1A /* DesignSystem */,
+				D8321AB82F8554390046BB1A /* Library */,
+				D8321ABB2F8554460046BB1A /* Persistence */,
+				D8321ABE2F8554530046BB1A /* Player */,
+				D8321AC12F85545F0046BB1A /* Settings */,
+				D8CC7A6A2F857D9300B0060A /* LiveTV */,
+			);
+			productName = JellyTV;
+			productReference = D8EF31792F8478A60082D493 /* JellyTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8EF31712F8478A60082D493 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					D8EF31782F8478A60082D493 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = D8EF31742F8478A60082D493 /* Build configuration list for PBXProject "JellyTV" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8EF31702F8478A60082D493;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D8321AB12F8554190046BB1A /* XCLocalSwiftPackageReference "../Packages/JellyfinAPI" */,
+				D8321AB42F85542C0046BB1A /* XCLocalSwiftPackageReference "../Packages/DesignSystem" */,
+				D8321AB72F8554390046BB1A /* XCLocalSwiftPackageReference "../Packages/Library" */,
+				D8321ABA2F8554460046BB1A /* XCLocalSwiftPackageReference "../Packages/Persistence" */,
+				D8321ABD2F8554530046BB1A /* XCLocalSwiftPackageReference "../Packages/Player" */,
+				D8321AC02F85545F0046BB1A /* XCLocalSwiftPackageReference "../Packages/Settings" */,
+				D8CC7A692F857D9300B0060A /* XCLocalSwiftPackageReference "../Packages/LiveTV" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D8EF317A2F8478A60082D493 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8EF31782F8478A60082D493 /* JellyTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8EF31772F8478A60082D493 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8EF31752F8478A60082D493 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D8EF31822F8478A60082D493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = F2J8ZU2NQJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		D8EF31832F8478A60082D493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = F2J8ZU2NQJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TVOS_DEPLOYMENT_TARGET = 26.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8EF31852F8478A60082D493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2J8ZU2NQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Jelly TV";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cursorkittens.JellyTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		D8EF31862F8478A60082D493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2J8ZU2NQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Jelly TV";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cursorkittens.JellyTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8EF31742F8478A60082D493 /* Build configuration list for PBXProject "JellyTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8EF31822F8478A60082D493 /* Debug */,
+				D8EF31832F8478A60082D493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8EF31842F8478A60082D493 /* Build configuration list for PBXNativeTarget "JellyTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8EF31852F8478A60082D493 /* Debug */,
+				D8EF31862F8478A60082D493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D8321AB12F8554190046BB1A /* XCLocalSwiftPackageReference "../Packages/JellyfinAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/JellyfinAPI;
+		};
+		D8321AB42F85542C0046BB1A /* XCLocalSwiftPackageReference "../Packages/DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/DesignSystem;
+		};
+		D8321AB72F8554390046BB1A /* XCLocalSwiftPackageReference "../Packages/Library" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/Library;
+		};
+		D8321ABA2F8554460046BB1A /* XCLocalSwiftPackageReference "../Packages/Persistence" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/Persistence;
+		};
+		D8321ABD2F8554530046BB1A /* XCLocalSwiftPackageReference "../Packages/Player" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/Player;
+		};
+		D8321AC02F85545F0046BB1A /* XCLocalSwiftPackageReference "../Packages/Settings" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/Settings;
+		};
+		D8CC7A692F857D9300B0060A /* XCLocalSwiftPackageReference "../Packages/LiveTV" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/LiveTV;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8321AB22F8554190046BB1A /* JellyfinAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JellyfinAPI;
+		};
+		D8321AB52F85542C0046BB1A /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		D8321AB82F8554390046BB1A /* Library */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Library;
+		};
+		D8321ABB2F8554460046BB1A /* Persistence */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Persistence;
+		};
+		D8321ABE2F8554530046BB1A /* Player */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Player;
+		};
+		D8321AC12F85545F0046BB1A /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
+		D8CC7A6A2F857D9300B0060A /* LiveTV */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LiveTV;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D8EF31712F8478A60082D493 /* Project object */;
+}

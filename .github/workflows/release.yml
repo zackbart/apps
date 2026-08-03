@@ -1,0 +1,224 @@
+name: Release native app
+
+# Tags are app-scoped so each product can version independently.
+# Examples: barr-v0.0.10, windo-v0.1.7, loadout-v0.1.3.
+on:
+  push:
+    tags:
+      - "barr-v*"
+      - "windo-v*"
+      - "loadout-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Configure app from tag
+        shell: bash
+        run: |
+          tag="$GITHUB_REF_NAME"
+          case "$tag" in
+            barr-v*) app=barr; display=Barr; scheme=Barr; project=Barr.xcodeproj; workdir=barr/app ;;
+            windo-v*) app=windo; display=Windo; scheme=Windo; project=Windo.xcodeproj; workdir=windo ;;
+            loadout-v*) app=loadout; display=Loadout; scheme=Loadout; project=Loadout.xcodeproj; workdir=loadout ;;
+            *) echo "::error::Unsupported release tag: $tag"; exit 1 ;;
+          esac
+
+          {
+            echo "APP=$app"
+            echo "DISPLAY=$display"
+            echo "SCHEME=$scheme"
+            echo "PROJECT=$project"
+            echo "WORKDIR=$workdir"
+            echo "VERSION=${tag#*-v}"
+          } >> "$GITHUB_ENV"
+
+      - name: Check release secrets
+        env:
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          AC_API_KEY_BASE64: ${{ secrets.AC_API_KEY_BASE64 }}
+          AC_API_KEY_ID: ${{ secrets.AC_API_KEY_ID }}
+          AC_API_ISSUER_ID: ${{ secrets.AC_API_ISSUER_ID }}
+          HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        shell: bash
+        run: |
+          missing=0
+          for name in BUILD_CERTIFICATE_BASE64 P12_PASSWORD APPLE_TEAM_ID \
+            AC_API_KEY_BASE64 AC_API_KEY_ID AC_API_ISSUER_ID HOMEBREW_TAP_TOKEN; do
+            if [ -z "${!name}" ]; then
+              echo "::error::Missing required Actions secret: $name"
+              missing=1
+            fi
+          done
+          exit "$missing"
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i macos || true
+
+      - name: Install tools
+        run: brew install xcodegen create-dmg
+
+      - name: Import Developer ID certificate
+        env:
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
+        shell: bash
+        run: |
+          keychain="$RUNNER_TEMP/build.keychain-db"
+          keychain_password="$(uuidgen)"
+          echo "$BUILD_CERTIFICATE_BASE64" | base64 --decode > "$RUNNER_TEMP/cert.p12"
+          security create-keychain -p "$keychain_password" "$keychain"
+          security set-keychain-settings -lut 21600 "$keychain"
+          security unlock-keychain -p "$keychain_password" "$keychain"
+          security import "$RUNNER_TEMP/cert.p12" -k "$keychain" -P "$P12_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$keychain_password" "$keychain" >/dev/null
+          security list-keychains -d user -s "$keychain"
+          rm "$RUNNER_TEMP/cert.p12"
+
+      - name: Generate Xcode project
+        shell: bash
+        run: |
+          cd "$WORKDIR"
+          xcodegen generate
+
+      - name: Test Barr
+        if: env.APP == 'barr'
+        shell: bash
+        run: |
+          cd "$WORKDIR"
+          xcodebuild test \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Archive
+        shell: bash
+        run: |
+          cd "$WORKDIR"
+          xcodebuild archive \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -archivePath "$RUNNER_TEMP/$DISPLAY.xcarchive" \
+            -destination 'generic/platform=macOS' \
+            MARKETING_VERSION="$VERSION" \
+            CURRENT_PROJECT_VERSION=${{ github.run_number }} \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="Developer ID Application" \
+            DEVELOPMENT_TEAM=${{ secrets.APPLE_TEAM_ID }}
+
+      - name: Export Developer ID app
+        shell: bash
+        run: |
+          cd "$WORKDIR"
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/$DISPLAY.xcarchive" \
+            -exportOptionsPlist ExportOptions.plist \
+            -exportPath "$RUNNER_TEMP/export"
+
+      - name: Package DMG
+        id: dmg
+        shell: bash
+        run: |
+          dmg="$RUNNER_TEMP/$DISPLAY-$VERSION.dmg"
+          create-dmg \
+            --volname "$DISPLAY $VERSION" \
+            --window-size 540 380 \
+            --icon-size 100 \
+            --icon "$DISPLAY.app" 140 190 \
+            --app-drop-link 400 190 \
+            "$dmg" "$RUNNER_TEMP/export/$DISPLAY.app"
+          echo "path=$dmg" >> "$GITHUB_OUTPUT"
+
+      - name: Sign DMG
+        run: |
+          codesign --force --sign "Developer ID Application" --timestamp "${{ steps.dmg.outputs.path }}"
+          codesign --verify --verbose=2 "${{ steps.dmg.outputs.path }}"
+
+      - name: Notarize and staple
+        env:
+          AC_API_KEY_BASE64: ${{ secrets.AC_API_KEY_BASE64 }}
+          AC_API_KEY_ID: ${{ secrets.AC_API_KEY_ID }}
+          AC_API_ISSUER_ID: ${{ secrets.AC_API_ISSUER_ID }}
+        shell: bash
+        run: |
+          key="$RUNNER_TEMP/AuthKey.p8"
+          echo "$AC_API_KEY_BASE64" | base64 --decode > "$key"
+          xcrun notarytool submit "${{ steps.dmg.outputs.path }}" \
+            --key "$key" --key-id "$AC_API_KEY_ID" --issuer "$AC_API_ISSUER_ID" --wait
+          xcrun stapler staple "${{ steps.dmg.outputs.path }}"
+          rm "$key"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "${{ steps.dmg.outputs.path }}" \
+            --title "$DISPLAY $VERSION" \
+            --generate-notes
+
+  update-tap:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure app from tag
+        shell: bash
+        run: |
+          case "$GITHUB_REF_NAME" in
+            barr-v*) app=barr; display=Barr ;;
+            windo-v*) app=windo; display=Windo ;;
+            loadout-v*) app=loadout; display=Loadout ;;
+            *) echo "::error::Unsupported release tag: $GITHUB_REF_NAME"; exit 1 ;;
+          esac
+          {
+            echo "APP=$app"
+            echo "DISPLAY=$display"
+            echo "VERSION=${GITHUB_REF_NAME#*-v}"
+          } >> "$GITHUB_ENV"
+
+      - name: Bump Homebrew cask
+        env:
+          TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        shell: bash
+        run: |
+          if [ -z "$TAP_TOKEN" ]; then
+            echo "::error::Missing required Actions secret: HOMEBREW_TAP_TOKEN"
+            exit 1
+          fi
+
+          url="https://github.com/zackbart/apps/releases/download/$GITHUB_REF_NAME/$DISPLAY-$VERSION.dmg"
+          curl -fSL --retry 6 --retry-delay 10 --retry-all-errors -o app.dmg "$url"
+          test -s app.dmg || { echo "::error::Downloaded DMG is empty"; exit 1; }
+          sha=$(sha256sum app.dmg | awk '{print $1}')
+          rm app.dmg
+
+          git clone "https://x-access-token:${TAP_TOKEN}@github.com/zackbart/homebrew-tap.git" tap
+          cd tap
+          cask="Casks/$APP.rb"
+          sed -i -E "s|^  version \".*\"|  version \"$VERSION\"|" "$cask"
+          sed -i -E "s|^  sha256 \".*\"|  sha256 \"$sha\"|" "$cask"
+          if grep -q '^      verified:' "$cask"; then
+            sed -i -E "s|^  url \".*\",|  url \"https://github.com/zackbart/apps/releases/download/$APP-v#{version}/$DISPLAY-#{version}.dmg\",|" "$cask"
+            sed -i -E "s|^      verified: \"github.com/zackbart/[^/]+/\"|      verified: \"github.com/zackbart/apps/\"|" "$cask"
+          else
+            sed -i -E "s|^  url \".*\"|  url \"https://github.com/zackbart/apps/releases/download/$APP-v#{version}/$DISPLAY-#{version}.dmg\"|" "$cask"
+          fi
+          sed -i -E "s|^  homepage \".*\"|  homepage \"https://github.com/zackbart/apps/tree/main/$APP\"|" "$cask"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$cask"
+          git diff --cached --quiet || git commit -m "$APP $VERSION"
+          git push

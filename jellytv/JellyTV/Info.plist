@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- We only use standard TLS (URLSession + AVFoundation HLS over HTTPS).
+	     Standard encryption is exempt under the EAR; declaring this here means
+	     TestFlight won't prompt for encryption-export compliance every build. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>JellyTV needs access to your local network to connect to your Jellyfin media server.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_jellyfin._tcp</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+		<!-- AVFoundation/AVPlayer does NOT honor NSAllowsLocalNetworking for
+		     media loads. Without this exception, AVPlayer fails with
+		     AVFoundationErrorCode -11850 "Operation Stopped" + CFNetwork
+		     -12939 when trying to play HTTP streams from a LAN Jellyfin
+		     server. NSAllowsArbitraryLoadsForMedia is scoped specifically
+		     to AVFoundation media loading and does not affect URLSession. -->
+		<key>NSAllowsArbitraryLoadsForMedia</key>
+		<true/>
+	</dict>
+</dict>
+</plist>
