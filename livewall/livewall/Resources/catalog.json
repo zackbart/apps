@@ -1,0 +1,54 @@
+{
+  "wallpapers": [
+    {
+      "id": "867468486919849",
+      "title": "Gaze",
+      "thumbnailURL": "https://s4.wallspace.app/wallpaper/867468486919849/thumbnail.webp",
+      "videoURL": "https://s4.wallspace.app/wallpaper/867468486919849/previewhd.mp4",
+      "resolution": "3840x2160",
+      "tags": ["abstract", "colors", "smooth"],
+      "source": "catalog",
+      "duration": 15
+    },
+    {
+      "id": "821646237254581",
+      "title": "Green Leaves",
+      "thumbnailURL": "https://s4.wallspace.app/wallpaper/821646237254581/thumbnail.webp",
+      "videoURL": "https://s4.wallspace.app/wallpaper/821646237254581/previewhd.mp4",
+      "resolution": "3840x2160",
+      "tags": ["nature", "plants", "calm"],
+      "source": "catalog",
+      "duration": 10
+    },
+    {
+      "id": "811688348618467",
+      "title": "Black Hole",
+      "thumbnailURL": "https://s4.wallspace.app/wallpaper/811688348618467/thumbnail.webp",
+      "videoURL": "https://s4.wallspace.app/wallpaper/811688348618467/previewhd.mp4",
+      "resolution": "3840x2160",
+      "tags": ["space", "dark", "dramatic"],
+      "source": "catalog",
+      "duration": 20
+    },
+    {
+      "id": "198899832529485",
+      "title": "Minecraft",
+      "thumbnailURL": "https://s4.wallspace.app/wallpaper/198899832529485/thumbnail.webp",
+      "videoURL": "https://s4.wallspace.app/wallpaper/198899832529485/previewhd.mp4",
+      "resolution": "3840x2160",
+      "tags": ["gaming", "pixel", "fun"],
+      "source": "catalog",
+      "duration": 30
+    },
+    {
+      "id": "213924118113496",
+      "title": "Frog Couple",
+      "thumbnailURL": "https://s4.wallspace.app/wallpaper/213924118113496/thumbnail.webp",
+      "videoURL": "https://s4.wallspace.app/wallpaper/213924118113496/previewhd.mp4",
+      "resolution": "3840x2160",
+      "tags": ["nature", "animals", "cute"],
+      "source": "catalog",
+      "duration": 12
+    }
+  ]
+}

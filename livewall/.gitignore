@@ -1,0 +1,46 @@
+# Secrets
+.env
+
+# Xcode
+## User settings
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+## Build products
+build/
+DerivedData/
+*.xcscmblueprint
+*.xccheckout
+
+## Xcode patches
+*.moved-aside
+
+## Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+## CocoaPods
+Pods/
+
+## Carthage
+Carthage/Build/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Misc
+*.swp
+*.swo
+*~
+*.log
+
+# Motif workflow state
+.motif/
+
+# Claude
+.claude/
