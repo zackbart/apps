@@ -25,6 +25,9 @@ any non-DRM web video on top of other apps, including over full-screen apps.
 A menu-bar utility (no Dock icon). Liquid Glass control pill, ambient title bar
 that tints to the video, global hotkey, favorites, opacity, and compact mode.
 
+Pause When Hidden (menu-bar toggle, on by default): hiding the window pauses
+whatever is playing, and showing it again resumes it.
+
 ## Install
 
 Grab the `.dmg` from the [latest Windo release](https://github.com/zackbart/apps/releases/tag/legacy-windo-v0.1.6), or install via Homebrew:
@@ -49,7 +52,7 @@ All app code is one file: `Sources/main.swift` (AppKit + WKWebView, no dependenc
 
 | Action | Key |
 |---|---|
-| Show/hide from anywhere | ⌥⌘W |
+| Show/hide from anywhere | ⌃⌘H |
 | Focus URL | ⌘L |
 | Reload | ⌘R |
 | Add to favorites | ⌘D |

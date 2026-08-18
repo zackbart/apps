@@ -32,6 +32,13 @@ func lerp(_ a: NSColor, _ b: NSColor, _ t: CGFloat) -> NSColor {
                    blue: a.blueComponent + (b.blueComponent - a.blueComponent) * t, alpha: 1)
 }
 
+// Largest per-channel difference between two colors — drives "close enough, stop".
+func maxDelta(_ a: NSColor, _ b: NSColor) -> CGFloat {
+    guard let a = a.usingColorSpace(.sRGB), let b = b.usingColorSpace(.sRGB) else { return 1 }
+    return max(abs(a.redComponent - b.redComponent),
+               max(abs(a.greenComponent - b.greenComponent), abs(a.blueComponent - b.blueComponent)))
+}
+
 // Windo — floating web window that stays on top of everything, including
 // other apps' native fullscreen. Menu-bar utility, no Dock icon.
 // Controls live in a floating Liquid Glass bar that collapses to a pill.
@@ -383,17 +390,20 @@ final class GlassBar: NSView {
     @objc private func collapse() { setExpanded(false) }
 }
 
-final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, WKNavigationDelegate, WKScriptMessageHandler {
-    var pageFullscreen = false
+final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTextFieldDelegate, WKNavigationDelegate, WKScriptMessageHandler {
+    var fullscreenViews = Set<ObjectIdentifier>()   // web views in (faked) page fullscreen
     // The fullscreen shim posts {fs:true/false}. While a video is in (faked) page
     // fullscreen, stop the ambient-tint takeSnapshot — snapshotting the hardware
-    // video layer blanks it (black picture, audio keeps playing).
+    // video layer blanks it (black picture, audio keeps playing). Per web view: one
+    // tab (or iframe) going fullscreen must not mute sampling for the others.
     func userContentController(_ c: WKUserContentController, didReceive m: WKScriptMessage) {
-        guard m.name == "windo", let s = m.body as? String,
+        guard m.name == "windo", let wv = m.webView, let s = m.body as? String,
               let data = s.data(using: .utf8),
               let obj = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
               let fs = obj["fs"] as? Bool else { return }
-        pageFullscreen = fs
+        let id = ObjectIdentifier(wv)
+        if fs { fullscreenViews.insert(id) } else { fullscreenViews.remove(id) }
+        updateTintTimers()
     }
 
     let geoBridge = GeoBridge()   // shared across tabs; bridges navigator.geolocation → CoreLocation
@@ -401,6 +411,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
     var tabs: [Tab] = []
     var activeIndex = 0
     var webView: WKWebView { tabs[activeIndex].webView }   // the visible tab
+    var activeWebView: WKWebView? { tabs.indices.contains(activeIndex) ? tabs[activeIndex].webView : nil }
     var webContainer: NSView!
     var tabBar: NSStackView!
     var urlField: NSTextField!
@@ -411,16 +422,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
     var muted = false
     var pinned = true
     var compact = false
+    var pauseWhenHidden = true
     var opacity: CGFloat = 1.0
     var favorites: [Favorite] = []
     var sampleTimer: Timer?
     var lerpTimer: Timer?
+    var tabBarTimer: Timer?
+    var opacitySaveTimer: Timer?
+    var snapshotInFlight = false
     var targetColor = NSColor(white: 0.1, alpha: 1)
     var currentColor = NSColor(white: 0.1, alpha: 1)
+    var appliedColor: NSColor?
+    var tabBarSignature = ""
 
     func applicationDidFinishLaunching(_ note: Notification) {
         opacity = CGFloat(UserDefaults.standard.object(forKey: "opacity") as? Double ?? 1.0)
         compact = UserDefaults.standard.bool(forKey: "compact")
+        pauseWhenHidden = UserDefaults.standard.object(forKey: "pauseWhenHidden") as? Bool ?? true
         loadFavorites()
         buildWindow()
         buildStatusItem()
@@ -428,34 +446,93 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
         registerHotKey()
         NotificationCenter.default.addObserver(self, selector: #selector(hotKeyToggle),
                                                name: .windoToggle, object: nil)
+        // Occluded windows still report isVisible — occlusion is what actually gates sampling.
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTintTimers),
+                                               name: NSWindow.didChangeOcclusionStateNotification, object: window)
         window.alphaValue = opacity
         addTab(url: UserDefaults.standard.string(forKey: "lastURL") ?? kDefaultURL, activate: true)
         setCompact(compact)
         showWindow()
-        startTinting()
     }
 
     // MARK: - Ambient titlebar: tint the bar to the video's top-strip color
 
-    func startTinting() {
-        sampleTimer = Timer.scheduledTimer(withTimeInterval: 0.35, repeats: true) { [weak self] _ in self?.sampleTopColor() }
-        lerpTimer = Timer.scheduledTimer(withTimeInterval: 0.045, repeats: true) { [weak self] _ in self?.tickTint() }
+    // Sampling is only worth its CPU when the window can actually be seen.
+    var tintShouldRun: Bool {
+        guard let w = window, w.isVisible, w.occlusionState.contains(.visible),
+              let wv = activeWebView, !compact else { return false }
+        return !fullscreenViews.contains(ObjectIdentifier(wv))
     }
+
+    // Single place that starts/stops the timers; every call site just calls this.
+    @objc func updateTintTimers() {
+        guard tintShouldRun else {
+            sampleTimer?.invalidate(); sampleTimer = nil
+            lerpTimer?.invalidate(); lerpTimer = nil
+            snapshotInFlight = false   // a snapshot may never complete once we go dark
+            return
+        }
+        guard sampleTimer == nil else { return }
+        let t = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in self?.sampleTopColor() }
+        t.tolerance = 0.25
+        sampleTimer = t
+    }
+
     func sampleTopColor() {
-        guard !compact, !pageFullscreen, window.isVisible, webView.bounds.width > 1 else { return }
+        guard !snapshotInFlight, tintShouldRun, let wv = activeWebView, wv.bounds.width > 1 else { return }
         let cfg = WKSnapshotConfiguration()
         cfg.snapshotWidth = 64                      // downscale for speed
-        webView.takeSnapshot(with: cfg) { [weak self] img, _ in
-            if let c = img?.topAverageColor(0.18) { self?.targetColor = c }
+        snapshotInFlight = true
+        wv.takeSnapshot(with: cfg) { [weak self, weak wv] img, _ in
+            guard let self else { return }
+            self.snapshotInFlight = false
+            guard let wv, wv === self.activeWebView else { return }   // tab switched under us
+            if let c = img?.topAverageColor(0.18) { self.setTarget(c) }
         }
     }
+
+    // Only animate when the color would actually move; the lerp timer is transient.
+    func setTarget(_ c: NSColor) {
+        targetColor = c
+        guard tintShouldRun, maxDelta(currentColor, targetColor) >= 1.0 / 255, lerpTimer == nil else { return }
+        let t = Timer.scheduledTimer(withTimeInterval: 0.045, repeats: true) { [weak self] _ in self?.tickTint() }
+        t.tolerance = 0.01
+        lerpTimer = t
+    }
+
     func tickTint() {
-        guard !compact, window.isVisible else { return }
+        guard tintShouldRun, let w = window else {
+            lerpTimer?.invalidate(); lerpTimer = nil
+            return
+        }
         currentColor = lerp(currentColor, targetColor, 0.12)   // ease toward the sampled color
-        window.backgroundColor = currentColor
+        if maxDelta(currentColor, targetColor) < 1.0 / 255 {   // converged: snap and stop
+            currentColor = targetColor
+            lerpTimer?.invalidate(); lerpTimer = nil
+        }
+        if let a = appliedColor, maxDelta(a, currentColor) == 0 { return }
+        appliedColor = currentColor
+        w.backgroundColor = currentColor
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ s: NSApplication) -> Bool { false }
+    func applicationWillTerminate(_ note: Notification) { saveOpacity() }
+
+    // MARK: - NSWindowDelegate — close/minimize are just "hide", same as the hotkey
+
+    func windowShouldClose(_ s: NSWindow) -> Bool {
+        hideWindow()
+        rebuildMenu()
+        return false
+    }
+    func windowDidMiniaturize(_ n: Notification) {
+        if pauseWhenHidden { for t in tabs { pauseMedia(in: t.webView, remember: true) } }
+        updateTintTimers()
+    }
+    func windowDidDeminiaturize(_ n: Notification) {
+        if let wv = activeWebView { resumeMedia(in: wv) }   // inactive tabs stay parked
+        updateTintTimers()
+    }
 
     // MARK: - Web view
 
@@ -495,7 +572,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
         wv.isHidden = true
         webContainer.addSubview(wv, positioned: .below, relativeTo: nil)
         let tab = Tab(webView: wv)
-        tab.titleObs = wv.observe(\.title) { [weak self] _, _ in self?.refreshTabBar() }
+        tab.titleObs = wv.observe(\.title) { [weak self] _, _ in self?.scheduleTabBarRefresh() }
         tabs.append(tab)
         if activate { selectTab(tabs.count - 1) } else { refreshTabBar() }
         wv.load(URLRequest(url: normalizedURL(url) ?? URL(string: kDefaultURL)!))
@@ -503,25 +580,55 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
 
     func selectTab(_ i: Int) {
         guard tabs.indices.contains(i) else { return }
+        let prev = activeWebView
         activeIndex = i
         for (j, t) in tabs.enumerated() { t.webView.isHidden = (j != i) }
+        // Hidden tabs keep decoding video/audio otherwise; park them, resume on return.
+        if let prev, prev !== webView { pauseMedia(in: prev, remember: true) }
+        if window.isVisible && !window.isMiniaturized { resumeMedia(in: webView) }
         urlField.stringValue = webView.url?.absoluteString ?? ""
         if muted { applyMute() }   // carry mute state onto the now-visible tab
         refreshTabBar()
+        updateTintTimers()
     }
 
     func closeTab(_ i: Int) {
         guard tabs.count > 1, tabs.indices.contains(i) else { return }   // keep one tab alive
+        let wv = tabs[i].webView
         tabs[i].titleObs?.invalidate()
-        tabs[i].webView.removeFromSuperview()
+        pauseMedia(in: wv, remember: false)
+        wv.stopLoading()
+        wv.navigationDelegate = nil
+        // Handlers retain us (and the geo bridge) — drop them or the tab never dies.
+        wv.configuration.userContentController.removeScriptMessageHandler(forName: "windo")
+        wv.configuration.userContentController.removeScriptMessageHandler(forName: "windoGeo")
+        fullscreenViews.remove(ObjectIdentifier(wv))
+        wv.removeFromSuperview()
         tabs.remove(at: i)
         if i < activeIndex { activeIndex -= 1 }
         else if i == activeIndex { activeIndex = min(i, tabs.count - 1) }
         selectTab(activeIndex)
     }
 
+    // Title KVO and didFinish fire in bursts; coalesce them into one rebuild.
+    // .common mode so menu tracking / dragging doesn't stall the timer.
+    func scheduleTabBarRefresh() {
+        tabBarTimer?.invalidate()
+        let t = Timer(timeInterval: 0.15, repeats: false) { [weak self] _ in self?.refreshTabBar() }
+        t.tolerance = 0.05
+        RunLoop.main.add(t, forMode: .common)
+        tabBarTimer = t
+    }
+
     func refreshTabBar() {
         guard tabBar != nil else { return }
+        tabBarTimer?.invalidate(); tabBarTimer = nil
+        // Nothing visible changed → keep the buttons and skip the glass-bar animation.
+        let sig = tabs.enumerated()
+            .map { "\($0.offset == activeIndex)\u{1}\($0.element.webView.title ?? "")" }
+            .joined(separator: "\u{2}")
+        guard sig != tabBarSignature else { return }
+        tabBarSignature = sig
         tabBar.arrangedSubviews.forEach { $0.removeFromSuperview() }
         for (i, t) in tabs.enumerated() {
             tabBar.addArrangedSubview(tabItem(index: i, title: t.webView.title, active: i == activeIndex))
@@ -582,6 +689,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
         window.setFrameAutosaveName("WindoMain")
         window.center()
         window.isReleasedWhenClosed = false
+        window.delegate = self
 
         let container = NSView(frame: frame)
         webContainer = NSView(frame: container.bounds)   // holds all tab webviews
@@ -692,6 +800,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
 
         let c = menu.addItem(withTitle: "Compact Mode", action: #selector(toggleCompact), keyEquivalent: "")
         c.target = self; c.state = compact ? .on : .off
+        let ph = menu.addItem(withTitle: "Pause When Hidden", action: #selector(togglePauseWhenHidden), keyEquivalent: "")
+        ph.target = self; ph.state = pauseWhenHidden ? .on : .off
         menu.addItem(opacityMenuItem())
 
         menu.addItem(.separator())
@@ -785,6 +895,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
         glassBar.setExpanded(true)
         window.makeFirstResponder(urlField)
     }
+    // ponytail: JS media control — no public WKWebView pause API. Tag what we paused
+    // so resume restarts only those; both halves are safe to run twice.
+    func pauseMedia(in wv: WKWebView, remember: Bool) {
+        let tag = remember ? "m.dataset.windoResume='1';" : ""
+        wv.evaluateJavaScript(
+            "document.querySelectorAll('video,audio').forEach(m=>{if(!m.paused&&!m.ended){\(tag)m.pause()}})")
+    }
+    func resumeMedia(in wv: WKWebView) {
+        wv.evaluateJavaScript(
+            "document.querySelectorAll('[data-windo-resume]').forEach(m=>{delete m.dataset.windoResume;m.play().catch(()=>{})})")
+    }
+
     // ponytail: JS mute — no public WKWebView mute API.
     func applyMute() {
         webView.evaluateJavaScript("document.querySelectorAll('video,audio').forEach(m=>m.muted=\(muted))")
@@ -796,21 +918,48 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
                                    accessibilityDescription: nil)
     }
     @objc func toggleWindow() {
-        if window.isVisible { window.orderOut(nil) } else { showWindow() }
+        if window.isVisible { hideWindow() } else { showWindow() }
         rebuildMenu()
+    }
+    // A hidden window keeps decoding video at full cost, so park every tab.
+    func hideWindow() {
+        if pauseWhenHidden { for t in tabs { pauseMedia(in: t.webView, remember: true) } }
+        window.orderOut(nil)
+        updateTintTimers()
     }
     func showWindow() {
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+        if let wv = activeWebView { resumeMedia(in: wv) }   // inactive tabs stay parked
+        updateTintTimers()
+        // occlusionState only updates after this pass of the run loop.
+        DispatchQueue.main.async { [weak self] in self?.updateTintTimers() }
         rebuildMenu()
     }
 
     // MARK: - Opacity / compact / global hotkey
 
+    // Continuous slider: apply every tick, but only persist once the drag settles.
     @objc func opacityChanged(_ s: NSSlider) {
         opacity = CGFloat(s.doubleValue)
         window.alphaValue = opacity
+        opacitySaveTimer?.invalidate(); opacitySaveTimer = nil
+        if NSApp.currentEvent?.type == .leftMouseUp { saveOpacity(); return }
+        // The status-item menu runs the run loop in event tracking — .common or never.
+        let t = Timer(timeInterval: 0.3, repeats: false) { [weak self] _ in self?.saveOpacity() }
+        t.tolerance = 0.1
+        RunLoop.main.add(t, forMode: .common)
+        opacitySaveTimer = t
+    }
+    func saveOpacity() {
+        opacitySaveTimer?.invalidate(); opacitySaveTimer = nil
         UserDefaults.standard.set(Double(opacity), forKey: "opacity")
+    }
+
+    @objc func togglePauseWhenHidden() {
+        pauseWhenHidden.toggle()
+        UserDefaults.standard.set(pauseWhenHidden, forKey: "pauseWhenHidden")
+        rebuildMenu()
     }
 
     @objc func toggleCompact() { setCompact(!compact) }
@@ -824,6 +973,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
             window.standardWindowButton(b)?.isHidden = on
         }
         UserDefaults.standard.set(on, forKey: "compact")
+        updateTintTimers()   // compact hides the tinted titlebar; nothing to sample for
         rebuildMenu()
     }
 
@@ -843,11 +993,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
     }
 
     @objc func hotKeyToggle() {
-        if window.isVisible && window.isKeyWindow { window.orderOut(nil) } else { showWindow() }
+        if window.isVisible && window.isKeyWindow { hideWindow() } else { showWindow() }
         rebuildMenu()
     }
 
     // MARK: - WKNavigationDelegate (remember where we are)
+
+    // A new document drops the shim's fullscreen state with it.
+    func webView(_ wv: WKWebView, didCommit nav: WKNavigation!) {
+        fullscreenViews.remove(ObjectIdentifier(wv))
+        updateTintTimers()
+    }
 
     func webView(_ wv: WKWebView, didFinish nav: WKNavigation!) {
         guard let u = wv.url?.absoluteString else { return }
@@ -855,7 +1011,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate, W
             urlField.stringValue = u
             UserDefaults.standard.set(u, forKey: "lastURL")
         }
-        refreshTabBar()
+        scheduleTabBarRefresh()
     }
 
     // MARK: - URL field
