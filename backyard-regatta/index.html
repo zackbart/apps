@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#9bd6df" />
+    <meta name="description" content="Race tiny sailboats through a flooded backyard." />
+    <title>Puddle Cup — Backyard Regatta</title>
+  </head>
+  <body>
+    <main id="app">
+      <div id="game" aria-label="Puddle Cup 3D sailing game"></div>
+
+      <section class="start-screen" id="start-screen" aria-labelledby="game-title">
+        <div class="title-lockup">
+          <p class="event-stamp">The 14th annual backyard regatta</p>
+          <h1 id="game-title"><span>Puddle</span><span>Cup</span></h1>
+          <p class="year">’26</p>
+          <p class="tagline">Six boats. Three laps. One very wet backyard.</p>
+        </div>
+
+        <div class="race-card">
+          <div class="race-card__tape" aria-hidden="true"></div>
+          <p class="race-card__label">Choose your hull</p>
+          <div class="swatches" id="swatches" role="radiogroup" aria-label="Boat color">
+            <button class="swatch is-active" data-color="coral" style="--swatch:#e84a38" role="radio" aria-checked="true" aria-label="Coral boat"></button>
+            <button class="swatch" data-color="sun" style="--swatch:#f4c845" role="radio" aria-checked="false" aria-label="Yellow boat"></button>
+            <button class="swatch" data-color="mint" style="--swatch:#4ba888" role="radio" aria-checked="false" aria-label="Mint boat"></button>
+            <button class="swatch" data-color="ink" style="--swatch:#335e91" role="radio" aria-checked="false" aria-label="Blue boat"></button>
+          </div>
+
+          <dl class="briefing">
+            <div><dt>Steer</dt><dd>A / D</dd></div>
+            <div><dt>Trim sail</dt><dd>W / S</dd></div>
+            <div><dt>Restart</dt><dd>R</dd></div>
+          </dl>
+
+          <button class="start-button" id="start-button">
+            <span>Launch boat</span>
+            <kbd>Space</kbd>
+          </button>
+        </div>
+      </section>
+
+      <section class="hud is-hidden" id="hud" aria-label="Race status">
+        <div class="hud-card position-card">
+          <span class="hud-label">Place</span>
+          <strong><span id="position">4</span><sup id="ordinal">th</sup></strong>
+          <span class="fleet-size">of 6</span>
+        </div>
+
+        <div class="race-clock">
+          <span id="lap-label">Lap 1 / 3</span>
+          <strong id="clock">01:30.0</strong>
+          <span id="gate-label">Gate 1 / 6</span>
+        </div>
+
+        <div class="wind-card hud-card">
+          <div class="wind-dial" id="wind-dial"><span>↑</span></div>
+          <div><span class="hud-label">Wind</span><strong id="wind-speed">6.5</strong><small> knots</small></div>
+        </div>
+
+        <div class="trim-panel">
+          <div class="trim-copy"><span>Sail trim</span><strong id="trim-state">GOOD</strong></div>
+          <div class="trim-track">
+            <div class="trim-ideal" id="trim-ideal"></div>
+            <div class="trim-fill" id="trim-fill"></div>
+            <div class="trim-knob" id="trim-knob"></div>
+          </div>
+          <div class="trim-keys"><kbd>W</kbd><span>Tight</span><span>Ease</span><kbd>S</kbd></div>
+        </div>
+
+        <p class="controls-hint" id="controls-hint"><kbd>A</kbd><kbd>D</kbd> steer <i></i> <kbd>W</kbd><kbd>S</kbd> trim</p>
+        <div class="center-message" id="center-message" aria-live="polite"></div>
+        <div class="gate-arrow" id="gate-arrow" aria-hidden="true"><span>▲</span><small>Next gate</small></div>
+      </section>
+
+      <section class="result-screen is-hidden" id="result-screen" aria-labelledby="result-title">
+        <div class="result-card">
+          <p id="result-kicker">Race complete</p>
+          <div class="toy-trophy" id="toy-trophy" aria-hidden="true"><i></i><span></span></div>
+          <h2 id="result-title">2nd place</h2>
+          <div class="result-time"><span id="result-time-label">Your time</span><strong id="result-time">01:24.6</strong></div>
+          <div class="result-stats">
+            <div><span>Best</span><strong id="best-time">—</strong></div>
+            <div><span>Passes</span><strong id="result-passes">0</strong></div>
+            <div><span>Bumps</span><strong id="result-bumps">0</strong></div>
+          </div>
+          <p id="result-line">That was close. The puddle wants a rematch.</p>
+          <button class="start-button" id="restart-button"><span>Race again</span><kbd>Enter</kbd></button>
+        </div>
+      </section>
+
+      <div class="speed-lines" id="speed-lines" aria-hidden="true"></div>
+      <div class="impact-flash" id="impact-flash" aria-hidden="true"></div>
+      <div class="rotate-notice">This race needs a wider screen.</div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

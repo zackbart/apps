@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "backyard-regatta",
+  "account_id": "ea1b650c245740ad1e2122b1941e616f",
+  "compatibility_date": "2026-08-18",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

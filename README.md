@@ -1,6 +1,6 @@
-# Native apps
+# Apps
 
-A collection of native apps built to solve problems I have.
+A collection of focused apps built to solve problems I have.
 
 ## Apps
 
@@ -13,6 +13,7 @@ A collection of native apps built to solve problems I have.
 | [MrMouse](mrmouse/) | macOS | A lightweight Logitech MX Master 3S driver. |
 | [Herdr iOS](herdr-ios/) | iOS | A SwiftUI client for Herdr. |
 | [JellyTV](jellytv/) | tvOS | A Live-TV-first Jellyfin client for Apple TV. |
+| [Puddle Cup](backyard-regatta/) | Web | A 90-second Three.js toy sailboat race through a flooded backyard. |
 
 Each app owns its project files, documentation, and license. Run development
 commands from the app directory unless its README says otherwise.
