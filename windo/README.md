@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/zackbart/apps/releases/download/legacy-windo-v0.1.6/Windo.dmg">
+  <a href="https://github.com/zackbart/apps/releases/download/windo-v0.1.7/Windo-0.1.7.dmg">
     <img src="https://shieldcn.dev/badge/Download-Windo.dmg-blue.svg?logo=apple&size=lg" alt="Download the latest Windo.dmg">
   </a>
-  <a href="https://github.com/zackbart/apps/releases/tag/legacy-windo-v0.1.6">
-    <img src="https://shieldcn.dev/badge/Release-0.1.6-blue.svg" alt="Latest Windo release">
+  <a href="https://github.com/zackbart/apps/releases/tag/windo-v0.1.7">
+    <img src="https://shieldcn.dev/badge/Release-0.1.7-blue.svg" alt="Latest Windo release">
   </a>
   <a href="https://github.com/zackbart/apps/blob/main/windo/LICENSE">
     <img src="https://shieldcn.dev/badge/License-MIT-blue.svg" alt="MIT license">
@@ -30,7 +30,7 @@ whatever is playing, and showing it again resumes it.
 
 ## Install
 
-Grab the `.dmg` from the [latest Windo release](https://github.com/zackbart/apps/releases/tag/legacy-windo-v0.1.6), or install via Homebrew:
+Grab the `.dmg` from the [latest Windo release](https://github.com/zackbart/apps/releases/tag/windo-v0.1.7), or install via Homebrew:
 
 ```bash
 brew install --cask zackbart/tap/windo
@@ -66,8 +66,8 @@ pill (bottom-left) expands on hover.
 Tag-driven. Bump `MARKETING_VERSION` in `project.yml`, commit, then:
 
 ```bash
-git tag windo-v0.1.7
-git push origin windo-v0.1.7
+git tag windo-v0.1.8
+git push origin windo-v0.1.8
 ```
 
 The repository release workflow builds on `macos-26`, signs with Developer ID,
