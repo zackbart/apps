@@ -1,0 +1,23 @@
+{
+  "name": "micro-gains-server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8788",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "gen:seed": "node scripts/gen-seed.mjs",
+    "db:migrate:local": "wrangler d1 migrations apply micro-gains-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply micro-gains-db --remote",
+    "db:seed:local": "npm run gen:seed && wrangler d1 execute micro-gains-db --local --file=migrations/0002_seed_exercises.sql",
+    "deploy": "npm run db:migrate:remote && wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@cloudflare/workers-types": "^5.20260730.1",
+    "typescript": "^5.6.3",
+    "vitest": "^4.1.0",
+    "wrangler": "^4.124.0"
+  }
+}
