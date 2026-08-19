@@ -134,6 +134,20 @@ let kGeoShim = """
 })();
 """
 
+// A one-shot pause() scan doesn't hold: parked tabs start new media on their own
+// (YouTube autoplay-next, SPA navigation). This capture-phase listener re-pauses and
+// tags anything that starts while the tab is parked, so resumeMedia still finds it.
+let kParkShim = """
+(function () {
+  if (window.__windoPark) return; window.__windoPark = true;
+  window.__windoParked = false;
+  document.addEventListener('play', function (e) {
+    var m = e.target;
+    if (window.__windoParked && m && m.pause) { m.dataset.windoResume = '1'; m.pause(); }
+  }, true);
+})();
+"""
+
 // Bridges the page's navigator.geolocation (via kGeoShim) to macOS CoreLocation.
 // One shared CLLocationManager serves every tab; requests carry the WKWebView they
 // came from so replies land in the right page. macOS shows the location-consent
@@ -430,6 +444,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTe
     var tabBarTimer: Timer?
     var opacitySaveTimer: Timer?
     var snapshotInFlight = false
+    var snapshotGen = 0
     var targetColor = NSColor(white: 0.1, alpha: 1)
     var currentColor = NSColor(white: 0.1, alpha: 1)
     var appliedColor: NSColor?
@@ -469,7 +484,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTe
         guard tintShouldRun else {
             sampleTimer?.invalidate(); sampleTimer = nil
             lerpTimer?.invalidate(); lerpTimer = nil
-            snapshotInFlight = false   // a snapshot may never complete once we go dark
+            snapshotGen &+= 1          // orphan any in-flight snapshot; it can't come back
+            snapshotInFlight = false
             return
         }
         guard sampleTimer == nil else { return }
@@ -483,8 +499,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTe
         let cfg = WKSnapshotConfiguration()
         cfg.snapshotWidth = 64                      // downscale for speed
         snapshotInFlight = true
+        let gen = snapshotGen
         wv.takeSnapshot(with: cfg) { [weak self, weak wv] img, _ in
-            guard let self else { return }
+            guard let self, gen == self.snapshotGen else { return }   // superseded; newer owns the flag
             self.snapshotInFlight = false
             guard let wv, wv === self.activeWebView else { return }   // tab switched under us
             if let c = img?.topAverageColor(0.18) { self.setTarget(c) }
@@ -551,6 +568,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTe
         cfg.userContentController.addUserScript(
             WKUserScript(source: kGeoShim, injectionTime: .atDocumentStart, forMainFrameOnly: false))
         cfg.userContentController.add(geoBridge, name: "windoGeo")   // geolocation ← shim
+        cfg.userContentController.addUserScript(
+            WKUserScript(source: kParkShim, injectionTime: .atDocumentStart, forMainFrameOnly: false))
         let wv = WKWebView(frame: webContainer.bounds, configuration: cfg)
         wv.autoresizingMask = [.width, .height]
         wv.customUserAgent = kUserAgent
@@ -899,12 +918,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTe
     // so resume restarts only those; both halves are safe to run twice.
     func pauseMedia(in wv: WKWebView, remember: Bool) {
         let tag = remember ? "m.dataset.windoResume='1';" : ""
-        wv.evaluateJavaScript(
-            "document.querySelectorAll('video,audio').forEach(m=>{if(!m.paused&&!m.ended){\(tag)m.pause()}})")
+        wv.evaluateJavaScript("window.__windoParked=true;"
+            + "document.querySelectorAll('video,audio').forEach(m=>{if(!m.paused&&!m.ended){\(tag)m.pause()}})")
     }
+    // Unpark first, then play; the tag only clears once play() actually takes.
     func resumeMedia(in wv: WKWebView) {
-        wv.evaluateJavaScript(
-            "document.querySelectorAll('[data-windo-resume]').forEach(m=>{delete m.dataset.windoResume;m.play().catch(()=>{})})")
+        wv.evaluateJavaScript("window.__windoParked=false;"
+            + "document.querySelectorAll('[data-windo-resume]').forEach("
+            + "m=>{m.play().then(()=>{delete m.dataset.windoResume}).catch(()=>{})})")
     }
 
     // ponytail: JS mute — no public WKWebView mute API.
@@ -959,6 +980,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTe
     @objc func togglePauseWhenHidden() {
         pauseWhenHidden.toggle()
         UserDefaults.standard.set(pauseWhenHidden, forKey: "pauseWhenHidden")
+        if !window.isVisible || window.isMiniaturized {   // already out of sight: apply now
+            if pauseWhenHidden { for t in tabs { pauseMedia(in: t.webView, remember: true) } }
+            else if let wv = activeWebView { resumeMedia(in: wv) }
+        }
         rebuildMenu()
     }
 
@@ -1002,6 +1027,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSTe
     // A new document drops the shim's fullscreen state with it.
     func webView(_ wv: WKWebView, didCommit nav: WKNavigation!) {
         fullscreenViews.remove(ObjectIdentifier(wv))
+        // A fresh document starts unparked — re-park it unless it's the tab on screen.
+        let onScreen = wv === activeWebView && window.isVisible && !window.isMiniaturized
+        if !onScreen && (pauseWhenHidden || wv !== activeWebView) { pauseMedia(in: wv, remember: false) }
         updateTintTimers()
     }
 
