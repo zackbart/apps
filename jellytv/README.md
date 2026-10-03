@@ -55,4 +55,4 @@ xcodebuild -project JellyTV/JellyTV.xcodeproj -scheme JellyTV \
 ```
 
 Stack: SwiftUI + `@Observable` + Swift Concurrency (no Combine, no coordinators, no TCA).
-See `CLAUDE.md` for the architectural ground rules.
+See `AGENTS.md` for the architectural ground rules.
