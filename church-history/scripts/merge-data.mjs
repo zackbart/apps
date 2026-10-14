@@ -27,8 +27,9 @@ for (const [id, patch] of Object.entries(overrides.patch ?? {})) {
   }
 }
 const nodes = [...byId.values()].sort((a, b) => a.start - b.start);
-// Book citations first, then the other sources in their researched order.
-for (const n of nodes) if (n.sources) n.sources.sort((a, b) => /^Pelikan /.test(b) - /^Pelikan /.test(a));
+// Book citations first (Pelikan, then Damick), then the other sources in their researched order.
+const rank = (s) => (/^Pelikan /.test(s) ? 0 : /^Damick /.test(s) ? 1 : 2);
+for (const n of nodes) if (n.sources) n.sources.sort((a, b) => rank(a) - rank(b));
 const problems = [];
 for (const n of nodes) {
   for (const p of n.parents ?? []) if (!byId.has(p)) problems.push(`${n.id}: missing parent ${p}`);

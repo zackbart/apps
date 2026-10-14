@@ -85,3 +85,20 @@ For every item you own:
 **Clean round.** End your log with a line `Result: CLEAN` if you made no text changes and removed no citations (narrowing a range or adding a well-supported citation still counts as clean), otherwise `Result: CHANGES` and a count.
 
 Validate as in round 2: your JSON parses, `node scripts/merge-data.mjs` shows no broken references, `node scripts/check-pelikan.mjs` and `node scripts/check-pelikan-quotes.mjs <your log>` report no problems.
+
+## Damick pass
+
+We now have the full text of Fr. Andrew Stephen Damick, *Orthodoxy and Heterodoxy: Finding the Way to Christ in a Complicated Religious Landscape* (2nd ed., Ancient Faith, 2017). This replaces the earlier "Damick is not available" note.
+
+**The text.** `research/books/damick/text/` has one file per part: `introduction.txt`, `ch1.txt` to `ch8.txt`, `epilogue.txt`, `appendix1.txt` to `appendix4.txt`. Section headings appear as lines like `=== H4 Lutheranism ===`. Chapters: 1 Orthodoxy, heterodoxy, heresy and history (including the ancient heresies), 2 Roman Catholicism, 3 the Magisterial Reformation (Lutheran, Reformed, Anglican), 4 the Radical Reformation (Anabaptists, Moravians, Puritans, Quakers, Baptists), 5 Evangelicalism and revivalism (Restorationism, Adventism, Holiness, and more), 6 Pentecostalism, 7 non-mainstream groups (Latter-day Saints, Jehovah's Witnesses, and others), 8 non-Christian religions. Not in git. Never copy more than a short quote into a tracked file.
+
+**What Damick is for.** He is an Eastern Orthodox priest comparing the traditions on the church, salvation, and the sacraments. Use him in three ways:
+1. **Cross-check.** Where Damick and the map disagree on a fact, find out who is right. Pelikan and the tradition's own documents outrank Damick. Fix the map only if it is actually wrong.
+2. **"Seen differently".** Where Damick gives the Orthodox view of a tradition's teaching, and the map's `disputed` field would be clearer for including it, add or adjust a short neutral sentence that names it as the Orthodox view (for example "Orthodox writers see ..."). Never state Damick's judgment as fact in `summary`, `why`, `facts`, or `sacraments`. Keep the map neutral between traditions. Do not add polemic. Use plain words and the field's length limit.
+3. **Support.** Where Damick directly supports a claim already on the map, cite him.
+
+**Citation format (strict).** `Damick ch3: Lutheranism`, that is `Damick <part>: <section heading>`, where part is `intro`, `ch1` to `ch8`, `epilogue`, or `appendix1` to `appendix4`, and the heading is copied exactly from a `=== H3 ...` or `=== H4 ...` line in that file (keep its capitalization). Use the most specific section that holds the passage. Pelikan citations stay first in `sources`, then Damick, then others. Keep 2 to 5 sources per item.
+
+**Proof in the log.** For every Damick citation, write one line: `- <id>.<field>: <what you did>. `Damick ch3: Lutheranism`, quote: "exact words from that section"` (25 words at most, copied exactly). Also log every place Damick and the map disagree, and how you resolved it.
+
+**Validate:** JSON parses, `node scripts/merge-data.mjs` shows no broken references, and `node scripts/check-damick.mjs` and `node scripts/check-pelikan.mjs` report no problems.

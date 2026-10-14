@@ -37,6 +37,13 @@ const pelikanCite = (s: string) => {
   if (!m) return null;
   return `Pelikan, <i>The Christian Tradition</i>, vol. ${m[1]}, ${m[2].includes('-') ? 'pp.' : 'p.'} ${m[2]}`;
 };
+/** Damick has no page numbers, so citations name a chapter and section: "Damick ch3: Lutheranism". */
+const damickCite = (s: string) => {
+  const m = /^Damick (intro|ch[1-8]|epilogue|appendix[1-4]): (.+)$/.exec(s);
+  if (!m) return null;
+  const part = m[1].replace(/^ch/, 'ch. ').replace(/^appendix/, 'appendix ').replace(/^intro$/, 'introduction');
+  return `Damick, <i>Orthodoxy and Heterodoxy</i>, ${part}, "${esc(m[2])}"`;
+};
 const nameOf = (n: HistoryNode) => SHORT_NAME[n.id] ?? n.name;
 const isTradId = (id: string | undefined) => !!id && byId.get(id)?.type === 'tradition';
 
@@ -1080,7 +1087,7 @@ function renderPanel(n: HistoryNode) {
   if (n.sources?.length) {
     const links = n.sources
       .map((u) => {
-        const book = pelikanCite(u);
+        const book = pelikanCite(u) ?? damickCite(u);
         if (book) return `<cite>${book}</cite>`;
         let host = u;
         try {
@@ -1177,7 +1184,7 @@ function renderLegend() {
   legend.innerHTML = `<button type="button" class="legend-toggle" aria-expanded="${!legendFolded}" aria-label="${legendFolded ? 'Show the key' : 'Hide the key'}">${CHEVRON}</button><h4>What happens at communion</h4><ul>${Object.entries(EUCHARIST)
     .filter(([k]) => used.has(k))
     .map(([, s]) => `<li style="--c:${s.color}"><i></i><span>${esc(s.name)}${s.note ? `<small>${esc(s.note)}</small>` : ''}</span></li>`)
-    .join('')}</ul>`;
+    .join('')}</ul><p class="legend-note">Colors show each tradition's main emphasis. Many views overlap.</p>`;
 }
 
 document.querySelectorAll<HTMLButtonElement>('.seg button').forEach((btn) => {

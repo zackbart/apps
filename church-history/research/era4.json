@@ -19,6 +19,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Damick ch5: THE GREAT AWAKENINGS",
         "https://www.digitalhistory.uh.edu/disp_textbook.cfm?psid=2992&smtID=2",
         "https://www.thearda.com/us-religion/history/timelines/entry?eid=239&etype=1",
         "https://www.govinfo.gov/content/pkg/GOVPUB-S20-PURL-gpo39912/pdf/GOVPUB-S20-PURL-gpo39912.pdf"
@@ -44,6 +45,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch3: Anglicanism and its Heirs",
         "https://www.ame-church.com/founders-day-2018/",
         "https://www.ame-church.com/our-church/our-beliefs/",
         "https://oikoumene.org/member-churches/african-methodist-episcopal-church"
@@ -70,8 +72,8 @@
       "outsideNicene": true,
       "importance": 2,
       "sources": [
+        "Damick ch7: MORMONISM",
         "https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/chapter-11?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/sacrament-meetings?lang=eng",
         "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report"
@@ -99,9 +101,9 @@
       "importance": 1,
       "sources": [
         "Pelikan 5:313",
+        "Damick ch5: Restorationism",
         "https://discipleshistory.org/history/",
         "https://discipleshistory.org/wiki/christian-church-disciples-of-christ/",
-        "https://www.oikoumene.org/organization/world-convention-of-churches-of-christ",
         "https://disciples.org/our-identity/communion-and-baptism/"
       ]
     },
@@ -127,7 +129,7 @@
         "Pelikan 5:176",
         "Pelikan 5:255",
         "Pelikan 5:272",
-        "https://academic.oup.com/edited-volume/61883/chapter-abstract/547767906?login=false",
+        "Damick ch3: Anglicanism and its Heirs",
         "https://academic.oup.com/book/5718/chapter-abstract/148841086"
       ]
     },
@@ -138,7 +140,7 @@
       "start": 1837,
       "end": null,
       "parents": ["methodist"],
-      "summary": "Wesleyan Christians taught entire sanctification, God's grace enabling holy love and living. Phoebe Palmer's meetings spread the movement beyond Methodist institutions.",
+      "summary": "Wesleyan Christians taught entire sanctification as a second work of grace after conversion. Phoebe Palmer's meetings spread the movement beyond Methodist institutions.",
       "why": "Methodist teaching about holiness shaped later revival churches and Pentecostal beliefs about spiritual experiences after conversion.",
       "facts": [
         "The movement developed in the 1830s. 1837 marks Palmer's leadership of the Tuesday meetings.",
@@ -148,13 +150,14 @@
       ],
       "sacraments": "Usually two sacraments or ordinances. Baptism practices vary. Wesleyan churches treat Communion as a means of grace. The Salvation Army omits outward sacraments.",
       "today": "Millions worldwide. Nazarenes alone about 2.8M in 2025.",
+      "disputed": "Nazarenes teach a second work of grace with continued growth. Orthodox writers describe sanctification as lifelong union with God.",
       "outsideNicene": false,
       "importance": 2,
       "sources": [
         "Pelikan 5:148-149",
+        "Damick ch5: The Holiness Movement",
         "https://nazarene.org/our-history/",
-        "https://nazarene.org/historical-statement/",
-        "https://nazarene.org/what-we-believe/",
+        "https://resources.nazarene.org/index.php/s/3qpJHL6De44ppjd/download",
         "https://nazarene.org/news/general-secretary-releases-2025-statistics/"
       ]
     },
@@ -176,6 +179,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch5: Adventism",
         "https://adventist.org/identity/history",
         "https://encyclopedia.adventist.org/article?highlight=Division&id=B8SX",
         "https://www.adventist.org/who-are-seventh-day-adventists/united-for-mission-one-hundred-and-fifty-years/"
@@ -201,6 +205,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Damick ch4: Baptists",
         "https://www.sbc.net/resource-library/resolutions/resolution-on-racial-reconciliation-on-the-150th-anniversary-of-the-southern-baptist-convention/",
         "https://bfm.sbc.net/bfm2000/",
         "https://research.lifeway.com/wp-content/uploads/2026/05/2025_ACP_Summary.pdf"
@@ -227,6 +232,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch5: Adventism",
         "https://www.adventist.org/who-are-seventh-day-adventists/united-for-mission-one-hundred-and-fifty-years/",
         "https://adventist.org/beliefs",
         "https://adventist.org/beliefs/official/the-lords-supper",
@@ -253,6 +259,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch5: The Holiness Movement",
         "https://www.salvationarmy.org/history",
         "https://www.salvationarmy.org/sites/default/files/2025-06/Handbook%2Bof%2BDoctrine.pdf",
         "https://www.salvationarmy.org/sites/default/files/2025-12/Annual_Report-2025.pdf",
@@ -279,6 +286,8 @@
       "importance": 1,
       "sources": [
         "Pelikan 5:250-252",
+        "Damick ch2: Papal Supremacy",
+        "Damick ch2: Papal Infallibility",
         "https://www.vatican.va/content/pius-ix/en/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html",
         "https://www.oikoumene.org/church-families/old-catholic-churches"
       ]
@@ -329,6 +338,7 @@
       "outsideNicene": false,
       "importance": 3,
       "sources": [
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
         "https://bg-patriarshia.bg/news/poslanie-na-vselenskia-patriarh-vartolomey-po-povod-70-godin",
         "https://www.orthodoxhistory.org/2020/02/18/the-bulgarian-schism-began-150-years-ago/",
         "https://www.oikoumene.org/resources/documents/dictionary-of-the-ecumenical-movement-orthodoxy"
@@ -355,6 +365,7 @@
       "outsideNicene": true,
       "importance": 2,
       "sources": [
+        "Damick ch7: JEHOVAH’S WITNESSES",
         "https://www.jw.org/en/library/brochures/Jehovahs-Witnesses-Unitedly-Doing-Gods-Will-Worldwide/Jehovah-Gathers-and-Equips-His-People-for-Work/",
         "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/An-Association-of-Brothers/Meetings-for-Worship-Instruction-and-Encouragement/",
         "https://www.jw.org/en/library/books/2025-Service-Year-Report-of-Jehovahs-Witnesses-Worldwide/2025-Grand-Totals/"
@@ -380,6 +391,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch4: Baptists",
         "https://kinginstitute.stanford.edu/national-baptist-convention-nbc",
         "https://baptistworld.org/members/",
         "https://baptistworld.org/beliefs/"
@@ -406,9 +418,9 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Damick ch6: The Azusa Street Revival: The Spread of Pentecostalism",
         "https://ag.org/Beliefs/Statement-of-Fundamental-truths",
         "https://ag.org/About/About-the-AG/History",
-        "https://upci.org/our-beliefs/",
         "https://iphc.org/wp-content/uploads/2023/04/IPHC-Manual-April-1.pdf",
         "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
       ]
@@ -457,8 +469,8 @@
       "outsideNicene": true,
       "importance": 2,
       "sources": [
+        "Damick ch6: The Azusa Street Revival: The Spread of Pentecostalism",
         "https://upci.org/about-the-upci/",
-        "https://upci.org/our-beliefs/",
         "https://upci.org/one-million-constituents/",
         "https://dmc.upci.org/wp-content/uploads/2023/03/2023-UPCI-ARTICLES-OF-FAITH.pdf",
         "https://ag.org/About/About-the-AG/History"
@@ -484,6 +496,7 @@
       "importance": 2,
       "sources": [
         "Pelikan 5:326",
+        "Damick ch5: Liberalism and Fundamentalism",
         "https://pcusa.org/news-storytelling/blogs/historical-society-blog/journal-interview-bradley-longfield-fundamentalist-modernist-conflict",
         "https://pcusa.org/es/news-storytelling/blogs/historical-society-blog/fighting-right-fundamentalist-modernist-controversy-and-west-jersey-presbytery"
       ]
@@ -532,6 +545,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Damick ch5: The Mega-Church Movement",
         "https://www.pewresearch.org/religion/2025/02/26/religious-landscape-study-religious-identity/",
         "https://hirr.hartfordinternational.edu/research/megachurch-research/",
         "https://web01.hartfordinternational.edu/megachurch/2020_megachurch_report.pdf"
@@ -555,6 +569,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch3: Lutheranism",
         "https://www.ucc.org/who-we-are/about/history/",
         "https://www.umc.org/en/content/methodist-history-the-uniting-conference-of-1968",
         "https://pcusa.org/historical-society/history-online/history/history-church",
@@ -582,6 +597,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Damick ch6: THE CHARISMATIC MOVEMENT",
         "https://dioceseofraleigh.org/charismatic-renewal/history",
         "https://doi.org/10.3366/swc.2019.0267",
         "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
@@ -609,6 +625,7 @@
       "sources": [
         "Pelikan 5:326-327",
         "Pelikan 5:331-332",
+        "Damick ch2: CLOSER YET FURTHER APART: THEOLOGY, LITURGICS, AND REUNION",
         "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
         "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html"
       ]
@@ -631,6 +648,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Damick ch2: THE GREAT SCHISM",
         "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
         "https://www.christianunity.va/content/unitacristiani/it/dialoghi/sezione-orientale/chiese-ortodosse-di-tradizione-bizantina/relazioni-bilaterali/patriarcato-ecumenico/dichiarazioni-comuni/1965-dichiarazione-comune-di-papa-paolo-vi-e-del-patriarca-ecume/testo-in-inglese.pdf"
       ]
@@ -703,6 +721,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch3: Anglicanism and its Heirs",
         "https://anglicanchurch.net/welcome/",
         "https://anglicanchurch.net/structure/"
       ]
