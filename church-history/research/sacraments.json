@@ -4,19 +4,19 @@
    "id": "baptism",
    "name": "Baptism",
    "short": "Baptism",
-   "what": "Washing with water to mark entry into Christian life and the church."
+   "what": "Washing with water as Christian initiation. Churches differ over how baptism gives or signifies new life."
   },
   {
    "id": "communion",
    "name": "Communion",
    "short": "Communion",
-   "what": "Sharing bread and wine, or grape juice, in remembrance of Jesus' death."
+   "what": "Sharing bread and wine, or grape juice, to celebrate Christ's death and resurrection. Churches differ over his presence."
   },
   {
    "id": "confirmation",
    "name": "Confirmation",
    "short": "Confirmation",
-   "what": "Prayer, laying on hands, or anointing to affirm baptism and invoke the Holy Spirit."
+   "what": "Prayer, laying on hands, or anointing linked to baptism and the gift of the Holy Spirit."
   },
   {
    "id": "confession",
@@ -28,7 +28,7 @@
    "id": "marriage",
    "name": "Marriage",
    "short": "Marriage",
-   "what": "A church celebration of marriage vows, with prayer and blessing."
+   "what": "A church celebration of marriage, with prayer and blessing. Some traditions include vows or crowning."
   },
   {
    "id": "ordination",
@@ -46,7 +46,7 @@
  "rows": [
   {
    "id": "church-of-east",
-   "summary": "Holy mysteries convey grace. Their traditional seven include baptismal oil, holy leaven, and the sign of the cross.",
+   "summary": "Holy mysteries convey grace. Abdisho's traditional seven include baptismal oil, holy leaven, and the sign of the cross.",
    "cells": {
     "baptism": {
      "status": "sacrament",
@@ -66,7 +66,7 @@
     },
     "marriage": {
      "status": "rite",
-     "note": "Priests bless marriages. Traditional lists omit marriage, though modern dialogue affirms its sacramental character."
+     "note": "Priests bless marriages. Abdisho's seven omit marriage, though modern dialogue affirms its sacramental character."
     },
     "ordination": {
      "status": "sacrament",
@@ -74,7 +74,7 @@
     },
     "anointing": {
      "status": "rite",
-     "note": "Priests anoint the sick. Traditional lists omit this rite, though dialogue affirms its sacramental character."
+     "note": "Priests anoint the sick. Abdisho's seven omit it, though dialogue affirms its sacramental character."
     }
    },
    "sources": [
@@ -157,7 +157,9 @@
    },
    "sources": [
     "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
-    "https://www.oca.org/questions/sevensacraments/the-sacraments"
+    "https://www.oca.org/questions/sevensacraments/the-sacraments",
+    "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/marriage",
+    "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/chrismation"
    ]
   },
   {
@@ -196,7 +198,10 @@
    "sources": [
     "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
     "https://www.vatican.va/content/catechism/en/part_two/section_one/chapter_one/article_2/iv_the_sacraments_of_salvation.html",
-    "https://www.vatican.va/content/paul-vi/en/apost_constitutions/documents/hf_p-vi_apc_19721130_sacram-unctionem.html"
+    "https://www.vatican.va/content/paul-vi/en/apost_constitutions/documents/hf_p-vi_apc_19721130_sacram-unctionem.html",
+    "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/iii_how_is_the_sacrament_of_baptism_celebrated.index.html",
+    "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_3/v_the_sacramental_sacrifice_thanksgiving_memorial_presence.index.html",
+    "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_2/iii_the_effects_of_confirmation.index.html"
    ]
   },
   {
@@ -216,8 +221,8 @@
      "note": "After instruction, believers affirm baptismal faith publicly and receive prayer, usually with laying on hands."
     },
     "confession": {
-     "status": "sacrament",
-     "note": "Retains private confession and absolution. The Apology explicitly calls absolution a sacrament."
+     "status": "varies",
+     "note": "Retains confession and absolution. The Apology calls absolution a sacrament, but many churches count two."
     },
     "marriage": {
      "status": "rite",
@@ -236,7 +241,9 @@
     "https://bookofconcord.org/defense/of-the-number-and-use-of-sacraments/",
     "https://bookofconcord.org/small-catechism/",
     "https://witness.lcms.org/2007/confessing-and-confirming-the-faith-10-2007/",
-    "https://download.elca.org/ELCA%20Resource%20Repository/How_is_oil_used_in_worship.pdf"
+    "https://download.elca.org/ELCA%20Resource%20Repository/How_is_oil_used_in_worship.pdf",
+    "https://download.elca.org/ELCA%20Resource%20Repository/What_is_a_sacrament_for_Lutherans.pdf",
+    "https://bookofconcord.org/augsburg-confession/"
    ]
   },
   {
@@ -276,12 +283,14 @@
     "https://centernet.pcusa.org/what-we-believe/what-makes-us-unique/",
     "https://pcusa.org/order-worship-faqs",
     "https://www.pcusa.org/sites/default/files/2025-08/2025_0724_Book_of_Order_Interactive_2025-2027.pdf",
-    "https://centernet.pcusa.org/ministries/worship/faq/faq-pastoralrites/"
+    "https://centernet.pcusa.org/ministries/worship/faq/faq-pastoralrites/",
+    "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism",
+    "https://www.opc.org/wcf.html"
    ]
   },
   {
    "id": "anabaptist",
-   "summary": "Baptism and communion express faith, obedience, and shared discipleship. Some communities also observe foot washing and other ordinances.",
+   "summary": "Baptism and communion are usually signs or ordinances of God's work and believers' commitment. Some communities observe foot washing, anointing, and other ordinances.",
    "cells": {
     "baptism": {
      "status": "ordinance",
@@ -289,19 +298,19 @@
     },
     "communion": {
      "status": "ordinance",
-     "note": "Shares bread and wine or juice to remember Christ and renew believers' covenant together."
+     "note": "Shares bread and wine or juice, remembering Christ, sharing his presence, and renewing community."
     },
     "confirmation": {
-     "status": "none",
-     "note": "Believers profess faith at baptism. No separate confirmation rite normally follows."
+     "status": "varies",
+     "note": "Mennonites usually have no separate rite. Some Brethren confirm believers through laying on hands."
     },
     "confession": {
      "status": "rite",
      "note": "Members confess sins and seek reconciliation, especially before communion, without priestly sacramental absolution."
     },
     "marriage": {
-     "status": "rite",
-     "note": "The congregation witnesses marriage vows and prays for the spouses. Some call marriage an ordinance."
+     "status": "varies",
+     "note": "The church witnesses marriage vows and prays. Some Mennonites count marriage as an ordinance."
     },
     "ordination": {
      "status": "rite",
@@ -316,12 +325,15 @@
     "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/",
     "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/baptism/",
     "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/the-lords-supper/",
-    "https://www.brethren.org/about/practices/"
+    "https://www.brethren.org/about/practices/",
+    "https://brethrenchurch.org/contextual-brethren-live/",
+    "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/marriage/",
+    "https://biblicalmennonite.com/wp-content/uploads/2021/08/Ministers-Manual-2016-2018-2021.pdf"
    ]
   },
   {
    "id": "anglican",
-   "summary": "Article 25 names two Gospel sacraments and five other rites. Anglicans differ over calling those five sacraments.",
+   "summary": "Article 25 names two Gospel sacraments. Some Anglicans count seven sacraments, while others call the remaining five sacramental rites.",
    "cells": {
     "baptism": {
      "status": "sacrament",
@@ -332,30 +344,32 @@
      "note": "Shares bread and wine as communion with Christ. Teachings about his presence differ."
     },
     "confirmation": {
-     "status": "rite",
-     "note": "Bishops lay hands on baptized believers. Article 25 distinguishes this from Gospel sacraments."
+     "status": "varies",
+     "note": "Bishops lay hands on believers. Some count confirmation as a sacrament, others a rite."
     },
     "confession": {
-     "status": "rite",
-     "note": "Offers communal confession and optional private absolution. Article 25 distinguishes penance from Gospel sacraments."
+     "status": "varies",
+     "note": "Offers confession and optional private absolution. Some count penance as a sacrament, others a rite."
     },
     "marriage": {
-     "status": "rite",
-     "note": "Blesses marriage vows. Article 25 distinguishes matrimony from Gospel sacraments."
+     "status": "varies",
+     "note": "Blesses marriage vows. Some count matrimony as a sacrament, others as a church rite."
     },
     "ordination": {
-     "status": "rite",
-     "note": "Bishops ordain deacons, priests, and bishops. Article 25 distinguishes orders from Gospel sacraments."
+     "status": "varies",
+     "note": "Bishops ordain deacons, priests, and bishops. Some count orders as a sacrament, others a rite."
     },
     "anointing": {
-     "status": "rite",
-     "note": "Anoints the sick and prays for healing. Article 25 distinguishes unction from Gospel sacraments."
+     "status": "varies",
+     "note": "Anoints the sick. Some count unction as a sacrament, others as a church rite."
     }
    },
    "sources": [
     "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
     "https://www.episcopalchurch.org/who-we-are/what-we-believe/",
-    "https://episcopalri.org/sacraments/"
+    "https://episcopalri.org/sacraments/",
+    "https://ecphilippines.org/catechism/",
+    "https://www.anglicancatholic.org.uk/history/"
    ]
   },
   {
@@ -488,7 +502,7 @@
     },
     "communion": {
      "status": "ordinance",
-     "note": "Usually shares bread and wine or juice to remember Jesus' death. Frequency differs by church."
+     "note": "Usually shares bread and wine or juice in remembrance. Some also emphasize communion with Christ."
     },
     "confirmation": {
      "status": "none",

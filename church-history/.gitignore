@@ -3,3 +3,6 @@ dist/
 .wrangler/
 *.log
 .DS_Store
+
+# Copyrighted reference books, local only
+research/books/

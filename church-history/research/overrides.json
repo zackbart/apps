@@ -25,7 +25,20 @@
    "on": null
   },
   "catholic": {
-   "why": "It is the largest Christian church, about 1.4 billion people, and the line most Protestant churches broke from in the 1500s."
+   "why": "The largest Christian church, with about 1.42 billion baptized members. Most Protestant traditions trace their separation from Rome to the Reformation.",
+   "sources": [
+    "https://www.vatican.va/content/catechism/en.html",
+    "https://www.usccb.org/catechism/pt2sect2",
+    "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
+    "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
+    "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+   ]
+  },
+  "anglican": {
+   "sacraments": "Two Gospel sacraments, baptism and the Eucharist. Baptism includes infants. Anglicans differ over counting five other rites and explain Christ's real presence in several ways."
+  },
+  "pentecostal": {
+   "sacraments": "Usually two ordinances, believers' baptism and communion. Many distinguish Spirit baptism from conversion. Oneness churches link water and Spirit baptism to new birth. Some practice foot washing."
   }
  },
  "add": [
@@ -36,26 +49,33 @@
    "start": 1596,
    "end": null,
    "parents": [
+    "catholic",
     "eastern-orthodox",
-    "catholic"
+    "oriental-orthodox",
+    "church-of-east"
    ],
-   "summary": "Eastern churches in full communion with the pope that keep their own liturgies, clergy, and church law. The largest, the Ukrainian Greek Catholic Church, came out of the Union of Brest in 1596.",
-   "why": "They show Catholic unity does not require the Latin Mass. Orthodox churches see these unions as an obstacle to reunion.",
+   "summary": "Eastern churches in communion with Rome, preserving their own worship and law. Brest in 1596 marks one reunion, not the beginning of all Eastern Catholic churches.",
+   "why": "Catholic unity allows several Eastern rites, not only the Latin rite. Catholic and Orthodox churches still dispute the history of these unions.",
    "facts": [
     "There are 23 Eastern Catholic churches alongside the Latin Church.",
-    "The Maronites of Lebanon confirmed their ties with Rome in 1182.",
+    "Maronites trace continuous communion with Rome. Other Eastern Catholic churches arose through reunions at different dates.",
     "Many of them ordain married men as priests.",
     "Each uses an Eastern rite such as Byzantine, Syriac, or Coptic."
    ],
-   "sacraments": "Seven sacraments, often called holy mysteries. Infants receive baptism, chrismation, and first communion together. The Byzantine rite uses leavened bread.",
+   "sacraments": "Seven sacraments, often called holy mysteries. Eastern tradition joins baptism, chrismation, and communion, including for infants. Practices differ across churches. Byzantine churches use leavened Eucharistic bread.",
    "today": "About 18 million, mostly in Ukraine, India, and the Middle East",
-   "disputed": "Orthodox critics call these unions uniatism. The 1993 Balamand statement, signed by Catholic and Orthodox theologians, rejected it as a path to reunion.",
+   "disputed": "The 1993 Balamand dialogue rejected uniatism as a model for reunion, while affirming Eastern Catholic churches' right to exist.",
    "outsideNicene": false,
    "importance": 2,
    "sources": [
     "https://www.britannica.com/topic/Eastern-rite-church",
     "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
-    "https://www.britannica.com/event/Union-of-Brest-Litovsk"
+    "https://www.britannica.com/event/Union-of-Brest-Litovsk",
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/",
+    "https://www.usccb.org/resources/who-are-catholics-middle-east",
+    "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/iii_how_is_the_sacrament_of_baptism_celebrated.index.html",
+    "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
+    "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-orientale/chiese-ortodosse-di-tradizione-bizantina/commissione-mista-internazionale-per-il-dialogo-teologico-tra-la/documenti-di-dialogo/testo-in-lingua-inglese.html"
    ]
   }
  ]

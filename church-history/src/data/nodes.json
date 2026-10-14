@@ -845,14 +845,16 @@
   "facts": [
    "Pope Nicholas I rejects Photius as patriarch in 863.",
    "A Constantinople council condemns Nicholas and the Filioque in 867.",
-   "The 879 to 880 council later restores communion with Photius."
+   "Ignatius's restoration ends the rupture in 867.",
+   "The 879 to 880 council later recognizes Photius as patriarch."
   ],
   "disputed": "Catholic and Orthodox histories differ over responsibility, Photius's legitimacy, and which subsequent council deserves recognition.",
   "outsideNicene": false,
   "importance": 2,
   "sources": [
    "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
-   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople",
+   "https://churchmotherofgod.org/histories/great-schism/"
   ]
  },
  {
@@ -865,7 +867,7 @@
    "chalcedonian"
   ],
   "summary": "Churches in communion with the bishop of Rome develop as a distinct branch after the East-West separation, preserving apostolic succession and sacramental worship.",
-  "why": "It is the largest Christian church, about 1.4 billion people, and the line most Protestant churches broke from in the 1500s.",
+  "why": "The largest Christian church, with about 1.42 billion baptized members. Most Protestant traditions trace their separation from Rome to the Reformation.",
   "facts": [
    "1054 marks a map division, not Catholicism's claimed founding date.",
    "The pope holds universal authority in Catholic teaching.",
@@ -880,7 +882,8 @@
    "https://www.vatican.va/content/catechism/en.html",
    "https://www.usccb.org/catechism/pt2sect2",
    "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
-   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
+   "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
   ]
  },
  {
@@ -1595,7 +1598,7 @@
    "The Book of Common Prayer first appeared in 1549.",
    "The 1563 Thirty-nine Articles express Reformation teaching."
   ],
-  "sacraments": "Two gospel sacraments: baptism, including infants, and Eucharist. Five other rites are commonly called sacraments. Communion teaching varies, including Reformed spiritual presence and Anglo-Catholic real presence.",
+  "sacraments": "Two Gospel sacraments, baptism and the Eucharist. Baptism includes infants. Anglicans differ over counting five other rites and explain Christ's real presence in several ways.",
   "today": "About 85 million worldwide, especially Africa, Britain, and Commonwealth countries.",
   "outsideNicene": false,
   "importance": 1,
@@ -1846,26 +1849,33 @@
   "start": 1596,
   "end": null,
   "parents": [
+   "catholic",
    "eastern-orthodox",
-   "catholic"
+   "oriental-orthodox",
+   "church-of-east"
   ],
-  "summary": "Eastern churches in full communion with the pope that keep their own liturgies, clergy, and church law. The largest, the Ukrainian Greek Catholic Church, came out of the Union of Brest in 1596.",
-  "why": "They show Catholic unity does not require the Latin Mass. Orthodox churches see these unions as an obstacle to reunion.",
+  "summary": "Eastern churches in communion with Rome, preserving their own worship and law. Brest in 1596 marks one reunion, not the beginning of all Eastern Catholic churches.",
+  "why": "Catholic unity allows several Eastern rites, not only the Latin rite. Catholic and Orthodox churches still dispute the history of these unions.",
   "facts": [
    "There are 23 Eastern Catholic churches alongside the Latin Church.",
-   "The Maronites of Lebanon confirmed their ties with Rome in 1182.",
+   "Maronites trace continuous communion with Rome. Other Eastern Catholic churches arose through reunions at different dates.",
    "Many of them ordain married men as priests.",
    "Each uses an Eastern rite such as Byzantine, Syriac, or Coptic."
   ],
-  "sacraments": "Seven sacraments, often called holy mysteries. Infants receive baptism, chrismation, and first communion together. The Byzantine rite uses leavened bread.",
+  "sacraments": "Seven sacraments, often called holy mysteries. Eastern tradition joins baptism, chrismation, and communion, including for infants. Practices differ across churches. Byzantine churches use leavened Eucharistic bread.",
   "today": "About 18 million, mostly in Ukraine, India, and the Middle East",
-  "disputed": "Orthodox critics call these unions uniatism. The 1993 Balamand statement, signed by Catholic and Orthodox theologians, rejected it as a path to reunion.",
+  "disputed": "The 1993 Balamand dialogue rejected uniatism as a model for reunion, while affirming Eastern Catholic churches' right to exist.",
   "outsideNicene": false,
   "importance": 2,
   "sources": [
    "https://www.britannica.com/topic/Eastern-rite-church",
    "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
-   "https://www.britannica.com/event/Union-of-Brest-Litovsk"
+   "https://www.britannica.com/event/Union-of-Brest-Litovsk",
+   "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/",
+   "https://www.usccb.org/resources/who-are-catholics-middle-east",
+   "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/iii_how_is_the_sacrament_of_baptism_celebrated.index.html",
+   "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
+   "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-orientale/chiese-ortodosse-di-tradizione-bizantina/commissione-mista-internazionale-per-il-dialogo-teologico-tra-la/documenti-di-dialogo/testo-in-lingua-inglese.html"
   ]
  },
  {
@@ -1887,7 +1897,7 @@
    "Particular Baptists emerged separately in the 1630s with Calvinist beliefs."
   ],
   "sacraments": "Two ordinances: believers' baptism, usually immersion, and the Lord's Supper, usually memorial. Some Reformed Baptists also emphasize spiritual feeding on Christ.",
-  "today": "At least 53 million baptized believers in Baptist World Alliance member churches.",
+  "today": "About 53 million baptized believers in Baptist World Alliance member churches.",
   "disputed": "Most historians trace Baptist origins to English Separatists. Some Baptists claim continuity with earlier churches rather than a seventeenth-century beginning.",
   "outsideNicene": false,
   "importance": 1,
@@ -1896,7 +1906,8 @@
    "https://www.thegospelcoalition.org/themelios/article/origins-of-the-particular-baptists/",
    "https://bfm.sbc.net/bfm2000/",
    "https://baptistworld.org/annual-ministry-report/",
-   "https://www.ccel.org/creeds/bcf/bcfc30.htm"
+   "https://www.ccel.org/creeds/bcf/bcfc30.htm",
+   "https://baptistworld.org/"
   ]
  },
  {
@@ -2037,7 +2048,7 @@
    "The Russian Orthodox Church lifted the old condemnations in 1971."
   ],
   "sacraments": "Priestly groups retain seven mysteries, infant baptism, and Christ's real Eucharistic presence. Priestless groups retain baptism but lack priestly Eucharist and other priest-dependent rites.",
-  "today": "Estimated two million in Russia, eastern Europe, and diaspora communities.",
+  "today": "About two million worldwide, a 2018 estimate. Current total uncertain.",
   "outsideNicene": false,
   "importance": 2,
   "sources": [
@@ -2653,7 +2664,7 @@
    "The Assemblies of God organized in Hot Springs, Arkansas, in 1914.",
    "2026 Pentecostal-charismatic total is about 676M across churches. Confidence medium. The categories overlap."
   ],
-  "sacraments": "Usually two ordinances, believers' immersion and symbolic Communion. Spirit baptism is a distinct experience of spiritual power. Some churches also practice foot washing.",
+  "sacraments": "Usually two ordinances, believers' baptism and communion. Many distinguish Spirit baptism from conversion. Oneness churches link water and Spirit baptism to new birth. Some practice foot washing.",
   "today": "Hundreds of millions worldwide. Especially Africa, Latin America, and Asia.",
   "disputed": "1906 marks international expansion. Pentecostals had earlier roots. Most are Trinitarian. Oneness churches appear separately.",
   "outsideNicene": false,
@@ -3061,18 +3072,20 @@
   "why": "Its doctrinal separation concerns authority and sexual ethics more than baptism or Eucharistic presence.",
   "facts": [
    "The denomination launched on May 1, 2022.",
-   "Its convening General Conference met in Costa Rica in September 2024. Confidence high.",
+   "Its convening General Conference met in Costa Rica in September 2024.",
    "Its doctrine retains infant baptism and two sacraments as means of grace.",
-   "Reviewed official sources provide no verified global adherent total. Current-size confidence low."
+   "The church reported 7,250 congregations in September 2026. No global adherent total accompanies that report.",
+   "Its next General Conference met in Johannesburg, South Africa, in 2026."
   ],
   "sacraments": "Two sacraments, infant or adult baptism and Holy Communion. Communion conveys grace and Christ's body and blood spiritually through faith. Bread and wine remain unchanged.",
-  "today": "Adherent total unverified. Congregations in Americas, Africa, Europe, and Asia.",
+  "today": "7,250 congregations reported in September 2026. Global adherent total unverified.",
   "outsideNicene": false,
   "importance": 2,
   "sources": [
    "https://www.globalmethodist.org/launch-information",
    "https://www.globalmethodist.org/articles-of-faith",
-   "https://globalmethodist.org/wp-content/uploads/2024/11/2024-GMC-BOOK-OF-DOCTRINES-FINAL.pdf"
+   "https://globalmethodist.org/wp-content/uploads/2024/11/2024-GMC-BOOK-OF-DOCTRINES-FINAL.pdf",
+   "https://www.globalmethodist.org/global-methodist-church-concludes-historic-2026-general-conference-in-johannesburg"
   ]
  },
  {
@@ -3105,12 +3118,12 @@
   "summary": "Catholic, Protestant, independent, Eastern Orthodox, and Oriental Orthodox churches remain distinct in October 2026. Counts differ by membership definitions, reference year, and how researchers count overlapping movements.",
   "why": "These figures give an approximate sense of size. Membership totals do not measure agreement about Christian beliefs.",
   "facts": [
-   "The Vatican reports 1.422B baptized Catholics for 2024. Confidence is high for its reported count.",
-   "2026 Protestant and independent estimates total 1.06B, including Pentecostal churches. Confidence is medium.",
-   "Eastern Orthodox estimates range between 220M and 260M. Oriental Orthodox estimates approach 60M. Confidence is medium.",
+   "The Vatican reports 1.422B baptized Catholics for 2024.",
+   "WCD estimates 1.06B Protestants and independents in 2026, including Pentecostal churches.",
+   "WCD estimates 293M Orthodox Christians in 2026, combining Eastern and Oriental churches.",
    "Pentecostal and charismatic counts overlap denominations. These totals use different sources and cannot form a consistent global sum."
   ],
-  "disputed": "WCD counts 293M Eastern and Oriental Orthodox combined. Subtracting about 60M Oriental Orthodox gives an inferred 233M Eastern Orthodox. Counting methods differ.",
+  "disputed": "The Vatican counts baptized Catholics. WCD uses different definitions. Subtracting totals from different sources cannot reliably count Eastern Orthodox.",
   "outsideNicene": false,
   "importance": 1,
   "sources": [
