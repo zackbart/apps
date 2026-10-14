@@ -3,7 +3,7 @@
 
 import type { HistoryNode } from './types';
 import { EMBLEMS } from './emblems';
-import { EUCHARIST, SIMPLE_MARKERS } from './layout';
+import { EUCHARIST, EXAMPLES, SIMPLE_MARKERS } from './layout';
 import { byId, CHOICES, esc, eucharistKey, hueOf, lineageIn, momentsOn, myChurch, nameOf, rememberChurch, visibleSet } from './model';
 import sacramentData from './data/sacraments.json';
 import stepData from './data/steps.json';
@@ -134,7 +134,7 @@ export function renderChurch(root: HTMLElement) {
   const mine = current();
   const chips = CHOICES.map(
     (id) =>
-      `<button type="button" class="pick" data-pick="${id}" aria-pressed="${id === mine}">${emblem(id)}${esc(nameOf(byId.get(id)!))}</button>`,
+      `<button type="button" class="pick" data-pick="${id}" aria-pressed="${id === mine}" title="${esc(EXAMPLES[id] ?? '')}">${emblem(id)}${esc(nameOf(byId.get(id)!))}</button>`,
   ).join('');
   if (other === mine) other = null;
   const options = CHOICES.filter((id) => id !== mine)

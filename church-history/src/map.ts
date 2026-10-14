@@ -4,7 +4,7 @@
 
 import type { HistoryNode } from './types';
 import { FIRST_YEAR, LANE_ORDER, NOW, SIMPLE_ORDER, TRUNK } from './layout';
-import { ACCENT, hueOf, INK, nameOf, nodes, parentIn, visibleSet, yearText, KIND_TEXT, type Mode } from './model';
+import { ACCENT, ACCENT_SOFT, hueOf, INK, nameOf, nodes, parentIn, visibleSet, yearText, KIND_TEXT, type Mode } from './model';
 
 const NS = 'http://www.w3.org/2000/svg';
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -46,7 +46,7 @@ const R_MAX = rawX(NOW);
 
 // ---------------------------------------------------------------------------
 
-type State = 'lit' | 'normal' | 'dim';
+type State = 'own' | 'lit' | 'normal' | 'dim';
 
 interface Line {
   node: HistoryNode;
@@ -54,6 +54,8 @@ interface Line {
   path: SVGPathElement;
   hit: SVGPathElement;
   tip: SVGCircleElement;
+  /** The lighter red over the part of this line that a chosen church traces back through. */
+  trace: SVGPathElement;
   label?: SVGTextElement;
   y: number;
   /** Where the line starts, bends, and ends on screen, from the last render. */
@@ -73,11 +75,15 @@ interface Mark {
 }
 
 export interface Highlight {
-  /** Lines and moments to bring forward. Everything else steps back. */
+  /** The one line drawn in the accent color: the selected church, or else the reader's own. */
+  own?: string | null;
+  /** Lines and moments to bring forward in ink. Everything else steps back. */
   lit?: Set<string> | null;
   selected?: string | null;
-  /** The reader's own church line, drawn in the accent without dimming the rest. */
+  /** The line from Jesus to the reader's church. It never dims the rest. */
   personal?: Set<string> | null;
+  /** Earlier churches on the chosen line, and the year the next step branched off each one. */
+  trace?: Map<string, number> | null;
 }
 
 export interface MapOptions {
@@ -182,9 +188,10 @@ export class FlatMap {
       const g = el('g', { class: 'line', 'data-id': t.id }, this.gLines);
       const hit = el('path', { class: 'hit', 'data-id': t.id }, g);
       const path = el('path', { class: 'stroke' }, g);
+      const trace = el('path', { class: 'trace' }, g);
       const tip = el('circle', { class: 'tip', r: 2.6 }, g);
       el('title', {}, g).textContent = `${nameOf(t)}, ${yearText(t)}`;
-      const line: Line = { node: t, parent: parentIn(t, this.visible), path, hit, tip, y: 0, sx: 0, ex: 0, bend: 0 };
+      const line: Line = { node: t, parent: parentIn(t, this.visible), path, hit, tip, trace, y: 0, sx: 0, ex: 0, bend: 0 };
       // The trunk is one line in three parts. Only its first part is named.
       if (!TRUNK.includes(t.id) || t.id === 'apostolic') {
         line.label = el('text', { class: 'line-label', 'data-id': t.id }, this.gLabels) as SVGTextElement;
@@ -386,16 +393,19 @@ export class FlatMap {
     return left + ((rawX(year) - this.r0) / (this.r1 - this.r0)) * (right - left);
   }
 
-  private stateOf(ids: string[]): State {
-    const { lit, personal } = this.hl;
-    if (lit) return ids.some((id) => lit.has(id)) ? 'lit' : 'dim';
-    if (personal && ids.some((id) => personal.has(id))) return 'lit';
+  private stateOf(id: string): State {
+    const { own, lit, personal, trace } = this.hl;
+    if (id === own) return 'own';
+    if (trace?.has(id)) return 'normal';
+    if (lit) return lit.has(id) ? 'lit' : 'dim';
+    if (personal?.has(id)) return 'lit';
     return 'normal';
   }
 
   private strokeFor(t: HistoryNode, state: State) {
     if (this.mode === 'plain') {
-      if (state === 'lit') return ACCENT;
+      if (state === 'own') return ACCENT;
+      if (state === 'lit') return INK;
       if (state === 'dim') return '#dcdcdc';
       return TRUNK.includes(t.id) ? '#3a3a3a' : '#8e8e8e';
     }
@@ -456,9 +466,11 @@ export class FlatMap {
         : `M${sx} ${l.y}L${ex} ${l.y}`;
       l.path.setAttribute('d', d);
       l.hit.setAttribute('d', d);
-      const state = this.stateOf([t.id]);
+      const until = this.hl.trace?.get(t.id);
+      l.trace.style.display = until == null ? 'none' : '';
+      const state = this.stateOf(t.id);
       const imp = TRUNK.includes(t.id) ? 0 : this.simple ? 1 : t.importance;
-      const width = (imp === 0 ? 4 : imp === 1 ? 2.6 : imp === 2 ? 1.7 : 1.2) + (state === 'lit' ? 1.2 : 0);
+      const width = (imp === 0 ? 4 : imp === 1 ? 2.6 : imp === 2 ? 1.7 : 1.2) + (state === 'own' ? 1.6 : state === 'lit' ? 0.6 : 0);
       const color = this.strokeFor(t, state);
       l.path.setAttribute('stroke', color);
       l.path.setAttribute('stroke-width', String(width));
@@ -466,6 +478,12 @@ export class FlatMap {
       if (t.outsideNicene) l.path.setAttribute('stroke-dasharray', '5 3');
       else l.path.removeAttribute('stroke-dasharray');
       l.path.parentElement!.classList.toggle('selected', selected === t.id);
+      if (until != null) {
+        const tx = this.X(Math.min(until, endYear));
+        l.trace.setAttribute('d', bend ? d.replace(/L[^L]*$/, `L${Math.max(tx, sx + bend)} ${l.y}`) : `M${sx} ${l.y}L${tx} ${l.y}`);
+        l.trace.setAttribute('stroke', ACCENT_SOFT);
+        l.trace.setAttribute('stroke-width', String(width + 0.6));
+      }
       // A dot at the tip while the line is still growing.
       const growing = (t.end == null || t.end > reveal) && reveal < NOW;
       l.tip.style.display = growing ? '' : 'none';
@@ -478,9 +496,9 @@ export class FlatMap {
       l.ex = ex;
       l.bend = bend;
       if (!l.label) continue;
-      l.label.setAttribute('fill', state === 'lit' && this.mode === 'plain' ? ACCENT : state === 'dim' ? '#b4b4b4' : INK);
+      l.label.setAttribute('fill', state === 'own' && this.mode === 'plain' ? ACCENT : state === 'dim' ? '#b4b4b4' : INK);
       l.label.classList.toggle('minor', !this.simple && t.importance > 1);
-      l.label.classList.toggle('strong', state === 'lit');
+      l.label.classList.toggle('strong', state === 'own');
       const living = t.end == null || t.end > reveal;
       if (t.id !== 'apostolic' && living && ex <= plotRight + 2 && ex >= plotLeft) tipLabels.push(l);
       else startLabels.push(l);
@@ -566,7 +584,8 @@ export class FlatMap {
   private rank(n: HistoryNode) {
     if (n.id === this.hl.selected) return -100;
     let r = n.importance * 10;
-    if (this.hl.lit?.has(n.id) || this.hl.personal?.has(n.id)) r -= 15;
+    if (n.id === this.hl.own) r -= 30;
+    else if (this.hl.lit?.has(n.id) || this.hl.personal?.has(n.id)) r -= 15;
     if (n.type === 'tradition') r -= 3;
     else if (n.type === 'council' || n.type === 'schism') r -= 1;
     return r + n.start / 10000;

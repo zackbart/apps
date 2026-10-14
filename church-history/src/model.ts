@@ -127,6 +127,8 @@ export const eucharistKey = (t: HistoryNode) => inherit(EUCHARIST_OF, t, 'memori
 
 export const INK = '#151515';
 export const ACCENT = '#d63d22';
+/** The lighter red for the path a church traces back through. */
+export const ACCENT_SOFT = '#f0a594';
 export const COUNCIL = '#151515';
 export const SPLIT = '#151515';
 
@@ -192,6 +194,31 @@ export const damickCite = (s: string) => {
 // "My church" is remembered between visits.
 
 const STORE = 'church-history:my-church';
+const WELCOMED = 'church-history:welcomed';
+/** Whether the reader has seen the first-visit church picker. */
+export function welcomed() {
+  try {
+    return !!localStorage.getItem(WELCOMED) || !!localStorage.getItem(STORE);
+  } catch {
+    return true;
+  }
+}
+/** Forget the reader's church and show the first-visit picker again. */
+export function resetWelcome() {
+  try {
+    localStorage.removeItem(WELCOMED);
+    localStorage.removeItem(STORE);
+  } catch {
+    /* private mode */
+  }
+}
+export function markWelcomed() {
+  try {
+    localStorage.setItem(WELCOMED, '1');
+  } catch {
+    /* private mode */
+  }
+}
 export function myChurch() {
   try {
     const id = localStorage.getItem(STORE);
