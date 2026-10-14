@@ -89,13 +89,13 @@ export const FAMILY_OF: Record<string, string> = {
 /** How each tradition understands communion (the Lord's Supper, the Eucharist). */
 export const EUCHARIST: Record<string, Swatch> = {
   early: { name: 'Christ\'s body and blood', note: 'Held by the early church before anyone defined how', color: '#eee4c8' },
-  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox and other ancient Eastern churches', color: '#a48df0' },
-  transub: { name: 'Transubstantiation', note: 'The substance becomes Christ. Bread and wine only appear to remain', color: '#f0cb63' },
+  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox and other ancient Eastern churches, and Old Catholics', color: '#a48df0' },
+  transub: { name: 'Transubstantiation', note: 'The bread and wine become Christ\'s body and blood. Their outward appearances remain', color: '#f0cb63' },
   union: { name: 'Real presence: in, with, and under', note: 'Lutheran. Bread and wine remain, and Christ is truly there', color: '#62a9f5' },
   varied: { name: 'Real presence, views vary', note: 'Anglican and Moravian. Affirmed without one fixed explanation', color: '#f58ea6' },
-  spiritual: { name: 'Spiritual presence', note: 'Reformed and Methodist. Christ is received by faith through the Spirit', color: '#6fd08f' },
+  spiritual: { name: 'Real spiritual presence', note: 'Reformed and Methodist. Christ is truly present and received by faith through the Spirit', color: '#6fd08f' },
   memorial: { name: 'Memorial', note: 'An act of remembrance and obedience, often called an ordinance', color: '#58d3e0' },
-  none: { name: 'No outward sacraments', note: 'Quakers and the Salvation Army', color: '#c9b6a0' },
+  none: { name: 'No outward sacraments', note: 'Most Quakers and the Salvation Army. Some evangelical Friends do use outward baptism and communion', color: '#c9b6a0' },
   outside: { name: 'Outside the historic creeds', color: '#8891a8' },
 };
 
@@ -220,21 +220,21 @@ export const CHAPTERS: Chapter[] = [
     focus: 60,
     from: 30,
     to: 320,
-    text: "Jesus' followers carried the faith from Jerusalem across the Roman Empire. For three centuries it was one fellowship, often persecuted, gathered around baptism and the Lord's Supper.",
+    text: "Jesus' followers carried the faith from Jerusalem across the Roman Empire. Often persecuted, they gathered around baptism and the Lord's Supper. Rival groups and local splits already existed, but most churches still saw themselves as one body.",
   },
   {
     title: 'The creeds',
     focus: 400,
     from: 300,
     to: 480,
-    text: 'Once Rome legalized Christianity in 313, bishops met in councils to settle who Jesus is. Nicaea gave us the Nicene Creed. Fights at Ephesus in 431 and Chalcedon in 451 sent the Church of the East and the Oriental Orthodox their own way.',
+    text: 'Once Rome legalized Christianity in 313, bishops met in councils to settle who Jesus is. Nicaea in 325 and Constantinople in 381 gave us the Nicene Creed. The Persian church declared its independence in 424. Disputes over Ephesus in 431 and Chalcedon in 451 slowly set the Church of the East and the Oriental Orthodox on their own paths.',
   },
   {
     title: 'East and West',
     focus: 1054,
     from: 450,
     to: 1120,
-    text: "The Greek East and the Latin West drifted apart over language, politics, and the pope's authority. In 1054 the break became formal. The East became Eastern Orthodox and the West became Catholic.",
+    text: "The Greek East and the Latin West drifted apart over language, politics, the pope's authority, and the Filioque. The excommunications of 1054 became the marker of a split that took centuries to harden. Eastern Orthodox and Catholic churches both claim unbroken continuity with the apostles.",
   },
   {
     title: 'The Reformation',
@@ -248,14 +248,14 @@ export const CHAPTERS: Chapter[] = [
     focus: 1760,
     from: 1580,
     to: 1980,
-    text: 'Protestant churches kept renewing and dividing. Baptists began in 1609. Methodists grew out of the Church of England in the 1700s. Pentecostals came from a 1906 revival in Los Angeles.',
+    text: 'Protestant churches kept renewing and dividing. Baptists began in 1609. Methodists grew out of the Church of England in the 1700s. Pentecostalism grew from Holiness revivals around 1900 and spread from Los Angeles in 1906.',
   },
   {
     title: 'Today',
     focus: 1960,
     from: 1880,
     to: 2026,
-    text: 'More than 2.5 billion people are Christians. Just over half are Catholic, about two in five are Protestant or independent, and about one in ten is Orthodox.',
+    text: 'The World Christian Database counts about 2.7 billion Christians in 2026. Roughly half are Catholic, two in five are Protestant or independent, and one in ten is Orthodox.',
   },
 ];
 

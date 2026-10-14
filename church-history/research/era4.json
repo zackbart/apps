@@ -783,18 +783,20 @@
       "why": "Its doctrinal separation concerns authority and sexual ethics more than baptism or Eucharistic presence.",
       "facts": [
         "The denomination launched on May 1, 2022.",
-        "Its convening General Conference met in Costa Rica in September 2024. Confidence high.",
+        "Its convening General Conference met in Costa Rica in September 2024.",
         "Its doctrine retains infant baptism and two sacraments as means of grace.",
-        "Reviewed official sources provide no verified global adherent total. Current-size confidence low."
+        "The church reported 7,250 congregations in September 2026. No global adherent total accompanies that report.",
+        "Its next General Conference met in Johannesburg, South Africa, in 2026."
       ],
       "sacraments": "Two sacraments, infant or adult baptism and Holy Communion. Communion conveys grace and Christ's body and blood spiritually through faith. Bread and wine remain unchanged.",
-      "today": "Adherent total unverified. Congregations in Americas, Africa, Europe, and Asia.",
+      "today": "7,250 congregations reported in September 2026. Global adherent total unverified.",
       "outsideNicene": false,
       "importance": 2,
       "sources": [
         "https://www.globalmethodist.org/launch-information",
         "https://www.globalmethodist.org/articles-of-faith",
-        "https://globalmethodist.org/wp-content/uploads/2024/11/2024-GMC-BOOK-OF-DOCTRINES-FINAL.pdf"
+        "https://globalmethodist.org/wp-content/uploads/2024/11/2024-GMC-BOOK-OF-DOCTRINES-FINAL.pdf",
+        "https://www.globalmethodist.org/global-methodist-church-concludes-historic-2026-general-conference-in-johannesburg"
       ]
     },
     {
@@ -852,12 +854,12 @@
       "summary": "Catholic, Protestant, independent, Eastern Orthodox, and Oriental Orthodox churches remain distinct in October 2026. Counts differ by membership definitions, reference year, and how researchers count overlapping movements.",
       "why": "These figures give an approximate sense of size. Membership totals do not measure agreement about Christian beliefs.",
       "facts": [
-        "The Vatican reports 1.422B baptized Catholics for 2024. Confidence is high for its reported count.",
-        "2026 Protestant and independent estimates total 1.06B, including Pentecostal churches. Confidence is medium.",
-        "Eastern Orthodox estimates range between 220M and 260M. Oriental Orthodox estimates approach 60M. Confidence is medium.",
+        "The Vatican reports 1.422B baptized Catholics for 2024.",
+        "WCD estimates 1.06B Protestants and independents in 2026, including Pentecostal churches.",
+        "WCD estimates 293M Orthodox Christians in 2026, combining Eastern and Oriental churches.",
         "Pentecostal and charismatic counts overlap denominations. These totals use different sources and cannot form a consistent global sum."
       ],
-      "disputed": "WCD counts 293M Eastern and Oriental Orthodox combined. Subtracting about 60M Oriental Orthodox gives an inferred 233M Eastern Orthodox. Counting methods differ.",
+      "disputed": "The Vatican counts baptized Catholics. WCD uses different definitions. Subtracting totals from different sources cannot reliably count Eastern Orthodox.",
       "outsideNicene": false,
       "importance": 1,
       "sources": [

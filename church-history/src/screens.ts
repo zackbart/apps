@@ -175,7 +175,7 @@ export function renderSacraments(root: HTMLElement, deps: ScreenDeps, focus?: st
 
   root.innerHTML = `<div class="screen-inner wide">
     <h2>The sacraments, side by side</h2>
-    <p class="lede">Which churches treat each rite as a sacrament. An ordinance is a rite done in obedience to Christ, understood as a sign rather than a means of grace.</p>
+    <p class="lede">Which churches treat each rite as a sacrament. An ordinance is a practice kept in obedience to Christ. Churches differ over how it relates to grace.</p>
     <div class="key">${key}</div>
     <div class="sac-layout">
       <div class="grid-wrap"><table class="sac-grid"><thead><tr><th></th>${head}</tr></thead><tbody>${body}</tbody></table></div>
