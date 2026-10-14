@@ -1,0 +1,870 @@
+{
+  "era": "The Reformations and their aftermath, 1517 to 1800",
+  "nodes": [
+    {
+      "id": "moravian",
+      "type": "tradition",
+      "name": "Moravian Church",
+      "start": 1457,
+      "end": null,
+      "parents": [
+        "catholic"
+      ],
+      "summary": "The Unity of Brethren arose from Bohemian reform before Luther. Refugees renewed its church life at Herrnhut in the eighteenth century.",
+      "why": "Moravians carried earlier Czech reform into Protestant missions and influenced Wesley's search for assurance of faith.",
+      "facts": [
+        "The Unity of Brethren organized at Kunwald in 1457.",
+        "Its founders drew on the reform associated with Jan Hus.",
+        "Zinzendorf welcomed Moravian refugees at Herrnhut in 1722.",
+        "Missionaries went to the Caribbean in 1732."
+      ],
+      "sacraments": "Two: baptism, including infants, and Holy Communion. Moravians affirm Christ's presence and covenant fellowship without defining precisely how Christ is present in the elements.",
+      "today": "Over one million worldwide, mainly eastern Africa, the Caribbean, and the Americas.",
+      "disputed": "The church began in 1457. Its 1727 renewal continued that church rather than creating a Lutheran offshoot.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+        "https://moravianarchives.org/history/",
+        "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/"
+      ]
+    },
+    {
+      "id": "ninety-five-theses",
+      "type": "schism",
+      "name": "Luther's 95 Theses",
+      "start": 1517,
+      "end": 1521,
+      "on": "catholic",
+      "splits": [
+        "lutheran"
+      ],
+      "summary": "Martin Luther challenged indulgence preaching at Wittenberg in 1517. The dispute widened into separation from Rome by 1521.",
+      "why": "Luther's challenge to indulgences began the dispute that led to Lutheran churches, although he initially sought reform within Catholicism.",
+      "facts": [
+        "Luther circulated his theses on October 31, 1517.",
+        "Printing spread the controversy across Europe.",
+        "Pope Leo X excommunicated Luther in January 1521."
+      ],
+      "sacraments": "The initial dispute concerned indulgences, repentance, and penance. Luther later challenged the Catholic sacramental system.",
+      "disputed": "Posting the theses on the church door remains debated. Catholics and Lutherans interpret the later rupture differently.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.loc.gov/item/2021667736/",
+        "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+      ]
+    },
+    {
+      "id": "lutheran",
+      "type": "tradition",
+      "name": "Lutheran",
+      "start": 1517,
+      "end": null,
+      "parents": [
+        "catholic"
+      ],
+      "summary": "Luther and his colleagues built churches around justification by faith, biblical preaching, and sacraments as gifts of grace.",
+      "why": "Lutheran churches teach that sacraments convey grace and Christ's body and blood are truly present in Communion.",
+      "facts": [
+        "Luther initially worked as a Catholic monk and teacher.",
+        "The Augsburg Confession became a shared doctrinal standard.",
+        "The Book of Concord gathered Lutheran confessions in 1580."
+      ],
+      "sacraments": "Usually two: baptism, including infants, and Eucharist. Both convey grace. Christ's body and blood are present with bread and wine in sacramental union. Absolution also has sacramental status.",
+      "today": "Over 78 million in Lutheran World Federation churches, with others outside it.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf",
+        "https://www.lcms.org/about/beliefs/faqs/doctrine",
+        "https://bookofconcord.org/solid-declaration/the-holy-supper/",
+        "https://lutheranworld.org/sites/default/files/2024-09/LWF%202024-31%20Strategy%20-%20EN.pdf"
+      ]
+    },
+    {
+      "id": "reformed",
+      "type": "tradition",
+      "name": "Reformed",
+      "start": 1519,
+      "end": null,
+      "parents": [
+        "catholic"
+      ],
+      "summary": "Zwingli led reform in Zurich. Calvin later shaped Geneva. Their churches developed into Swiss, Dutch, French, Presbyterian, and related Reformed traditions.",
+      "why": "Reformed churches form a major Protestant family with Communion teachings that differ from Lutheran sacramental union.",
+      "facts": [
+        "Zwingli began preaching at Zurich's Grossmunster in 1519.",
+        "Zurich adopted reforms through public debates and council decisions.",
+        "Calvin and Bullinger agreed on Communion teaching in 1549.",
+        "Presbyterian churches belong to this wider family."
+      ],
+      "sacraments": "Two: baptism, usually including infants, and the Lord's Supper. Calvin taught real spiritual presence and feeding through faith. Zwingli emphasized remembrance and rejected bodily presence.",
+      "today": "About 100 million in World Communion of Reformed Churches member churches.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html",
+        "https://pcusa.org/historical-society/exhibits/foundations-faith",
+        "https://centernet.pcusa.org/ministries/worship/sacraments/",
+        "https://pcusa.org/sacraments-lords-supper-faqs",
+        "https://wcrc.eu/about/",
+        "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+      ]
+    },
+    {
+      "id": "diet-of-worms",
+      "type": "event",
+      "name": "Diet of Worms",
+      "start": 1521,
+      "end": 1521,
+      "on": "lutheran",
+      "summary": "Luther refused to retract his writings before Emperor Charles V. The Edict of Worms outlawed him and condemned his teachings.",
+      "why": "Luther's survival depended on rulers willing to protect him against imperial law.",
+      "facts": [
+        "Luther appeared before the diet in April 1521.",
+        "Charles V issued the edict in May.",
+        "Frederick the Wise sheltered Luther at Wartburg Castle."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+        "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+      ]
+    },
+    {
+      "id": "anabaptist",
+      "type": "tradition",
+      "name": "Anabaptist",
+      "start": 1525,
+      "end": null,
+      "parents": [
+        "reformed"
+      ],
+      "summary": "Zurich reformers baptized professing believers rather than infants in 1525. Related movements elsewhere formed voluntary churches separate from state control.",
+      "why": "Anabaptists made professed faith the basis for baptism and church membership. Mennonites, Hutterites, and Amish share these roots.",
+      "facts": [
+        "Conrad Grebel baptized George Blaurock in Zurich on January 21, 1525.",
+        "Menno Simons gave Mennonites their name.",
+        "Hutterites began communal sharing in Moravia in 1528.",
+        "Jakob Ammann's followers separated in 1693, forming the Amish."
+      ],
+      "sacraments": "Usually two ordinances or signs: believers' baptism and the Lord's Supper, remembering Christ and renewing community commitment. Many also practice footwashing.",
+      "today": "About 2.13 million baptized believers worldwide, especially Africa, Asia, and the Americas.",
+      "disputed": "The Zurich link records Swiss origins. Anabaptism also developed through distinct South German, Austrian, and Dutch movements.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+        "https://hutterites.org/history/community-of-goods/",
+        "https://groups.etown.edu/amishstudies/religion/amish-origins/",
+        "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/baptism/",
+        "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/foot-washing/",
+        "https://mwc-cmm.org/en/about-mwc/"
+      ]
+    },
+    {
+      "id": "schleitheim-confession",
+      "type": "council",
+      "name": "Schleitheim Confession",
+      "start": 1527,
+      "end": 1527,
+      "on": "anabaptist",
+      "summary": "Swiss Brethren adopted seven articles at Schleitheim, defining baptism, discipline, Communion, church separation, leadership, nonviolence, and refusal of oaths.",
+      "why": "The Swiss Brethren tied baptism to voluntary church membership and rejected violence, separating church life from political power.",
+      "facts": [
+        "The gathering met on February 24, 1527.",
+        "Michael Sattler helped draft the articles.",
+        "The seven articles are not seven sacraments.",
+        "These articles did not represent every Anabaptist group."
+      ],
+      "sacraments": "Baptism follows repentance and confessed faith. The Lord's Supper belongs to the baptized community committed to shared discipline.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://gameo.org/index.php?title=Schleitheim_Confession",
+        "https://zimmer.fresnostate.edu/~mariterel/schleitheim_confession.htm"
+      ]
+    },
+    {
+      "id": "marburg-colloquy",
+      "type": "schism",
+      "name": "Marburg Colloquy",
+      "start": 1529,
+      "end": 1529,
+      "on": "lutheran",
+      "splits": [
+        "lutheran",
+        "reformed"
+      ],
+      "summary": "Luther and Zwingli agreed on many doctrines but could not agree about Christ's bodily presence in the Eucharist, blocking Protestant union.",
+      "why": "Disagreement about Christ's presence in Communion prevented Luther and Zwingli from uniting their churches.",
+      "facts": [
+        "Philip of Hesse convened the meeting in October 1529.",
+        "Luther defended Christ's bodily presence with bread and wine.",
+        "Zwingli interpreted the bread and wine as commemorative signs."
+      ],
+      "sacraments": "Luther affirmed Christ's real bodily presence with bread and wine. Zwingli emphasized remembrance and rejected bodily presence in the elements.",
+      "disputed": "Swiss reform began independently before Marburg. This split records failed union rather than descent from Lutheranism.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html",
+        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Marburg%2C_Colloquy_of",
+        "https://bookofconcord.org/solid-declaration/the-holy-supper/"
+      ]
+    },
+    {
+      "id": "augsburg-confession",
+      "type": "event",
+      "name": "Augsburg Confession",
+      "start": 1530,
+      "end": 1530,
+      "on": "lutheran",
+      "summary": "Philipp Melanchthon drafted a statement of Lutheran faith that Protestant rulers presented to Charles V at Augsburg.",
+      "why": "Lutheran churches share this statement of belief about salvation, church life, baptism, and Communion.",
+      "facts": [
+        "Representatives presented the confession on June 25, 1530.",
+        "It defended justification by faith.",
+        "It affirmed infant baptism and Christ's presence in Communion."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://thebookofconcord.org/wp-content/PDFs/augsburg.pdf",
+        "https://bookofconcord.org/"
+      ]
+    },
+    {
+      "id": "act-of-supremacy",
+      "type": "schism",
+      "name": "Act of Supremacy",
+      "start": 1534,
+      "end": 1534,
+      "on": "catholic",
+      "splits": [
+        "anglican"
+      ],
+      "summary": "Parliament declared Henry VIII supreme head of the Church of England, replacing papal authority within England.",
+      "why": "England broke with papal authority before its church adopted Protestant changes to worship and teaching.",
+      "facts": [
+        "Henry sought annulment of his marriage to Catherine of Aragon.",
+        "Parliament strengthened royal control through several acts.",
+        "Henry retained much Catholic doctrine and sacramental practice."
+      ],
+      "disputed": "Anglicans claim continuity with England's ancient church. Catholics see the rejection of papal authority as schism.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+        "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism"
+      ]
+    },
+    {
+      "id": "anglican",
+      "type": "tradition",
+      "name": "Anglican",
+      "start": 1534,
+      "end": null,
+      "parents": [
+        "catholic"
+      ],
+      "summary": "England's church broke with papal authority, adopted Protestant reforms, and retained bishops and ordered worship. Related churches later formed a worldwide communion.",
+      "why": "Anglican churches, including the American Episcopal Church, combine Reformed and Catholic sacramental emphases.",
+      "facts": [
+        "Thomas Cranmer helped shape English worship and doctrine.",
+        "The Book of Common Prayer first appeared in 1549.",
+        "The 1563 Thirty-nine Articles express Reformation teaching."
+      ],
+      "sacraments": "Two gospel sacraments: baptism, including infants, and Eucharist. Five other rites are commonly called sacraments. Communion teaching varies, including Reformed spiritual presence and Anglo-Catholic real presence.",
+      "today": "About 85 million worldwide, especially Africa, Britain, and Commonwealth countries.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism",
+        "https://www.churchofengland.org/faith-life/what-we-believe/eucharist",
+        "https://www.churchofengland.org/sites/default/files/2025-01/gs-misc-1406-a-report-from-the-faith-and-order-commission.pdf",
+        "https://gafcon.org/"
+      ]
+    },
+    {
+      "id": "john-calvin",
+      "type": "figure",
+      "name": "John Calvin",
+      "start": 1536,
+      "end": 1564,
+      "on": "reformed",
+      "summary": "John Calvin published the Institutes in 1536 and helped organize Geneva's Reformed church, returning in 1541 after exile.",
+      "why": "Calvin's teaching shaped Reformed beliefs about grace, church discipline, and spiritual communion with Christ.",
+      "facts": [
+        "Calvin expanded the Institutes through several editions, ending in 1559.",
+        "Calvin taught predestination and justification by faith.",
+        "Geneva trained ministers and sheltered Protestant refugees.",
+        "Calvin affirmed real spiritual feeding on Christ in Communion."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://pcusa.org/historical-society/exhibits/foundations-faith",
+        "https://centernet.pcusa.org/what-we-believe/sacraments/",
+        "https://pcusa.org/sacraments-lords-supper-faqs"
+      ]
+    },
+    {
+      "id": "menno-simons",
+      "type": "figure",
+      "name": "Menno Simons",
+      "start": 1536,
+      "end": 1561,
+      "on": "anabaptist",
+      "summary": "Menno Simons left the Catholic priesthood in 1536 and led Dutch Anabaptists committed to discipleship, believers' baptism, and nonviolence.",
+      "why": "Mennonites take their name from a leader who helped nonviolent Anabaptist communities survive persecution.",
+      "facts": [
+        "Menno served as a priest in Friesland.",
+        "His followers became known as Mennonites.",
+        "He rejected the violence associated with the Munster rebellion."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://gameo.org/index.php?title=Menno_Simons_%281496-1561%29",
+        "https://www.mennoniteusa.org/who-are-mennonites/history/"
+      ]
+    },
+    {
+      "id": "jesuit-approval",
+      "type": "event",
+      "name": "Jesuit Approval",
+      "start": 1540,
+      "end": 1540,
+      "on": "catholic",
+      "summary": "Pope Paul III approved the Society of Jesus, founded by Ignatius of Loyola and companions for preaching, education, and missions.",
+      "why": "Jesuit schools and missions became part of Catholic renewal during the Protestant Reformations.",
+      "facts": [
+        "Papal approval came on September 27, 1540.",
+        "Jesuits opened schools and served overseas missions.",
+        "The order remained within the Catholic Church."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.jesuits.global/2021/09/26/on-27-september-1540-the-society-of-jesus-received-papal-approval/",
+        "https://www.jesuits.global/about-us/the-jesuits/"
+      ]
+    },
+    {
+      "id": "council-of-trent",
+      "type": "council",
+      "name": "Council of Trent",
+      "start": 1545,
+      "end": 1563,
+      "on": "catholic",
+      "summary": "Catholic bishops answered Protestant challenges, defined disputed teachings, and ordered reforms in clergy training and church discipline.",
+      "why": "Trent defined Catholic sacramental teaching in response to Protestant challenges, preserving differences that still divide churches.",
+      "facts": [
+        "The council met in several sessions between 1545 and 1563.",
+        "It reaffirmed seven sacraments in 1547.",
+        "It reaffirmed transubstantiation and Christ's real presence in 1551.",
+        "It required seminaries to improve priestly formation."
+      ],
+      "sacraments": "Seven sacraments convey grace. Baptism includes infants. The Eucharist becomes Christ's body and blood through transubstantiation, while appearances of bread and wine remain.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.newadvent.org/cathen/15030c.htm",
+        "https://www.newadvent.org/cathen/13295a.htm",
+        "https://www.newadvent.org/cathen/05573a.htm"
+      ]
+    },
+    {
+      "id": "english-prayer-and-articles",
+      "type": "event",
+      "name": "Prayer Book and Articles",
+      "start": 1549,
+      "end": 1563,
+      "on": "anglican",
+      "summary": "The Book of Common Prayer introduced English worship services in 1549. The Thirty-nine Articles of 1563 set out the church's Reformation teaching.",
+      "why": "Anglican worship and sacramental teaching draw on both the prayer book and the Articles.",
+      "facts": [
+        "Thomas Cranmer led work on the first prayer book.",
+        "A more strongly Protestant revision appeared in 1552.",
+        "The Articles distinguish two gospel sacraments from five other rites.",
+        "The Articles reject transubstantiation and affirm spiritual reception of Christ."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+        "https://www.churchofengland.org/sites/default/files/2025-01/gs-misc-1406-a-report-from-the-faith-and-order-commission.pdf",
+        "https://www.churchofengland.org/sites/default/files/2025-01/erg-part-report-jan-2025-hob-a-compendium-of-sources-on-the-c-of-e-doctrine-of-marriage.pdf"
+      ]
+    },
+    {
+      "id": "peace-of-augsburg",
+      "type": "event",
+      "name": "Peace of Augsburg",
+      "start": 1555,
+      "end": 1555,
+      "on": "lutheran",
+      "summary": "The Holy Roman Empire recognized Catholic and Lutheran territorial churches. Rulers generally determined their territories' religion, with provisions for dissenters to emigrate.",
+      "why": "Rulers' religious choices helped turn reform movements into established regional churches.",
+      "facts": [
+        "The agreement took effect on September 25, 1555.",
+        "It recognized churches adhering to the Augsburg Confession.",
+        "Reformed Christians and Anabaptists lacked recognition under this settlement."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi%3Adocument-4386",
+        "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/augsburg-religious-peace-1555"
+      ]
+    },
+    {
+      "id": "elizabethan-settlement",
+      "type": "event",
+      "name": "Elizabethan Settlement",
+      "start": 1559,
+      "end": 1559,
+      "on": "anglican",
+      "summary": "Elizabeth I restored royal supremacy and Protestant worship after Mary I's Catholic restoration, using a revised prayer book and retaining bishops.",
+      "why": "Elizabeth's settlement shaped the Church of England and left some reformers dissatisfied, contributing to Puritan dissent.",
+      "facts": [
+        "The monarch became supreme governor rather than supreme head.",
+        "The Act of Uniformity required the 1559 prayer book.",
+        "Catholics and some Protestant reformers resisted the settlement."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+        "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism"
+      ]
+    },
+    {
+      "id": "scottish-reformation",
+      "type": "event",
+      "name": "Scottish Reformation",
+      "start": 1560,
+      "end": 1560,
+      "on": "reformed",
+      "summary": "John Knox and fellow reformers helped Scotland's Parliament adopt the Scots Confession and reject papal jurisdiction and the Mass.",
+      "why": "Scotland's Reformed churches developed Presbyterian government, giving elders authority instead of bishops.",
+      "facts": [
+        "Knox learned from Calvin during exile in Geneva.",
+        "Six ministers prepared the Scots Confession in 1560.",
+        "The First Book of Discipline proposed church and educational reforms.",
+        "Presbyterian government developed further over the following decades."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://pcusa.org/historical-society/exhibits/foundations-faith",
+        "https://www.churchofscotland.org.uk/about-us/our-faith/book-of-confessions"
+      ]
+    },
+    {
+      "id": "congregationalist",
+      "type": "tradition",
+      "name": "Congregationalist",
+      "start": 1581,
+      "end": null,
+      "parents": [
+        "anglican",
+        "reformed"
+      ],
+      "summary": "English Separatists and Puritans developed churches governed by their own congregations, drawing on Reformed beliefs while resisting control by bishops.",
+      "why": "Congregationalists gave each local church authority over its own affairs. English Baptists emerged partly from these churches.",
+      "facts": [
+        "Robert Browne organized a separatist congregation around 1581.",
+        "Some Puritans sought reform within England's church. Others separated.",
+        "Pilgrims brought congregational church life to Plymouth in 1620.",
+        "The Savoy Declaration of 1658 adapted Westminster teaching."
+      ],
+      "sacraments": "Two sacraments or ordinances: baptism and the Lord's Supper. Historically, churches baptized infants and taught Christ's spiritual presence. Modern congregations vary, including memorial interpretations.",
+      "today": "Millions worldwide, including united churches, especially Americas, Britain, southern Africa, and Pacific.",
+      "disputed": "The Anglican link records English origins. The Reformed link records theology rather than a single formal church split.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.congregational.org.uk/church-membership/a-past-that-inspires",
+        "https://oikoumene.org/church-families/reformed-churches",
+        "https://uccsadenomination.org.za/",
+        "https://www.ccel.org/ccel/schaff/creeds1.x.iii.html",
+        "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/E7BFA5B8735EED51A5974140C88A9F01/S0017816000013110a.pdf/john_robinson_and_the_beginnings_of_the_pilgrim_movement.pdf"
+      ]
+    },
+    {
+      "id": "union-of-brest",
+      "type": "schism",
+      "name": "Union of Brest",
+      "start": 1596,
+      "end": 1596,
+      "on": "eastern-orthodox",
+      "splits": [
+        "eastern-catholic"
+      ],
+      "summary": "Several bishops of the Kyivan metropolitan church entered communion with Rome while preserving Byzantine worship. Other bishops, clergy, and laypeople opposed the union.",
+      "why": "Eastern Catholic churches can preserve Eastern worship while accepting communion with Rome.",
+      "facts": [
+        "The union occurred in the Polish-Lithuanian Commonwealth.",
+        "It contributed to today's Ukrainian and Belarusian Greek Catholic churches.",
+        "Orthodox communities continued outside the union.",
+        "Eastern Catholic churches also arose through other unions."
+      ],
+      "disputed": "Catholic supporters describe restored communion. Orthodox opponents describe a divisive union accompanied by political pressure.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://ugcc.ua/en/church/history/union-of-brest/",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/the-unia"
+      ]
+    },
+    {
+      "id": "baptist",
+      "type": "tradition",
+      "name": "Baptist",
+      "start": 1609,
+      "end": null,
+      "parents": [
+        "anglican",
+        "congregationalist"
+      ],
+      "summary": "John Smyth and Thomas Helwys formed an English believers' baptism church in Amsterdam in 1609, emerging from Separatist and Puritan roots.",
+      "why": "Baptists emerged from English Separatism. They share believers' baptism with Anabaptists without sharing a single origin.",
+      "facts": [
+        "Dutch Mennonites influenced Smyth. Helwys resisted joining them.",
+        "Helwys established an English congregation around 1612 and defended religious liberty.",
+        "General Baptists taught that Christ died for all.",
+        "Particular Baptists emerged separately in the 1630s with Calvinist beliefs."
+      ],
+      "sacraments": "Two ordinances: believers' baptism, usually immersion, and the Lord's Supper, usually memorial. Some Reformed Baptists also emphasize spiritual feeding on Christ.",
+      "today": "At least 53 million baptized believers in Baptist World Alliance member churches.",
+      "disputed": "Most historians trace Baptist origins to English Separatists. Some Baptists claim continuity with earlier churches rather than a seventeenth-century beginning.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.jstor.org/stable/10.7722/j.ctt81sdz",
+        "https://www.thegospelcoalition.org/themelios/article/origins-of-the-particular-baptists/",
+        "https://bfm.sbc.net/bfm2000/",
+        "https://baptistworld.org/annual-ministry-report/",
+        "https://www.ccel.org/creeds/bcf/bcfc30.htm"
+      ]
+    },
+    {
+      "id": "synod-of-dort",
+      "type": "council",
+      "name": "Synod of Dort",
+      "start": 1618,
+      "end": 1619,
+      "on": "reformed",
+      "summary": "Dutch and international Reformed delegates rejected Remonstrant teachings and issued canons on election, atonement, human corruption, grace, and perseverance.",
+      "why": "Calvinists and Arminians disagree about how God's grace relates to human response. Dort established the Reformed position.",
+      "facts": [
+        "Delegates met at Dordrecht in the Netherlands.",
+        "The Remonstrants followed Jacob Arminius's challenge to Reformed teaching.",
+        "The Canons address five disputed points, not all Christian doctrine."
+      ],
+      "disputed": "Reformed churches accepted the Canons as faithful teaching. Remonstrants rejected the verdict and faced political suppression.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+        "https://www.opc.org/OS/2019/OS_Oct_2019.pdf"
+      ]
+    },
+    {
+      "id": "thirty-years-war",
+      "type": "event",
+      "name": "Thirty Years' War",
+      "start": 1618,
+      "end": 1648,
+      "on": "catholic",
+      "summary": "War devastated central Europe as religious conflict intertwined with dynastic power. The Peace of Westphalia in 1648 secured recognition for Reformed churches.",
+      "why": "Religious divisions and rulers' ambitions fueled devastating war. The peace recognized three confessions but stopped short of universal religious freedom.",
+      "facts": [
+        "Fighting began with rebellion in Bohemia in 1618.",
+        "Catholic France opposed Catholic Habsburg rulers for political reasons.",
+        "Westphalia recognized Catholic, Lutheran, and Reformed confessions in the Empire.",
+        "The settlement did not grant universal religious freedom."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648",
+        "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/augsburg-religious-peace-1555"
+      ]
+    },
+    {
+      "id": "westminster-confession",
+      "type": "event",
+      "name": "Westminster Confession",
+      "start": 1646,
+      "end": 1646,
+      "on": "reformed",
+      "summary": "The Westminster Assembly completed a Reformed confession during the English Civil War. Scotland adopted it in 1647 as a doctrinal standard.",
+      "why": "Presbyterian churches share this doctrinal standard. Congregationalists and Baptists later adapted it for their own confessions.",
+      "facts": [
+        "Parliament convened the assembly in 1643.",
+        "The confession teaches two sacraments.",
+        "It supports baptism of believers' children.",
+        "It teaches spiritual reception of Christ in the Lord's Supper."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.churchofscotland.org.uk/about-us/our-faith/book-of-confessions",
+        "https://www.churchofscotland.org.uk/__data/assets/pdf_file/0007/143584/printBookofConfessions.pdf"
+      ]
+    },
+    {
+      "id": "quaker",
+      "type": "tradition",
+      "name": "Quaker",
+      "start": 1650,
+      "end": null,
+      "parents": [
+        "anglican"
+      ],
+      "summary": "George Fox and other English dissenters formed the Religious Society of Friends, emphasizing direct guidance by Christ's Spirit and rejecting required outward rituals.",
+      "why": "Friends traditionally understand baptism and Communion as inward experiences of the Spirit, without administering outward sacraments.",
+      "facts": [
+        "The name Quaker arose during Fox's Derby imprisonment in 1650.",
+        "Margaret Fell helped organize and sustain the movement.",
+        "Friends developed a witness against war and compulsory oaths.",
+        "Modern Friends include evangelical, conservative, and liberal communities."
+      ],
+      "sacraments": "Traditionally no outward sacraments. Baptism and Communion are inward experiences of the Spirit. Some evangelical Friends use outward rites.",
+      "today": "Over 400,000 worldwide, especially Kenya, Bolivia, the United States, and Britain.",
+      "disputed": "The Anglican link records the English religious setting rather than one formal secession. Some modern liberal Friends do not affirm Nicene Christianity.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.quakersintheworld.org/quakers-in-action/12",
+        "https://quaker.org/legacy/charlestonwv/meeting-the-spirit.html",
+        "https://fwcc.world/about-us/mission-history/",
+        "https://www.quaker.org.uk/communities/news/5-take-aways-from-george-fox-400"
+      ]
+    },
+    {
+      "id": "old-believers-schism",
+      "type": "schism",
+      "name": "Old Believers Schism",
+      "start": 1666,
+      "end": 1667,
+      "on": "eastern-orthodox",
+      "splits": [
+        "old-believers"
+      ],
+      "summary": "Moscow councils upheld liturgical changes associated with Patriarch Nikon and condemned opponents, deepening separation between Russia's established church and Old Believers.",
+      "why": "Disagreements over inherited worship and church authority divided Orthodox Christians as well as Western churches.",
+      "facts": [
+        "Nikon began changing Russian liturgical practices in 1653.",
+        "Changes included using three fingers rather than two when crossing oneself.",
+        "The councils also deposed Nikon while retaining his reforms.",
+        "Authorities persecuted opponents, including Archpriest Avvakum."
+      ],
+      "disputed": "Reformers sought agreement with Greek practice. Old Believers regarded the inherited Russian rites as the faithful tradition.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4",
+        "https://www.heritageabroad.gov/wp-content/uploads/2022/10/Old-Believers-Report-final-for-website.pdf"
+      ]
+    },
+    {
+      "id": "old-believers",
+      "type": "tradition",
+      "name": "Old Believers",
+      "start": 1666,
+      "end": null,
+      "parents": [
+        "eastern-orthodox"
+      ],
+      "summary": "Russian Christians preserved pre-reform worship after the seventeenth-century schism. Their communities divided into groups with priests and groups without priests.",
+      "why": "Old Believers share Orthodox beliefs but differ over church authority. Communities without priests cannot celebrate the Eucharist.",
+      "facts": [
+        "Old Believers retained the two-fingered sign of the cross.",
+        "Priestly and priestless communities developed different church structures.",
+        "The Russian Orthodox Church lifted the old condemnations in 1971."
+      ],
+      "sacraments": "Priestly groups retain seven mysteries, infant baptism, and Christ's real Eucharistic presence. Priestless groups retain baptism but lack priestly Eucharist and other priest-dependent rites.",
+      "today": "Estimated two million in Russia, eastern Europe, and diaspora communities.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.cdamm.org/articles/old-believers",
+        "https://theoldbelievers.com/old-believer-work/spiritual-communion-among-the-priestless-old-believers-bezpopovtsy/",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4"
+      ]
+    },
+    {
+      "id": "pietism",
+      "type": "event",
+      "name": "Pietism and Spener",
+      "start": 1675,
+      "end": 1675,
+      "on": "lutheran",
+      "summary": "Philipp Jakob Spener published Pia Desideria, urging Bible study, active lay participation, practical Christian living, and better pastoral formation.",
+      "why": "Pietism encouraged personal renewal within Protestant churches and influenced Moravians, Methodists, and later revivals.",
+      "facts": [
+        "Spener worked as a Lutheran pastor in Frankfurt.",
+        "Small gatherings studied Scripture and encouraged Christian living.",
+        "Pietism emphasized personal renewal without forming one new denomination."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://e-revistas.uc3m.es/index.php/REVHISTO/article/view/2581",
+        "https://www.persee.fr/doc/rhpr_0035-2403_1991_num_71_2_5135_t1_0263_0000_2"
+      ]
+    },
+    {
+      "id": "herrnhut-renewal",
+      "type": "event",
+      "name": "Herrnhut Renewal",
+      "start": 1727,
+      "end": 1727,
+      "on": "moravian",
+      "summary": "Members of Herrnhut's divided refugee community experienced reconciliation and spiritual renewal during a Communion service on August 13, 1727.",
+      "why": "A Communion service helped reconcile Herrnhut's divided community, which sustained prayer and sent missionaries abroad.",
+      "facts": [
+        "Count Zinzendorf supported the community on his Saxon estate.",
+        "The service took place at nearby Berthelsdorf's Lutheran parish church.",
+        "Moravians remember the day as their spiritual birthday."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.moravian.org/2020/08/august-13th-the-spiritual-birthday-of-the-moravian-church/",
+        "https://www.moravianchurcharchives.org/digital-access/digital-access-1066/"
+      ]
+    },
+    {
+      "id": "methodist",
+      "type": "tradition",
+      "name": "Methodist",
+      "start": 1729,
+      "end": null,
+      "parents": [
+        "anglican"
+      ],
+      "summary": "John and Charles Wesley organized renewal within Anglicanism through disciplined devotion, preaching, and societies. Methodist churches later gained separate ministries and sacramental authority.",
+      "why": "Methodists grew from Anglican renewal into separate churches that emphasize grace, conversion, and holy living.",
+      "facts": [
+        "The Oxford Holy Club began in 1729.",
+        "John Wesley experienced assurance at Aldersgate in 1738.",
+        "Charles Wesley wrote hymns for worship and teaching.",
+        "American Methodists formed an independent church in 1784. English separation developed through 1795."
+      ],
+      "sacraments": "Two sacraments: baptism, including infants, and Holy Communion. Both are means of grace. Methodists affirm Christ's real spiritual presence without transubstantiation.",
+      "today": "Over 80 million in World Methodist Council churches, including united churches.",
+      "disputed": "1729 dates the renewal movement. Separate churches emerged later. Wesley resisted treating English Methodism as a new denomination.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://worldmethodistcouncil.org/about-us/",
+        "https://www.umc.org/en/content/renewing-waters-how-united-methodists-understand-%20baptism",
+        "https://www.umc.org/en/content/ask-the-umc-what-do-i-need-to-know-about-holy-communion-in-the-united-methodist-church",
+        "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf",
+        "https://www.umc.org/en/content/glossary-christmas-conference"
+      ]
+    },
+    {
+      "id": "first-great-awakening",
+      "type": "event",
+      "name": "First Great Awakening",
+      "start": 1730,
+      "end": 1745,
+      "on": "congregationalist",
+      "summary": "Revivals spread through British North America during the 1730s and 1740s. Jonathan Edwards and George Whitefield preached conversion and renewed Christian commitment.",
+      "why": "Revival preachers spread evangelical emphasis on personal conversion across existing Protestant churches.",
+      "facts": [
+        "Edwards led revival preaching in Northampton, Massachusetts.",
+        "Whitefield's preaching tours linked churches across the colonies.",
+        "Revivals divided supporters and critics within established churches.",
+        "Presbyterians and Baptists also took part and gained converts."
+      ],
+      "disputed": "Dates approximate the revival period. The Congregationalist link reflects Edwards, but the movement crossed several Protestant branches.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.nps.gov/articles/the-joseph-bellamy-house-the-great-awakening-in-puritan-new-england-teaching-with-historic-places.htm",
+        "https://open.bu.edu/bitstreams/91e0a19e-ed8f-4f0a-8b2f-fd7b731a4c14/download"
+      ]
+    },
+    {
+      "id": "aldersgate",
+      "type": "event",
+      "name": "Wesley at Aldersgate",
+      "start": 1738,
+      "end": 1738,
+      "on": "anglican",
+      "summary": "On May 24, 1738, John Wesley attended a London religious meeting and experienced assurance that Christ had saved him.",
+      "why": "Wesley's experience of assurance became central to Methodist teaching while he remained an Anglican priest.",
+      "facts": [
+        "Wesley described his heart as \"strangely warmed.\"",
+        "The meeting heard Luther's preface to Romans.",
+        "Moravian contacts influenced Wesley's search for assurance.",
+        "Wesley continued to identify as an Anglican."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.methodist.org.uk/about/podcasts/the-methodist-podcast-episode-84-aldersgate-sunday/",
+        "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf"
+      ]
+    },
+    {
+      "id": "methodist-separation",
+      "type": "schism",
+      "name": "Methodist Separation",
+      "start": 1784,
+      "end": 1795,
+      "on": "anglican",
+      "splits": [
+        "methodist"
+      ],
+      "summary": "American Methodists organized an independent church in 1784. England's 1795 Plan of Pacification permitted Methodist sacramental ministry, consolidating a gradual break from Anglicanism.",
+      "why": "Authority to ordain ministers and administer sacraments helped Methodist societies become separate churches.",
+      "facts": [
+        "The Christmas Conference organized the Methodist Episcopal Church in Baltimore.",
+        "Thomas Coke and Francis Asbury led the American church.",
+        "England's Plan allowed local societies to approve Methodist Communion services."
+      ],
+      "sacraments": "The dispute concerned authority to ordain ministers and administer baptism and Communion. Methodists retained the two gospel sacraments.",
+      "disputed": "England's separation unfolded gradually. In 1795, Methodist societies gained greater sacramental authority, but no single date defines the break.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.umc.org/en/content/glossary-christmas-conference",
+        "https://www.umc.org/en/content/the-christmas-conference-10-days-that-started-a-church",
+        "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf"
+      ]
+    },
+    {
+      "id": "episcopal-church-us",
+      "type": "event",
+      "name": "US Episcopal Church",
+      "start": 1789,
+      "end": 1789,
+      "on": "anglican",
+      "summary": "American Anglicans adopted the Episcopal Church's constitution and prayer book in 1789, organizing national church life after the American Revolution.",
+      "why": "American Anglicans established their own church government while retaining Anglican worship and sacramental teaching.",
+      "facts": [
+        "The church retained bishops and Anglican worship.",
+        "Samuel Seabury became its first bishop in 1784 through Scottish consecration.",
+        "William White helped shape representative national governance.",
+        "The constitution and General Convention joined bishops, clergy, and lay representatives."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.episcopalarchives.org/governance-documents/constitution-and-canons",
+        "https://www.episcopalchurch.org/who-we-are/our-history/timeline-of-the-episcopal-church/",
+        "https://www.episcopalchurch.org/who-we-are/our-history/past-presiding-bishops/"
+      ]
+    }
+  ]
+}

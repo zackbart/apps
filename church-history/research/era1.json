@@ -1,0 +1,663 @@
+{
+  "era": "Jesus to Chalcedon, c. AD 30 to 451",
+  "nodes": [
+    {
+      "id": "apostolic",
+      "type": "tradition",
+      "name": "Jesus and apostles",
+      "start": 30,
+      "end": 100,
+      "parents": [],
+      "summary": "Jesus' followers proclaimed his resurrection, gathered in Jerusalem, and spread the gospel through Jewish and Gentile communities.",
+      "why": "Every later Christian tradition traces its roots to Jesus and the apostles.",
+      "facts": [
+        "Jesus' crucifixion and resurrection traditionally date around AD 30 or 33.",
+        "Jerusalem's first believers remained connected to Jewish worship.",
+        "Apostles taught, baptized, and celebrated the Lord's Supper."
+      ],
+      "sacraments": "No fixed sacrament count. Baptism marks entry into Christ. The Lord's Supper shares in his body and blood. Both are central to worship.",
+      "today": "Later Christian traditions claim this inheritance. No separate membership.",
+      "disputed": "Traditions disagree about infant baptism, Eucharistic presence, and church authority in this period.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://bible.usccb.org/bible/acts/2",
+        "https://bible.usccb.org/bible/1corinthians/11"
+      ]
+    },
+    {
+      "id": "pentecost",
+      "type": "event",
+      "name": "Pentecost",
+      "start": 30,
+      "end": 30,
+      "on": "apostolic",
+      "summary": "Acts describes the Holy Spirit empowering Jesus' followers in Jerusalem. Peter preached, and about 3,000 people received baptism.",
+      "why": "The church's first shared life joined the Holy Spirit's work with preaching, baptism, and worship.",
+      "facts": [
+        "The traditional date is approximately AD 30 or 33.",
+        "Acts 2 connects baptism with repentance and forgiveness.",
+        "Believers shared teaching, prayer, meals, and possessions."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://bible.usccb.org/bible/acts/2"
+      ]
+    },
+    {
+      "id": "pauls-missions",
+      "type": "event",
+      "name": "Paul's missions",
+      "start": 46,
+      "end": 60,
+      "on": "apostolic",
+      "summary": "Paul and coworkers established Gentile churches across Asia Minor and Greece. His letters explained faith, church life, baptism, and the Lord's Supper.",
+      "why": "Paul brought the gospel to Gentile communities. His letters still shape Christian teaching about baptism and the Lord's Supper.",
+      "facts": [
+        "Paul traveled with Barnabas, Silas, Timothy, and others.",
+        "Acts describes three missionary journeys, followed by his journey to Rome.",
+        "His letters address real congregations and their conflicts."
+      ],
+      "importance": 2,
+      "outsideNicene": false,
+      "sources": [
+        "https://www.vatican.va/various/basiliche/san_paolo/en/san_paolo/viaggi.htm",
+        "https://bible.usccb.org/bible/1corinthians/11"
+      ]
+    },
+    {
+      "id": "council-of-jerusalem",
+      "type": "council",
+      "name": "Council of Jerusalem",
+      "start": 49,
+      "end": 49,
+      "on": "apostolic",
+      "summary": "Apostles and elders decided Gentile converts did not need circumcision. Acts records shared food restrictions intended to support fellowship.",
+      "why": "Gentiles could become Christians without circumcision. The council gave churches an early example of settling disputes together.",
+      "facts": [
+        "The meeting probably occurred around AD 48 or 49.",
+        "Peter, James, Paul, and Barnabas appear in Acts 15.",
+        "The council rejected circumcision as a requirement for Gentile salvation."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://bible.usccb.org/bible/acts/15",
+        "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Council-Jerusalem"
+      ]
+    },
+    {
+      "id": "fall-of-jerusalem",
+      "type": "event",
+      "name": "Jerusalem falls",
+      "start": 70,
+      "end": 70,
+      "on": "apostolic",
+      "summary": "Roman troops under Titus destroyed Jerusalem and its Temple during the Jewish revolt. The disaster transformed the setting of Jewish and Christian life.",
+      "why": "Jerusalem's destruction ended Temple worship and weakened the city's role as Christianity spread elsewhere.",
+      "facts": [
+        "Rome destroyed the Second Temple in AD 70.",
+        "Christian communities already existed beyond Judea.",
+        "Christianity's separation from Judaism developed gradually over many years."
+      ],
+      "importance": 2,
+      "outsideNicene": false,
+      "sources": [
+        "https://www.worldhistory.org/article/1993/the-siege-of-jerusalem-in-70-ce/",
+        "https://bible.usccb.org/bible/acts/2"
+      ]
+    },
+    {
+      "id": "early-church",
+      "type": "tradition",
+      "name": "Early church",
+      "start": 100,
+      "end": 451,
+      "parents": [
+        "apostolic"
+      ],
+      "summary": "Churches developed bishops, shared Scriptures, creeds, and sacramental worship. They faced persecution and doctrinal disputes before the major fifth-century separations.",
+      "why": "Catholics, Orthodox Christians, and many Protestants share beliefs and worship practices inherited from these churches.",
+      "facts": [
+        "Local churches differed in customs and leadership arrangements.",
+        "Baptism and Eucharist remained central to Christian membership and worship.",
+        "Disputes over Ephesus and Chalcedon led to lasting divisions."
+      ],
+      "sacraments": "No universally fixed count. Baptism gives cleansing and new birth. Eucharist shares Christ's body and blood. Practices develop, including infant baptism, confirmation, penance, and ordination.",
+      "today": "Living Christian traditions inherit these churches. No separate membership.",
+      "disputed": "An undivided church is a map simplification. Rival Christian groups and earlier local schisms already existed.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.newadvent.org/fathers/0714.htm",
+        "https://www.newadvent.org/fathers/0126.htm",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+      ]
+    },
+    {
+      "id": "roman-persecutions",
+      "type": "event",
+      "name": "Roman persecutions",
+      "start": 64,
+      "end": 313,
+      "on": "early-church",
+      "summary": "Roman authorities sometimes punished Christians for refusing sacrifice or public worship. Persecution varied by emperor and region, ending broadly with toleration.",
+      "why": "Persecution gave churches martyrs to remember and forced decisions about whether Christians who renounced their faith could return.",
+      "facts": [
+        "Nero punished Christians in Rome in AD 64, before this branch begins.",
+        "Decius demanded sacrifices across the empire in AD 250.",
+        "Diocletian's persecution began in AD 303.",
+        "Galerius granted toleration in 311. Milan extended protections in 313."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://assets.press.princeton.edu/chapters/s10056.pdf",
+        "https://sourcebooks.web.fordham.edu/source/edict-milan.asp"
+      ]
+    },
+    {
+      "id": "didache",
+      "type": "event",
+      "name": "Didache",
+      "start": 100,
+      "end": 100,
+      "on": "early-church",
+      "summary": "An early Christian handbook describes moral teaching, baptism, Eucharistic prayers, fasting, and local ministers. Its instructions reveal worship before later sacramental systems.",
+      "why": "Early Christians baptized in the Trinity's name, allowed pouring when necessary, and reserved Communion for baptized believers.",
+      "facts": [
+        "The text probably dates around the late first or early second century.",
+        "It prefers running water and allows threefold pouring when needed.",
+        "It limits Eucharistic participation to baptized believers.",
+        "Sunday gatherings include breaking bread and confessing sins."
+      ],
+      "importance": 2,
+      "disputed": "Scholars debate its date and whether some meal prayers describe Eucharist, a fellowship meal, or both.",
+      "outsideNicene": false,
+      "sources": [
+        "https://www.newadvent.org/fathers/0714.htm",
+        "https://www.newadvent.org/cathen/04779a.htm"
+      ]
+    },
+    {
+      "id": "ignatius-of-antioch",
+      "type": "figure",
+      "name": "Ignatius of Antioch",
+      "start": 35,
+      "end": 110,
+      "on": "early-church",
+      "summary": "Ignatius wrote letters urging churches to unite around their bishop and confess Christ's real humanity. He described the Eucharist as Christ's flesh.",
+      "why": "Ignatius linked unity under a bishop with belief that Communion gives Christ's flesh.",
+      "facts": [
+        "His life dates are approximate. He probably died around AD 110.",
+        "Clement, Ignatius, and Polycarp belong to the Apostolic Fathers.",
+        "His letters distinguish bishops, elders, and deacons.",
+        "He linked baptism and Eucharist with the bishop's oversight."
+      ],
+      "importance": 2,
+      "outsideNicene": false,
+      "sources": [
+        "https://www.newadvent.org/fathers/0109.htm",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/second-century/the-apostolic-fathers"
+      ]
+    },
+    {
+      "id": "development-of-bishops",
+      "type": "event",
+      "name": "Rise of bishops",
+      "start": 100,
+      "end": 200,
+      "on": "early-church",
+      "summary": "Leadership increasingly centered on one bishop in each city, assisted by elders and deacons. This pattern spread unevenly across Christian communities.",
+      "why": "The spread of bishops shaped ordination and claims of apostolic succession. Christians still disagree about whether this leadership is required.",
+      "facts": [
+        "Ignatius describes one bishop with elders and deacons in several Asian churches.",
+        "The Didache instructs communities to appoint bishops and deacons.",
+        "Early terminology for bishops and elders overlaps."
+      ],
+      "importance": 2,
+      "disputed": "Catholic and Orthodox churches trace bishops to the apostles. Many Protestants distinguish later rule by bishops from New Testament leadership.",
+      "outsideNicene": false,
+      "sources": [
+        "https://www.newadvent.org/fathers/0109.htm",
+        "https://www.newadvent.org/fathers/0714.htm",
+        "https://www.churchsociety.org/wp-content/uploads/2021/05/Cman_062_2_Chadwick.pdf"
+      ]
+    },
+    {
+      "id": "gnosticism",
+      "type": "event",
+      "name": "Gnostic movements",
+      "start": 100,
+      "end": 500,
+      "on": "early-church",
+      "summary": "Several movements offered salvation through special knowledge and distinguished the highest God from the material world's creator. Church teachers opposed their accounts of Christ.",
+      "why": "Gnostic teachings prompted church teachers to defend creation's goodness, Christ's real humanity, and teaching open to everyone.",
+      "facts": [
+        "Gnosticism names diverse schools, rather than one church.",
+        "Valentinus taught in the second century.",
+        "Irenaeus argued against Gnostic teachings.",
+        "These dates approximate the rise and decline of ancient Christian Gnostic schools."
+      ],
+      "importance": 2,
+      "outsideNicene": true,
+      "disputed": "Scholars debate which groups count as Gnostic. This node covers ancient Christian Gnostic schools, rather than every religion emphasizing spiritual knowledge.",
+      "sources": [
+        "https://www.encyclopedia.com/philosophy-and-religion/ancient-religions/ancient-religion/gnosticism",
+        "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/gnosticism"
+      ]
+    },
+    {
+      "id": "marcionism",
+      "type": "event",
+      "name": "Marcion's challenge",
+      "start": 144,
+      "end": 700,
+      "on": "early-church",
+      "summary": "Marcion rejected the Old Testament and distinguished its creator God from Jesus' Father. His followers used an edited Luke and ten Pauline letters.",
+      "why": "Marcion's rejection of Jewish Scripture prompted churches to defend the Old Testament and clarify which writings belonged in the Bible.",
+      "facts": [
+        "Rome expelled Marcion around AD 144.",
+        "His teaching challenged continuity between Israel's Scriptures and Jesus.",
+        "Marcionite churches persisted for centuries.",
+        "The end date roughly marks their decline in late antiquity."
+      ],
+      "importance": 2,
+      "outsideNicene": true,
+      "sources": [
+        "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/marcionism",
+        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Marcion_and_the_Marcionite_Churches"
+      ]
+    },
+    {
+      "id": "montanism",
+      "type": "event",
+      "name": "Montanism",
+      "start": 165,
+      "end": 700,
+      "on": "early-church",
+      "summary": "Montanus, Prisca, and Maximilla proclaimed new prophecy in Phrygia. Their movement emphasized the Spirit, strict discipline, and expectation of Christ's return.",
+      "why": "The dispute raised questions Christians still face about prophecy, spiritual gifts, church authority, and predictions of the end times.",
+      "facts": [
+        "The movement began during the second century. Its exact starting year is disputed.",
+        "Tertullian supported the New Prophecy.",
+        "Church leaders challenged its prophetic claims and discipline.",
+        "The end date is approximate. Communities survived into later centuries."
+      ],
+      "importance": 2,
+      "outsideNicene": false,
+      "sources": [
+        "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/montanism",
+        "https://www.newadvent.org/cathen/10521a.htm"
+      ]
+    },
+    {
+      "id": "canon-formation",
+      "type": "event",
+      "name": "New Testament canon",
+      "start": 100,
+      "end": 397,
+      "on": "early-church",
+      "summary": "Churches gradually recognized authoritative apostolic writings. Athanasius listed the familiar 27 New Testament books in 367. Later regional councils endorsed similar lists.",
+      "why": "Churches gradually recognized the New Testament books. No single council invented the Bible.",
+      "facts": [
+        "Gospels and Paul's letters circulated before complete book lists.",
+        "Athanasius' AD 367 letter lists the familiar 27 New Testament books.",
+        "Hippo in 393 and Carthage in 397 endorsed regional canonical lists.",
+        "Some eastern churches continued debating particular books after 397."
+      ],
+      "disputed": "Churches continued recognizing biblical books beyond this date. Christian traditions still differ over the Old Testament and some other books.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.newadvent.org/fathers/2806039.htm",
+        "https://www.newadvent.org/cathen/03274a.htm"
+      ]
+    },
+    {
+      "id": "constantine-and-milan",
+      "type": "event",
+      "name": "Constantine and Milan",
+      "start": 313,
+      "end": 313,
+      "on": "early-church",
+      "summary": "Constantine and Licinius agreed to religious toleration and restoration of Christian property. Constantine's patronage brought churches into a new relationship with imperial power.",
+      "why": "Legal protection and imperial support let Christians build public churches. Emperors also began convening councils to settle church disputes.",
+      "facts": [
+        "The agreement protected Christian worship alongside other religions.",
+        "It required restoration of confiscated church property.",
+        "Constantine later convened Nicaea in 325.",
+        "Christianity became the official imperial faith later, under Theodosius."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://sourcebooks.web.fordham.edu/source/edict-milan.asp",
+        "https://www.goarch.org/-/the-first-ecumenical-council"
+      ]
+    },
+    {
+      "id": "arianism",
+      "type": "event",
+      "name": "Arian controversy",
+      "start": 318,
+      "end": 700,
+      "on": "early-church",
+      "summary": "Arius taught that the Son was created and did not share the Father's eternal divine being. Related teachings gained bishops, emperors, and Germanic converts.",
+      "why": "The Nicene Creed insists that Jesus is fully divine because Arius taught that the Son was God's highest creature.",
+      "facts": [
+        "Arius taught in Alexandria.",
+        "Nicaea condemned his teaching in 325.",
+        "The controversy continued long after Nicaea.",
+        "Related movements faded in Germanic kingdoms by roughly the seventh century."
+      ],
+      "importance": 2,
+      "outsideNicene": true,
+      "disputed": "Arianism groups several differing anti-Nicene positions. Their followers did not all teach precisely what Arius taught.",
+      "sources": [
+        "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/arius-and-arianism",
+        "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/arianism"
+      ]
+    },
+    {
+      "id": "nicaea-i",
+      "type": "council",
+      "name": "First Council of Nicaea",
+      "start": 325,
+      "end": 325,
+      "on": "early-church",
+      "summary": "Constantine assembled bishops who rejected Arius and adopted the original Nicene Creed. They affirmed the Son shares the Father's divine being.",
+      "why": "Catholics, Orthodox Christians, and most Protestants share Nicaea's confession that Jesus is fully divine.",
+      "facts": [
+        "The creed calls the Son begotten, rather than created.",
+        "Homoousios means the Son shares the Father's divine essence.",
+        "Nicaea also addressed Easter and church discipline.",
+        "The council did not select the books of the Bible."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.goarch.org/-/the-first-ecumenical-council",
+        "https://www.newadvent.org/cathen/11049a.htm"
+      ]
+    },
+    {
+      "id": "augustine-of-hippo",
+      "type": "figure",
+      "name": "Augustine of Hippo",
+      "start": 354,
+      "end": 430,
+      "on": "early-church",
+      "summary": "Augustine, bishop of Hippo in North Africa, wrote about grace, sin, Scripture, and the church. His debates shaped Western teaching about baptism and sacraments.",
+      "why": "Augustine's teaching still shapes Catholic and Protestant debates about grace, original sin, and whether a minister's failings invalidate baptism.",
+      "facts": [
+        "He lived from AD 354 to 430.",
+        "He wrote Confessions and The City of God.",
+        "Against Donatists, he defended Christ's authority behind baptism despite a minister's failings.",
+        "Against Pelagius, he stressed dependence on God's grace."
+      ],
+      "importance": 2,
+      "disputed": "Catholics and Protestants draw different conclusions from Augustine. Eastern traditions receive his theology with different emphases.",
+      "outsideNicene": false,
+      "sources": [
+        "https://plato.stanford.edu/entries/augustine/",
+        "https://www.newadvent.org/fathers/14087.htm"
+      ]
+    },
+    {
+      "id": "edict-of-thessalonica",
+      "type": "event",
+      "name": "Edict of Thessalonica",
+      "start": 380,
+      "end": 380,
+      "on": "early-church",
+      "summary": "Theodosius I, with Gratian and Valentinian II, declared Nicene Christianity the empire's official faith. Imperial law increasingly disadvantaged rival Christian teachings.",
+      "why": "Official status gave Nicene churches public power. Emperors increasingly used law to enforce religious decisions.",
+      "facts": [
+        "The Edict of Thessalonica dates to February 27, 380.",
+        "It identifies the faith associated with bishops of Rome and Alexandria.",
+        "Later laws restricted pagan worship further."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://droitromain.univ-grenoble-alpes.fr/Francogallica/Thessalonique_fran.htm",
+        "https://assets.cambridge.org/97811084/73798/excerpt/9781108473798_excerpt.pdf"
+      ]
+    },
+    {
+      "id": "constantinople-i",
+      "type": "council",
+      "name": "First Council of Constantinople",
+      "start": 381,
+      "end": 381,
+      "on": "early-church",
+      "summary": "Theodosius convened bishops who reaffirmed Nicene faith and the Holy Spirit's divinity. Tradition links the council to the expanded Nicene Creed.",
+      "why": "Its creed still guides worship and teaching about the Trinity. It joins baptism with forgiveness and the hope of resurrection.",
+      "facts": [
+        "The council rejected teachings that denied the Holy Spirit's full divinity.",
+        "The creed confesses one baptism for forgiveness of sins.",
+        "Chalcedon's records in 451 explicitly attribute the expanded creed to 381.",
+        "Bishops ranked Constantinople after Rome because it was New Rome."
+      ],
+      "disputed": "Scholars debate how the expanded creed was drafted. Chalcedon's surviving records explicitly attribute it to this council.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-second-ecumenical-council",
+        "https://www.newadvent.org/cathen/11049a.htm"
+      ]
+    },
+    {
+      "id": "ephesus",
+      "type": "council",
+      "name": "Council of Ephesus",
+      "start": 431,
+      "end": 431,
+      "on": "early-church",
+      "summary": "Cyril and his supporters condemned Nestorius and affirmed Mary as Theotokos, meaning God-bearer. The title defended Jesus' identity as the incarnate divine Son.",
+      "why": "Calling Mary Mother of God affirms that Jesus is one divine person. Disagreement over this teaching divided eastern Christians.",
+      "facts": [
+        "Nestorius objected to unqualified use of Theotokos.",
+        "The council affirmed one Christ, rather than two separately acting subjects.",
+        "Theotokos does not mean Mary originated God's divine nature.",
+        "Rival episcopal assemblies and imperial politics complicated the proceedings."
+      ],
+      "disputed": "The Church of the East disputes traditional accounts of Nestorius' teaching. Later dialogue recognizes shared belief in Christ's divinity and humanity.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/saints/lives/1949/09/09/102555-commemoration-of-the-holy-fathers-of-the-third-ecumenical-counci",
+        "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+      ]
+    },
+    {
+      "id": "church-of-east-separation",
+      "type": "schism",
+      "name": "Church of East separation",
+      "start": 431,
+      "end": 431,
+      "on": "early-church",
+      "summary": "Persian churches increasingly separated from Roman imperial churches. Rejection of Ephesus and later reception of Antiochene teaching deepened a division already shaped by politics.",
+      "why": "The Church of the East developed outside the Roman Empire. Its separation involved both political independence and disagreements about Christ.",
+      "facts": [
+        "Persian bishops asserted independence from western appeals in 424.",
+        "Ephesus in 431 became a marker of doctrinal separation.",
+        "Later fifth-century synods consolidated distinctive Christological teaching.",
+        "The 431 branch point simplifies a gradual separation."
+      ],
+      "splits": [
+        "church-of-east"
+      ],
+      "disputed": "Nestorius did not found this church. Its Persian institutions predated Ephesus, and it rejects the label Nestorian.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
+        "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf"
+      ]
+    },
+    {
+      "id": "church-of-east",
+      "type": "tradition",
+      "name": "Church of the East",
+      "start": 431,
+      "end": null,
+      "parents": [
+        "early-church"
+      ],
+      "summary": "This ancient Persian Christian tradition uses East Syriac worship and accepts the first two ecumenical councils. The Assyrian and Ancient churches continue its independent lineage.",
+      "why": "This ancient tradition carried Christian missions across Asia. Its baptism and Eucharist belong to a history beyond the Roman Empire.",
+      "facts": [
+        "Its church institutions existed before the AD 431 map branch.",
+        "It confesses one Christ, fully divine and fully human.",
+        "Assyrian and Ancient churches continue today. Chaldean Catholics form a separate branch united with Rome.",
+        "The Addai and Mari Eucharistic prayer preserves very ancient worship."
+      ],
+      "sacraments": "Seven mysteries, including Holy Leaven. Baptism grants new birth and includes infants. Eucharist gives Christ's body and blood.",
+      "today": "About 400,000 Assyrian members in Iraq, Iran, India, and worldwide diaspora.",
+      "disputed": "The estimate covers only the Assyrian church. It rejects the label Nestorian and affirms the Nicene faith.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
+        "https://www.assyrianchurch.org.au/the-church",
+        "https://www.assyrianchurch.org/sacraments/",
+        "https://www.assyrianchurch.org.au/doctrine3"
+      ]
+    },
+    {
+      "id": "pentarchy-forming",
+      "type": "event",
+      "name": "Five patriarchal sees",
+      "start": 325,
+      "end": 451,
+      "on": "early-church",
+      "summary": "Rome, Constantinople, Alexandria, Antioch, and Jerusalem gained regional authority. Councils shaped their standing. The formal system of five patriarchates developed further in the sixth century.",
+      "why": "These five cities became centers of church authority. Their roles still shape Catholic and Orthodox disagreements about leadership.",
+      "facts": [
+        "Nicaea recognized Rome, Alexandria, and Antioch's established regional privileges.",
+        "Constantinople gained second rank at the council of 381.",
+        "Chalcedon recognized Jerusalem's independent regional jurisdiction in 451.",
+        "Justinian later gave the five-see system formal imperial expression."
+      ],
+      "importance": 2,
+      "disputed": "Rome rejected Chalcedon's decision to raise Constantinople's rank. Catholics and Orthodox Christians disagree about Rome's authority and the five patriarchates.",
+      "outsideNicene": false,
+      "sources": [
+        "https://www.newadvent.org/cathen/11549a.htm",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates"
+      ]
+    },
+    {
+      "id": "chalcedon",
+      "type": "council",
+      "name": "Council of Chalcedon",
+      "start": 451,
+      "end": 451,
+      "on": "early-church",
+      "summary": "Bishops affirmed Jesus as one person in two natures, fully divine and fully human. They accepted Leo's Tome and deposed Alexandria's bishop Dioscorus.",
+      "why": "Catholics, Eastern Orthodox Christians, and most Protestants accept its teaching about Christ. Oriental Orthodox churches reject its wording.",
+      "facts": [
+        "Emperor Marcian convened the council.",
+        "Its definition preserves Christ's divine and human natures without confusion or separation.",
+        "The council reaffirmed the creeds associated with 325 and 381.",
+        "Many Christians in Egypt and Syria rejected the council."
+      ],
+      "disputed": "Oriental Orthodox churches reject Chalcedon's wording while affirming Christ's full divinity and humanity. Both sides claim continuity with Cyril of Alexandria.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
+        "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/"
+      ]
+    },
+    {
+      "id": "chalcedonian-separation",
+      "type": "schism",
+      "name": "Chalcedonian separation",
+      "start": 451,
+      "end": 451,
+      "on": "early-church",
+      "summary": "Acceptance or rejection of Chalcedon gradually divided churches into Chalcedonian and non-Chalcedonian communions. Separate hierarchies developed over subsequent generations.",
+      "why": "This division separates Oriental Orthodox from Eastern Orthodox churches. Catholics and Eastern Orthodox Christians share the history of accepting Chalcedon.",
+      "facts": [
+        "AD 451 marks the council. Separate church institutions developed gradually afterward.",
+        "Egyptian and Syrian opposition helped form lasting churches that rejected Chalcedon.",
+        "Armenian rejection developed later.",
+        "Modern dialogues have found substantial agreement about Christ's divinity and humanity."
+      ],
+      "splits": [
+        "oriental-orthodox",
+        "chalcedonian"
+      ],
+      "disputed": "Each side saw itself preserving apostolic faith. Politics, language, coercion, and theology all contributed to the gradual separation.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
+        "https://czasopisma.kul.pl/index.php/vp/article/view/4125"
+      ]
+    },
+    {
+      "id": "oriental-orthodox",
+      "type": "tradition",
+      "name": "Oriental Orthodox",
+      "start": 451,
+      "end": null,
+      "parents": [
+        "early-church"
+      ],
+      "summary": "Six ancient church traditions reject Chalcedon and follow Cyril's teaching on Christ's united divinity and humanity. They share sacramental worship and communion with one another.",
+      "why": "Oriental Orthodox churches preserve ancient baptism and Eucharistic worship. They form a separate family from Eastern Orthodox churches.",
+      "facts": [
+        "The family includes Coptic, Armenian, Syriac, Ethiopian, Eritrean, and Malankara churches.",
+        "They accept Nicaea, Constantinople I, and Ephesus.",
+        "Miaphysite teaching affirms Christ's full humanity and divinity in one united incarnate nature.",
+        "Their apostolic origins predate the AD 451 map branch."
+      ],
+      "sacraments": "Generally seven holy mysteries. Baptism, usually infant immersion, gives new birth. Chrismation follows. Eucharist truly gives Christ's body and blood, including to baptized infants.",
+      "today": "About 60 million in Ethiopia, Egypt, Eritrea, Armenia, Syria, India, diaspora.",
+      "disputed": "They reject Eutyches' teaching that Christ's divinity absorbed his humanity. They reject Monophysite as a label for their own teaching.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
+        "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
+        "https://ukmidcopts.org/coptic/sacraments/",
+        "https://www.copticchurch.net/introduction-to-the-coptic-church/sacraments/4_eucharist"
+      ]
+    },
+    {
+      "id": "chalcedonian",
+      "type": "tradition",
+      "name": "Chalcedonian church",
+      "start": 451,
+      "end": 1054,
+      "parents": [
+        "early-church"
+      ],
+      "summary": "Churches accepting Chalcedon shared communion centered on Rome and eastern patriarchates. Catholic and Eastern Orthodox churches developed from this shared history.",
+      "why": "Catholic and Eastern Orthodox baptism and Eucharistic worship grew from a shared history before their medieval separation.",
+      "facts": [
+        "They accept Christ as one person in two complete natures.",
+        "Rome and Constantinople remained major centers alongside the other patriarchal sees.",
+        "East and West developed different liturgies and approaches to authority.",
+        "The AD 1054 endpoint marks a gradual medieval separation."
+      ],
+      "sacraments": "No universally fixed count. Baptism gives new birth. Eucharist gives Christ's body and blood. Confirmation, penance, ordination, marriage, and anointing develop. Seven becomes standard later.",
+      "today": "Catholic and Eastern Orthodox churches continue this inheritance. No separate membership.",
+      "disputed": "Catholic and Orthodox churches each claim continuity with these churches. Neither describes itself as a new church founded in 1054.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates",
+        "https://www.newadvent.org/fathers/0714.htm",
+        "https://www.newadvent.org/fathers/0126.htm"
+      ]
+    }
+  ]
+}

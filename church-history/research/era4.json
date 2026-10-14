@@ -1,0 +1,870 @@
+{
+  "era": "1800 to October 2026; current claims checked October 14, 2026; confidence labels appear in facts",
+  "nodes": [
+    {
+      "id": "second-great-awakening",
+      "type": "event",
+      "name": "Second Great Awakening",
+      "start": 1800,
+      "end": 1840,
+      "on": "methodist",
+      "summary": "American revivals spread personal conversion, camp meetings, and lay preaching. Methodists and Baptists expanded, while new restoration and holiness movements emerged.",
+      "why": "These revivals helped make conversion experiences and preaching central to American Protestant life alongside baptism and Communion.",
+      "facts": [
+        "The revival began in the 1790s. Dates vary by region.",
+        "Barton Stone hosted the Cane Ridge camp meeting in Kentucky in 1801.",
+        "Presbyterian, Methodist, and Baptist preachers participated.",
+        "Early camp meetings grew from Presbyterian Communion gatherings."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.thearda.com/us-religion/history/timelines/entry?eid=239&etype=1",
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S20-PURL-gpo39912/pdf/GOVPUB-S20-PURL-gpo39912.pdf"
+      ]
+    },
+    {
+      "id": "african-methodist-episcopal",
+      "type": "tradition",
+      "name": "African Methodist Episcopal Church",
+      "start": 1816,
+      "end": null,
+      "parents": ["methodist"],
+      "summary": "Richard Allen united Black Methodist congregations in Philadelphia after racial discrimination in white churches. The AME Church joined Christian worship with education and freedom struggles.",
+      "why": "Black Methodists formed their own churches to protect their dignity, leadership, and freedom.",
+      "facts": [
+        "Mother Bethel began in 1794. The denomination organized in 1816.",
+        "Allen became its first bishop.",
+        "AME congregations supported abolition, schools, and civil rights.",
+        "WCC lists about 2.5M members without a census year. Current-size confidence low."
+      ],
+      "sacraments": "Two sacraments, baptism and the Lord's Supper. The church baptizes infants. Believers receive Christ spiritually in Communion through faith, following Methodist teaching.",
+      "today": "Roughly 2.5M reported. United States, Africa, and Caribbean.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.ame-church.com/founders-day-2018/",
+        "https://www.ame-church.com/our-church/our-beliefs/",
+        "https://oikoumene.org/member-churches/african-methodist-episcopal-church"
+      ]
+    },
+    {
+      "id": "latter-day-saints",
+      "type": "tradition",
+      "name": "Latter-day Saints",
+      "start": 1830,
+      "end": null,
+      "parents": ["methodist", "reformed"],
+      "summary": "Joseph Smith organized a church in New York claiming restored apostolic authority. Its scriptures, priesthood, and understanding of the Godhead differ from Nicene Christianity.",
+      "why": "Churches use words such as baptism, sacrament, and restoration for different beliefs about God and church authority.",
+      "facts": [
+        "Smith organized the church on April 6, 1830.",
+        "Its largest body is the Church of Jesus Christ of Latter-day Saints.",
+        "Father, Son, and Holy Ghost are distinct beings united in purpose.",
+        "2025 registered membership was 17.9M. Confidence high for the church's reported count."
+      ],
+      "sacraments": "Ordinances have no fixed sacrament count. Baptism uses immersion from age eight. Weekly bread and water remember Christ and renew covenants. Temples have additional ordinances.",
+      "today": "LDS church reports 17.9M in 2025. Americas and worldwide.",
+      "disputed": "Parents represent Smith's religious environment. Saints identify as Christian. Nicene churches reject their Godhead doctrine.",
+      "outsideNicene": true,
+      "importance": 2,
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/chapter-11?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/sacrament-meetings?lang=eng",
+        "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report"
+      ]
+    },
+    {
+      "id": "restorationist",
+      "type": "tradition",
+      "name": "Stone-Campbell churches",
+      "start": 1832,
+      "end": null,
+      "parents": ["reformed", "baptist"],
+      "summary": "Barton Stone's and Alexander Campbell's movements united around 1832 to restore New Testament Christianity and Christian unity. Later divisions produced Churches of Christ, Christian Churches, and Disciples.",
+      "why": "Weekly Communion and believers' baptism can accompany a strong rejection of denominational creeds and centralized authority.",
+      "facts": [
+        "Stone's movement began in 1804. Campbell's organized reform began in 1809.",
+        "Churches of Christ became a separate US census category in 1906.",
+        "Disciples of Christ organized their present denominational structure in 1968.",
+        "Several million worldwide is a broad estimate. Confidence low without uniform membership counts."
+      ],
+      "sacraments": "Baptism and Communion are ordinances or sacraments. Believers' immersion commonly relates to forgiveness. Weekly Communion generally commemorates Christ. Disciples also emphasize Christ's presence.",
+      "today": "Several million worldwide. Strongest in United States and Africa.",
+      "disputed": "Many Churches of Christ reject denominational labels. The branches differ over instruments, church cooperation, and how baptism relates to salvation.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://discipleshistory.org/history/",
+        "https://discipleshistory.org/wiki/christian-church-disciples-of-christ/",
+        "https://www.oikoumene.org/organization/world-convention-of-churches-of-christ",
+        "https://www.lytlechurchofchrist.org/questions-answers"
+      ]
+    },
+    {
+      "id": "oxford-movement",
+      "type": "event",
+      "name": "Oxford Movement",
+      "start": 1833,
+      "end": 1845,
+      "on": "anglican",
+      "summary": "John Keble, John Henry Newman, and Edward Pusey defended Anglican continuity with the ancient church. Their teaching helped shape Anglo-Catholic worship and sacramental practice.",
+      "why": "Its teaching helped give some Anglican churches Catholic forms of worship and a strong emphasis on sacramental grace.",
+      "facts": [
+        "Tracts for the Times appeared from 1833 to 1841.",
+        "Tractarians emphasized bishops, apostolic succession, and the early church.",
+        "Newman joined the Roman Catholic Church in 1845.",
+        "Anglo-Catholic influence continued after the original movement."
+      ],
+      "sacraments": "The movement renewed Anglican teaching on baptismal regeneration and Christ's real presence. It promoted confirmation, frequent Communion, and Eucharistic sacrifice.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://academic.oup.com/edited-volume/61883/chapter-abstract/547767906?login=false",
+        "https://academic.oup.com/book/5718/chapter-abstract/148841086",
+        "https://www.newadvent.org/cathen/11370a.htm"
+      ]
+    },
+    {
+      "id": "holiness",
+      "type": "tradition",
+      "name": "Holiness churches",
+      "start": 1837,
+      "end": null,
+      "parents": ["methodist"],
+      "summary": "Wesleyan Christians taught entire sanctification, God's grace enabling holy love and living. Phoebe Palmer's meetings spread the movement beyond Methodist institutions.",
+      "why": "Methodist teaching about holiness shaped later revival churches and Pentecostal beliefs about spiritual experiences after conversion.",
+      "facts": [
+        "The movement developed in the 1830s. 1837 marks Palmer's leadership of the Tuesday meetings.",
+        "Entire sanctification concerns devotion and freedom from sin's rule, not immunity from mistakes.",
+        "The Church of the Nazarene united holiness groups in 1907 and 1908.",
+        "Nazarenes report 2.76M members in 2025. Confidence high for that denomination, low for family totals."
+      ],
+      "sacraments": "Usually two sacraments or ordinances. Baptism practices vary. Wesleyan churches treat Communion as a means of grace. The Salvation Army omits outward sacraments.",
+      "today": "Millions worldwide. Nazarenes alone about 2.8M in 2025.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://nazarene.org/our-history/",
+        "https://nazarene.org/historical-statement/",
+        "https://nazarene.org/what-we-believe/",
+        "https://nazarene.org/news/general-secretary-releases-2025-statistics/"
+      ]
+    },
+    {
+      "id": "millerite-disappointment",
+      "type": "event",
+      "name": "Great Disappointment",
+      "start": 1844,
+      "end": 1844,
+      "on": "baptist",
+      "summary": "Followers of Baptist preacher William Miller expected Christ's return on October 22, 1844. The failed expectation divided the movement and shaped several Adventist churches.",
+      "why": "Adventist churches grew from an American revival movement, then developed different explanations of prophecy and Christian practice.",
+      "facts": [
+        "Miller first expected the return in 1843 or 1844.",
+        "Samuel Snow promoted the October 22 date.",
+        "Sabbatarian Adventists later interpreted the date as a heavenly event.",
+        "Other Adventists rejected that interpretation."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://adventist.org/identity/history",
+        "https://encyclopedia.adventist.org/article?highlight=Division&id=B8SX",
+        "https://www.adventist.org/who-are-seventh-day-adventists/united-for-mission-one-hundred-and-fifty-years/"
+      ]
+    },
+    {
+      "id": "southern-baptist",
+      "type": "tradition",
+      "name": "Southern Baptist Convention",
+      "start": 1845,
+      "end": null,
+      "parents": ["baptist"],
+      "summary": "Southern Baptists formed a convention in Augusta, Georgia, after disputes over appointing slaveholders as missionaries. The split defended slavery. Both sides retained Baptist beliefs about baptism and Communion.",
+      "why": "Church divisions sometimes follow racial and political conflicts while preserving almost identical baptism and Communion practices.",
+      "facts": [
+        "The convention formed in 1845.",
+        "Its founders defended slaveholding against restrictions by national Baptist mission boards.",
+        "The convention apologized for supporting slavery and racism in 1995.",
+        "2025 membership was 12.33M. Confidence high for the Annual Church Profile's reported total."
+      ],
+      "sacraments": "Two ordinances. Believers' baptism by immersion publicly expresses faith. Bread and cup symbolically remember Christ's death. Local churches decide who may participate.",
+      "today": "12.3M reported members in 2025. Chiefly United States.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.sbc.net/resource-library/resolutions/resolution-on-racial-reconciliation-on-the-150th-anniversary-of-the-southern-baptist-convention/",
+        "https://bfm.sbc.net/bfm2000/",
+        "https://research.lifeway.com/wp-content/uploads/2026/05/2025_ACP_Summary.pdf"
+      ]
+    },
+    {
+      "id": "adventist",
+      "type": "tradition",
+      "name": "Adventist churches",
+      "start": 1844,
+      "end": null,
+      "parents": ["baptist", "methodist"],
+      "summary": "Several churches grew from Millerite expectations of Christ's return. Seventh-day Adventists organized in 1863, teaching Saturday Sabbath observance, Christ's return, and health reform.",
+      "why": "Seventh-day Adventists share second-advent roots with other movements, including Jehovah's Witnesses, but teach different beliefs about God and Christian practice.",
+      "facts": [
+        "Seventh-day Adventists formed their General Conference in May 1863.",
+        "Ellen White influenced their teaching and institutions.",
+        "The present Seventh-day Adventist Church explicitly teaches the Trinity.",
+        "SDA reported 23.68M baptized members at year-end 2024. Confidence high for its reported count."
+      ],
+      "sacraments": "Seventh-day Adventists practice believers' immersion baptism and Communion as ordinances. Bread and grape juice symbolize Christ's body and blood. Foot washing precedes Communion.",
+      "today": "SDA alone 23.7M members in 2024. Worldwide, especially Global South.",
+      "disputed": "This branch covers broader Adventist origins. The sacramental and population details describe Seventh-day Adventists.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.adventist.org/who-are-seventh-day-adventists/united-for-mission-one-hundred-and-fifty-years/",
+        "https://adventist.org/beliefs",
+        "https://adventist.org/beliefs/official/the-lords-supper",
+        "https://news.eud.adventist.org/all-news/adventists-grow-worldwide-to-23.6-million-members"
+      ]
+    },
+    {
+      "id": "salvation-army",
+      "type": "tradition",
+      "name": "Salvation Army",
+      "start": 1865,
+      "end": null,
+      "parents": ["methodist", "holiness"],
+      "summary": "William and Catherine Booth's London mission combined evangelical preaching with practical help for poor people. It became the Salvation Army in 1878 and discontinued outward sacraments.",
+      "why": "A Christian church can affirm grace and holy living while choosing to practice neither water baptism nor Communion.",
+      "facts": [
+        "The Booths began the Christian Mission in London's East End in 1865.",
+        "The mission adopted the name Salvation Army in 1878.",
+        "It stopped administering baptism and Communion in 1883.",
+        "Its 2025 report lists 1.26M senior soldiers. Confidence high for that membership category."
+      ],
+      "sacraments": "No outward sacraments. Salvationists practice neither water baptism nor bread-and-cup Communion. They emphasize inward grace, Christ's presence, and holiness in everyday life.",
+      "today": "About 1.3M senior soldiers. Work spans 134 countries and territories.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.salvationarmy.org.au/scribe/sites/bellarinepeninsula/files/podcast/WorshipBeliefsPractices.pdf",
+        "https://www.salvationarmy.org/sites/default/files/2025-12/Annual_Report-2025.pdf",
+        "https://www.salvationarmy.org/global-presence"
+      ]
+    },
+    {
+      "id": "vatican-i",
+      "type": "council",
+      "name": "Vatican I",
+      "start": 1869,
+      "end": 1870,
+      "on": "catholic",
+      "summary": "Pope Pius IX's council defined papal jurisdiction and infallibility for formal definitions of faith or morals addressed to the whole church. Opponents formed Old Catholic churches.",
+      "why": "The council defined the pope's teaching authority. Some Catholics rejected that authority and formed separate churches while keeping seven sacraments.",
+      "facts": [
+        "The council opened in December 1869.",
+        "Pastor Aeternus defined papal infallibility on July 18, 1870.",
+        "Infallibility concerns defined teaching, not every papal statement or personal conduct.",
+        "War and Rome's capture interrupted the council in 1870."
+      ],
+      "disputed": "Catholics call the definition a development of apostolic teaching. Old Catholics, Orthodox, and Protestants reject the claimed authority.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.vatican.va/content/pius-ix/en/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html",
+        "https://www.catholicculture.org/culture/library/view.cfm?recnum=5413",
+        "https://www.oikoumene.org/church-families/old-catholic-churches"
+      ]
+    },
+    {
+      "id": "old-catholic",
+      "type": "tradition",
+      "name": "Old Catholic churches",
+      "start": 1871,
+      "end": null,
+      "parents": ["catholic"],
+      "summary": "German, Swiss, and Austrian Catholics who rejected Vatican I organized separate churches. They joined the older Utrecht church in a communion retaining bishops and seven sacraments.",
+      "why": "Rejecting papal infallibility did not require abandoning Catholic sacramental worship or apostolic succession.",
+      "facts": [
+        "Utrecht's separate episcopal history dates to 1723 and 1724.",
+        "The Union of Utrecht formed in 1889.",
+        "Old Catholics entered full communion with Anglicans in 1931.",
+        "WCC's roughly 115,000 figure lacks a census year. Current-size confidence low."
+      ],
+      "sacraments": "Seven sacraments. Churches baptize infants and teach Christ's true presence in the Eucharist. They retain apostolic succession without requiring Rome's definition of transubstantiation.",
+      "today": "Roughly 115,000 in Utrecht communion. Chiefly continental Europe. Estimate dated.",
+      "disputed": "Many independent groups call themselves Old Catholic. This node describes the historic Utrecht communion.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.oikoumene.org/church-families/old-catholic-churches",
+        "https://www.oikoumene.org/organization/international-old-catholic-bishops-conference",
+        "https://www.utrechter-union.org/en/about-us/what-is-the-ibc/history/"
+      ]
+    },
+    {
+      "id": "orthodox-autocephalies",
+      "type": "event",
+      "name": "Orthodox national churches",
+      "start": 1872,
+      "end": 1945,
+      "on": "eastern-orthodox",
+      "summary": "Eastern Orthodox churches formed self-governing national bodies. Disputes over territory and ethnic boundaries sometimes interrupted communion while the churches retained shared sacramental doctrines.",
+      "why": "Autocephaly lets an Orthodox church govern itself while retaining Orthodox beliefs and sacraments.",
+      "facts": [
+        "Moscow's patriarchate dates to 1589, before this era.",
+        "Constantinople's 1872 council condemned ethnic church organization and declared the Bulgarian hierarchy schismatic.",
+        "Not every Orthodox church accepted that judgment.",
+        "Constantinople recognized Bulgarian autocephaly and ended the schism in 1945."
+      ],
+      "disputed": "Orthodox churches disagree over who may grant autocephaly and how territorial boundaries should operate.",
+      "outsideNicene": false,
+      "importance": 3,
+      "sources": [
+        "https://www.orthodoxhistory.org/2020/02/18/the-bulgarian-schism-began-150-years-ago/",
+        "https://www.oikoumene.org/resources/documents/dictionary-of-the-ecumenical-movement-orthodoxy"
+      ]
+    },
+    {
+      "id": "jehovahs-witnesses",
+      "type": "tradition",
+      "name": "Jehovah's Witnesses",
+      "start": 1870,
+      "end": null,
+      "parents": ["adventist"],
+      "summary": "Charles Taze Russell's Bible study movement developed in the 1870s. Its main successor adopted the name Jehovah's Witnesses in 1931 and rejects Nicene teaching about God.",
+      "why": "Their baptism and annual remembrance of Jesus differ from the theology and Communion practice of Nicene churches.",
+      "facts": [
+        "Russell began publishing Zion's Watch Tower in 1879.",
+        "Witnesses teach that Jesus is God's first creation and the Spirit is God's active force.",
+        "Most attend the annual Memorial without eating its bread or drinking its wine.",
+        "2025 peak active publishers numbered 9.21M. Confidence high for the reported category."
+      ],
+      "sacraments": "Immersion baptism dedicates believers to Jehovah. The annual Memorial uses symbolic bread and wine. Only those claiming heavenly anointing partake. Witnesses have no seven-sacrament system.",
+      "today": "About 9.2M peak active publishers in 2025. Worldwide.",
+      "disputed": "The Adventist parent represents second-advent influences. Witnesses identify as Christian. Nicene churches reject their doctrine of Christ.",
+      "outsideNicene": true,
+      "importance": 2,
+      "sources": [
+        "https://www.jw.org/en/library/brochures/Jehovahs-Witnesses-Unitedly-Doing-Gods-Will-Worldwide/Jehovah-Gathers-and-Equips-His-People-for-Work/",
+        "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/An-Association-of-Brothers/Meetings-for-Worship-Instruction-and-Encouragement/",
+        "https://www.jw.org/en/library/books/2025-Service-Year-Report-of-Jehovahs-Witnesses-Worldwide/2025-Grand-Totals/"
+      ]
+    },
+    {
+      "id": "national-baptist-convention",
+      "type": "tradition",
+      "name": "National Baptist Convention",
+      "start": 1895,
+      "end": null,
+      "parents": ["baptist"],
+      "summary": "Black Baptist organizations united in Atlanta in 1895 for missions, education, and publishing. Their churches sustained Black leadership and later supplied major civil rights leaders.",
+      "why": "Black Baptist churches preserved Baptist ordinances while building institutions beyond white control.",
+      "facts": [
+        "Three national Black Baptist organizations merged in 1895.",
+        "Later divisions produced several National Baptist conventions.",
+        "Martin Luther King Jr. worked within this tradition before the Progressive National Baptist split.",
+        "Self-reports and religious censuses differ. Confidence low for a precise current membership total."
+      ],
+      "sacraments": "Two ordinances. Believers' immersion publicly confesses faith. The Lord's Supper remembers Christ with symbolic bread and cup. Congregations decide who may participate.",
+      "today": "Several million, chiefly African American congregations in United States.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://kinginstitute.stanford.edu/national-baptist-convention-nbc",
+        "https://baptistworld.org/members/",
+        "https://baptistworld.org/beliefs/"
+      ]
+    },
+    {
+      "id": "pentecostal",
+      "type": "tradition",
+      "name": "Pentecostal churches",
+      "start": 1906,
+      "end": null,
+      "parents": ["holiness", "baptist"],
+      "summary": "William Seymour's Azusa Street revival spread Pentecostal worship internationally. Pentecostals emphasize the Holy Spirit's power, healing, and spiritual gifts, including speaking in tongues.",
+      "why": "Most Pentecostal churches practice water baptism and Communion. They also teach Spirit baptism as a distinct experience of spiritual power.",
+      "facts": [
+        "Azusa Street began in Los Angeles in 1906. Interracial worship marked its early years.",
+        "Earlier roots include Charles Parham's Topeka school in 1901.",
+        "The Assemblies of God organized in Hot Springs, Arkansas, in 1914.",
+        "2026 Pentecostal-charismatic total is about 676M across churches. Confidence medium. The categories overlap."
+      ],
+      "sacraments": "Usually two ordinances, believers' immersion and symbolic Communion. Spirit baptism is a distinct experience of spiritual power. Some churches also practice foot washing.",
+      "today": "Hundreds of millions worldwide. Especially Africa, Latin America, and Asia.",
+      "disputed": "1906 marks international expansion. Pentecostals had earlier roots. Most are Trinitarian. Oneness churches appear separately.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://ag.org/About/About-the-AG/History",
+        "https://news.ag.org/en/article-repository/news/2016/04/what-azusa-had-and-we-need",
+        "https://ag.org/Beliefs/Statement-of-Fundamental-truths",
+        "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
+      ]
+    },
+    {
+      "id": "edinburgh-1910",
+      "type": "event",
+      "name": "Edinburgh missionary conference",
+      "start": 1910,
+      "end": 1910,
+      "on": "anglican",
+      "summary": "Protestant and Anglican mission leaders met in Edinburgh to coordinate evangelism. Their cooperation helped launch the modern ecumenical movement and later interchurch organizations.",
+      "why": "Churches began seeking practical cooperation and visible unity without first settling every doctrinal or sacramental disagreement.",
+      "facts": [
+        "Most delegates came from Western Protestant mission agencies.",
+        "Catholic and Orthodox churches did not participate as partner churches.",
+        "The meeting created a continuation committee.",
+        "The conference helped prepare the way for the World Council of Churches."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.oikoumene.org/about-the-wcc/history",
+        "https://www.oikoumene.org/news/world-churches-to-mark-100-years-of-landmark-mission-event"
+      ]
+    },
+    {
+      "id": "oneness-pentecostal",
+      "type": "tradition",
+      "name": "Oneness Pentecostals",
+      "start": 1916,
+      "end": null,
+      "parents": ["pentecostal"],
+      "summary": "Pentecostals who taught God's oneness and baptism in Jesus' name separated from Trinitarian colleagues. Their theology rejects the Nicene distinction of three eternal divine persons.",
+      "why": "Baptism in Jesus' name expresses these churches' beliefs about God and salvation.",
+      "facts": [
+        "The Jesus' name controversy began in 1913.",
+        "The Assemblies of God's Trinitarian statement prompted a major separation in 1916.",
+        "The United Pentecostal Church International formed in 1945.",
+        "UPCI reports 5.75M constituents in a 2024 release. Confidence medium. Other Oneness groups add more."
+      ],
+      "sacraments": "Ordinances include baptism, Communion, and often foot washing. Immersion in Jesus' name relates to forgiveness. UPCI links salvation with Spirit baptism and tongues.",
+      "today": "UPCI alone reports about 5.8M constituents worldwide. Broader total uncertain.",
+      "disputed": "Oneness believers identify as Christian and reject the label modalist. Nicene churches reject their doctrine of divine persons.",
+      "outsideNicene": true,
+      "importance": 2,
+      "sources": [
+        "https://upci.org/about-the-upci/",
+        "https://upci.org/our-beliefs/",
+        "https://upci.org/one-million-constituents/",
+        "https://mycac.net/welcome/believe/articles-of-faith/",
+        "https://ag.org/About/About-the-AG/History"
+      ]
+    },
+    {
+      "id": "fundamentalist-modernist",
+      "type": "event",
+      "name": "Fundamentalist-modernist controversy",
+      "start": 1920,
+      "end": 1936,
+      "on": "reformed",
+      "summary": "American Protestants fought over biblical authority, miracles, and adapting theology to modern scholarship. The conflict divided denominations and helped distinguish later evangelical and mainline networks.",
+      "why": "Disagreements over reading Scripture divided modern Protestants even when they shared beliefs about baptism and Communion.",
+      "facts": [
+        "Harry Emerson Fosdick preached Shall the Fundamentalists Win? in 1922.",
+        "J. Gresham Machen argued that liberal Christianity changed the faith itself.",
+        "Machen helped establish Westminster Seminary in 1929.",
+        "The Orthodox Presbyterian Church formed in 1936."
+      ],
+      "disputed": "Conservatives defended doctrinal continuity. Modernists sought credible Christian teaching alongside historical criticism and science. Neither camp represented all Protestants.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://pcusa.org/news-storytelling/blogs/historical-society-blog/journal-interview-bradley-longfield-fundamentalist-modernist-conflict",
+        "https://pcusa.org/es/news-storytelling/blogs/historical-society-blog/fighting-right-fundamentalist-modernist-controversy-and-west-jersey-presbytery"
+      ]
+    },
+    {
+      "id": "world-council-churches",
+      "type": "event",
+      "name": "World Council of Churches",
+      "start": 1948,
+      "end": 1948,
+      "on": "apostolic",
+      "summary": "Churches founded the World Council of Churches in Amsterdam as a fellowship for unity, witness, and service. Orthodox and Protestant churches cooperate without merging their denominations.",
+      "why": "Ecumenical cooperation can include shared study of baptism and Eucharist while churches retain different sacramental rules.",
+      "facts": [
+        "The first assembly brought together 147 member churches.",
+        "The WCC is a fellowship. Member churches retain their own authority.",
+        "The Catholic Church cooperates but is not a member.",
+        "Churches widely discussed its 1982 text Baptism, Eucharist and Ministry."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.oikoumene.org/about-the-wcc/history",
+        "https://www.oikoumene.org/about-the-wcc/faq"
+      ]
+    },
+    {
+      "id": "evangelical-nondenom",
+      "type": "tradition",
+      "name": "Independent evangelical churches",
+      "start": 1950,
+      "end": null,
+      "parents": ["baptist", "reformed"],
+      "summary": "Independent evangelical churches expanded through Bible teaching, conversion preaching, church planting, and contemporary worship. Some grew into megachurches, while others remained small congregations.",
+      "why": "A church's lack of a denominational name does not imply a single theology of baptism or Communion.",
+      "facts": [
+        "1950 marks postwar growth, not the first independent church.",
+        "Megachurches commonly have at least 2,000 weekly worshippers and can also belong to denominations.",
+        "Pew found nondenominational Protestants were 7% of US adults in 2023-24. Confidence high for this survey.",
+        "Worldwide evangelical-independent totals lack one definition. Confidence low."
+      ],
+      "sacraments": "Usually two ordinances, believers' baptism and symbolic Communion. Frequency varies. Some churches retain infant baptism or Christ's spiritual presence. Charismatic churches emphasize spiritual gifts.",
+      "today": "Millions worldwide. Strongest in Americas, Africa, and Asia.",
+      "disputed": "Parents represent common influences. Independent, evangelical, charismatic, and megachurch labels overlap, but each describes something different.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.pewresearch.org/religion/2025/02/26/religious-landscape-study-religious-identity/",
+        "https://hirr.hartfordinternational.edu/research/megachurch-research/",
+        "https://web01.hartfordinternational.edu/megachurch/2020_megachurch_report.pdf"
+      ]
+    },
+    {
+      "id": "mainline-mergers",
+      "type": "event",
+      "name": "US mainline mergers",
+      "start": 1957,
+      "end": 1988,
+      "on": "apostolic",
+      "summary": "American Protestant denominations reunited older branches or joined related traditions. These mergers created the UCC, United Methodist Church, PCUSA, and ELCA. Each retained its own sacramental tradition.",
+      "why": "The family tree includes branches joining together as well as splitting apart.",
+      "facts": [
+        "1957 UCC joined Congregational Christian Churches with the Evangelical and Reformed Church.",
+        "1968 United Methodist Church joined Methodists with the Evangelical United Brethren.",
+        "1983 PCUSA reunited the Presbyterian Church in the US with the United Presbyterian Church in the USA.",
+        "1988 ELCA united the ALC, LCA, and Association of Evangelical Lutheran Churches."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.ucc.org/who-we-are/about/history/",
+        "https://www.umc.org/en/content/methodist-history-the-uniting-conference-of-1968",
+        "https://pcusa.org/historical-society/history-online/history/history-church",
+        "https://www.elca.org/about-the-elca/who-we-are/history"
+      ]
+    },
+    {
+      "id": "charismatic",
+      "type": "tradition",
+      "name": "Charismatic renewal",
+      "start": 1960,
+      "end": null,
+      "parents": ["pentecostal"],
+      "summary": "Christians brought Pentecostal-style prayer, healing, and spiritual gifts into existing denominations. Protestant renewal gained attention in 1960. Catholic renewal spread from Duquesne University in 1967.",
+      "why": "Spiritual gifts can coexist with Catholic, Anglican, Lutheran, or other established sacramental teaching.",
+      "facts": [
+        "Episcopal priest Dennis Bennett publicized his experience of tongues in 1960.",
+        "The Duquesne Weekend helped begin Catholic charismatic renewal in February 1967.",
+        "Many participants stayed within their existing churches.",
+        "Charismatics share the 2026 combined 676M Pentecostal-charismatic estimate. Separate total uncertain. Confidence medium."
+      ],
+      "sacraments": "Participants retain their churches' sacrament counts, baptism practices, and Eucharistic beliefs. Spirit baptism means spiritual renewal. Catholics do not count it as an additional sacrament.",
+      "today": "Hundreds of millions across denominations worldwide. Counts overlap Pentecostals.",
+      "disputed": "Participants belong to different denominations. The Pentecostal parent represents influence on their worship.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.christianitytoday.com/1975/02/profile-of-charismatic-movement/",
+        "https://dioceseofraleigh.org/charismatic-renewal/history",
+        "https://doi.org/10.3366/swc.2019.0267",
+        "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
+      ]
+    },
+    {
+      "id": "vatican-ii",
+      "type": "council",
+      "name": "Vatican II",
+      "start": 1962,
+      "end": 1965,
+      "on": "catholic",
+      "summary": "The Catholic council renewed worship, encouraged lay participation, and committed Catholics to dialogue with other Christians. It permitted wider use of local languages. Later reforms changed the Mass.",
+      "why": "The council allowed wider use of local languages in Catholic worship and encouraged dialogue with other Christians.",
+      "facts": [
+        "John XXIII opened the council. Paul VI completed it.",
+        "Sacrosanctum Concilium authorized expanded vernacular use while preserving Latin in principle.",
+        "Unitatis Redintegratio addressed Christian unity in 1964.",
+        "The reformed Roman Missal followed in 1969 and 1970."
+      ],
+      "sacraments": "The council retained seven sacraments, baptismal grace, transubstantiation, and Eucharistic sacrifice. It promoted active participation, Scripture readings, and approved liturgy in local languages.",
+      "disputed": "Catholics dispute some later interpretations and reforms. The council itself did not abolish Latin or redefine the Eucharist as merely symbolic.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+        "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html"
+      ]
+    },
+    {
+      "id": "excommunications-lifted",
+      "type": "event",
+      "name": "1054 excommunications lifted",
+      "start": 1965,
+      "end": 1965,
+      "on": "catholic",
+      "summary": "Pope Paul VI and Patriarch Athenagoras removed the 1054 excommunications from church memory. Their joint declaration encouraged Catholic-Orthodox reconciliation. The churches remained divided.",
+      "why": "Reconciliation gestures and theological dialogue can advance without making Catholic and Orthodox Communion interchangeable.",
+      "facts": [
+        "The declaration appeared on December 7, 1965.",
+        "The original censures targeted particular people, not every member of both churches.",
+        "Both sides regretted the words and actions that deepened estrangement.",
+        "Lifting the censures did not end the schism or restore shared Eucharistic communion."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+        "https://www.christianunity.va/content/unitacristiani/it/dialoghi/sezione-orientale/chiese-ortodosse-di-tradizione-bizantina/relazioni-bilaterali/patriarcato-ecumenico/dichiarazioni-comuni/1965-dichiarazione-comune-di-papa-paolo-vi-e-del-patriarca-ecume/testo-in-inglese.pdf"
+      ]
+    },
+    {
+      "id": "joint-declaration-justification",
+      "type": "event",
+      "name": "Joint declaration on justification",
+      "start": 1999,
+      "end": 1999,
+      "on": "lutheran",
+      "summary": "The Lutheran World Federation and Catholic Church agreed on basic truths about justification by God's grace through faith. They judged earlier condemnations inapplicable to the agreed teaching.",
+      "why": "A central Reformation disagreement narrowed, while differences about church authority, ministry, and sacraments remained.",
+      "facts": [
+        "Representatives signed the declaration in Augsburg on October 31, 1999.",
+        "The agreement describes a consensus in basic truths, not identical theology on every point.",
+        "It did not create full church communion or general permission for shared Eucharist.",
+        "Some Lutheran churches outside the federation reject the agreement."
+      ],
+      "disputed": "Supporters see doctrinal agreement. Critics argue that important differences remain or that the document weakens Lutheran teaching.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://lutheranworld.org/what-we-do/unity-church/joint-declaration-doctrine-justification-jddj",
+        "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-occidentale/luterani/dialogo/documenti-di-dialogo/1999-dichiarazione-congiunta-sulla-dottrina-della-giustificazion/en3.html"
+      ]
+    },
+    {
+      "id": "gafcon-realignment",
+      "type": "schism",
+      "name": "GAFCON Anglican realignment",
+      "start": 2008,
+      "end": 2026,
+      "on": "anglican",
+      "splits": ["acna"],
+      "summary": "Conservative Anglican leaders organized GAFCON amid conflicts over sexuality and biblical authority. They supported ACNA and later claimed to reorganize global Anglican communion beyond Canterbury's institutions.",
+      "why": "Anglican identity now depends on disputed relationships between provinces, shared doctrine, and Communion institutions.",
+      "facts": [
+        "GAFCON met in Jerusalem and issued its declaration in 2008.",
+        "It supported ACNA's formation in 2009.",
+        "GAFCON announced its Global Anglican Communion initiative in October 2025.",
+        "The March 2026 Abuja Affirmation rejected Canterbury's governing instruments. Confidence high for GAFCON's stated position."
+      ],
+      "disputed": "GAFCON claims to restore historic Anglican faith. Other Anglicans dispute its authority and its claim to speak for the Communion.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://gafcon.org/communique-updates/the-abuja-affirmation/",
+        "https://anglicanchurch.net/welcome/"
+      ]
+    },
+    {
+      "id": "acna",
+      "type": "tradition",
+      "name": "ACNA",
+      "start": 2009,
+      "end": null,
+      "parents": ["anglican"],
+      "summary": "The Anglican Church in North America united conservative Anglican groups, including congregations leaving Episcopal and Canadian Anglican churches. Several overseas Anglican provinces recognized the new body.",
+      "why": "An Anglican church can retain its liturgy and sacraments while changing which bishops and provinces it recognizes.",
+      "facts": [
+        "ACNA formed in 2009.",
+        "Conflicts included sexuality, biblical authority, and episcopal oversight.",
+        "Recognition by overseas provinces does not equal membership in Canterbury's Anglican Communion institutions.",
+        "Its current official welcome page reports over 130,000 members. Confidence medium for this rounded claim."
+      ],
+      "sacraments": "Two principal sacraments, baptism and Eucharist, plus five sacramental rites. Churches baptize infants. Eucharistic teaching ranges from Reformed spiritual presence to Anglo-Catholic real presence.",
+      "today": "Over 130,000 reported members. United States, Canada, and Latin America.",
+      "disputed": "ACNA calls itself an Anglican province. Its status within the wider Communion remains contested.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://anglicanchurch.net/welcome/",
+        "https://anglicanchurch.net/structure/"
+      ]
+    },
+    {
+      "id": "moscow-constantinople-break",
+      "type": "schism",
+      "name": "Moscow-Constantinople communion break",
+      "start": 2018,
+      "end": 2018,
+      "on": "eastern-orthodox",
+      "splits": ["orthodox-church-ukraine"],
+      "summary": "Moscow ended Eucharistic communion with Constantinople over its decisions concerning Ukraine. The Orthodox Church of Ukraine's later independence deepened disputes over church boundaries and recognition.",
+      "why": "Orthodox churches can share sacramental beliefs while refusing Eucharistic communion because they dispute who has authority over a territory.",
+      "facts": [
+        "Moscow's Holy Synod announced the break on October 15, 2018.",
+        "Constantinople had moved toward Ukrainian autocephaly and restored previously excluded Ukrainian hierarchs.",
+        "The OCU formed in December 2018 and received its tomos in January 2019.",
+        "This was a jurisdictional rupture inside Orthodoxy, not a new creed or sacramental system."
+      ],
+      "sacraments": "Both retain Orthodox baptism and Eucharistic real presence. Moscow forbids its clergy and faithful from receiving Communion in Constantinople's churches.",
+      "disputed": "Moscow claims authority in Ukraine. Constantinople disputes that claim and asserts authority to grant church independence. Orthodox churches differ over recognition.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://old.mospat.ru/en/2018/10/15/news165263/",
+        "https://ec-patr.org/en/resources/autocephaly-of-the-orthodox-church-of-ukraine/",
+        "https://www.ecupatria.org/2019/01/14/autocephaly-of-the-orthodox-church-in-ukraine/"
+      ]
+    },
+    {
+      "id": "orthodox-church-ukraine",
+      "type": "tradition",
+      "name": "Orthodox Church of Ukraine",
+      "start": 2018,
+      "end": null,
+      "parents": ["eastern-orthodox"],
+      "summary": "A Kyiv council united Ukrainian Orthodox groups in December 2018. Patriarch Bartholomew granted the new church independence in January 2019. Moscow rejects that decision.",
+      "why": "A self-governing Orthodox church retains Orthodox beliefs and sacraments. Disputes over its independence affect which churches share Communion with it.",
+      "facts": [
+        "The unification council elected Metropolitan Epiphanius in December 2018.",
+        "Bartholomew signed the tomos on January 5 and presented it on January 6, 2019.",
+        "It is distinct from the Ukrainian Orthodox Church historically linked to Moscow.",
+        "Razumkov's 2024 survey found 35% identifying with OCU. Confidence medium. This is identification, not membership."
+      ],
+      "sacraments": "Orthodox mysteries, commonly counted as seven. Infants receive baptism, chrismation, and Communion. The church teaches Eucharistic real presence. Church independence concerns governance.",
+      "today": "Millions identify with OCU in Ukraine. Exact membership uncertain.",
+      "disputed": "Constantinople recognizes its autocephaly. Moscow rejects it. Orthodox recognition is partial, so communion depends on the particular church.",
+      "outsideNicene": false,
+      "importance": 3,
+      "sources": [
+        "https://www.ecupatria.org/2019/01/14/autocephaly-of-the-orthodox-church-in-ukraine/",
+        "https://old.mospat.ru/en/2018/10/15/news165263/",
+        "https://razumkov.org.ua/en/surveys/religiosity-trust-in-the-church-confessional-division-and-inter-church-relations-in-ukrainian-society-october-2024"
+      ]
+    },
+    {
+      "id": "united-methodist-split",
+      "type": "schism",
+      "name": "United Methodist split",
+      "start": 2019,
+      "end": 2024,
+      "on": "methodist",
+      "splits": ["global-methodist"],
+      "summary": "Disputes over sexuality, biblical authority, and enforcing church rules led thousands of congregations to leave the United Methodist Church. Many joined the Global Methodist Church.",
+      "why": "Both churches kept Methodist sacraments. The split chiefly changed church affiliation and rules about marriage and ordination.",
+      "facts": [
+        "The 2019 General Conference strengthened restrictions and authorized a temporary US disaffiliation process.",
+        "The Global Methodist Church launched on May 1, 2022.",
+        "About 7,600 US congregations left in 2019-2023. Not all joined the GMC.",
+        "UMC removed bans on gay clergy and same-sex weddings in 2024. Confidence high."
+      ],
+      "disputed": "Conservatives emphasize biblical authority and continuity. Supporters of inclusion emphasize equal participation. Departing congregations chose several destinations.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.umnews.org/news/may-1-wrap-up-gay-clergy-ban-lifted-new-retirement-plan-approved",
+        "https://www.umc.org/en/content/timeline-of-the-united-methodist-church",
+        "https://www.globalmethodist.org/launch-information",
+        "https://apnews.com/article/ef5755c84d49896c520b5835e6169317"
+      ]
+    },
+    {
+      "id": "global-methodist",
+      "type": "tradition",
+      "name": "Global Methodist Church",
+      "start": 2022,
+      "end": null,
+      "parents": ["methodist"],
+      "summary": "Conservative Methodists formed a new denomination as United Methodist divisions widened. The Global Methodist Church retains Wesleyan theology and teaches marriage between a man and a woman.",
+      "why": "Its doctrinal separation concerns authority and sexual ethics more than baptism or Eucharistic presence.",
+      "facts": [
+        "The denomination launched on May 1, 2022.",
+        "Its convening General Conference met in Costa Rica in September 2024. Confidence high.",
+        "Its doctrine retains infant baptism and two sacraments as means of grace.",
+        "Reviewed official sources provide no verified global adherent total. Current-size confidence low."
+      ],
+      "sacraments": "Two sacraments, infant or adult baptism and Holy Communion. Communion conveys grace and Christ's body and blood spiritually through faith. Bread and wine remain unchanged.",
+      "today": "Adherent total unverified. Congregations in Americas, Africa, Europe, and Asia.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.globalmethodist.org/launch-information",
+        "https://www.globalmethodist.org/articles-of-faith",
+        "https://globalmethodist.org/wp-content/uploads/2024/11/2024-GMC-BOOK-OF-DOCTRINES-FINAL.pdf"
+      ]
+    },
+    {
+      "id": "global-south-shift",
+      "type": "event",
+      "name": "Global South growth",
+      "start": 1900,
+      "end": 2026,
+      "on": "apostolic",
+      "summary": "Christian populations grew in Africa, Latin America, and Asia. Africa now has the largest continental Christian population. Europe has lost its former numerical dominance.",
+      "why": "Growing churches in Africa, Latin America, and Asia shape Christian worship, mission, and debates worldwide.",
+      "facts": [
+        "Pew's 2025 study places 31% of 2020 Christians in sub-Saharan Africa, ahead of every other region.",
+        "The 2026 World Christian Database estimates about 780M Christians in Africa, the largest continent.",
+        "It estimates 69% of Christians live in the Global South in 2026.",
+        "Confidence high for Africa's leading position. Medium for current modeled population estimates."
+      ],
+      "disputed": "Pew measures religious identification. Church databases use broader affiliation and estimates. Their absolute totals differ, but both show Africa's growth.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.pewresearch.org/2025/06/09/christian-population-change/",
+        "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
+      ]
+    },
+    {
+      "id": "nicaea-anniversary",
+      "type": "event",
+      "name": "Nicaea 1700th anniversary",
+      "start": 2025,
+      "end": 2025,
+      "on": "apostolic",
+      "summary": "Pope Leo XIV, Patriarch Bartholomew, and other Christian leaders prayed at Iznik on November 28, 2025. They commemorated 1,700 years since the first Council of Nicaea.",
+      "why": "The Nicene faith remains shared across major Christian traditions even where church government and Eucharistic communion remain divided.",
+      "facts": [
+        "Iznik in Türkiye is ancient Nicaea, the council's meeting place in 325.",
+        "Leaders gathered near the archaeological remains of Saint Neophytos Basilica.",
+        "They commemorated shared faith and prayed for Christian unity.",
+        "Vatican and independent reports confirm the completed November 2025 gathering. Confidence high."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.vaticannews.va/en/pope/news/2025-11/pope-leo-xiv-ecumenical-prayer-turkiye-iznik-nicaea.html",
+        "https://apnews.com/article/841635be753e7ec904ec00f1d4c2e93b"
+      ]
+    },
+    {
+      "id": "christianity-today",
+      "type": "event",
+      "name": "Christianity today",
+      "start": 2026,
+      "end": 2026,
+      "on": "apostolic",
+      "summary": "Catholic, Protestant, independent, Eastern Orthodox, and Oriental Orthodox churches remain distinct in October 2026. Counts differ by membership definitions, reference year, and how researchers count overlapping movements.",
+      "why": "These figures give an approximate sense of size. Membership totals do not measure agreement about Christian beliefs.",
+      "facts": [
+        "The Vatican reports 1.422B baptized Catholics for 2024. Confidence is high for its reported count.",
+        "2026 Protestant and independent estimates total 1.06B, including Pentecostal churches. Confidence is medium.",
+        "Eastern Orthodox estimates range between 220M and 260M. Oriental Orthodox estimates approach 60M. Confidence is medium.",
+        "Pentecostal and charismatic counts overlap denominations. These totals use different sources and cannot form a consistent global sum."
+      ],
+      "disputed": "WCD counts 293M Eastern and Oriental Orthodox combined. Subtracting about 60M Oriental Orthodox gives an inferred 233M Eastern Orthodox. Counting methods differ.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
+        "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+        "https://www.oikoumene.org/church-families/orthodox-churches-oriental"
+      ]
+    }
+  ]
+}
