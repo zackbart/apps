@@ -111,9 +111,13 @@ function compareTable(a: string, b: string) {
   if (!ra || !rb) return '';
   const ea = EUCHARIST[eucharistKey(byId.get(a)!)];
   const eb = EUCHARIST[eucharistKey(byId.get(b)!)];
+  // Each cell carries its church's name, so phones can stack the two columns as cards.
+  const na = esc(nameOf(byId.get(a)!));
+  const nb = esc(nameOf(byId.get(b)!));
+  const td = (r: Row, html: string) => `<td data-church="${r === ra ? na : nb}">${html}</td>`;
   const cell = (r: Row, rite: string) => {
     const c = r.cells[rite];
-    return `<td><span class="status ${c.status}">${mark(c.status)}${STATUS_TEXT[c.status]}</span><p>${esc(c.note)}</p></td>`;
+    return td(r, `<span class="status ${c.status}">${mark(c.status)}${STATUS_TEXT[c.status]}</span><p>${esc(c.note)}</p>`);
   };
   const rows = RITES.map((r) => {
     const same = ra.cells[r.id].status === rb.cells[r.id].status;
@@ -121,10 +125,10 @@ function compareTable(a: string, b: string) {
   }).join('');
   return `<section class="compare-table"><h3>Side by side</h3>
     <div class="table-wrap"><table>
-      <thead><tr><th></th><th scope="col">${emblem(a)}${esc(nameOf(byId.get(a)!))}</th><th scope="col">${emblem(b)}${esc(nameOf(byId.get(b)!))}</th></tr></thead>
+      <thead><tr><th></th><th scope="col">${emblem(a)}${na}</th><th scope="col">${emblem(b)}${nb}</th></tr></thead>
       <tbody>
-        <tr><th scope="row">In brief</th><td><p>${esc(ra.summary)}</p></td><td><p>${esc(rb.summary)}</p></td></tr>
-        <tr class="${ea === eb ? '' : 'differs'}"><th scope="row">View of communion${ea === eb ? '' : '<small>Differs</small>'}</th><td><span class="cat" style="--c:${ea.color}"><i></i>${esc(ea.name)}</span></td><td><span class="cat" style="--c:${eb.color}"><i></i>${esc(eb.name)}</span></td></tr>
+        <tr><th scope="row">In brief</th>${td(ra, `<p>${esc(ra.summary)}</p>`)}${td(rb, `<p>${esc(rb.summary)}</p>`)}</tr>
+        <tr class="${ea === eb ? '' : 'differs'}"><th scope="row">View of communion${ea === eb ? '' : '<small>Differs</small>'}</th>${td(ra, `<span class="cat" style="--c:${ea.color}"><i></i>${esc(ea.name)}</span>`)}${td(rb, `<span class="cat" style="--c:${eb.color}"><i></i>${esc(eb.name)}</span>`)}</tr>
         ${rows}
       </tbody>
     </table></div></section>`;

@@ -109,8 +109,13 @@ function textWidth(text: string, font: string) {
 const FONT_LINE = '600 12.5px Inter, system-ui, sans-serif';
 const FONT_MINOR = '500 11.5px Inter, system-ui, sans-serif';
 const FONT_MARK = '500 11.5px Inter, system-ui, sans-serif';
+const FONT_TICK = '500 11px Inter, system-ui, sans-serif';
+// Narrow maps use smaller labels. These match `.flatmap.narrow` in style.css.
+const NARROW = 520;
+const FONT_NARROW = { line: '600 11.5px Inter, system-ui, sans-serif', minor: '500 10.5px Inter, system-ui, sans-serif', mark: '500 10.5px Inter, system-ui, sans-serif' };
 
 const ease = (k: number) => 1 - Math.pow(1 - k, 3);
+const KEY_MOMENTS = visibleSet(true);
 
 export class FlatMap {
   readonly root: HTMLElement;
@@ -239,7 +244,9 @@ export class FlatMap {
     const bottom = 44;
     const avail = Math.max(100, this.h - top - bottom);
     const max = this.simple ? (present.length < 8 ? 64 : 52) : 26;
-    const gap = Math.min(max, Math.max(this.simple ? 24 : 13, avail / (present.length + 0.1)));
+    // Short screens and the pinned story map, which cannot scroll, pack the lanes tighter.
+    const floor = this.simple ? (this.h < 440 || !this.opts.interactive ? 16 : 24) : 13;
+    const gap = Math.min(max, Math.max(floor, avail / (present.length + 0.1)));
     const used = gap * (present.length - 1);
     const y0 = top + Math.max(0, (avail - used) / 2) - gap * 0.2;
     const target = new Map(present.map((id, i) => [id, y0 + i * gap]));
@@ -249,6 +256,7 @@ export class FlatMap {
     const needed = offRow + bottom;
     // A long list of lanes can be taller than the screen. Then the map scrolls down.
     this.svg.style.height = needed > this.h + 4 ? `${Math.ceil(needed)}px` : '';
+    this.svg.classList.toggle('tall', needed > this.h + 4);
     if (animate && !reduceMotion && this.laneY.size) {
       this.laneAnim = { from: new Map(this.laneY), to: target, offFrom: this.offRowY, offTo: offRow, t0: performance.now(), dur: 650 };
       this.schedule();
@@ -272,6 +280,7 @@ export class FlatMap {
     if (!w || !h || (w === this.w && h === this.h)) return;
     this.w = w;
     this.h = h;
+    this.svg.classList.toggle('narrow', this.narrow);
     this.layoutLanes();
     this.render();
   }
@@ -372,6 +381,15 @@ export class FlatMap {
   // -------------------------------------------------------------------------
   // Drawing
 
+  /** Narrow or short, as on phones. Lanes sit closer, so labels get smaller and fewer. */
+  private get narrow() {
+    return this.w < NARROW || this.h < 440;
+  }
+  private font(kind: 'line' | 'minor' | 'mark') {
+    if (this.narrow) return FONT_NARROW[kind];
+    return kind === 'line' ? FONT_LINE : kind === 'minor' ? FONT_MINOR : FONT_MARK;
+  }
+
   private tipRoom = { key: '', px: 150 };
   private get labelRoom() {
     if (this.domain[1] < NOW - 5) return 16;
@@ -381,7 +399,7 @@ export class FlatMap {
       const widest = Math.max(
         ...this.lines
           .filter((l) => l.label && l.node.end == null)
-          .map((l) => textWidth(l.label!.textContent!, !this.simple && l.node.importance > 1 ? FONT_MINOR : FONT_LINE)),
+          .map((l) => textWidth(l.label!.textContent!, this.font(!this.simple && l.node.importance > 1 ? 'minor' : 'line'))),
       );
       this.tipRoom = { key, px: Math.min(Math.max(widest + 16, 90), this.w * 0.34) };
     }
@@ -431,9 +449,17 @@ export class FlatMap {
     const gridBottom = this.offRowY + 22;
     const years: number[] = [];
     for (let y = Math.ceil(Math.max(y0, 0) / step) * step; y <= Math.min(y1, NOW); y += step) if (y > FIRST_YEAR + step * 0.3) years.push(y);
+    // A year that would touch its neighbor or "Today" keeps its hairline but drops its label.
+    // On narrow maps the year labels also hold their space against moment labels.
+    let lastRight = -Infinity;
+    const todayLeft = y1 >= NOW - 1 ? this.X(NOW) - textWidth('Today', FONT_TICK) / 2 : Infinity;
     const tick = (year: number, text: string, cls = '') => {
       const x = this.X(year);
       el('line', { x1: x, x2: x, y1: 8, y2: gridBottom - 14, class: `hair ${cls}` }, this.gGrid);
+      const half = textWidth(text, FONT_TICK) / 2;
+      if (x - half < lastRight + 6 || (!cls.includes('now') && x + half > todayLeft - 6)) return;
+      lastRight = x + half;
+      if (this.narrow) take([x - half, gridBottom - 10, x + half, gridBottom + 2]);
       const t = el('text', { x, y: gridBottom, class: `tick ${cls}`, 'text-anchor': 'middle' }, this.gGrid);
       t.textContent = text;
     };
@@ -508,9 +534,9 @@ export class FlatMap {
     const order = (a: Line, b: Line) => this.rank(a.node) - this.rank(b.node);
     for (const l of tipLabels.sort(order)) {
       const ex = l.ex;
-      const font = l.label!.classList.contains('minor') ? FONT_MINOR : FONT_LINE;
-      const w = textWidth(l.label!.textContent!, font);
-      const b: [number, number, number, number] = [ex + 6, l.y - 8, ex + 8 + w, l.y + 6];
+      const w = textWidth(l.label!.textContent!, this.font(l.label!.classList.contains('minor') ? 'minor' : 'line'));
+      const up = this.narrow ? 7 : 8;
+      const b: [number, number, number, number] = [ex + 6, l.y - up, ex + 8 + w, l.y + up - 2];
       // A name that does not fit at the tip goes at the start of the line instead.
       if (!free(b) && selected !== l.node.id) {
         startLabels.push(l);
@@ -522,8 +548,20 @@ export class FlatMap {
       l.label!.style.display = '';
     }
 
+    // Lanes sit close together on narrow maps, so the labels below also keep off the lines themselves.
+    if (this.narrow) {
+      for (const l of this.lines) {
+        if (l.path.parentElement!.style.display === 'none') continue;
+        take([l.sx + l.bend, l.y - 2, l.ex, l.y + 2]);
+        const py = l.parent ? this.lineById.get(l.parent)!.y : l.y;
+        if (l.bend) take([l.sx, Math.min(py, l.y) - 2, l.sx + l.bend, Math.max(py, l.y) + 2]);
+      }
+    }
+
     // Moments. Their labels compete with the start labels of lines, by importance.
     const markLabels: { m: Mark; x: number }[] = [];
+    // A narrow map showing the detail across many centuries names only the main moments, and those of the chosen line.
+    const sparse = this.narrow && !this.simple && span > 400;
     for (const m of this.marks) {
       const shown = m.year <= reveal;
       m.g.style.display = shown ? '' : 'none';
@@ -542,7 +580,8 @@ export class FlatMap {
       m.g.classList.toggle('dim', state === 'dim' || !inFocus);
       m.g.classList.toggle('selected', selected === m.node.id);
       if (x < plotLeft - 4 || x > this.w) continue;
-      if (inFocus && state !== 'dim') markLabels.push({ m, x });
+      const quiet = sparse && !KEY_MOMENTS.has(m.node.id) && !(lit && state === 'lit');
+      if (inFocus && state !== 'dim' && !quiet) markLabels.push({ m, x });
       else if (selected === m.node.id) markLabels.push({ m, x });
     }
     const all: ({ kind: 'mark'; m: Mark; x: number; r: number } | { kind: 'start'; l: Line; r: number })[] = [
@@ -553,7 +592,7 @@ export class FlatMap {
       if (item.kind === 'mark') {
         const { m, x } = item;
         // The year sits 4px after the name.
-        const w = textWidth(m.label.textContent!, FONT_MARK) + 6;
+        const w = textWidth(m.label.textContent!, this.font('mark')) + 6;
         const above: [number, number, number, number] = [x - w / 2 - 2, m.y - 22, x + w / 2 + 2, m.y - 8];
         const below: [number, number, number, number] = [x - w / 2 - 2, m.y + 9, x + w / 2 + 2, m.y + 23];
         const b = free(above) ? above : free(below) ? below : selected === m.node.id ? above : null;
@@ -565,8 +604,7 @@ export class FlatMap {
         m.label.style.display = '';
       } else {
         const l = item.l;
-        const font = l.label!.classList.contains('minor') ? FONT_MINOR : FONT_LINE;
-        const w = textWidth(l.label!.textContent!, font);
+        const w = textWidth(l.label!.textContent!, this.font(l.label!.classList.contains('minor') ? 'minor' : 'line'));
         // Skip lines that are not on screen at all.
         if (this.X(l.node.end ?? NOW) < plotLeft + 20 || l.sx > this.w) continue;
         const lx = Math.max(l.sx + l.bend + 4, plotLeft + 2);

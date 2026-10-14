@@ -174,7 +174,26 @@ function select(id: string | null) {
   panelBody.scrollTop = 0;
   history.replaceState(null, '', `#${selected}`);
   applyHighlight();
-  if (view === 'map') mapView.showYear(n.start);
+  if (view === 'map') {
+    mapView.showYear(n.start);
+    showAboveSheet(selected);
+  }
+}
+
+// On phones the sheet covers the lower half of the map. Scroll the map so the chosen line or moment sits above it.
+function showAboveSheet(id: string) {
+  if (!phoneQuery.matches) return;
+  // Wait two frames, so a map that just appeared has been measured and drawn.
+  requestAnimationFrame(() =>
+    requestAnimationFrame(() => {
+      const scroller = document.querySelector<HTMLElement>('.map-view .map-scroll')!;
+      const target = $('map-host').querySelector(`.line-label[data-id="${id}"], .mark[data-id="${id}"]`);
+      const box = target?.getBoundingClientRect();
+      if (selected !== id || panel.hidden || !box?.height) return;
+      const middle = (scroller.getBoundingClientRect().top + panel.getBoundingClientRect().top) / 2;
+      scroller.scrollBy({ top: box.top + box.height / 2 - middle, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }),
+  );
 }
 
 panelBody.addEventListener('click', (e) => {
