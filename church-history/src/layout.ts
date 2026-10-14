@@ -205,6 +205,22 @@ export const SHORT_NAME: Record<string, string> = {
   'council-of-trent': 'Trent',
 };
 
+/** Familiar names inside each family, so readers can find their own church. */
+export const EXAMPLES: Record<string, string> = {
+  'church-of-east': 'Assyrian Church of the East',
+  'oriental-orthodox': 'Coptic, Armenian, Ethiopian, Syriac',
+  'eastern-orthodox': 'Greek, Russian, Antiochian, OCA',
+  catholic: 'Roman Catholic and Eastern Catholic',
+  lutheran: 'ELCA, Missouri Synod',
+  reformed: 'Presbyterian and Reformed',
+  anabaptist: 'Mennonite, Amish, Hutterite',
+  anglican: 'Episcopal, Church of England, ACNA',
+  methodist: 'United Methodist, Wesleyan, AME',
+  pentecostal: 'Assemblies of God, Foursquare, COGIC',
+  baptist: 'Southern Baptist, American Baptist',
+  'evangelical-nondenom': 'Independent Bible and community churches',
+};
+
 export interface Chapter {
   title: string;
   from: number;

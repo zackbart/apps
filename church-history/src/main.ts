@@ -10,6 +10,7 @@ import { FlatMap, type Highlight } from './map';
 import { createStory } from './story';
 import { bindChurch, bindSacraments, renderChurch, renderSacraments, setCompare } from './screens';
 import { panelHtml } from './panel';
+import { showWelcome } from './onboarding';
 import {
   byId,
   childrenIn,
@@ -23,6 +24,8 @@ import {
   lineageIn,
   myChurch,
   nameOf,
+  resetWelcome,
+  welcomed,
   nodes,
   visibleSet,
   type Mode,
@@ -100,11 +103,17 @@ $('views').addEventListener('click', (e) => {
 // ---------------------------------------------------------------------------
 // Selection and highlight
 
+/** Each earlier church on this line, with the year the next step branched off it. */
+function traceOf(id: string, visible: Set<string>) {
+  const line = lineageIn(id, visible);
+  return new Map(line.slice(0, -1).map((a, i) => [a, byId.get(line[i + 1])!.start]));
+}
+
 /** What to light up on a map that shows these nodes. */
 function highlightFor(visible: Set<string>, simple: boolean): Highlight {
   const mine = myChurch();
   const personal = mine && visible.has(mine) ? new Set(lineageIn(mine, visible)) : null;
-  if (!selected) return { personal };
+  if (!selected) return { personal, own: personal ? mine : null, trace: personal ? traceOf(mine!, visible) : null };
   const n = byId.get(selected)!;
   const children = childrenIn(visible, simple);
   let lit: Set<string>;
@@ -114,7 +123,8 @@ function highlightFor(visible: Set<string>, simple: boolean): Highlight {
     const host = n.on && visible.has(n.on) ? n.on : '';
     lit = new Set([...(host ? lineageIn(host, visible) : []), ...(n.splits ?? []).filter((s) => visible.has(s))]);
   }
-  return { lit, selected, personal };
+  if (n.type !== 'tradition') return { lit, selected, personal };
+  return { lit, selected, personal, own: selected, trace: traceOf(selected, visible) };
 }
 
 function applyHighlight() {
@@ -125,10 +135,10 @@ function applyHighlight() {
   const n = selected ? byId.get(selected)! : null;
   const text = n
     ? n.type === 'tradition'
-      ? `<i></i>${esc(nameOf(n))}, with the line it came from and the branches that grew from it.`
-      : `<i></i>The lines touched by ${esc(nameOf(n))}.`
+      ? `<i></i>${esc(nameOf(n))}. The lighter red traces where it came from.${childrenIn(visibleSet(true), true).has(n.id) ? ' The dark lines grew from it.' : ''}`
+      : `The dark lines are the churches touched by ${esc(nameOf(n))}.`
     : mine
-      ? `<i></i>Your church: ${esc(nameOf(byId.get(mine)!))}. <button type="button" data-goto="church">Change</button>`
+      ? `<i></i>Your church: ${esc(nameOf(byId.get(mine)!))}. The lighter red traces it back to Jesus. <button type="button" data-goto="church">Change</button>`
       : '';
   document.querySelectorAll<HTMLElement>('.map-note').forEach((el) => {
     el.hidden = !text || (mode !== 'plain' && el.closest('.map-view') !== null);
@@ -381,10 +391,17 @@ function route() {
     select(hash);
   } else {
     setView('story');
+    // First visit: ask for the reader's church before the story starts.
+    if (!welcomed()) showWelcome(() => applyHighlight());
   }
 }
 
 mapView.setDomain(FIRST_YEAR, NOW, false);
+// `?start` begins fresh: it forgets the saved church and opens the picker at the top of the story.
+if (new URLSearchParams(location.search).has('start')) {
+  resetWelcome();
+  history.replaceState(null, '', location.pathname);
+}
 route();
 renderLegend();
 addEventListener('hashchange', route);

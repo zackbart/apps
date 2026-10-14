@@ -14,7 +14,7 @@ Four views:
 - On the map, "Family" and "Communion" color every line. "Communion" shows what each tradition believes happens at the Lord's Supper.
 - `/` opens search. `Esc` clears the selection. On the map, the arrow keys move through time and `+` and `-` zoom. In the story, the left and right arrow keys move between chapters.
 - Links like `/#baptist` open the map on a tradition. `/#compare=baptist,catholic` opens a comparison. `/#map`, `/#church`, and `/#sacraments` open a view.
-- The church you pick in "My church" is remembered and drawn in red on the maps.
+- On a first visit, a picker asks which church the reader goes to, with familiar names for each family. They can skip it. The church they pick, here or in "My church", is remembered and drawn in red on the maps. Links to a view or a tradition skip the picker. `/?start` starts fresh: it forgets the saved church and opens the picker at the top of the story.
 
 ## Data
 
