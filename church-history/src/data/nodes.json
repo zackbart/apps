@@ -19,6 +19,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:13",
+   "Pelikan 1:162-163",
    "https://bible.usccb.org/bible/acts/2",
    "https://bible.usccb.org/bible/1corinthians/11"
   ]
@@ -40,6 +42,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:108",
    "https://bible.usccb.org/bible/acts/2"
   ]
  },
@@ -61,6 +64,8 @@
   "importance": 2,
   "outsideNicene": false,
   "sources": [
+   "Pelikan 1:159-160",
+   "Pelikan 1:168",
    "https://www.newadvent.org/fathers/0109.htm",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/second-century/the-apostolic-fathers"
   ]
@@ -82,6 +87,8 @@
   "importance": 2,
   "outsideNicene": false,
   "sources": [
+   "Pelikan 1:13",
+   "Pelikan 1:162-163",
    "https://www.vatican.va/various/basiliche/san_paolo/en/san_paolo/viaggi.htm",
    "https://bible.usccb.org/bible/1corinthians/11"
   ]
@@ -103,8 +110,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://bible.usccb.org/bible/acts/15",
-   "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Council-Jerusalem"
+   "Pelikan 1:13-14",
+   "Pelikan 2:23",
+   "https://bible.usccb.org/bible/acts/15"
   ]
  },
  {
@@ -125,6 +133,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:158",
    "https://assets.press.princeton.edu/chapters/s10056.pdf",
    "https://sourcebooks.web.fordham.edu/source/edict-milan.asp"
   ]
@@ -146,8 +155,9 @@
   "importance": 2,
   "outsideNicene": false,
   "sources": [
-   "https://www.worldhistory.org/article/1993/the-siege-of-jerusalem-in-70-ce/",
-   "https://bible.usccb.org/bible/acts/2"
+   "Pelikan 1:13",
+   "Pelikan 1:20-21",
+   "https://www.newadvent.org/fathers/250103.htm"
   ]
  },
  {
@@ -172,9 +182,11 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:69-70",
+   "Pelikan 1:107",
+   "Pelikan 1:159-168",
    "https://www.newadvent.org/fathers/0714.htm",
-   "https://www.newadvent.org/fathers/0126.htm",
-   "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+   "https://www.newadvent.org/fathers/0126.htm"
   ]
  },
  {
@@ -196,6 +208,8 @@
   "disputed": "Scholars debate its date and whether some meal prayers describe Eucharist, a fellowship meal, or both.",
   "outsideNicene": false,
   "sources": [
+   "Pelikan 1:126",
+   "Pelikan 1:156",
    "https://www.newadvent.org/fathers/0714.htm",
    "https://www.newadvent.org/cathen/04779a.htm"
   ]
@@ -218,9 +232,10 @@
   "disputed": "Catholic and Orthodox churches trace bishops to the apostles. Many Protestants distinguish later rule by bishops from New Testament leadership.",
   "outsideNicene": false,
   "sources": [
+   "Pelikan 1:98-99",
+   "Pelikan 1:159-161",
    "https://www.newadvent.org/fathers/0109.htm",
-   "https://www.newadvent.org/fathers/0714.htm",
-   "https://www.churchsociety.org/wp-content/uploads/2021/05/Cman_062_2_Chadwick.pdf"
+   "https://www.newadvent.org/fathers/0714.htm"
   ]
  },
  {
@@ -242,8 +257,9 @@
   "outsideNicene": true,
   "disputed": "Scholars debate which groups count as Gnostic. This node covers ancient Christian Gnostic schools, rather than every religion emphasizing spiritual knowledge.",
   "sources": [
-   "https://www.encyclopedia.com/philosophy-and-religion/ancient-religions/ancient-religion/gnosticism",
-   "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/gnosticism"
+   "Pelikan 1:82-86",
+   "Pelikan 1:116",
+   "https://www.newadvent.org/fathers/0103101.htm"
   ]
  },
  {
@@ -265,6 +281,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:114-115",
    "https://www.newadvent.org/fathers/2806039.htm",
    "https://www.newadvent.org/cathen/03274a.htm"
   ]
@@ -287,7 +304,9 @@
   "importance": 2,
   "outsideNicene": true,
   "sources": [
-   "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/marcionism",
+   "Pelikan 1:72",
+   "Pelikan 1:79-81",
+   "https://www.newadvent.org/fathers/03121.htm",
    "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Marcion_and_the_Marcionite_Churches"
   ]
  },
@@ -309,7 +328,7 @@
   "importance": 2,
   "outsideNicene": false,
   "sources": [
-   "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/montanism",
+   "Pelikan 1:97-102",
    "https://www.newadvent.org/cathen/10521a.htm"
   ]
  },
@@ -331,6 +350,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:40",
+   "Pelikan 1:202",
    "https://sourcebooks.web.fordham.edu/source/edict-milan.asp",
    "https://www.goarch.org/-/the-first-ecumenical-council"
   ]
@@ -354,8 +375,10 @@
   "outsideNicene": true,
   "disputed": "Arianism groups several differing anti-Nicene positions. Their followers did not all teach precisely what Arius taught.",
   "sources": [
-   "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/arius-and-arianism",
-   "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/arianism"
+   "Pelikan 1:193",
+   "Pelikan 1:200-202",
+   "https://www.newadvent.org/fathers/3801.htm",
+   "https://www.newadvent.org/cathen/01707c.htm"
   ]
  },
  {
@@ -376,8 +399,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.goarch.org/-/the-first-ecumenical-council",
-   "https://www.newadvent.org/cathen/11049a.htm"
+   "Pelikan 1:201-202",
+   "https://www.newadvent.org/fathers/3801.htm",
+   "https://www.goarch.org/-/the-first-ecumenical-council"
   ]
  },
  {
@@ -399,6 +423,8 @@
   "disputed": "Rome rejected Chalcedon's decision to raise Constantinople's rank. Catholics and Orthodox Christians disagree about Rome's authority and the five patriarchates.",
   "outsideNicene": false,
   "sources": [
+   "Pelikan 2:162-165",
+   "https://www.newadvent.org/fathers/3801.htm",
    "https://www.newadvent.org/cathen/11549a.htm",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates"
   ]
@@ -422,6 +448,8 @@
   "disputed": "Catholics and Protestants draw different conclusions from Augustine. Eastern traditions receive his theology with different emphases.",
   "outsideNicene": false,
   "sources": [
+   "Pelikan 1:292-294",
+   "Pelikan 1:310-311",
    "https://plato.stanford.edu/entries/augustine/",
    "https://www.newadvent.org/fathers/14087.htm"
   ]
@@ -466,6 +494,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:25-27",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-second-ecumenical-council",
    "https://www.newadvent.org/cathen/11049a.htm"
   ]
@@ -489,9 +518,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:260-262",
    "https://www.oca.org/saints/lives/1949/09/09/102555-commemoration-of-the-holy-fathers-of-the-third-ecumenical-counci",
-   "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
-   "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+   "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/"
   ]
  },
  {
@@ -516,6 +545,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:37",
+   "Pelikan 2:43",
    "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
    "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf"
   ]
@@ -543,6 +574,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:40-43",
    "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
    "https://www.assyrianchurch.org.au/the-church",
    "https://www.assyrianchurch.org/sacraments/",
@@ -568,6 +600,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:263-266",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
    "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/"
   ]
@@ -595,6 +628,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:266-267",
+   "Pelikan 2:37",
    "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
    "https://czasopisma.kul.pl/index.php/vp/article/view/4125"
   ]
@@ -622,9 +657,10 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 1:271",
+   "Pelikan 2:52-54",
    "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
    "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
-   "https://ukmidcopts.org/coptic/sacraments/",
    "https://www.copticchurch.net/introduction-to-the-coptic-church/sacraments/4_eucharist"
   ]
  },
@@ -637,7 +673,7 @@
   "parents": [
    "early-church"
   ],
-  "summary": "Churches accepting Chalcedon shared communion centered on Rome and eastern patriarchates. Catholic and Eastern Orthodox churches developed from this shared history.",
+  "summary": "Churches accepting Chalcedon confessed one Christ in two natures. Catholic and Eastern Orthodox churches inherit this tradition, whose unity faced repeated disputes.",
   "why": "Catholic and Eastern Orthodox baptism and Eucharistic worship grew from a shared history before their medieval separation.",
   "facts": [
    "They accept Christ as one person in two complete natures.",
@@ -651,10 +687,11 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
-   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates",
-   "https://www.newadvent.org/fathers/0714.htm",
-   "https://www.newadvent.org/fathers/0126.htm"
+   "Pelikan 1:263-266",
+   "Pelikan 1:274-275",
+   "Pelikan 1:163-168",
+   "Pelikan 2:147",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council"
   ]
  },
  {
@@ -675,6 +712,8 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 3:106",
+   "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080409.html",
    "https://archive.osb.org/gen/benedict.html"
   ]
  },
@@ -696,6 +735,7 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 1:274-277",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians",
    "https://www.newadvent.org/cathen/04423f.htm"
   ]
@@ -719,6 +759,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:183-187",
    "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism"
   ]
@@ -763,6 +804,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:4-5",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/the-rise-of-islam",
    "https://orthinc.oca.org/article/A%2BHistory%2Bof%2Bthe%2BOrthodox%2BChurch"
   ]
@@ -785,6 +827,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:72-74",
+   "Pelikan 2:151-152",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/monoenergism-monothelitism",
    "https://www.newadvent.org/cathen/04423f.htm"
   ]
@@ -808,6 +852,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:103",
+   "Pelikan 2:125-126",
+   "Pelikan 2:145",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm",
    "https://www.newadvent.org/cathen/04423f.htm"
   ]
@@ -852,9 +899,10 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 2:174",
+   "Pelikan 2:186",
    "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
-   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople",
-   "https://churchmotherofgod.org/histories/great-schism/"
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
   ]
  },
  {
@@ -867,7 +915,7 @@
    "chalcedonian"
   ],
   "summary": "Churches in communion with the bishop of Rome develop as a distinct branch after the East-West separation, preserving apostolic succession and sacramental worship.",
-  "why": "The largest Christian church, with about 1.42 billion baptized members. Most Protestant traditions trace their separation from Rome to the Reformation.",
+  "why": "The largest Christian church, about 1.42 billion baptized members in 2024. Most Protestant traditions trace their separation from Rome to the Reformation.",
   "facts": [
    "1054 marks a map division, not Catholicism's claimed founding date.",
    "The pope holds universal authority in Catholic teaching.",
@@ -879,8 +927,11 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:172",
+   "Pelikan 2:147",
+   "Pelikan 3:203-204",
+   "Pelikan 3:209-210",
    "https://www.vatican.va/content/catechism/en.html",
-   "https://www.usccb.org/catechism/pt2sect2",
    "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
    "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
    "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
@@ -909,9 +960,11 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
+   "Pelikan 2:25",
+   "Pelikan 2:147",
+   "Pelikan 2:291-293",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
-   "https://www.oca.org/questions/sevensacraments/the-sacraments"
+   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
   ]
  },
  {
@@ -937,9 +990,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:147",
    "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
-   "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
-   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+   "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
   ]
  },
  {
@@ -960,6 +1013,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 3:243-245",
    "https://guides.loc.gov/crusades",
    "https://sourcebooks.web.fordham.edu/source/urban2-5vers.asp",
    "https://sourcebooks.web.fordham.edu/source/cde-privs.asp"
@@ -988,10 +1042,9 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
-   "https://www.waldensian.org/history/waldo/",
-   "https://www.waldensian.org/history/role-of-women-in-the-middle-ages/",
    "https://chiesavaldese.org/chi-siamo/storia/valdesi/",
    "https://chiesavaldese.org/cosa-crediamo/",
+   "https://chiesavaldese.org/atto_sinodo/pastorato-femminile/",
    "https://www.oikoumene.org/member-churches/waldensian-church"
   ]
  },
@@ -1036,8 +1089,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:271",
    "https://cup.columbia.edu/book/the-conquest-of-constantinople/9780231136686/",
-   "https://www.newadvent.org/cathen/04543c.htm",
    "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
   ]
  },
@@ -1060,6 +1113,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 3:203-204",
    "https://www.papalencyclicals.net/councils/ecum12-2.htm",
    "https://sourcebooks.web.fordham.edu/basis/lateran4.asp"
   ]
@@ -1082,9 +1136,11 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
-   "https://www.op.org/saints/festum-s-thomae-de-aquino/",
-   "https://ccel.org/ccel/aquinas/summa.TP_Q60.html",
-   "https://english.op.org/godzdogz/sacraments-the-eucharist-presence/"
+   "Pelikan 3:268-269",
+   "Pelikan 3:208",
+   "https://www.newadvent.org/summa/4062.htm",
+   "https://www.newadvent.org/summa/4075.htm",
+   "https://www.op.org/saints/festum-s-thomae-de-aquino/"
   ]
  },
  {
@@ -1107,6 +1163,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:271",
+   "Pelikan 3:209-210",
    "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
    "https://www.newadvent.org/cathen/09476c.htm"
   ]
@@ -1129,8 +1187,10 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
-   "https://provence-alpes-cotedazur.com/que-faire/culture-et-patrimoine/monuments/palais-des-papes/papes-en-avignon/",
-   "https://westernciv.com/syllabus/birth-of-europe/spring/the-crisis-of-the-medieval-church/"
+   "Pelikan 4:117",
+   "https://www.newadvent.org/cathen/02158a.htm",
+   "https://www.newadvent.org/cathen/04020a.htm",
+   "https://www.newadvent.org/cathen/06799a.htm"
   ]
  },
  {
@@ -1151,7 +1211,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
+   "Pelikan 4:72-74",
+   "https://www.papalencyclicals.net/councils/ecum16.htm",
    "https://www.newadvent.org/cathen/04288a.htm"
   ]
  },
@@ -1174,6 +1235,8 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 4:58",
+   "Pelikan 4:111",
    "https://chaucer.fas.harvard.edu/pages/john-wycliffe-and-lollards",
    "https://plato.stanford.edu/entries/wyclif/",
    "https://www.newadvent.org/cathen/09333a.htm"
@@ -1199,9 +1262,11 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.newadvent.org/cathen/04288a.htm",
-   "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
-   "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf"
+   "Pelikan 4:69",
+   "Pelikan 4:112",
+   "Pelikan 4:124",
+   "https://www.papalencyclicals.net/councils/ecum16.htm",
+   "https://www.newadvent.org/cathen/04288a.htm"
   ]
  },
  {
@@ -1223,8 +1288,10 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 4:53-59",
+   "Pelikan 4:93-94",
+   "Pelikan 4:123-125",
    "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf",
-   "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/",
    "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45763"
   ]
  },
@@ -1248,10 +1315,10 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:271-280",
+   "Pelikan 4:291-292",
    "https://www.papalencyclicals.net/councils/ecum17.htm",
-   "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
-   "https://www.oca.org/reflections/fr.-lawrence-farley/patience-and-reception",
-   "https://www.newadvent.org/cathen/06111a.htm"
+   "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
   ]
  },
  {
@@ -1273,7 +1340,7 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
-   "https://www.oca.org/saints/lives/2018/06/15/101725-saint-jonah-metropolitan-of-moscow",
+   "Pelikan 2:297-298",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixteenth-century/russia3"
   ]
@@ -1296,6 +1363,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 2:271",
+   "Pelikan 2:253",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/the-fall-of-byzantium",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2"
   ]
@@ -1345,6 +1414,8 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:54",
+   "Pelikan 5:148",
    "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
    "https://moravianarchives.org/history/",
    "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/"
@@ -1372,6 +1443,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:136-137",
+   "Pelikan 4:172-173",
    "https://www.loc.gov/item/2021667736/",
    "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
   ]
@@ -1397,8 +1470,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:178-181",
+   "Pelikan 4:351",
    "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf",
-   "https://www.lcms.org/about/beliefs/faqs/doctrine",
    "https://bookofconcord.org/solid-declaration/the-holy-supper/",
    "https://lutheranworld.org/sites/default/files/2024-09/LWF%202024-31%20Strategy%20-%20EN.pdf"
   ]
@@ -1425,12 +1499,11 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:184",
+   "Pelikan 4:189-203",
    "https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html",
-   "https://pcusa.org/historical-society/exhibits/foundations-faith",
    "https://centernet.pcusa.org/ministries/worship/sacraments/",
-   "https://pcusa.org/sacraments-lords-supper-faqs",
-   "https://wcrc.eu/about/",
-   "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+   "https://wcrc.eu/about/"
   ]
  },
  {
@@ -1450,7 +1523,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+   "Pelikan 4:181",
    "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
   ]
  },
@@ -1477,11 +1550,10 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:314-320",
    "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
    "https://hutterites.org/history/community-of-goods/",
    "https://groups.etown.edu/amishstudies/religion/amish-origins/",
-   "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/baptism/",
-   "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/foot-washing/",
    "https://mwc-cmm.org/en/about-mwc/"
   ]
  },
@@ -1504,6 +1576,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:314",
+   "Pelikan 4:317-320",
    "https://gameo.org/index.php?title=Schleitheim_Confession",
    "https://zimmer.fresnostate.edu/~mariterel/schleitheim_confession.htm"
   ]
@@ -1531,7 +1605,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html",
+   "Pelikan 4:151",
+   "Pelikan 4:178-181",
    "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Marburg%2C_Colloquy_of",
    "https://bookofconcord.org/solid-declaration/the-holy-supper/"
   ]
@@ -1553,6 +1628,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:3",
+   "Pelikan 4:173-181",
    "https://thebookofconcord.org/wp-content/PDFs/augsburg.pdf",
    "https://bookofconcord.org/"
   ]
@@ -1578,8 +1655,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
-   "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism"
+   "https://researchbriefings.files.parliament.uk/documents/CBP-7515/CBP-7515.pdf",
+   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/"
   ]
  },
  {
@@ -1603,10 +1680,15 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism",
-   "https://www.churchofengland.org/faith-life/what-we-believe/eucharist",
-   "https://www.churchofengland.org/sites/default/files/2025-01/gs-misc-1406-a-report-from-the-faith-and-order-commission.pdf",
-   "https://gafcon.org/"
+   "Pelikan 5:51",
+   "Pelikan 5:284-285",
+   "Pelikan 4:2-3",
+   "Pelikan 5:272",
+   "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+   "https://ecphilippines.org/catechism/",
+   "https://www.anglicancatholic.org.uk/history/",
+   "https://anglican.org.au/about-us/anglican-communion/",
+   "https://www.churchofengland.org/faith-life/what-we-believe/eucharist"
   ]
  },
  {
@@ -1627,8 +1709,10 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:184",
+   "Pelikan 4:189-203",
+   "Pelikan 4:217-218",
    "https://pcusa.org/historical-society/exhibits/foundations-faith",
-   "https://centernet.pcusa.org/what-we-believe/sacraments/",
    "https://pcusa.org/sacraments-lords-supper-faqs"
   ]
  },
@@ -1649,6 +1733,7 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 4:314-320",
    "https://gameo.org/index.php?title=Menno_Simons_%281496-1561%29",
    "https://www.mennoniteusa.org/who-are-mennonites/history/"
   ]
@@ -1693,9 +1778,10 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.newadvent.org/cathen/15030c.htm",
-   "https://www.newadvent.org/cathen/13295a.htm",
-   "https://www.newadvent.org/cathen/05573a.htm"
+   "Pelikan 4:274-275",
+   "Pelikan 4:291-299",
+   "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
+   "https://www.newadvent.org/cathen/15030c.htm"
   ]
  },
  {
@@ -1716,9 +1802,10 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:272",
+   "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
    "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
-   "https://www.churchofengland.org/sites/default/files/2025-01/gs-misc-1406-a-report-from-the-faith-and-order-commission.pdf",
-   "https://www.churchofengland.org/sites/default/files/2025-01/erg-part-report-jan-2025-hob-a-compendium-of-sources-on-the-c-of-e-doctrine-of-marriage.pdf"
+   "https://www.churchofengland.org/sites/default/files/2025-01/gs-misc-1406-a-report-from-the-faith-and-order-commission.pdf"
   ]
  },
  {
@@ -1738,8 +1825,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi%3Adocument-4386",
-   "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/augsburg-religious-peace-1555"
+   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/the-religious-peace-of-augsburg-september-25-1555",
+   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648"
   ]
  },
  {
@@ -1759,8 +1846,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
-   "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism"
+   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+   "https://researchbriefings.files.parliament.uk/documents/CBP-7515/CBP-7515.pdf",
+   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/"
   ]
  },
  {
@@ -1781,6 +1869,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:4",
    "https://pcusa.org/historical-society/exhibits/foundations-faith",
    "https://www.churchofscotland.org.uk/about-us/our-faith/book-of-confessions"
   ]
@@ -1811,7 +1900,6 @@
   "sources": [
    "https://www.congregational.org.uk/church-membership/a-past-that-inspires",
    "https://oikoumene.org/church-families/reformed-churches",
-   "https://uccsadenomination.org.za/",
    "https://www.ccel.org/ccel/schaff/creeds1.x.iii.html",
    "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/E7BFA5B8735EED51A5974140C88A9F01/S0017816000013110a.pdf/john_robinson_and_the_beginnings_of_the_pilgrim_movement.pdf"
   ]
@@ -1863,18 +1951,15 @@
    "Each uses an Eastern rite such as Byzantine, Syriac, or Coptic."
   ],
   "sacraments": "Seven sacraments, often called holy mysteries. Eastern tradition joins baptism, chrismation, and communion, including for infants. Practices differ across churches. Byzantine churches use leavened Eucharistic bread.",
-  "today": "About 18 million, mostly in Ukraine, India, and the Middle East",
+  "today": "About 18 million in CNEWA's 2017 Annuario Pontificio figures",
   "disputed": "The 1993 Balamand dialogue rejected uniatism as a model for reunion, while affirming Eastern Catholic churches' right to exist.",
   "outsideNicene": false,
   "importance": 2,
   "sources": [
-   "https://www.britannica.com/topic/Eastern-rite-church",
-   "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
-   "https://www.britannica.com/event/Union-of-Brest-Litovsk",
    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/",
-   "https://www.usccb.org/resources/who-are-catholics-middle-east",
-   "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/iii_how_is_the_sacrament_of_baptism_celebrated.index.html",
-   "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
+   "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+   "https://cnewa.org/wp-content/uploads/2020/03/2017-Statistics.pdf",
+   "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
    "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-orientale/chiese-ortodosse-di-tradizione-bizantina/commissione-mista-internazionale-per-il-dialogo-teologico-tra-la/documenti-di-dialogo/testo-in-lingua-inglese.html"
   ]
  },
@@ -1902,10 +1987,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:46",
    "https://www.jstor.org/stable/10.7722/j.ctt81sdz",
-   "https://www.thegospelcoalition.org/themelios/article/origins-of-the-particular-baptists/",
    "https://bfm.sbc.net/bfm2000/",
-   "https://baptistworld.org/annual-ministry-report/",
    "https://www.ccel.org/creeds/bcf/bcfc30.htm",
    "https://baptistworld.org/"
   ]
@@ -1928,6 +2012,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:184",
+   "Pelikan 4:234-237",
    "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
    "https://www.opc.org/OS/2019/OS_Oct_2019.pdf"
   ]
@@ -1950,8 +2036,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648",
-   "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/augsburg-religious-peace-1555"
+   "Pelikan 4:1",
+   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/the-religious-peace-of-augsburg-september-25-1555",
+   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648"
   ]
  },
  {
@@ -1972,6 +2059,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 4:203",
+   "Pelikan 4:362",
    "https://www.churchofscotland.org.uk/about-us/our-faith/book-of-confessions",
    "https://www.churchofscotland.org.uk/__data/assets/pdf_file/0007/143584/printBookofConfessions.pdf"
   ]
@@ -1999,8 +2088,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:169",
    "https://www.quakersintheworld.org/quakers-in-action/12",
-   "https://quaker.org/legacy/charlestonwv/meeting-the-spirit.html",
    "https://fwcc.world/about-us/mission-history/",
    "https://www.quaker.org.uk/communities/news/5-take-aways-from-george-fox-400"
   ]
@@ -2027,6 +2116,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:9",
+   "Pelikan 5:32-33",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4",
    "https://www.heritageabroad.gov/wp-content/uploads/2022/10/Old-Believers-Report-final-for-website.pdf"
   ]
@@ -2052,8 +2143,9 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:32-33",
+   "Pelikan 5:257",
    "https://www.cdamm.org/articles/old-believers",
-   "https://theoldbelievers.com/old-believer-work/spiritual-communion-among-the-priestless-old-believers-bezpopovtsy/",
    "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4"
   ]
  },
@@ -2074,6 +2166,8 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 4:361",
+   "Pelikan 5:53-54",
    "https://e-revistas.uc3m.es/index.php/REVHISTO/article/view/2581",
    "https://www.persee.fr/doc/rhpr_0035-2403_1991_num_71_2_5135_t1_0263_0000_2"
   ]
@@ -2122,9 +2216,9 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:124",
+   "Pelikan 5:148-149",
    "https://worldmethodistcouncil.org/about-us/",
-   "https://www.umc.org/en/content/renewing-waters-how-united-methodists-understand-%20baptism",
-   "https://www.umc.org/en/content/ask-the-umc-what-do-i-need-to-know-about-holy-communion-in-the-united-methodist-church",
    "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf",
    "https://www.umc.org/en/content/glossary-christmas-conference"
   ]
@@ -2148,6 +2242,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:140-141",
    "https://www.nps.gov/articles/the-joseph-bellamy-house-the-great-awakening-in-puritan-new-england-teaching-with-historic-places.htm",
    "https://open.bu.edu/bitstreams/91e0a19e-ed8f-4f0a-8b2f-fd7b731a4c14/download"
   ]
@@ -2170,6 +2265,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:124",
+   "Pelikan 5:148",
    "https://www.methodist.org.uk/about/podcasts/the-methodist-podcast-episode-84-aldersgate-sunday/",
    "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf"
   ]
@@ -2242,6 +2339,7 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "https://www.digitalhistory.uh.edu/disp_textbook.cfm?psid=2992&smtID=2",
    "https://www.thearda.com/us-religion/history/timelines/entry?eid=239&etype=1",
    "https://www.govinfo.gov/content/pkg/GOVPUB-S20-PURL-gpo39912/pdf/GOVPUB-S20-PURL-gpo39912.pdf"
   ]
@@ -2328,10 +2426,11 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:313",
    "https://discipleshistory.org/history/",
    "https://discipleshistory.org/wiki/christian-church-disciples-of-christ/",
    "https://www.oikoumene.org/organization/world-convention-of-churches-of-christ",
-   "https://www.lytlechurchofchrist.org/questions-answers"
+   "https://disciples.org/our-identity/communion-and-baptism/"
   ]
  },
  {
@@ -2353,9 +2452,11 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:176",
+   "Pelikan 5:255",
+   "Pelikan 5:272",
    "https://academic.oup.com/edited-volume/61883/chapter-abstract/547767906?login=false",
-   "https://academic.oup.com/book/5718/chapter-abstract/148841086",
-   "https://www.newadvent.org/cathen/11370a.htm"
+   "https://academic.oup.com/book/5718/chapter-abstract/148841086"
   ]
  },
  {
@@ -2380,6 +2481,7 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:148-152",
    "https://nazarene.org/our-history/",
    "https://nazarene.org/historical-statement/",
    "https://nazarene.org/what-we-believe/",
@@ -2489,7 +2591,8 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
-   "https://www.salvationarmy.org.au/scribe/sites/bellarinepeninsula/files/podcast/WorshipBeliefsPractices.pdf",
+   "https://www.salvationarmy.org/history",
+   "https://www.salvationarmy.org/sites/default/files/2025-06/Handbook%2Bof%2BDoctrine.pdf",
    "https://www.salvationarmy.org/sites/default/files/2025-12/Annual_Report-2025.pdf",
    "https://www.salvationarmy.org/global-presence"
   ]
@@ -2513,8 +2616,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:250-252",
    "https://www.vatican.va/content/pius-ix/en/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html",
-   "https://www.catholicculture.org/culture/library/view.cfm?recnum=5413",
    "https://www.oikoumene.org/church-families/old-catholic-churches"
   ]
  },
@@ -2569,6 +2672,7 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:252",
    "https://www.oikoumene.org/church-families/old-catholic-churches",
    "https://www.oikoumene.org/organization/international-old-catholic-bishops-conference",
    "https://www.utrechter-union.org/en/about-us/what-is-the-ibc/history/"
@@ -2593,6 +2697,7 @@
   "outsideNicene": false,
   "importance": 3,
   "sources": [
+   "https://bg-patriarshia.bg/news/poslanie-na-vselenskia-patriarh-vartolomey-po-povod-70-godin",
    "https://www.orthodoxhistory.org/2020/02/18/the-bulgarian-schism-began-150-years-ago/",
    "https://www.oikoumene.org/resources/documents/dictionary-of-the-ecumenical-movement-orthodoxy"
   ]
@@ -2670,9 +2775,12 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "https://ag.org/Beliefs/Statement-of-Fundamental-truths",
+   "https://ag.org/beliefs/position-papers/divine-healing",
+   "https://iphc.org/beliefs/",
+   "https://upci.org/our-beliefs/",
    "https://ag.org/About/About-the-AG/History",
    "https://news.ag.org/en/article-repository/news/2016/04/what-azusa-had-and-we-need",
-   "https://ag.org/Beliefs/Statement-of-Fundamental-truths",
    "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
   ]
  },
@@ -2694,6 +2802,7 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:307-308",
    "https://www.oikoumene.org/about-the-wcc/history",
    "https://www.oikoumene.org/news/world-churches-to-mark-100-years-of-landmark-mission-event"
   ]
@@ -2724,7 +2833,7 @@
    "https://upci.org/about-the-upci/",
    "https://upci.org/our-beliefs/",
    "https://upci.org/one-million-constituents/",
-   "https://mycac.net/welcome/believe/articles-of-faith/",
+   "https://dmc.upci.org/wp-content/uploads/2023/03/2023-UPCI-ARTICLES-OF-FAITH.pdf",
    "https://ag.org/About/About-the-AG/History"
   ]
  },
@@ -2747,6 +2856,7 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:326",
    "https://pcusa.org/news-storytelling/blogs/historical-society-blog/journal-interview-bradley-longfield-fundamentalist-modernist-conflict",
    "https://pcusa.org/es/news-storytelling/blogs/historical-society-blog/fighting-right-fundamentalist-modernist-controversy-and-west-jersey-presbytery"
   ]
@@ -2768,6 +2878,8 @@
   "outsideNicene": false,
   "importance": 2,
   "sources": [
+   "Pelikan 5:309-310",
+   "Pelikan 5:328",
    "https://www.oikoumene.org/about-the-wcc/history",
    "https://www.oikoumene.org/about-the-wcc/faq"
   ]
@@ -2847,7 +2959,6 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
-   "https://www.christianitytoday.com/1975/02/profile-of-charismatic-movement/",
    "https://dioceseofraleigh.org/charismatic-renewal/history",
    "https://doi.org/10.3366/swc.2019.0267",
    "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
@@ -2873,6 +2984,8 @@
   "outsideNicene": false,
   "importance": 1,
   "sources": [
+   "Pelikan 5:326-327",
+   "Pelikan 5:331-332",
    "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
    "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html"
   ]

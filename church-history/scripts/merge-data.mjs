@@ -9,8 +9,9 @@ for (const f of files) {
   const { nodes } = JSON.parse(readFileSync(new URL(f, dir), 'utf8'));
   for (const n of nodes) {
     const prev = byId.get(n.id);
-    // Keep the richer record when two eras describe the same node.
+    // Keep the richer record when two eras describe the same node, and the sources of both.
     if (!prev || JSON.stringify(n).length > JSON.stringify(prev).length) byId.set(n.id, { ...prev, ...n });
+    if (prev) byId.get(n.id).sources = [...new Set([...(byId.get(n.id).sources ?? []), ...(prev.sources ?? []), ...(n.sources ?? [])])];
   }
 }
 const overrides = JSON.parse(readFileSync(new URL('overrides.json', dir), 'utf8'));
@@ -20,10 +21,14 @@ for (const [id, patch] of Object.entries(overrides.patch ?? {})) {
   const n = byId.get(id);
   for (const [k, v] of Object.entries(patch)) {
     if (v === null) delete n[k];
+    // Patched sources add to the researched ones rather than replacing them.
+    else if (k === 'sources') n[k] = [...new Set([...v, ...(n[k] ?? [])])];
     else n[k] = v;
   }
 }
 const nodes = [...byId.values()].sort((a, b) => a.start - b.start);
+// Book citations first, then the other sources in their researched order.
+for (const n of nodes) if (n.sources) n.sources.sort((a, b) => /^Pelikan /.test(b) - /^Pelikan /.test(a));
 const problems = [];
 for (const n of nodes) {
   for (const p of n.parents ?? []) if (!byId.has(p)) problems.push(`${n.id}: missing parent ${p}`);

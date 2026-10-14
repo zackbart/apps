@@ -31,6 +31,12 @@ const sideSheetQuery = matchMedia('(max-height: 520px) and (min-width: 560px)');
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+/** Book citations are stored as "Pelikan <vol>:<pages>", for example "Pelikan 2:146-157". */
+const pelikanCite = (s: string) => {
+  const m = /^Pelikan ([1-5]):(\d+(?:-\d+)?)$/.exec(s);
+  if (!m) return null;
+  return `Pelikan, <i>The Christian Tradition</i>, vol. ${m[1]}, ${m[2].includes('-') ? 'pp.' : 'p.'} ${m[2]}`;
+};
 const nameOf = (n: HistoryNode) => SHORT_NAME[n.id] ?? n.name;
 const isTradId = (id: string | undefined) => !!id && byId.get(id)?.type === 'tradition';
 
@@ -1074,6 +1080,8 @@ function renderPanel(n: HistoryNode) {
   if (n.sources?.length) {
     const links = n.sources
       .map((u) => {
+        const book = pelikanCite(u);
+        if (book) return `<cite>${book}</cite>`;
         let host = u;
         try {
           host = new URL(u).hostname.replace(/^www\./, '');
