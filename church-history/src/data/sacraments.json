@@ -1,0 +1,522 @@
+{
+ "rites": [
+  {
+   "id": "baptism",
+   "name": "Baptism",
+   "short": "Baptism",
+   "what": "Washing with water to mark entry into Christian life and the church."
+  },
+  {
+   "id": "communion",
+   "name": "Communion",
+   "short": "Communion",
+   "what": "Sharing bread and wine, or grape juice, in remembrance of Jesus' death."
+  },
+  {
+   "id": "confirmation",
+   "name": "Confirmation",
+   "short": "Confirmation",
+   "what": "Prayer, laying on hands, or anointing to affirm baptism and invoke the Holy Spirit."
+  },
+  {
+   "id": "confession",
+   "name": "Confession",
+   "short": "Confession",
+   "what": "Confessing sins, seeking forgiveness, and hearing an assurance of pardon or absolution."
+  },
+  {
+   "id": "marriage",
+   "name": "Marriage",
+   "short": "Marriage",
+   "what": "A church celebration of marriage vows, with prayer and blessing."
+  },
+  {
+   "id": "ordination",
+   "name": "Ordination",
+   "short": "Ordination",
+   "what": "The church sets someone apart for ministry through prayer and usually laying on hands."
+  },
+  {
+   "id": "anointing",
+   "name": "Anointing of the sick",
+   "short": "Anointing",
+   "what": "Applying oil and praying for someone who is ill, seeking healing and spiritual strength."
+  }
+ ],
+ "rows": [
+  {
+   "id": "church-of-east",
+   "summary": "Holy mysteries convey grace. Their traditional seven include baptismal oil, holy leaven, and the sign of the cross.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Baptizes infants and adults with water, followed immediately by holy oil and communion."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Receives Christ's body and blood in Holy Qurbana, using bread containing holy leaven."
+    },
+    "confirmation": {
+     "status": "sacrament",
+     "note": "Holy oil seals baptism immediately. This corresponds to chrismation, without a later confirmation ceremony."
+    },
+    "confession": {
+     "status": "sacrament",
+     "note": "Priests grant absolution. Communal confession is usual, and personal confession is available."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Priests bless marriages. Traditional lists omit marriage, though modern dialogue affirms its sacramental character."
+    },
+    "ordination": {
+     "status": "sacrament",
+     "note": "Bishops confer priesthood through prayer and laying on hands to administer the holy mysteries."
+    },
+    "anointing": {
+     "status": "rite",
+     "note": "Priests anoint the sick. Traditional lists omit this rite, though dialogue affirms its sacramental character."
+    }
+   },
+   "sources": [
+    "https://www.assyrianchurch.org/sacraments/",
+    "https://www.assyrianchurch.org.au/doctrine3",
+    "https://news.assyrianchurch.org/wp-content/uploads/2017/11/Common-Statement-on-Sacramental-Life-FINAL-VERSION-18-NOV.pdf"
+   ]
+  },
+  {
+   "id": "oriental-orthodox",
+   "summary": "Holy mysteries communicate grace. Seven are commonly listed, while sacramental life extends beyond those rites.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Baptizes infants and adults, usually by immersion, then gives chrismation and communion."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Receives bread and wine as Christ's true body and blood, including baptized infants."
+    },
+    "confirmation": {
+     "status": "sacrament",
+     "note": "Priests anoint newly baptized people with holy myron to seal the gift of the Spirit."
+    },
+    "confession": {
+     "status": "sacrament",
+     "note": "Repentance and priestly absolution restore communion. Personal and communal confession practices differ."
+    },
+    "marriage": {
+     "status": "sacrament",
+     "note": "Priests bless and usually crown spouses, asking God to unite and sustain their marriage."
+    },
+    "ordination": {
+     "status": "sacrament",
+     "note": "Bishops lay hands on candidates and pray to confer ordained ministry."
+    },
+    "anointing": {
+     "status": "sacrament",
+     "note": "Priests pray for healing, usually with oil. Armenian practice often omits anointing."
+    }
+   },
+   "sources": [
+    "https://suscopts.org/coptic-orthodox/church/sacraments",
+    "https://armenianchurch.us/sacraments/",
+    "https://www.stjohnarmenianchurch.org/wp-content/uploads/2021/05/publications_1427997772.pdf"
+   ]
+  },
+  {
+   "id": "eastern-orthodox",
+   "summary": "Holy mysteries unite people with Christ and communicate grace. Seven are usually named, but the church does not limit mysteries to seven.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Usually baptizes infants by triple immersion, followed immediately by chrismation and communion."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Receives Christ's true body and blood in the Eucharist, including baptized infants."
+    },
+    "confirmation": {
+     "status": "sacrament",
+     "note": "Priests chrismate newly baptized people with holy oil as the seal of the Holy Spirit."
+    },
+    "confession": {
+     "status": "sacrament",
+     "note": "Confesses sins before God with a priest, who offers counsel and pronounces absolution."
+    },
+    "marriage": {
+     "status": "sacrament",
+     "note": "Priests crown spouses and bless their union as a sharing in Christ's love."
+    },
+    "ordination": {
+     "status": "sacrament",
+     "note": "Bishops lay hands on candidates and invoke the Spirit for ministry in apostolic succession."
+    },
+    "anointing": {
+     "status": "sacrament",
+     "note": "Priests anoint with blessed oil for bodily and spiritual healing, often during Holy Week."
+    }
+   },
+   "sources": [
+    "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
+    "https://www.oca.org/questions/sevensacraments/the-sacraments"
+   ]
+  },
+  {
+   "id": "catholic",
+   "summary": "Christ instituted seven sacraments. They communicate grace through visible signs, with the Eucharist at the center of sacramental life.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Baptizes infants and adults with water, forgiving sins and giving new life in Christ."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Bread and wine become Christ's body and blood. Their outward appearances remain."
+    },
+    "confirmation": {
+     "status": "sacrament",
+     "note": "Anoints with chrism and invokes the Spirit. Eastern Catholics usually confirm at baptism."
+    },
+    "confession": {
+     "status": "sacrament",
+     "note": "Confesses sins to a priest, who grants absolution and assigns penance."
+    },
+    "marriage": {
+     "status": "sacrament",
+     "note": "Marriage between baptized spouses is a sacrament of lifelong union, reflecting Christ's love."
+    },
+    "ordination": {
+     "status": "sacrament",
+     "note": "Bishops ordain bishops, priests, and deacons through prayer and laying on hands."
+    },
+    "anointing": {
+     "status": "sacrament",
+     "note": "Priests anoint those seriously ill or weakened by age, seeking strength, healing, and forgiveness."
+    }
+   },
+   "sources": [
+    "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
+    "https://www.vatican.va/content/catechism/en/part_two/section_one/chapter_one/article_2/iv_the_sacraments_of_salvation.html",
+    "https://www.vatican.va/content/paul-vi/en/apost_constitutions/documents/hf_p-vi_apc_19721130_sacram-unctionem.html"
+   ]
+  },
+  {
+   "id": "lutheran",
+   "summary": "Baptism and communion give grace through God's promise. The Apology also counts absolution as a sacrament, though lists differ.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Baptizes infants and adults. God grants forgiveness and new life through water and the Word."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Receives Christ's true body and blood with the bread and wine for forgiveness."
+    },
+    "confirmation": {
+     "status": "rite",
+     "note": "After instruction, believers affirm baptismal faith publicly and receive prayer, usually with laying on hands."
+    },
+    "confession": {
+     "status": "sacrament",
+     "note": "Retains private confession and absolution. The Apology explicitly calls absolution a sacrament."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Blesses marriage as an institution of creation, without counting it among sacraments of forgiveness."
+    },
+    "ordination": {
+     "status": "rite",
+     "note": "Ordains ministers with prayer and laying on hands. The Apology permits broader sacramental language."
+    },
+    "anointing": {
+     "status": "rite",
+     "note": "Some churches offer a healing rite with prayer, laying on hands, and optional oil."
+    }
+   },
+   "sources": [
+    "https://bookofconcord.org/defense/of-the-number-and-use-of-sacraments/",
+    "https://bookofconcord.org/small-catechism/",
+    "https://witness.lcms.org/2007/confessing-and-confirming-the-faith-10-2007/",
+    "https://download.elca.org/ELCA%20Resource%20Repository/How_is_oil_used_in_worship.pdf"
+   ]
+  },
+  {
+   "id": "reformed",
+   "summary": "Baptism and communion are covenant signs and seals. God uses them to strengthen faith through the Holy Spirit.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Usually baptizes believers and their children as a sign and seal of God's covenant."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Believers receive Christ spiritually through faith. Views of presence differ within the tradition."
+    },
+    "confirmation": {
+     "status": "rite",
+     "note": "Many churches mark a public profession of faith. Some call it confirmation."
+    },
+    "confession": {
+     "status": "rite",
+     "note": "Worship often includes communal confession and assurance of pardon, without requiring private priestly absolution."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Celebrates marriage vows and asks God to bless the spouses, without counting marriage as sacramental."
+    },
+    "ordination": {
+     "status": "rite",
+     "note": "Ordains ministers and often elders and deacons through prayer and laying on hands."
+    },
+    "anointing": {
+     "status": "varies",
+     "note": "Some churches offer healing prayers with oil. Others do not use anointing rites."
+    }
+   },
+   "sources": [
+    "https://centernet.pcusa.org/what-we-believe/what-makes-us-unique/",
+    "https://pcusa.org/order-worship-faqs",
+    "https://www.pcusa.org/sites/default/files/2025-08/2025_0724_Book_of_Order_Interactive_2025-2027.pdf",
+    "https://centernet.pcusa.org/ministries/worship/faq/faq-pastoralrites/"
+   ]
+  },
+  {
+   "id": "anabaptist",
+   "summary": "Baptism and communion express faith, obedience, and shared discipleship. Some communities also observe foot washing and other ordinances.",
+   "cells": {
+    "baptism": {
+     "status": "ordinance",
+     "note": "Baptizes people who profess faith, by pouring, immersion, or sprinkling, as a public commitment."
+    },
+    "communion": {
+     "status": "ordinance",
+     "note": "Shares bread and wine or juice to remember Christ and renew believers' covenant together."
+    },
+    "confirmation": {
+     "status": "none",
+     "note": "Believers profess faith at baptism. No separate confirmation rite normally follows."
+    },
+    "confession": {
+     "status": "rite",
+     "note": "Members confess sins and seek reconciliation, especially before communion, without priestly sacramental absolution."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "The congregation witnesses marriage vows and prays for the spouses. Some call marriage an ordinance."
+    },
+    "ordination": {
+     "status": "rite",
+     "note": "The church appoints and usually ordains ministers with prayer and laying on hands."
+    },
+    "anointing": {
+     "status": "varies",
+     "note": "Some communities anoint the sick with oil. Brethren churches call this an ordinance."
+    }
+   },
+   "sources": [
+    "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/",
+    "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/baptism/",
+    "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/the-lords-supper/",
+    "https://www.brethren.org/about/practices/"
+   ]
+  },
+  {
+   "id": "anglican",
+   "summary": "Article 25 names two Gospel sacraments and five other rites. Anglicans differ over calling those five sacraments.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Baptizes infants and adults into Christ and the church, with water and Trinitarian prayer."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Shares bread and wine as communion with Christ. Teachings about his presence differ."
+    },
+    "confirmation": {
+     "status": "rite",
+     "note": "Bishops lay hands on baptized believers. Article 25 distinguishes this from Gospel sacraments."
+    },
+    "confession": {
+     "status": "rite",
+     "note": "Offers communal confession and optional private absolution. Article 25 distinguishes penance from Gospel sacraments."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Blesses marriage vows. Article 25 distinguishes matrimony from Gospel sacraments."
+    },
+    "ordination": {
+     "status": "rite",
+     "note": "Bishops ordain deacons, priests, and bishops. Article 25 distinguishes orders from Gospel sacraments."
+    },
+    "anointing": {
+     "status": "rite",
+     "note": "Anoints the sick and prays for healing. Article 25 distinguishes unction from Gospel sacraments."
+    }
+   },
+   "sources": [
+    "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+    "https://www.episcopalchurch.org/who-we-are/what-we-believe/",
+    "https://episcopalri.org/sacraments/"
+   ]
+  },
+  {
+   "id": "methodist",
+   "summary": "Baptism and communion are means of grace. Confirmation, ordination, marriage, confession, and anointing remain church rites rather than sacraments.",
+   "cells": {
+    "baptism": {
+     "status": "sacrament",
+     "note": "Baptizes infants and adults by sprinkling, pouring, or immersion as entry into God's covenant."
+    },
+    "communion": {
+     "status": "sacrament",
+     "note": "Receives grace and encounters the risen Christ through bread and wine or grape juice."
+    },
+    "confirmation": {
+     "status": "rite",
+     "note": "Believers affirm baptismal vows and profess faith, usually with prayer and laying on hands."
+    },
+    "confession": {
+     "status": "rite",
+     "note": "Communal confession and assurance of pardon prepare worshippers for communion. Private priestly confession is unnecessary."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Celebrates marriage vows and blesses the spouses, without treating marriage as a sacrament."
+    },
+    "ordination": {
+     "status": "rite",
+     "note": "Ordains deacons and elders with prayer and laying on hands. Ordination is not a sacrament."
+    },
+    "anointing": {
+     "status": "rite",
+     "note": "Offers healing prayers with optional oil and laying on hands, following James 5."
+    }
+   },
+   "sources": [
+    "https://www.umc.org/en/content/united-methodist-sacraments-rites-and-rituals",
+    "https://www.umc.org/en/content/by-water-and-the-spirit-a-united-methodist-understanding-of-baptism",
+    "https://www.umc.org/-/media/umc-media/2013/12/19/01/24/this-holy-mystery-communion.pdf",
+    "https://www.umcdiscipleship.org/book-of-worship/a-service-of-healing-i"
+   ]
+  },
+  {
+   "id": "pentecostal",
+   "summary": "Most teach baptism and communion as ordinances. Spirit baptism and healing prayer are central, with different teachings among Pentecostal churches.",
+   "cells": {
+    "baptism": {
+     "status": "ordinance",
+     "note": "Most immerse believers as testimony. Oneness Pentecostals link water baptism to forgiveness and new birth."
+    },
+    "communion": {
+     "status": "ordinance",
+     "note": "Shares bread and wine or juice to remember Jesus' death and await his return."
+    },
+    "confirmation": {
+     "status": "none",
+     "note": "Spirit baptism is a separate experience, without a standard confirmation rite."
+    },
+    "confession": {
+     "status": "none",
+     "note": "Confesses to God and seeks reconciliation with others, without a standard priestly absolution rite."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Pastors witness marriage vows and pray for the spouses, without counting marriage as a sacrament."
+    },
+    "ordination": {
+     "status": "rite",
+     "note": "Recognizes ministers through ordination, usually with prayer and laying on hands."
+    },
+    "anointing": {
+     "status": "rite",
+     "note": "Elders anoint the sick with oil and pray for healing, following James 5."
+    }
+   },
+   "sources": [
+    "https://ag.org/Beliefs/Statement-of-Fundamental-truths",
+    "https://ag.org/beliefs/position-papers/divine-healing",
+    "https://iphc.org/beliefs/",
+    "https://www.upci.co.nz/about-1"
+   ]
+  },
+  {
+   "id": "baptist",
+   "summary": "Baptism and communion are usually symbolic ordinances of obedience. Local churches govern their practice, and some teach communion as spiritual nourishment.",
+   "cells": {
+    "baptism": {
+     "status": "ordinance",
+     "note": "Immerses professing believers as a public symbol of union with Christ's death and resurrection."
+    },
+    "communion": {
+     "status": "ordinance",
+     "note": "Remembers Christ's death with bread and wine or juice. Some teach spiritual nourishment through faith."
+    },
+    "confirmation": {
+     "status": "none",
+     "note": "Profession of faith and baptism normally mark membership, without a separate confirmation rite."
+    },
+    "confession": {
+     "status": "none",
+     "note": "Confesses to God and seeks reconciliation with others, without a required priestly absolution rite."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Ministers witness marriage vows and pray for the spouses, without treating marriage as a sacrament."
+    },
+    "ordination": {
+     "status": "rite",
+     "note": "Local churches ordain pastors and deacons, usually with prayer and laying on hands."
+    },
+    "anointing": {
+     "status": "varies",
+     "note": "Some churches anoint the sick with oil and pray. Others use prayer without oil."
+    }
+   },
+   "sources": [
+    "https://bfm.sbc.net/bfm2000/",
+    "https://www.sbc.net/about/what-we-do/faq/",
+    "https://www.sgbcsv.org/literature/PrayerAndAnointingWithOil.pdf",
+    "https://founders.org/articles/baptism-and-lords-supper/"
+   ]
+  },
+  {
+   "id": "evangelical-nondenom",
+   "summary": "Most practice baptism and communion as symbolic ordinances. Each congregation sets its teaching and practice, with Baptist and other evangelical influences.",
+   "cells": {
+    "baptism": {
+     "status": "ordinance",
+     "note": "Usually immerses believers who profess faith as a public declaration of following Jesus."
+    },
+    "communion": {
+     "status": "ordinance",
+     "note": "Usually shares bread and wine or juice to remember Jesus' death. Frequency differs by church."
+    },
+    "confirmation": {
+     "status": "none",
+     "note": "Usually uses baptism and membership classes, without a separate confirmation rite."
+    },
+    "confession": {
+     "status": "none",
+     "note": "Confesses to God and shares accountability with others, without a standard priestly absolution rite."
+    },
+    "marriage": {
+     "status": "rite",
+     "note": "Pastors witness marriage vows and pray for the spouses, without counting marriage as a sacrament."
+    },
+    "ordination": {
+     "status": "varies",
+     "note": "Some churches formally ordain pastors or elders. Others appoint leaders without an ordination ceremony."
+    },
+    "anointing": {
+     "status": "varies",
+     "note": "Some churches anoint the sick with oil and pray. Others use prayer without oil."
+    }
+   },
+   "sources": [
+    "https://www.gracechurch.org/about/doctrinal-statement",
+    "https://calvarychapel.com/beliefs/",
+    "https://hirr.hartfordinternational.edu/research/nondenominational-churches-research/",
+    "https://www.sgbcsv.org/literature/PrayerAndAnointingWithOil.pdf"
+   ]
+  }
+ ]
+}

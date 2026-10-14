@@ -1,0 +1,3122 @@
+[
+ {
+  "id": "apostolic",
+  "type": "tradition",
+  "name": "Jesus and apostles",
+  "start": 30,
+  "end": 100,
+  "parents": [],
+  "summary": "Jesus' followers proclaimed his resurrection, gathered in Jerusalem, and spread the gospel through Jewish and Gentile communities.",
+  "why": "Every later Christian tradition traces its roots to Jesus and the apostles.",
+  "facts": [
+   "Jesus' crucifixion and resurrection traditionally date around AD 30 or 33.",
+   "Jerusalem's first believers remained connected to Jewish worship.",
+   "Apostles taught, baptized, and celebrated the Lord's Supper."
+  ],
+  "sacraments": "No fixed sacrament count. Baptism marks entry into Christ. The Lord's Supper shares in his body and blood. Both are central to worship.",
+  "today": "Later Christian traditions claim this inheritance. No separate membership.",
+  "disputed": "Traditions disagree about infant baptism, Eucharistic presence, and church authority in this period.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://bible.usccb.org/bible/acts/2",
+   "https://bible.usccb.org/bible/1corinthians/11"
+  ]
+ },
+ {
+  "id": "pentecost",
+  "type": "event",
+  "name": "Pentecost",
+  "start": 30,
+  "end": 30,
+  "on": "apostolic",
+  "summary": "Acts describes the Holy Spirit empowering Jesus' followers in Jerusalem. Peter preached, and about 3,000 people received baptism.",
+  "why": "The church's first shared life joined the Holy Spirit's work with preaching, baptism, and worship.",
+  "facts": [
+   "The traditional date is approximately AD 30 or 33.",
+   "Acts 2 connects baptism with repentance and forgiveness.",
+   "Believers shared teaching, prayer, meals, and possessions."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://bible.usccb.org/bible/acts/2"
+  ]
+ },
+ {
+  "id": "ignatius-of-antioch",
+  "type": "figure",
+  "name": "Ignatius of Antioch",
+  "start": 35,
+  "end": 110,
+  "on": "early-church",
+  "summary": "Ignatius wrote letters urging churches to unite around their bishop and confess Christ's real humanity. He described the Eucharist as Christ's flesh.",
+  "why": "Ignatius linked unity under a bishop with belief that Communion gives Christ's flesh.",
+  "facts": [
+   "His life dates are approximate. He probably died around AD 110.",
+   "Clement, Ignatius, and Polycarp belong to the Apostolic Fathers.",
+   "His letters distinguish bishops, elders, and deacons.",
+   "He linked baptism and Eucharist with the bishop's oversight."
+  ],
+  "importance": 2,
+  "outsideNicene": false,
+  "sources": [
+   "https://www.newadvent.org/fathers/0109.htm",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/second-century/the-apostolic-fathers"
+  ]
+ },
+ {
+  "id": "pauls-missions",
+  "type": "event",
+  "name": "Paul's missions",
+  "start": 46,
+  "end": 60,
+  "on": "apostolic",
+  "summary": "Paul and coworkers established Gentile churches across Asia Minor and Greece. His letters explained faith, church life, baptism, and the Lord's Supper.",
+  "why": "Paul brought the gospel to Gentile communities. His letters still shape Christian teaching about baptism and the Lord's Supper.",
+  "facts": [
+   "Paul traveled with Barnabas, Silas, Timothy, and others.",
+   "Acts describes three missionary journeys, followed by his journey to Rome.",
+   "His letters address real congregations and their conflicts."
+  ],
+  "importance": 2,
+  "outsideNicene": false,
+  "sources": [
+   "https://www.vatican.va/various/basiliche/san_paolo/en/san_paolo/viaggi.htm",
+   "https://bible.usccb.org/bible/1corinthians/11"
+  ]
+ },
+ {
+  "id": "council-of-jerusalem",
+  "type": "council",
+  "name": "Council of Jerusalem",
+  "start": 49,
+  "end": 49,
+  "on": "apostolic",
+  "summary": "Apostles and elders decided Gentile converts did not need circumcision. Acts records shared food restrictions intended to support fellowship.",
+  "why": "Gentiles could become Christians without circumcision. The council gave churches an early example of settling disputes together.",
+  "facts": [
+   "The meeting probably occurred around AD 48 or 49.",
+   "Peter, James, Paul, and Barnabas appear in Acts 15.",
+   "The council rejected circumcision as a requirement for Gentile salvation."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://bible.usccb.org/bible/acts/15",
+   "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Council-Jerusalem"
+  ]
+ },
+ {
+  "id": "roman-persecutions",
+  "type": "event",
+  "name": "Roman persecutions",
+  "start": 64,
+  "end": 313,
+  "on": "early-church",
+  "summary": "Roman authorities sometimes punished Christians for refusing sacrifice or public worship. Persecution varied by emperor and region, ending broadly with toleration.",
+  "why": "Persecution gave churches martyrs to remember and forced decisions about whether Christians who renounced their faith could return.",
+  "facts": [
+   "Nero punished Christians in Rome in AD 64, before this branch begins.",
+   "Decius demanded sacrifices across the empire in AD 250.",
+   "Diocletian's persecution began in AD 303.",
+   "Galerius granted toleration in 311. Milan extended protections in 313."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://assets.press.princeton.edu/chapters/s10056.pdf",
+   "https://sourcebooks.web.fordham.edu/source/edict-milan.asp"
+  ]
+ },
+ {
+  "id": "fall-of-jerusalem",
+  "type": "event",
+  "name": "Jerusalem falls",
+  "start": 70,
+  "end": 70,
+  "on": "apostolic",
+  "summary": "Roman troops under Titus destroyed Jerusalem and its Temple during the Jewish revolt. The disaster transformed the setting of Jewish and Christian life.",
+  "why": "Jerusalem's destruction ended Temple worship and weakened the city's role as Christianity spread elsewhere.",
+  "facts": [
+   "Rome destroyed the Second Temple in AD 70.",
+   "Christian communities already existed beyond Judea.",
+   "Christianity's separation from Judaism developed gradually over many years."
+  ],
+  "importance": 2,
+  "outsideNicene": false,
+  "sources": [
+   "https://www.worldhistory.org/article/1993/the-siege-of-jerusalem-in-70-ce/",
+   "https://bible.usccb.org/bible/acts/2"
+  ]
+ },
+ {
+  "id": "early-church",
+  "type": "tradition",
+  "name": "Early church",
+  "start": 100,
+  "end": 451,
+  "parents": [
+   "apostolic"
+  ],
+  "summary": "Churches developed bishops, shared Scriptures, creeds, and sacramental worship. They faced persecution and doctrinal disputes before the major fifth-century separations.",
+  "why": "Catholics, Orthodox Christians, and many Protestants share beliefs and worship practices inherited from these churches.",
+  "facts": [
+   "Local churches differed in customs and leadership arrangements.",
+   "Baptism and Eucharist remained central to Christian membership and worship.",
+   "Disputes over Ephesus and Chalcedon led to lasting divisions."
+  ],
+  "sacraments": "No universally fixed count. Baptism gives cleansing and new birth. Eucharist shares Christ's body and blood. Practices develop, including infant baptism, confirmation, penance, and ordination.",
+  "today": "Living Christian traditions inherit these churches. No separate membership.",
+  "disputed": "An undivided church is a map simplification. Rival Christian groups and earlier local schisms already existed.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.newadvent.org/fathers/0714.htm",
+   "https://www.newadvent.org/fathers/0126.htm",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+  ]
+ },
+ {
+  "id": "didache",
+  "type": "event",
+  "name": "Didache",
+  "start": 100,
+  "end": 100,
+  "on": "early-church",
+  "summary": "An early Christian handbook describes moral teaching, baptism, Eucharistic prayers, fasting, and local ministers. Its instructions reveal worship before later sacramental systems.",
+  "why": "Early Christians baptized in the Trinity's name, allowed pouring when necessary, and reserved Communion for baptized believers.",
+  "facts": [
+   "The text probably dates around the late first or early second century.",
+   "It prefers running water and allows threefold pouring when needed.",
+   "It limits Eucharistic participation to baptized believers.",
+   "Sunday gatherings include breaking bread and confessing sins."
+  ],
+  "importance": 2,
+  "disputed": "Scholars debate its date and whether some meal prayers describe Eucharist, a fellowship meal, or both.",
+  "outsideNicene": false,
+  "sources": [
+   "https://www.newadvent.org/fathers/0714.htm",
+   "https://www.newadvent.org/cathen/04779a.htm"
+  ]
+ },
+ {
+  "id": "development-of-bishops",
+  "type": "event",
+  "name": "Rise of bishops",
+  "start": 100,
+  "end": 200,
+  "on": "early-church",
+  "summary": "Leadership increasingly centered on one bishop in each city, assisted by elders and deacons. This pattern spread unevenly across Christian communities.",
+  "why": "The spread of bishops shaped ordination and claims of apostolic succession. Christians still disagree about whether this leadership is required.",
+  "facts": [
+   "Ignatius describes one bishop with elders and deacons in several Asian churches.",
+   "The Didache instructs communities to appoint bishops and deacons.",
+   "Early terminology for bishops and elders overlaps."
+  ],
+  "importance": 2,
+  "disputed": "Catholic and Orthodox churches trace bishops to the apostles. Many Protestants distinguish later rule by bishops from New Testament leadership.",
+  "outsideNicene": false,
+  "sources": [
+   "https://www.newadvent.org/fathers/0109.htm",
+   "https://www.newadvent.org/fathers/0714.htm",
+   "https://www.churchsociety.org/wp-content/uploads/2021/05/Cman_062_2_Chadwick.pdf"
+  ]
+ },
+ {
+  "id": "gnosticism",
+  "type": "event",
+  "name": "Gnostic movements",
+  "start": 100,
+  "end": 500,
+  "on": "early-church",
+  "summary": "Several movements offered salvation through special knowledge and distinguished the highest God from the material world's creator. Church teachers opposed their accounts of Christ.",
+  "why": "Gnostic teachings prompted church teachers to defend creation's goodness, Christ's real humanity, and teaching open to everyone.",
+  "facts": [
+   "Gnosticism names diverse schools, rather than one church.",
+   "Valentinus taught in the second century.",
+   "Irenaeus argued against Gnostic teachings.",
+   "These dates approximate the rise and decline of ancient Christian Gnostic schools."
+  ],
+  "importance": 2,
+  "outsideNicene": true,
+  "disputed": "Scholars debate which groups count as Gnostic. This node covers ancient Christian Gnostic schools, rather than every religion emphasizing spiritual knowledge.",
+  "sources": [
+   "https://www.encyclopedia.com/philosophy-and-religion/ancient-religions/ancient-religion/gnosticism",
+   "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/gnosticism"
+  ]
+ },
+ {
+  "id": "canon-formation",
+  "type": "event",
+  "name": "New Testament canon",
+  "start": 100,
+  "end": 397,
+  "on": "early-church",
+  "summary": "Churches gradually recognized authoritative apostolic writings. Athanasius listed the familiar 27 New Testament books in 367. Later regional councils endorsed similar lists.",
+  "why": "Churches gradually recognized the New Testament books. No single council invented the Bible.",
+  "facts": [
+   "Gospels and Paul's letters circulated before complete book lists.",
+   "Athanasius' AD 367 letter lists the familiar 27 New Testament books.",
+   "Hippo in 393 and Carthage in 397 endorsed regional canonical lists.",
+   "Some eastern churches continued debating particular books after 397."
+  ],
+  "disputed": "Churches continued recognizing biblical books beyond this date. Christian traditions still differ over the Old Testament and some other books.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.newadvent.org/fathers/2806039.htm",
+   "https://www.newadvent.org/cathen/03274a.htm"
+  ]
+ },
+ {
+  "id": "marcionism",
+  "type": "event",
+  "name": "Marcion's challenge",
+  "start": 144,
+  "end": 700,
+  "on": "early-church",
+  "summary": "Marcion rejected the Old Testament and distinguished its creator God from Jesus' Father. His followers used an edited Luke and ten Pauline letters.",
+  "why": "Marcion's rejection of Jewish Scripture prompted churches to defend the Old Testament and clarify which writings belonged in the Bible.",
+  "facts": [
+   "Rome expelled Marcion around AD 144.",
+   "His teaching challenged continuity between Israel's Scriptures and Jesus.",
+   "Marcionite churches persisted for centuries.",
+   "The end date roughly marks their decline in late antiquity."
+  ],
+  "importance": 2,
+  "outsideNicene": true,
+  "sources": [
+   "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/marcionism",
+   "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Marcion_and_the_Marcionite_Churches"
+  ]
+ },
+ {
+  "id": "montanism",
+  "type": "event",
+  "name": "Montanism",
+  "start": 165,
+  "end": 700,
+  "on": "early-church",
+  "summary": "Montanus, Prisca, and Maximilla proclaimed new prophecy in Phrygia. Their movement emphasized the Spirit, strict discipline, and expectation of Christ's return.",
+  "why": "The dispute raised questions Christians still face about prophecy, spiritual gifts, church authority, and predictions of the end times.",
+  "facts": [
+   "The movement began during the second century. Its exact starting year is disputed.",
+   "Tertullian supported the New Prophecy.",
+   "Church leaders challenged its prophetic claims and discipline.",
+   "The end date is approximate. Communities survived into later centuries."
+  ],
+  "importance": 2,
+  "outsideNicene": false,
+  "sources": [
+   "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/montanism",
+   "https://www.newadvent.org/cathen/10521a.htm"
+  ]
+ },
+ {
+  "id": "constantine-and-milan",
+  "type": "event",
+  "name": "Constantine and Milan",
+  "start": 313,
+  "end": 313,
+  "on": "early-church",
+  "summary": "Constantine and Licinius agreed to religious toleration and restoration of Christian property. Constantine's patronage brought churches into a new relationship with imperial power.",
+  "why": "Legal protection and imperial support let Christians build public churches. Emperors also began convening councils to settle church disputes.",
+  "facts": [
+   "The agreement protected Christian worship alongside other religions.",
+   "It required restoration of confiscated church property.",
+   "Constantine later convened Nicaea in 325.",
+   "Christianity became the official imperial faith later, under Theodosius."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://sourcebooks.web.fordham.edu/source/edict-milan.asp",
+   "https://www.goarch.org/-/the-first-ecumenical-council"
+  ]
+ },
+ {
+  "id": "arianism",
+  "type": "event",
+  "name": "Arian controversy",
+  "start": 318,
+  "end": 700,
+  "on": "early-church",
+  "summary": "Arius taught that the Son was created and did not share the Father's eternal divine being. Related teachings gained bishops, emperors, and Germanic converts.",
+  "why": "The Nicene Creed insists that Jesus is fully divine because Arius taught that the Son was God's highest creature.",
+  "facts": [
+   "Arius taught in Alexandria.",
+   "Nicaea condemned his teaching in 325.",
+   "The controversy continued long after Nicaea.",
+   "Related movements faded in Germanic kingdoms by roughly the seventh century."
+  ],
+  "importance": 2,
+  "outsideNicene": true,
+  "disputed": "Arianism groups several differing anti-Nicene positions. Their followers did not all teach precisely what Arius taught.",
+  "sources": [
+   "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/arius-and-arianism",
+   "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/arianism"
+  ]
+ },
+ {
+  "id": "nicaea-i",
+  "type": "council",
+  "name": "First Council of Nicaea",
+  "start": 325,
+  "end": 325,
+  "on": "early-church",
+  "summary": "Constantine assembled bishops who rejected Arius and adopted the original Nicene Creed. They affirmed the Son shares the Father's divine being.",
+  "why": "Catholics, Orthodox Christians, and most Protestants share Nicaea's confession that Jesus is fully divine.",
+  "facts": [
+   "The creed calls the Son begotten, rather than created.",
+   "Homoousios means the Son shares the Father's divine essence.",
+   "Nicaea also addressed Easter and church discipline.",
+   "The council did not select the books of the Bible."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.goarch.org/-/the-first-ecumenical-council",
+   "https://www.newadvent.org/cathen/11049a.htm"
+  ]
+ },
+ {
+  "id": "pentarchy-forming",
+  "type": "event",
+  "name": "Five patriarchal sees",
+  "start": 325,
+  "end": 451,
+  "on": "early-church",
+  "summary": "Rome, Constantinople, Alexandria, Antioch, and Jerusalem gained regional authority. Councils shaped their standing. The formal system of five patriarchates developed further in the sixth century.",
+  "why": "These five cities became centers of church authority. Their roles still shape Catholic and Orthodox disagreements about leadership.",
+  "facts": [
+   "Nicaea recognized Rome, Alexandria, and Antioch's established regional privileges.",
+   "Constantinople gained second rank at the council of 381.",
+   "Chalcedon recognized Jerusalem's independent regional jurisdiction in 451.",
+   "Justinian later gave the five-see system formal imperial expression."
+  ],
+  "importance": 2,
+  "disputed": "Rome rejected Chalcedon's decision to raise Constantinople's rank. Catholics and Orthodox Christians disagree about Rome's authority and the five patriarchates.",
+  "outsideNicene": false,
+  "sources": [
+   "https://www.newadvent.org/cathen/11549a.htm",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates"
+  ]
+ },
+ {
+  "id": "augustine-of-hippo",
+  "type": "figure",
+  "name": "Augustine of Hippo",
+  "start": 354,
+  "end": 430,
+  "on": "early-church",
+  "summary": "Augustine, bishop of Hippo in North Africa, wrote about grace, sin, Scripture, and the church. His debates shaped Western teaching about baptism and sacraments.",
+  "why": "Augustine's teaching still shapes Catholic and Protestant debates about grace, original sin, and whether a minister's failings invalidate baptism.",
+  "facts": [
+   "He lived from AD 354 to 430.",
+   "He wrote Confessions and The City of God.",
+   "Against Donatists, he defended Christ's authority behind baptism despite a minister's failings.",
+   "Against Pelagius, he stressed dependence on God's grace."
+  ],
+  "importance": 2,
+  "disputed": "Catholics and Protestants draw different conclusions from Augustine. Eastern traditions receive his theology with different emphases.",
+  "outsideNicene": false,
+  "sources": [
+   "https://plato.stanford.edu/entries/augustine/",
+   "https://www.newadvent.org/fathers/14087.htm"
+  ]
+ },
+ {
+  "id": "edict-of-thessalonica",
+  "type": "event",
+  "name": "Edict of Thessalonica",
+  "start": 380,
+  "end": 380,
+  "on": "early-church",
+  "summary": "Theodosius I, with Gratian and Valentinian II, declared Nicene Christianity the empire's official faith. Imperial law increasingly disadvantaged rival Christian teachings.",
+  "why": "Official status gave Nicene churches public power. Emperors increasingly used law to enforce religious decisions.",
+  "facts": [
+   "The Edict of Thessalonica dates to February 27, 380.",
+   "It identifies the faith associated with bishops of Rome and Alexandria.",
+   "Later laws restricted pagan worship further."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://droitromain.univ-grenoble-alpes.fr/Francogallica/Thessalonique_fran.htm",
+   "https://assets.cambridge.org/97811084/73798/excerpt/9781108473798_excerpt.pdf"
+  ]
+ },
+ {
+  "id": "constantinople-i",
+  "type": "council",
+  "name": "First Council of Constantinople",
+  "start": 381,
+  "end": 381,
+  "on": "early-church",
+  "summary": "Theodosius convened bishops who reaffirmed Nicene faith and the Holy Spirit's divinity. Tradition links the council to the expanded Nicene Creed.",
+  "why": "Its creed still guides worship and teaching about the Trinity. It joins baptism with forgiveness and the hope of resurrection.",
+  "facts": [
+   "The council rejected teachings that denied the Holy Spirit's full divinity.",
+   "The creed confesses one baptism for forgiveness of sins.",
+   "Chalcedon's records in 451 explicitly attribute the expanded creed to 381.",
+   "Bishops ranked Constantinople after Rome because it was New Rome."
+  ],
+  "disputed": "Scholars debate how the expanded creed was drafted. Chalcedon's surviving records explicitly attribute it to this council.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-second-ecumenical-council",
+   "https://www.newadvent.org/cathen/11049a.htm"
+  ]
+ },
+ {
+  "id": "ephesus",
+  "type": "council",
+  "name": "Council of Ephesus",
+  "start": 431,
+  "end": 431,
+  "on": "early-church",
+  "summary": "Cyril and his supporters condemned Nestorius and affirmed Mary as Theotokos, meaning God-bearer. The title defended Jesus' identity as the incarnate divine Son.",
+  "why": "Calling Mary Mother of God affirms that Jesus is one divine person. Disagreement over this teaching divided eastern Christians.",
+  "facts": [
+   "Nestorius objected to unqualified use of Theotokos.",
+   "The council affirmed one Christ, rather than two separately acting subjects.",
+   "Theotokos does not mean Mary originated God's divine nature.",
+   "Rival episcopal assemblies and imperial politics complicated the proceedings."
+  ],
+  "disputed": "The Church of the East disputes traditional accounts of Nestorius' teaching. Later dialogue recognizes shared belief in Christ's divinity and humanity.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/saints/lives/1949/09/09/102555-commemoration-of-the-holy-fathers-of-the-third-ecumenical-counci",
+   "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+  ]
+ },
+ {
+  "id": "church-of-east-separation",
+  "type": "schism",
+  "name": "Church of East separation",
+  "start": 431,
+  "end": 431,
+  "on": "early-church",
+  "summary": "Persian churches increasingly separated from Roman imperial churches. Rejection of Ephesus and later reception of Antiochene teaching deepened a division already shaped by politics.",
+  "why": "The Church of the East developed outside the Roman Empire. Its separation involved both political independence and disagreements about Christ.",
+  "facts": [
+   "Persian bishops asserted independence from western appeals in 424.",
+   "Ephesus in 431 became a marker of doctrinal separation.",
+   "Later fifth-century synods consolidated distinctive Christological teaching.",
+   "The 431 branch point simplifies a gradual separation."
+  ],
+  "splits": [
+   "church-of-east"
+  ],
+  "disputed": "Nestorius did not found this church. Its Persian institutions predated Ephesus, and it rejects the label Nestorian.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
+   "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf"
+  ]
+ },
+ {
+  "id": "church-of-east",
+  "type": "tradition",
+  "name": "Church of the East",
+  "start": 431,
+  "end": null,
+  "parents": [
+   "early-church"
+  ],
+  "summary": "This ancient Persian Christian tradition uses East Syriac worship and accepts the first two ecumenical councils. The Assyrian and Ancient churches continue its independent lineage.",
+  "why": "This ancient tradition carried Christian missions across Asia. Its baptism and Eucharist belong to a history beyond the Roman Empire.",
+  "facts": [
+   "Its church institutions existed before the AD 431 map branch.",
+   "It confesses one Christ, fully divine and fully human.",
+   "Assyrian and Ancient churches continue today. Chaldean Catholics form a separate branch united with Rome.",
+   "The Addai and Mari Eucharistic prayer preserves very ancient worship."
+  ],
+  "sacraments": "Seven mysteries, including Holy Leaven. Baptism grants new birth and includes infants. Eucharist gives Christ's body and blood.",
+  "today": "About 400,000 Assyrian members in Iraq, Iran, India, and worldwide diaspora.",
+  "disputed": "The estimate covers only the Assyrian church. It rejects the label Nestorian and affirms the Nicene faith.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
+   "https://www.assyrianchurch.org.au/the-church",
+   "https://www.assyrianchurch.org/sacraments/",
+   "https://www.assyrianchurch.org.au/doctrine3"
+  ]
+ },
+ {
+  "id": "chalcedon",
+  "type": "council",
+  "name": "Council of Chalcedon",
+  "start": 451,
+  "end": 451,
+  "on": "early-church",
+  "summary": "Bishops affirmed Jesus as one person in two natures, fully divine and fully human. They accepted Leo's Tome and deposed Alexandria's bishop Dioscorus.",
+  "why": "Catholics, Eastern Orthodox Christians, and most Protestants accept its teaching about Christ. Oriental Orthodox churches reject its wording.",
+  "facts": [
+   "Emperor Marcian convened the council.",
+   "Its definition preserves Christ's divine and human natures without confusion or separation.",
+   "The council reaffirmed the creeds associated with 325 and 381.",
+   "Many Christians in Egypt and Syria rejected the council."
+  ],
+  "disputed": "Oriental Orthodox churches reject Chalcedon's wording while affirming Christ's full divinity and humanity. Both sides claim continuity with Cyril of Alexandria.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
+   "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/"
+  ]
+ },
+ {
+  "id": "chalcedonian-separation",
+  "type": "schism",
+  "name": "Chalcedonian separation",
+  "start": 451,
+  "end": 451,
+  "on": "early-church",
+  "summary": "Acceptance or rejection of Chalcedon gradually divided churches into Chalcedonian and non-Chalcedonian communions. Separate hierarchies developed over subsequent generations.",
+  "why": "This division separates Oriental Orthodox from Eastern Orthodox churches. Catholics and Eastern Orthodox Christians share the history of accepting Chalcedon.",
+  "facts": [
+   "The AD 451 date marks the council, rather than an immediate complete institutional split.",
+   "Egyptian and Syrian opposition helped form lasting non-Chalcedonian churches.",
+   "Armenian rejection developed later.",
+   "Modern dialogues have found substantial agreement about Christ's divinity and humanity."
+  ],
+  "splits": [
+   "oriental-orthodox",
+   "chalcedonian"
+  ],
+  "disputed": "Each side saw itself preserving apostolic faith. Politics, language, coercion, and theology all contributed to the gradual separation.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
+   "https://czasopisma.kul.pl/index.php/vp/article/view/4125"
+  ]
+ },
+ {
+  "id": "oriental-orthodox",
+  "type": "tradition",
+  "name": "Oriental Orthodox",
+  "start": 451,
+  "end": null,
+  "parents": [
+   "early-church"
+  ],
+  "summary": "Six ancient church traditions reject Chalcedon and follow Cyril's teaching on Christ's united divinity and humanity. They share sacramental worship and communion with one another.",
+  "why": "Oriental Orthodox churches preserve ancient baptism and Eucharistic worship. They form a separate family from Eastern Orthodox churches.",
+  "facts": [
+   "The family includes Coptic, Armenian, Syriac, Ethiopian, Eritrean, and Malankara churches.",
+   "They accept Nicaea, Constantinople I, and Ephesus.",
+   "Miaphysite teaching affirms Christ's full humanity and divinity in one united incarnate nature.",
+   "Their apostolic origins predate the AD 451 map branch."
+  ],
+  "sacraments": "Generally seven holy mysteries. Baptism, usually infant immersion, gives new birth. Chrismation follows. Eucharist truly gives Christ's body and blood, including to baptized infants.",
+  "today": "About 60 million in Ethiopia, Egypt, Eritrea, Armenia, Syria, India, diaspora.",
+  "disputed": "They reject Eutyches' teaching that Christ's divinity absorbed his humanity. They reject Monophysite as a label for their own teaching.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
+   "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
+   "https://ukmidcopts.org/coptic/sacraments/",
+   "https://www.copticchurch.net/introduction-to-the-coptic-church/sacraments/4_eucharist"
+  ]
+ },
+ {
+  "id": "chalcedonian",
+  "type": "tradition",
+  "name": "Chalcedonian church",
+  "start": 451,
+  "end": 1054,
+  "parents": [
+   "early-church"
+  ],
+  "summary": "Churches accepting Chalcedon shared communion centered on Rome and eastern patriarchates. Catholic and Eastern Orthodox churches developed from this shared history.",
+  "why": "Catholic and Eastern Orthodox baptism and Eucharistic worship grew from a shared history before their medieval separation.",
+  "facts": [
+   "They accept Christ as one person in two complete natures.",
+   "Rome and Constantinople remained major centers alongside the other patriarchal sees.",
+   "East and West developed different liturgies and approaches to authority.",
+   "The AD 1054 endpoint marks a gradual medieval separation."
+  ],
+  "sacraments": "No universally fixed count. Baptism gives new birth. Eucharist gives Christ's body and blood. Confirmation, penance, ordination, marriage, and anointing develop. Seven becomes standard later.",
+  "today": "Catholic and Eastern Orthodox churches continue this inheritance. No separate membership.",
+  "disputed": "Catholic and Orthodox churches each claim continuity with these churches. Neither describes itself as a new church founded in 1054.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates",
+   "https://www.newadvent.org/fathers/0714.htm",
+   "https://www.newadvent.org/fathers/0126.htm"
+  ]
+ },
+ {
+  "id": "benedict-of-nursia",
+  "type": "figure",
+  "name": "Benedict of Nursia",
+  "start": 480,
+  "end": 547,
+  "on": "chalcedonian",
+  "summary": "Benedict writes a rule for monks that shapes Western monasteries. Monks follow a shared pattern of prayer, work, obedience, and community life.",
+  "why": "Monasteries sustain worship, learning, care for travelers, and Christian missions throughout medieval Europe.",
+  "facts": [
+   "His life dates are approximate.",
+   "Tradition dates his move to Monte Cassino to about 529.",
+   "Christian monasticism already existed in Egypt, Palestine, and Asia Minor.",
+   "Monasteries following his rule preserve books and learning."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://archive.osb.org/gen/benedict.html"
+  ]
+ },
+ {
+  "id": "constantinople-ii",
+  "type": "council",
+  "name": "Constantinople II",
+  "start": 553,
+  "end": 553,
+  "on": "chalcedonian",
+  "summary": "Emperor Justinian calls the fifth ecumenical council. It condemns the Three Chapters to clarify Chalcedon and seek reconciliation with Christians rejecting it.",
+  "why": "Disagreements about Jesus continue after Chalcedon, and this council fails to reunite the divided churches.",
+  "facts": [
+   "The Three Chapters concern Theodore of Mopsuestia and selected writings of Theodoret and Ibas.",
+   "The council affirms Christ as one person, fully divine and fully human.",
+   "Catholics and Eastern Orthodox accept this council.",
+   "The effort does not restore communion with the Oriental Orthodox churches."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians",
+   "https://www.newadvent.org/cathen/04423f.htm"
+  ]
+ },
+ {
+  "id": "filioque-dispute",
+  "type": "event",
+  "name": "Filioque dispute",
+  "start": 589,
+  "end": 1014,
+  "on": "chalcedonian",
+  "summary": "Western Christians add \"and the Son\" to the creed's account of the Holy Spirit. Eastern Christians dispute both the teaching and the alteration.",
+  "why": "A short phrase becomes a lasting disagreement about the Trinity and who may change the church's creed.",
+  "facts": [
+   "Filioque means \"and the Son\" in Latin.",
+   "Its use spreads in the West after Toledo in 589.",
+   "Rome first includes it in the creed during worship in 1014.",
+   "The dispute continues beyond this period of adoption."
+  ],
+  "disputed": "Catholics defend the Latin teaching. Orthodox reject the unilateral change to the creed and generally reject its teaching about the Spirit's origin.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism"
+  ]
+ },
+ {
+  "id": "gregory-the-great",
+  "type": "figure",
+  "name": "Gregory the Great",
+  "start": 590,
+  "end": 604,
+  "on": "chalcedonian",
+  "summary": "Gregory leads the Roman church as pope, organizes relief, strengthens pastoral care, and sends monks to evangelize Anglo-Saxon England.",
+  "why": "Gregory's relief work and missions help make bishops and monasteries central to daily life and Christianity's spread in Western Europe.",
+  "facts": [
+   "590 to 604 marks his papacy, not his lifespan.",
+   "A former Roman official, Gregory becomes a monk before becoming pope.",
+   "He sends Augustine of Canterbury and other monks to England.",
+   "His Pastoral Rule guides clergy in caring for their congregations."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080528.html",
+   "https://www.newadvent.org/cathen/06780a.htm"
+  ]
+ },
+ {
+  "id": "rise-of-islam",
+  "type": "event",
+  "name": "Rise of Islam",
+  "start": 622,
+  "end": 698,
+  "on": "chalcedonian",
+  "summary": "Islam arises in Arabia. Muslim armies conquer Syria, Palestine, Egypt, and much of North Africa. Ancient Christian centers come under Muslim rule.",
+  "why": "Many early Christian homelands pass from Byzantine to Muslim rule, while their churches continue to worship.",
+  "facts": [
+   "622 marks Muhammad's migration from Mecca to Medina.",
+   "Byzantium loses Antioch, Jerusalem, and Alexandria to Muslim rule.",
+   "Christians continue worshiping under changing restrictions and conditions.",
+   "Conversions unfold over centuries, not immediately after conquest."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/the-rise-of-islam",
+   "https://orthinc.oca.org/article/A%2BHistory%2Bof%2Bthe%2BOrthodox%2BChurch"
+  ]
+ },
+ {
+  "id": "constantinople-iii",
+  "type": "council",
+  "name": "Constantinople III",
+  "start": 680,
+  "end": 681,
+  "on": "chalcedonian",
+  "summary": "The sixth ecumenical council rejects monothelitism, the claim that Christ has one will. It affirms both his divine and human wills.",
+  "why": "Christ's human will matters to the teaching that Jesus is fully human as well as fully divine.",
+  "facts": [
+   "The council affirms two wills and two activities in one Christ.",
+   "Christ's human will freely follows his divine will.",
+   "It condemns Pope Honorius I among supporters of the rejected teaching.",
+   "Catholics and Eastern Orthodox accept this council."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/monoenergism-monothelitism",
+   "https://www.newadvent.org/cathen/04423f.htm"
+  ]
+ },
+ {
+  "id": "nicaea-ii",
+  "type": "council",
+  "name": "Nicaea II",
+  "start": 787,
+  "end": 787,
+  "on": "chalcedonian",
+  "summary": "The seventh ecumenical council permits honoring icons of Christ and the saints. It distinguishes veneration from worship owed to God.",
+  "why": "This council gives Orthodox and Catholic Christians a basis for honoring sacred images in worship.",
+  "facts": [
+   "Empress Irene supports the council against opponents of religious images.",
+   "Honor shown to an image refers to the person depicted.",
+   "This is the last council both Catholics and Eastern Orthodox generally accept as ecumenical.",
+   "Further conflict ends with the Byzantine restoration of icons in 843."
+  ],
+  "disputed": "Many Protestants reject or restrict honoring religious images. Catholics and Orthodox distinguish this honor from worship of God.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm",
+   "https://www.newadvent.org/cathen/04423f.htm"
+  ]
+ },
+ {
+  "id": "charlemagne-coronation",
+  "type": "event",
+  "name": "Charlemagne crowned emperor",
+  "start": 800,
+  "end": 800,
+  "on": "chalcedonian",
+  "summary": "Pope Leo III crowns Charlemagne emperor in Rome on Christmas Day. The coronation ties the papacy to Frankish power and challenges Byzantine imperial claims.",
+  "why": "Competing emperors and church alliances deepen the division between Rome and Constantinople.",
+  "facts": [
+   "Charlemagne already rules the Franks.",
+   "The coronation creates a western rival to the emperor in Constantinople.",
+   "Frankish rulers support monasteries, church schools, and religious reforms."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/the-west2",
+   "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
+  ]
+ },
+ {
+  "id": "photian-schism",
+  "type": "event",
+  "name": "Photian schism",
+  "start": 863,
+  "end": 867,
+  "on": "chalcedonian",
+  "summary": "Rome and Constantinople break relations over Photius's appointment, church jurisdiction, and the Filioque. This temporary rupture anticipates the later East-West separation.",
+  "why": "Papal authority and changes to the creed divide Rome and Constantinople long before 1054.",
+  "facts": [
+   "Pope Nicholas I rejects Photius as patriarch in 863.",
+   "A Constantinople council condemns Nicholas and the Filioque in 867.",
+   "The 879 to 880 council later restores communion with Photius."
+  ],
+  "disputed": "Catholic and Orthodox histories differ over responsibility, Photius's legitimacy, and which subsequent council deserves recognition.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
+  ]
+ },
+ {
+  "id": "catholic",
+  "type": "tradition",
+  "name": "Catholic church",
+  "start": 1054,
+  "end": null,
+  "parents": [
+   "chalcedonian"
+  ],
+  "summary": "Churches in communion with the bishop of Rome develop as a distinct branch after the East-West separation, preserving apostolic succession and sacramental worship.",
+  "why": "It is the largest Christian church, about 1.4 billion people, and the line most Protestant churches broke from in the 1500s.",
+  "facts": [
+   "1054 marks a map division, not Catholicism's claimed founding date.",
+   "The pope holds universal authority in Catholic teaching.",
+   "The communion includes the Latin church and Eastern Catholic churches.",
+   "The Vatican reports 1.422 billion baptized Catholics for 2024."
+  ],
+  "sacraments": "Seven sacraments convey grace. Baptism, including infants, brings new birth. Eucharistic bread and wine become Christ's body and blood through transubstantiation.",
+  "today": "About 1.42 billion worldwide, especially the Americas, Europe, and Africa.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.vatican.va/content/catechism/en.html",
+   "https://www.usccb.org/catechism/pt2sect2",
+   "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
+   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+  ]
+ },
+ {
+  "id": "eastern-orthodox",
+  "type": "tradition",
+  "name": "Eastern Orthodox churches",
+  "start": 1054,
+  "end": null,
+  "parents": [
+   "chalcedonian"
+  ],
+  "summary": "Self-governing churches share Orthodox faith, bishops, liturgy, and sacramental communion. They honor Constantinople's patriarch as first among equals rather than a universal pope.",
+  "why": "Eastern Orthodoxy shares roots and sacramental beliefs with Catholicism, while differing over papal authority. It is also distinct from Oriental Orthodoxy.",
+  "facts": [
+   "1054 marks a map division, not Orthodoxy's claimed founding date.",
+   "Greek, Russian, Romanian, and other churches belong to this tradition.",
+   "Orthodox churches accept the first seven ecumenical councils.",
+   "The population estimate excludes the separate Oriental Orthodox churches."
+  ],
+  "sacraments": "Usually seven holy mysteries, though other rites also convey grace. Baptism, including infants, brings new birth. The Eucharist is truly Christ's body and blood.",
+  "today": "Roughly 200 million, mainly Eastern Europe, Russia, and communities abroad.",
+  "disputed": "Pew's 2010 figures imply about 208 million Eastern Orthodox. This rounded estimate is not a 2026 census.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
+   "https://www.oca.org/questions/sevensacraments/the-sacraments"
+  ]
+ },
+ {
+  "id": "great-schism-1054",
+  "type": "schism",
+  "name": "Great Schism",
+  "start": 1054,
+  "end": 1054,
+  "on": "chalcedonian",
+  "summary": "Roman legates and Constantinople's patriarch exchange excommunications. Their dispute becomes a conventional marker for the gradual separation of Catholic and Eastern Orthodox churches.",
+  "why": "Catholics and Eastern Orthodox remain divided despite sharing many beliefs about baptism and Communion.",
+  "facts": [
+   "Disputes include papal authority, the Filioque, and worship customs.",
+   "The 1054 sentences target named church leaders, not every believer.",
+   "Paul VI and Athenagoras lift the mutual excommunications in 1965.",
+   "The 1965 gesture does not restore full communion."
+  ],
+  "splits": [
+   "catholic",
+   "eastern-orthodox"
+  ],
+  "disputed": "Both traditions claim apostolic continuity and dispute responsibility for the split. Their separation developed over centuries.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+   "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
+   "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+  ]
+ },
+ {
+  "id": "crusades",
+  "type": "event",
+  "name": "Crusades",
+  "start": 1095,
+  "end": 1291,
+  "on": "catholic",
+  "summary": "Popes call military expeditions to the Holy Land. Crusaders establish Latin states, fight Muslim rulers, and sometimes attack Jewish communities and fellow Christians.",
+  "why": "Crusading links warfare to penance, pilgrimage, and church authority. Its violence leaves lasting distrust between religious communities.",
+  "facts": [
+   "Urban II calls the First Crusade in 1095.",
+   "Crusaders capture Jerusalem in 1099.",
+   "Church authorities offer penitential benefits to participants.",
+   "Acre falls in 1291. Other crusading campaigns continue elsewhere."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://guides.loc.gov/crusades",
+   "https://sourcebooks.web.fordham.edu/source/urban2-5vers.asp",
+   "https://sourcebooks.web.fordham.edu/source/cde-privs.asp"
+  ]
+ },
+ {
+  "id": "waldensians",
+  "type": "tradition",
+  "name": "Waldensians",
+  "start": 1170,
+  "end": null,
+  "parents": [
+   "catholic"
+  ],
+  "summary": "Waldo's followers preach poverty and Scripture in ordinary language. Church authorities condemn their unauthorized preaching. The movement survives and later joins the Reformed tradition.",
+  "why": "Calls for biblical preaching and church reform existed centuries before Luther.",
+  "facts": [
+   "The approximate founding date is the 1170s in Lyon, France.",
+   "Both women and men preach in the medieval movement.",
+   "Waldensians join the Swiss Reformation in 1532.",
+   "Waldensian churches still exist in Italy and South America."
+  ],
+  "sacraments": "Today, two sacraments are signs of grace. Baptism includes infants. Communion emphasizes Christ's spiritual presence. Medieval Waldensian views differed.",
+  "today": "Tens of thousands, mainly Italy, Uruguay, and Argentina.",
+  "disputed": "Medieval Waldensian communities did not all share the beliefs of modern Reformed churches.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.waldensian.org/history/waldo/",
+   "https://www.waldensian.org/history/role-of-women-in-the-middle-ages/",
+   "https://chiesavaldese.org/chi-siamo/storia/valdesi/",
+   "https://chiesavaldese.org/cosa-crediamo/",
+   "https://www.oikoumene.org/member-churches/waldensian-church"
+  ]
+ },
+ {
+  "id": "maronite-roman-communion",
+  "type": "event",
+  "name": "Maronites and Rome",
+  "start": 1182,
+  "end": 1182,
+  "on": "catholic",
+  "summary": "Maronites formally confirm communion with Rome in 1182. They retain their Syriac liturgy within the Catholic communion.",
+  "why": "Eastern Catholic churches share communion with the pope while keeping their own liturgical traditions.",
+  "facts": [
+   "Maronites trace their spiritual roots to Saint Maron in the fourth and fifth centuries.",
+   "Their church develops in Syria and Lebanon.",
+   "They retain a West Syriac liturgical tradition.",
+   "Maronites form one church within today's Eastern Catholic family."
+  ],
+  "disputed": "Maronites maintain that communion with Rome never broke. The 1182 date records confirmation, not an agreed founding or reunion.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+   "https://www.vaticannews.va/en/church/news/2025-05/rome-hosts-jubilee-of-eastern-churches-may.html"
+  ]
+ },
+ {
+  "id": "sack-of-constantinople-1204",
+  "type": "event",
+  "name": "Constantinople sacked",
+  "start": 1204,
+  "end": 1204,
+  "on": "eastern-orthodox",
+  "summary": "Fourth Crusade armies sack Constantinople, loot churches, and impose Latin rule. The attack makes reunion with Rome far harder for Byzantine Christians.",
+  "why": "The attack leaves Orthodox Christians with memories of violence and occupation that deepen their distrust of Rome.",
+  "facts": [
+   "The attackers are Western Christians, not Muslim armies.",
+   "They plunder an Orthodox Christian capital.",
+   "A Latin empire and Latin patriarch replace Byzantine authorities.",
+   "Byzantines recover Constantinople in 1261, but distrust persists."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://cup.columbia.edu/book/the-conquest-of-constantinople/9780231136686/",
+   "https://www.newadvent.org/cathen/04543c.htm",
+   "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
+  ]
+ },
+ {
+  "id": "lateran-iv",
+  "type": "council",
+  "name": "Fourth Lateran Council",
+  "start": 1215,
+  "end": 1215,
+  "on": "catholic",
+  "summary": "Innocent III's council defines Eucharistic transubstantiation and requires annual confession and Easter Communion for believers who have reached the age of discernment.",
+  "why": "Annual confession and Easter Communion become obligations for Western Christians. Transubstantiation becomes a focus of later Reformation debates.",
+  "facts": [
+   "Transubstantiation names the change of bread and wine into Christ's body and blood.",
+   "Canon 21 requires confession at least once a year.",
+   "The same canon requires Communion at least at Easter.",
+   "Priests must keep confessions secret."
+  ],
+  "sacraments": "The council defines transubstantiation and requires annual confession and Easter Communion. These rites already existed.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.papalencyclicals.net/councils/ecum12-2.htm",
+   "https://sourcebooks.web.fordham.edu/basis/lateran4.asp"
+  ]
+ },
+ {
+  "id": "thomas-aquinas",
+  "type": "figure",
+  "name": "Thomas Aquinas",
+  "start": 1225,
+  "end": 1274,
+  "on": "catholic",
+  "summary": "Aquinas, a Dominican theologian, uses philosophy to explain Christian teaching. His Summa explains how sacraments convey grace and how bread and wine become Christ's body and blood.",
+  "why": "His explanations shape Catholic sacramental language that Protestant reformers later debate.",
+  "facts": [
+   "He writes the Summa Theologiae.",
+   "He teaches that sacraments receive their power from Christ.",
+   "Transubstantiation changes substance while bread and wine retain their observable properties.",
+   "He composes texts for Eucharistic worship."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.op.org/saints/festum-s-thomae-de-aquino/",
+   "https://ccel.org/ccel/aquinas/summa.TP_Q60.html",
+   "https://english.op.org/godzdogz/sacraments-the-eucharist-presence/"
+  ]
+ },
+ {
+  "id": "lyon-ii",
+  "type": "council",
+  "name": "Lyon II",
+  "start": 1274,
+  "end": 1274,
+  "on": "catholic",
+  "summary": "A profession of faith accepted at Lyon lists seven sacraments. Byzantine representatives agree to union with Rome, but the reunion fails to endure.",
+  "why": "The formal list of seven sacraments classifies rites Christians already practiced.",
+  "facts": [
+   "The list names baptism, confirmation, Eucharist, penance, orders, marriage, and anointing of the sick.",
+   "The profession also affirms transubstantiation.",
+   "Emperor Michael VIII supports reunion partly for political protection.",
+   "Opposition in the Byzantine church prevents lasting union."
+  ],
+  "sacraments": "The profession of faith lists seven sacraments and affirms transubstantiation. Its count classifies older rites.",
+  "disputed": "Catholics recognize Lyon II as ecumenical. Eastern Orthodox churches reject its authority and the attempted union.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
+   "https://www.newadvent.org/cathen/09476c.htm"
+  ]
+ },
+ {
+  "id": "avignon-papacy",
+  "type": "event",
+  "name": "Avignon papacy",
+  "start": 1309,
+  "end": 1377,
+  "on": "catholic",
+  "summary": "Seven successive popes base their court in Avignon rather than Rome. Strong French influence and a costly administration fuel criticism of papal leadership.",
+  "why": "French influence and the cost of papal administration fuel distrust of church leadership before the Western Schism and Reformation.",
+  "facts": [
+   "Clement V settles in Avignon in 1309.",
+   "Avignon becomes a major center of papal administration.",
+   "Gregory XI returns to Rome in January 1377.",
+   "The later rival Avignon popes belong to a separate crisis."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://provence-alpes-cotedazur.com/que-faire/culture-et-patrimoine/monuments/palais-des-papes/papes-en-avignon/",
+   "https://westernciv.com/syllabus/birth-of-europe/spring/the-crisis-of-the-medieval-church/"
+  ]
+ },
+ {
+  "id": "western-schism",
+  "type": "event",
+  "name": "Western Schism",
+  "start": 1378,
+  "end": 1417,
+  "on": "catholic",
+  "summary": "Rival claimants in Rome and Avignon, later joined by Pisa, each claim the papacy. European rulers and churches divide their allegiance.",
+  "why": "Rival popes weaken trust in Catholic leadership. The crisis ends without creating permanent denominational branches.",
+  "facts": [
+   "Rival elections follow Gregory XI's death in 1378.",
+   "The Council of Pisa in 1409 adds a third claimant.",
+   "The Council of Constance resolves the main crisis.",
+   "Martin V's election in 1417 restores broad recognition of one pope."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
+   "https://www.newadvent.org/cathen/04288a.htm"
+  ]
+ },
+ {
+  "id": "wycliffe-lollards",
+  "type": "event",
+  "name": "Wycliffe and Lollards",
+  "start": 1382,
+  "end": 1382,
+  "on": "catholic",
+  "summary": "English church authorities condemn Wycliffe's teachings, including his rejection of transubstantiation. Lollard followers spread calls for biblical authority, preaching, and church reform.",
+  "why": "Wycliffe challenges transubstantiation, and his followers press for biblical authority and church reform more than a century before Luther.",
+  "facts": [
+   "1382 marks condemnation, not the movement's beginning or end.",
+   "Wycliffe supports Scripture's authority over corrupt clergy.",
+   "His followers circulate English Scripture and criticize church wealth.",
+   "Lollard communities persist into the sixteenth century."
+  ],
+  "disputed": "Wycliffe rejects transubstantiation but retains Christ's Eucharistic presence. Lollard beliefs vary, and some affirm more than a symbolic Communion.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://chaucer.fas.harvard.edu/pages/john-wycliffe-and-lollards",
+   "https://plato.stanford.edu/entries/wyclif/",
+   "https://www.newadvent.org/cathen/09333a.htm"
+  ]
+ },
+ {
+  "id": "constance",
+  "type": "council",
+  "name": "Council of Constance",
+  "start": 1414,
+  "end": 1418,
+  "on": "catholic",
+  "summary": "The council ends the Western Schism by securing one recognized pope. It also condemns Jan Hus, whom secular authorities burn in 1415.",
+  "why": "The council restores one recognized pope but condemns reformers, including Hus, whom secular authorities execute.",
+  "facts": [
+   "The council elects Martin V in 1417.",
+   "It asserts council authority over popes in resolving the crisis.",
+   "It condemns Hus and hands him to secular authorities on July 6, 1415.",
+   "It also condemns Wycliffe's teachings."
+  ],
+  "sacraments": "The council restricts the Eucharistic cup for laypeople, a practice contested by Hussites.",
+  "disputed": "Catholics reject permanent council authority over popes. Many Protestants honor Hus as a reformer and reject his condemnation.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.newadvent.org/cathen/04288a.htm",
+   "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
+   "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf"
+  ]
+ },
+ {
+  "id": "hussite-movement",
+  "type": "event",
+  "name": "Hussite reform",
+  "start": 1415,
+  "end": 1436,
+  "on": "catholic",
+  "summary": "After Hus's execution, Bohemian reformers demand preaching, moral reform, and Communion in both bread and wine. War and negotiations produce several Hussite groups.",
+  "why": "The Hussites make access to the Communion cup a central demand for church reform.",
+  "facts": [
+   "Hussites take their name from Jan Hus.",
+   "Moderate Utraquists emphasize Communion under both bread and wine.",
+   "Radical groups hold differing doctrines and political aims.",
+   "The 1436 settlement does not end all Hussite traditions."
+  ],
+  "disputed": "Hus did not adopt every teaching of Wycliffe. Later Hussite groups also differed from one another.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf",
+   "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/",
+   "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45763"
+  ]
+ },
+ {
+  "id": "florence",
+  "type": "council",
+  "name": "Council of Florence",
+  "start": 1438,
+  "end": 1445,
+  "on": "catholic",
+  "summary": "Eastern and Western delegates sign a reunion agreement in 1439. Most Orthodox communities reject it. A separate Armenian decree explains the seven sacraments.",
+  "why": "Catholics inherit detailed sacramental teaching from this council, but its reunion agreement fails to overcome Orthodox opposition.",
+  "facts": [
+   "The council moves from Ferrara to Florence in 1439.",
+   "The Greek agreement addresses the Filioque, purgatory, and papal primacy.",
+   "Mark of Ephesus refuses to sign the Greek union agreement.",
+   "The 1439 Armenian decree lists seven sacraments and describes their administration."
+  ],
+  "sacraments": "The Armenian decree describes seven sacraments. Baptism brings new birth. Eucharistic bread and wine become Christ's body and blood. It specifies materials, words, and ministers.",
+  "disputed": "Catholics accept the council as ecumenical. Orthodox churches reject it. Political pressure and opposition within Orthodox churches help explain the failed reunion.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.papalencyclicals.net/councils/ecum17.htm",
+   "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
+   "https://www.oca.org/reflections/fr.-lawrence-farley/patience-and-reception",
+   "https://www.newadvent.org/cathen/06111a.htm"
+  ]
+ },
+ {
+  "id": "moscow-orthodox-center",
+  "type": "event",
+  "name": "Moscow rises",
+  "start": 1448,
+  "end": 1448,
+  "on": "eastern-orthodox",
+  "summary": "Russian bishops elect their own metropolitan in 1448. Moscow's rulers expand their power and increasingly present their realm as a defender of Orthodox Christianity.",
+  "why": "Moscow becomes a major Orthodox center as Byzantine power declines and Constantinople later falls.",
+  "facts": [
+   "Jonah becomes metropolitan through an election by Russian bishops in 1448.",
+   "Moscow rejects the Florence reunion agreement.",
+   "Ivan III marries Byzantine princess Sophia Palaiologina in 1472.",
+   "The formal Moscow patriarchate begins later, in 1589."
+  ],
+  "disputed": "Russian bishops elect their own metropolitan in 1448. Moscow becomes a patriarchate later. The explicit \"Third Rome\" claim chiefly dates to the sixteenth century.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.oca.org/saints/lives/2018/06/15/101725-saint-jonah-metropolitan-of-moscow",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixteenth-century/russia3"
+  ]
+ },
+ {
+  "id": "fall-of-constantinople",
+  "type": "event",
+  "name": "Constantinople falls",
+  "start": 1453,
+  "end": 1453,
+  "on": "eastern-orthodox",
+  "summary": "Ottoman Sultan Mehmed II captures Constantinople on May 29, ending the Byzantine Empire. Orthodox church life continues under Ottoman rule.",
+  "why": "Orthodox churches lose Byzantine imperial protection and face the coming Reformation under Ottoman rule.",
+  "facts": [
+   "Constantinople falls after a sustained Ottoman siege.",
+   "The Byzantine emperor Constantine XI dies during the capture.",
+   "The patriarchate survives under Ottoman authority.",
+   "Moscow grows in influence but does not replace every Orthodox center."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/the-fall-of-byzantium",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2"
+  ]
+ },
+ {
+  "id": "unitas-fratrum-founded",
+  "type": "event",
+  "name": "Unity of Brethren",
+  "start": 1457,
+  "end": 1457,
+  "on": "catholic",
+  "summary": "Reformers inspired by Hus organize the Unity of Brethren at Kunvald in Bohemia. This church is the historical ancestor of the Moravian tradition.",
+  "why": "The Moravian church traces its roots to this medieval Bohemian reform movement, which it renews in the eighteenth century.",
+  "facts": [
+   "Unitas Fratrum means Unity of Brethren.",
+   "The community begins in 1457, decades before Luther.",
+   "It emphasizes following Christ in daily life.",
+   "The later renewed Moravian church carries forward this tradition."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/",
+   "https://www.unitasfratrum.org/about-unitas-fratrum/our-origin-growth"
+  ]
+ },
+ {
+  "id": "moravian",
+  "type": "tradition",
+  "name": "Moravian Church",
+  "start": 1457,
+  "end": null,
+  "parents": [
+   "catholic"
+  ],
+  "summary": "The Unity of Brethren arose from Bohemian reform before Luther. Refugees renewed its church life at Herrnhut in the eighteenth century.",
+  "why": "Moravians carried earlier Czech reform into Protestant missions and influenced Wesley's search for assurance of faith.",
+  "facts": [
+   "The Unity of Brethren organized at Kunwald in 1457.",
+   "Its founders drew on the reform associated with Jan Hus.",
+   "Zinzendorf welcomed Moravian refugees at Herrnhut in 1722.",
+   "Missionaries went to the Caribbean in 1732."
+  ],
+  "sacraments": "Two: baptism, including infants, and Holy Communion. Moravians affirm Christ's presence and covenant fellowship without defining precisely how Christ is present in the elements.",
+  "today": "Over one million worldwide, mainly eastern Africa, the Caribbean, and the Americas.",
+  "disputed": "The church began in 1457. Its 1727 renewal continued that church rather than creating a Lutheran offshoot.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+   "https://moravianarchives.org/history/",
+   "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/"
+  ]
+ },
+ {
+  "id": "ninety-five-theses",
+  "type": "schism",
+  "name": "Luther's 95 Theses",
+  "start": 1517,
+  "end": 1521,
+  "on": "catholic",
+  "splits": [
+   "lutheran"
+  ],
+  "summary": "Martin Luther challenged indulgence preaching at Wittenberg in 1517. The dispute widened into separation from Rome by 1521.",
+  "why": "Luther's challenge to indulgences began the dispute that led to Lutheran churches, although he initially sought reform within Catholicism.",
+  "facts": [
+   "Luther circulated his theses on October 31, 1517.",
+   "Printing spread the controversy across Europe.",
+   "Pope Leo X excommunicated Luther in January 1521."
+  ],
+  "sacraments": "The initial dispute concerned indulgences, repentance, and penance. Luther later challenged the Catholic sacramental system.",
+  "disputed": "Posting the theses on the church door remains debated. Catholics and Lutherans interpret the later rupture differently.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.loc.gov/item/2021667736/",
+   "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+  ]
+ },
+ {
+  "id": "lutheran",
+  "type": "tradition",
+  "name": "Lutheran",
+  "start": 1517,
+  "end": null,
+  "parents": [
+   "catholic"
+  ],
+  "summary": "Luther and his colleagues built churches around justification by faith, biblical preaching, and sacraments as gifts of grace.",
+  "why": "Lutheran churches teach that sacraments convey grace and Christ's body and blood are truly present in Communion.",
+  "facts": [
+   "Luther initially worked as a Catholic monk and teacher.",
+   "The Augsburg Confession became a shared doctrinal standard.",
+   "The Book of Concord gathered Lutheran confessions in 1580."
+  ],
+  "sacraments": "Usually two: baptism, including infants, and Eucharist. Both convey grace. Christ's body and blood are present with bread and wine in sacramental union. Absolution also has sacramental status.",
+  "today": "Over 78 million in Lutheran World Federation churches, with others outside it.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf",
+   "https://www.lcms.org/about/beliefs/faqs/doctrine",
+   "https://bookofconcord.org/solid-declaration/the-holy-supper/",
+   "https://lutheranworld.org/sites/default/files/2024-09/LWF%202024-31%20Strategy%20-%20EN.pdf"
+  ]
+ },
+ {
+  "id": "reformed",
+  "type": "tradition",
+  "name": "Reformed",
+  "start": 1519,
+  "end": null,
+  "parents": [
+   "catholic"
+  ],
+  "summary": "Zwingli led reform in Zurich. Calvin later shaped Geneva. Their churches developed into Swiss, Dutch, French, Presbyterian, and related Reformed traditions.",
+  "why": "Reformed churches form a major Protestant family with Communion teachings that differ from Lutheran sacramental union.",
+  "facts": [
+   "Zwingli began preaching at Zurich's Grossmunster in 1519.",
+   "Zurich adopted reforms through public debates and council decisions.",
+   "Calvin and Bullinger agreed on Communion teaching in 1549.",
+   "Presbyterian churches belong to this wider family."
+  ],
+  "sacraments": "Two: baptism, usually including infants, and the Lord's Supper. Calvin taught real spiritual presence and feeding through faith. Zwingli emphasized remembrance and rejected bodily presence.",
+  "today": "About 100 million in World Communion of Reformed Churches member churches.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html",
+   "https://pcusa.org/historical-society/exhibits/foundations-faith",
+   "https://centernet.pcusa.org/ministries/worship/sacraments/",
+   "https://pcusa.org/sacraments-lords-supper-faqs",
+   "https://wcrc.eu/about/",
+   "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+  ]
+ },
+ {
+  "id": "diet-of-worms",
+  "type": "event",
+  "name": "Diet of Worms",
+  "start": 1521,
+  "end": 1521,
+  "on": "lutheran",
+  "summary": "Luther refused to retract his writings before Emperor Charles V. The Edict of Worms outlawed him and condemned his teachings.",
+  "why": "Luther's survival depended on rulers willing to protect him against imperial law.",
+  "facts": [
+   "Luther appeared before the diet in April 1521.",
+   "Charles V issued the edict in May.",
+   "Frederick the Wise sheltered Luther at Wartburg Castle."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+   "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
+  ]
+ },
+ {
+  "id": "anabaptist",
+  "type": "tradition",
+  "name": "Anabaptist",
+  "start": 1525,
+  "end": null,
+  "parents": [
+   "reformed"
+  ],
+  "summary": "Zurich reformers baptized professing believers rather than infants in 1525. Related movements elsewhere formed voluntary churches separate from state control.",
+  "why": "Anabaptists made professed faith the basis for baptism and church membership. Mennonites, Hutterites, and Amish share these roots.",
+  "facts": [
+   "Conrad Grebel baptized George Blaurock in Zurich on January 21, 1525.",
+   "Menno Simons gave Mennonites their name.",
+   "Hutterites began communal sharing in Moravia in 1528.",
+   "Jakob Ammann's followers separated in 1693, forming the Amish."
+  ],
+  "sacraments": "Usually two ordinances or signs: believers' baptism and the Lord's Supper, remembering Christ and renewing community commitment. Many also practice footwashing.",
+  "today": "About 2.13 million baptized believers worldwide, especially Africa, Asia, and the Americas.",
+  "disputed": "The Zurich link records Swiss origins. Anabaptism also developed through distinct South German, Austrian, and Dutch movements.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+   "https://hutterites.org/history/community-of-goods/",
+   "https://groups.etown.edu/amishstudies/religion/amish-origins/",
+   "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/baptism/",
+   "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/foot-washing/",
+   "https://mwc-cmm.org/en/about-mwc/"
+  ]
+ },
+ {
+  "id": "schleitheim-confession",
+  "type": "council",
+  "name": "Schleitheim Confession",
+  "start": 1527,
+  "end": 1527,
+  "on": "anabaptist",
+  "summary": "Swiss Brethren adopted seven articles at Schleitheim, defining baptism, discipline, Communion, church separation, leadership, nonviolence, and refusal of oaths.",
+  "why": "The Swiss Brethren tied baptism to voluntary church membership and rejected violence, separating church life from political power.",
+  "facts": [
+   "The gathering met on February 24, 1527.",
+   "Michael Sattler helped draft the articles.",
+   "The seven articles are not seven sacraments.",
+   "These articles did not represent every Anabaptist group."
+  ],
+  "sacraments": "Baptism follows repentance and confessed faith. The Lord's Supper belongs to the baptized community committed to shared discipline.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://gameo.org/index.php?title=Schleitheim_Confession",
+   "https://zimmer.fresnostate.edu/~mariterel/schleitheim_confession.htm"
+  ]
+ },
+ {
+  "id": "marburg-colloquy",
+  "type": "schism",
+  "name": "Marburg Colloquy",
+  "start": 1529,
+  "end": 1529,
+  "on": "lutheran",
+  "splits": [
+   "lutheran",
+   "reformed"
+  ],
+  "summary": "Luther and Zwingli agreed on many doctrines but could not agree about Christ's bodily presence in the Eucharist, blocking Protestant union.",
+  "why": "Disagreement about Christ's presence in Communion prevented Luther and Zwingli from uniting their churches.",
+  "facts": [
+   "Philip of Hesse convened the meeting in October 1529.",
+   "Luther defended Christ's bodily presence with bread and wine.",
+   "Zwingli interpreted the bread and wine as commemorative signs."
+  ],
+  "sacraments": "Luther affirmed Christ's real bodily presence with bread and wine. Zwingli emphasized remembrance and rejected bodily presence in the elements.",
+  "disputed": "Swiss reform began independently before Marburg. This split records failed union rather than descent from Lutheranism.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html",
+   "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Marburg%2C_Colloquy_of",
+   "https://bookofconcord.org/solid-declaration/the-holy-supper/"
+  ]
+ },
+ {
+  "id": "augsburg-confession",
+  "type": "event",
+  "name": "Augsburg Confession",
+  "start": 1530,
+  "end": 1530,
+  "on": "lutheran",
+  "summary": "Philipp Melanchthon drafted a statement of Lutheran faith that Protestant rulers presented to Charles V at Augsburg.",
+  "why": "Lutheran churches share this statement of belief about salvation, church life, baptism, and Communion.",
+  "facts": [
+   "Representatives presented the confession on June 25, 1530.",
+   "It defended justification by faith.",
+   "It affirmed infant baptism and Christ's presence in Communion."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://thebookofconcord.org/wp-content/PDFs/augsburg.pdf",
+   "https://bookofconcord.org/"
+  ]
+ },
+ {
+  "id": "act-of-supremacy",
+  "type": "schism",
+  "name": "Act of Supremacy",
+  "start": 1534,
+  "end": 1534,
+  "on": "catholic",
+  "splits": [
+   "anglican"
+  ],
+  "summary": "Parliament declared Henry VIII supreme head of the Church of England, replacing papal authority within England.",
+  "why": "England broke with papal authority before its church adopted Protestant changes to worship and teaching.",
+  "facts": [
+   "Henry sought annulment of his marriage to Catherine of Aragon.",
+   "Parliament strengthened royal control through several acts.",
+   "Henry retained much Catholic doctrine and sacramental practice."
+  ],
+  "disputed": "Anglicans claim continuity with England's ancient church. Catholics see the rejection of papal authority as schism.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+   "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism"
+  ]
+ },
+ {
+  "id": "anglican",
+  "type": "tradition",
+  "name": "Anglican",
+  "start": 1534,
+  "end": null,
+  "parents": [
+   "catholic"
+  ],
+  "summary": "England's church broke with papal authority, adopted Protestant reforms, and retained bishops and ordered worship. Related churches later formed a worldwide communion.",
+  "why": "Anglican churches, including the American Episcopal Church, combine Reformed and Catholic sacramental emphases.",
+  "facts": [
+   "Thomas Cranmer helped shape English worship and doctrine.",
+   "The Book of Common Prayer first appeared in 1549.",
+   "The 1563 Thirty-nine Articles express Reformation teaching."
+  ],
+  "sacraments": "Two gospel sacraments: baptism, including infants, and Eucharist. Five other rites are commonly called sacraments. Communion teaching varies, including Reformed spiritual presence and Anglo-Catholic real presence.",
+  "today": "About 85 million worldwide, especially Africa, Britain, and Commonwealth countries.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism",
+   "https://www.churchofengland.org/faith-life/what-we-believe/eucharist",
+   "https://www.churchofengland.org/sites/default/files/2025-01/gs-misc-1406-a-report-from-the-faith-and-order-commission.pdf",
+   "https://gafcon.org/"
+  ]
+ },
+ {
+  "id": "john-calvin",
+  "type": "figure",
+  "name": "John Calvin",
+  "start": 1536,
+  "end": 1564,
+  "on": "reformed",
+  "summary": "John Calvin published the Institutes in 1536 and helped organize Geneva's Reformed church, returning in 1541 after exile.",
+  "why": "Calvin's teaching shaped Reformed beliefs about grace, church discipline, and spiritual communion with Christ.",
+  "facts": [
+   "Calvin expanded the Institutes through several editions, ending in 1559.",
+   "Calvin taught predestination and justification by faith.",
+   "Geneva trained ministers and sheltered Protestant refugees.",
+   "Calvin affirmed real spiritual feeding on Christ in Communion."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://pcusa.org/historical-society/exhibits/foundations-faith",
+   "https://centernet.pcusa.org/what-we-believe/sacraments/",
+   "https://pcusa.org/sacraments-lords-supper-faqs"
+  ]
+ },
+ {
+  "id": "menno-simons",
+  "type": "figure",
+  "name": "Menno Simons",
+  "start": 1536,
+  "end": 1561,
+  "on": "anabaptist",
+  "summary": "Menno Simons left the Catholic priesthood in 1536 and led Dutch Anabaptists committed to discipleship, believers' baptism, and nonviolence.",
+  "why": "Mennonites take their name from a leader who helped nonviolent Anabaptist communities survive persecution.",
+  "facts": [
+   "Menno served as a priest in Friesland.",
+   "His followers became known as Mennonites.",
+   "He rejected the violence associated with the Munster rebellion."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://gameo.org/index.php?title=Menno_Simons_%281496-1561%29",
+   "https://www.mennoniteusa.org/who-are-mennonites/history/"
+  ]
+ },
+ {
+  "id": "jesuit-approval",
+  "type": "event",
+  "name": "Jesuit Approval",
+  "start": 1540,
+  "end": 1540,
+  "on": "catholic",
+  "summary": "Pope Paul III approved the Society of Jesus, founded by Ignatius of Loyola and companions for preaching, education, and missions.",
+  "why": "Jesuit schools and missions became part of Catholic renewal during the Protestant Reformations.",
+  "facts": [
+   "Papal approval came on September 27, 1540.",
+   "Jesuits opened schools and served overseas missions.",
+   "The order remained within the Catholic Church."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.jesuits.global/2021/09/26/on-27-september-1540-the-society-of-jesus-received-papal-approval/",
+   "https://www.jesuits.global/about-us/the-jesuits/"
+  ]
+ },
+ {
+  "id": "council-of-trent",
+  "type": "council",
+  "name": "Council of Trent",
+  "start": 1545,
+  "end": 1563,
+  "on": "catholic",
+  "summary": "Catholic bishops answered Protestant challenges, defined disputed teachings, and ordered reforms in clergy training and church discipline.",
+  "why": "Trent defined Catholic sacramental teaching in response to Protestant challenges, preserving differences that still divide churches.",
+  "facts": [
+   "The council met in several sessions between 1545 and 1563.",
+   "It reaffirmed seven sacraments in 1547.",
+   "It reaffirmed transubstantiation and Christ's real presence in 1551.",
+   "It required seminaries to improve priestly formation."
+  ],
+  "sacraments": "Seven sacraments convey grace. Baptism includes infants. The Eucharist becomes Christ's body and blood through transubstantiation, while appearances of bread and wine remain.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.newadvent.org/cathen/15030c.htm",
+   "https://www.newadvent.org/cathen/13295a.htm",
+   "https://www.newadvent.org/cathen/05573a.htm"
+  ]
+ },
+ {
+  "id": "english-prayer-and-articles",
+  "type": "event",
+  "name": "Prayer Book and Articles",
+  "start": 1549,
+  "end": 1563,
+  "on": "anglican",
+  "summary": "The Book of Common Prayer introduced English worship services in 1549. The Thirty-nine Articles of 1563 set out the church's Reformation teaching.",
+  "why": "Anglican worship and sacramental teaching draw on both the prayer book and the Articles.",
+  "facts": [
+   "Thomas Cranmer led work on the first prayer book.",
+   "A more strongly Protestant revision appeared in 1552.",
+   "The Articles distinguish two gospel sacraments from five other rites.",
+   "The Articles reject transubstantiation and affirm spiritual reception of Christ."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+   "https://www.churchofengland.org/sites/default/files/2025-01/gs-misc-1406-a-report-from-the-faith-and-order-commission.pdf",
+   "https://www.churchofengland.org/sites/default/files/2025-01/erg-part-report-jan-2025-hob-a-compendium-of-sources-on-the-c-of-e-doctrine-of-marriage.pdf"
+  ]
+ },
+ {
+  "id": "peace-of-augsburg",
+  "type": "event",
+  "name": "Peace of Augsburg",
+  "start": 1555,
+  "end": 1555,
+  "on": "lutheran",
+  "summary": "The Holy Roman Empire recognized Catholic and Lutheran territorial churches. Rulers generally determined their territories' religion, with provisions for dissenters to emigrate.",
+  "why": "Rulers' religious choices helped turn reform movements into established regional churches.",
+  "facts": [
+   "The agreement took effect on September 25, 1555.",
+   "It recognized churches adhering to the Augsburg Confession.",
+   "Reformed Christians and Anabaptists lacked recognition under this settlement."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi%3Adocument-4386",
+   "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/augsburg-religious-peace-1555"
+  ]
+ },
+ {
+  "id": "elizabethan-settlement",
+  "type": "event",
+  "name": "Elizabethan Settlement",
+  "start": 1559,
+  "end": 1559,
+  "on": "anglican",
+  "summary": "Elizabeth I restored royal supremacy and Protestant worship after Mary I's Catholic restoration, using a revised prayer book and retaining bishops.",
+  "why": "Elizabeth's settlement shaped the Church of England and left some reformers dissatisfied, contributing to Puritan dissent.",
+  "facts": [
+   "The monarch became supreme governor rather than supreme head.",
+   "The Act of Uniformity required the 1559 prayer book.",
+   "Catholics and some Protestant reformers resisted the settlement."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+   "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/anglicanism"
+  ]
+ },
+ {
+  "id": "scottish-reformation",
+  "type": "event",
+  "name": "Scottish Reformation",
+  "start": 1560,
+  "end": 1560,
+  "on": "reformed",
+  "summary": "John Knox and fellow reformers helped Scotland's Parliament adopt the Scots Confession and reject papal jurisdiction and the Mass.",
+  "why": "Scotland's Reformed churches developed Presbyterian government, giving elders authority instead of bishops.",
+  "facts": [
+   "Knox learned from Calvin during exile in Geneva.",
+   "Six ministers prepared the Scots Confession in 1560.",
+   "The First Book of Discipline proposed church and educational reforms.",
+   "Presbyterian government developed further over the following decades."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://pcusa.org/historical-society/exhibits/foundations-faith",
+   "https://www.churchofscotland.org.uk/about-us/our-faith/book-of-confessions"
+  ]
+ },
+ {
+  "id": "congregationalist",
+  "type": "tradition",
+  "name": "Congregationalist",
+  "start": 1581,
+  "end": null,
+  "parents": [
+   "anglican",
+   "reformed"
+  ],
+  "summary": "English Separatists and Puritans developed churches governed by their own congregations, drawing on Reformed beliefs while resisting control by bishops.",
+  "why": "Congregationalists gave each local church authority over its own affairs. English Baptists emerged partly from these churches.",
+  "facts": [
+   "Robert Browne organized a separatist congregation around 1581.",
+   "Some Puritans sought reform within England's church. Others separated.",
+   "Pilgrims brought congregational church life to Plymouth in 1620.",
+   "The Savoy Declaration of 1658 adapted Westminster teaching."
+  ],
+  "sacraments": "Two sacraments or ordinances: baptism and the Lord's Supper. Historically, churches baptized infants and taught Christ's spiritual presence. Modern congregations vary, including memorial interpretations.",
+  "today": "Millions worldwide, including united churches, especially Americas, Britain, southern Africa, and Pacific.",
+  "disputed": "The Anglican link records English origins. The Reformed link records theology rather than a single formal church split.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.congregational.org.uk/church-membership/a-past-that-inspires",
+   "https://oikoumene.org/church-families/reformed-churches",
+   "https://uccsadenomination.org.za/",
+   "https://www.ccel.org/ccel/schaff/creeds1.x.iii.html",
+   "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/E7BFA5B8735EED51A5974140C88A9F01/S0017816000013110a.pdf/john_robinson_and_the_beginnings_of_the_pilgrim_movement.pdf"
+  ]
+ },
+ {
+  "id": "union-of-brest",
+  "type": "schism",
+  "name": "Union of Brest",
+  "start": 1596,
+  "end": 1596,
+  "on": "eastern-orthodox",
+  "splits": [
+   "eastern-catholic"
+  ],
+  "summary": "Several bishops of the Kyivan metropolitan church entered communion with Rome while preserving Byzantine worship. Other bishops, clergy, and laypeople opposed the union.",
+  "why": "Eastern Catholic churches can preserve Eastern worship while accepting communion with Rome.",
+  "facts": [
+   "The union occurred in the Polish-Lithuanian Commonwealth.",
+   "It contributed to today's Ukrainian and Belarusian Greek Catholic churches.",
+   "Orthodox communities continued outside the union.",
+   "Eastern Catholic churches also arose through other unions."
+  ],
+  "disputed": "Catholic supporters describe restored communion. Orthodox opponents describe a divisive union accompanied by political pressure.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://ugcc.ua/en/church/history/union-of-brest/",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/the-unia"
+  ]
+ },
+ {
+  "id": "eastern-catholic",
+  "type": "tradition",
+  "name": "Eastern Catholic churches",
+  "start": 1596,
+  "end": null,
+  "parents": [
+   "eastern-orthodox",
+   "catholic"
+  ],
+  "summary": "Eastern churches in full communion with the pope that keep their own liturgies, clergy, and church law. The largest, the Ukrainian Greek Catholic Church, came out of the Union of Brest in 1596.",
+  "why": "They show Catholic unity does not require the Latin Mass. Orthodox churches see these unions as an obstacle to reunion.",
+  "facts": [
+   "There are 23 Eastern Catholic churches alongside the Latin Church.",
+   "The Maronites of Lebanon confirmed their ties with Rome in 1182.",
+   "Many of them ordain married men as priests.",
+   "Each uses an Eastern rite such as Byzantine, Syriac, or Coptic."
+  ],
+  "sacraments": "Seven sacraments, often called holy mysteries. Infants receive baptism, chrismation, and first communion together. The Byzantine rite uses leavened bread.",
+  "today": "About 18 million, mostly in Ukraine, India, and the Middle East",
+  "disputed": "Orthodox critics call these unions uniatism. The 1993 Balamand statement, signed by Catholic and Orthodox theologians, rejected it as a path to reunion.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.britannica.com/topic/Eastern-rite-church",
+   "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
+   "https://www.britannica.com/event/Union-of-Brest-Litovsk"
+  ]
+ },
+ {
+  "id": "baptist",
+  "type": "tradition",
+  "name": "Baptist",
+  "start": 1609,
+  "end": null,
+  "parents": [
+   "anglican",
+   "congregationalist"
+  ],
+  "summary": "John Smyth and Thomas Helwys formed an English believers' baptism church in Amsterdam in 1609, emerging from Separatist and Puritan roots.",
+  "why": "Baptists emerged from English Separatism. They share believers' baptism with Anabaptists without sharing a single origin.",
+  "facts": [
+   "Dutch Mennonites influenced Smyth. Helwys resisted joining them.",
+   "Helwys established an English congregation around 1612 and defended religious liberty.",
+   "General Baptists taught that Christ died for all.",
+   "Particular Baptists emerged separately in the 1630s with Calvinist beliefs."
+  ],
+  "sacraments": "Two ordinances: believers' baptism, usually immersion, and the Lord's Supper, usually memorial. Some Reformed Baptists also emphasize spiritual feeding on Christ.",
+  "today": "At least 53 million baptized believers in Baptist World Alliance member churches.",
+  "disputed": "Most historians trace Baptist origins to English Separatists. Some Baptists claim continuity with earlier churches rather than a seventeenth-century beginning.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.jstor.org/stable/10.7722/j.ctt81sdz",
+   "https://www.thegospelcoalition.org/themelios/article/origins-of-the-particular-baptists/",
+   "https://bfm.sbc.net/bfm2000/",
+   "https://baptistworld.org/annual-ministry-report/",
+   "https://www.ccel.org/creeds/bcf/bcfc30.htm"
+  ]
+ },
+ {
+  "id": "synod-of-dort",
+  "type": "council",
+  "name": "Synod of Dort",
+  "start": 1618,
+  "end": 1619,
+  "on": "reformed",
+  "summary": "Dutch and international Reformed delegates rejected Remonstrant teachings and issued canons on election, atonement, human corruption, grace, and perseverance.",
+  "why": "Calvinists and Arminians disagree about how God's grace relates to human response. Dort established the Reformed position.",
+  "facts": [
+   "Delegates met at Dordrecht in the Netherlands.",
+   "The Remonstrants followed Jacob Arminius's challenge to Reformed teaching.",
+   "The Canons address five disputed points, not all Christian doctrine."
+  ],
+  "disputed": "Reformed churches accepted the Canons as faithful teaching. Remonstrants rejected the verdict and faced political suppression.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+   "https://www.opc.org/OS/2019/OS_Oct_2019.pdf"
+  ]
+ },
+ {
+  "id": "thirty-years-war",
+  "type": "event",
+  "name": "Thirty Years' War",
+  "start": 1618,
+  "end": 1648,
+  "on": "catholic",
+  "summary": "War devastated central Europe as religious conflict intertwined with dynastic power. The Peace of Westphalia in 1648 secured recognition for Reformed churches.",
+  "why": "Religious divisions and rulers' ambitions fueled devastating war. The peace recognized three confessions but stopped short of universal religious freedom.",
+  "facts": [
+   "Fighting began with rebellion in Bohemia in 1618.",
+   "Catholic France opposed Catholic Habsburg rulers for political reasons.",
+   "Westphalia recognized Catholic, Lutheran, and Reformed confessions in the Empire.",
+   "The settlement did not grant universal religious freedom."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648",
+   "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/augsburg-religious-peace-1555"
+  ]
+ },
+ {
+  "id": "westminster-confession",
+  "type": "event",
+  "name": "Westminster Confession",
+  "start": 1646,
+  "end": 1646,
+  "on": "reformed",
+  "summary": "The Westminster Assembly completed a Reformed confession during the English Civil War. Scotland adopted it in 1647 as a doctrinal standard.",
+  "why": "Presbyterian churches share this doctrinal standard. Congregationalists and Baptists later adapted it for their own confessions.",
+  "facts": [
+   "Parliament convened the assembly in 1643.",
+   "The confession teaches two sacraments.",
+   "It supports baptism of believers' children.",
+   "It teaches spiritual reception of Christ in the Lord's Supper."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.churchofscotland.org.uk/about-us/our-faith/book-of-confessions",
+   "https://www.churchofscotland.org.uk/__data/assets/pdf_file/0007/143584/printBookofConfessions.pdf"
+  ]
+ },
+ {
+  "id": "quaker",
+  "type": "tradition",
+  "name": "Quaker",
+  "start": 1650,
+  "end": null,
+  "parents": [
+   "anglican"
+  ],
+  "summary": "George Fox and other English dissenters formed the Religious Society of Friends, emphasizing direct guidance by Christ's Spirit and rejecting required outward rituals.",
+  "why": "Friends traditionally understand baptism and Communion as inward experiences of the Spirit, without administering outward sacraments.",
+  "facts": [
+   "The name Quaker arose during Fox's Derby imprisonment in 1650.",
+   "Margaret Fell helped organize and sustain the movement.",
+   "Friends developed a witness against war and compulsory oaths.",
+   "Modern Friends include evangelical, conservative, and liberal communities."
+  ],
+  "sacraments": "Traditionally no outward sacraments. Baptism and Communion are inward experiences of the Spirit. Some evangelical Friends use outward rites.",
+  "today": "Over 400,000 worldwide, especially Kenya, Bolivia, the United States, and Britain.",
+  "disputed": "The Anglican link records the English religious setting rather than one formal secession. Some modern liberal Friends do not affirm Nicene Christianity.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.quakersintheworld.org/quakers-in-action/12",
+   "https://quaker.org/legacy/charlestonwv/meeting-the-spirit.html",
+   "https://fwcc.world/about-us/mission-history/",
+   "https://www.quaker.org.uk/communities/news/5-take-aways-from-george-fox-400"
+  ]
+ },
+ {
+  "id": "old-believers-schism",
+  "type": "schism",
+  "name": "Old Believers Schism",
+  "start": 1666,
+  "end": 1667,
+  "on": "eastern-orthodox",
+  "splits": [
+   "old-believers"
+  ],
+  "summary": "Moscow councils upheld liturgical changes associated with Patriarch Nikon and condemned opponents, deepening separation between Russia's established church and Old Believers.",
+  "why": "Disagreements over inherited worship and church authority divided Orthodox Christians as well as Western churches.",
+  "facts": [
+   "Nikon began changing Russian liturgical practices in 1653.",
+   "Changes included using three fingers rather than two when crossing oneself.",
+   "The councils also deposed Nikon while retaining his reforms.",
+   "Authorities persecuted opponents, including Archpriest Avvakum."
+  ],
+  "disputed": "Reformers sought agreement with Greek practice. Old Believers regarded the inherited Russian rites as the faithful tradition.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4",
+   "https://www.heritageabroad.gov/wp-content/uploads/2022/10/Old-Believers-Report-final-for-website.pdf"
+  ]
+ },
+ {
+  "id": "old-believers",
+  "type": "tradition",
+  "name": "Old Believers",
+  "start": 1666,
+  "end": null,
+  "parents": [
+   "eastern-orthodox"
+  ],
+  "summary": "Russian Christians preserved pre-reform worship after the seventeenth-century schism. Their communities divided into groups with priests and groups without priests.",
+  "why": "Old Believers share Orthodox beliefs but differ over church authority. Communities without priests cannot celebrate the Eucharist.",
+  "facts": [
+   "Old Believers retained the two-fingered sign of the cross.",
+   "Priestly and priestless communities developed different church structures.",
+   "The Russian Orthodox Church lifted the old condemnations in 1971."
+  ],
+  "sacraments": "Priestly groups retain seven mysteries, infant baptism, and Christ's real Eucharistic presence. Priestless groups retain baptism but lack priestly Eucharist and other priest-dependent rites.",
+  "today": "Estimated two million in Russia, eastern Europe, and diaspora communities.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.cdamm.org/articles/old-believers",
+   "https://theoldbelievers.com/old-believer-work/spiritual-communion-among-the-priestless-old-believers-bezpopovtsy/",
+   "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4"
+  ]
+ },
+ {
+  "id": "pietism",
+  "type": "event",
+  "name": "Pietism and Spener",
+  "start": 1675,
+  "end": 1675,
+  "on": "lutheran",
+  "summary": "Philipp Jakob Spener published Pia Desideria, urging Bible study, active lay participation, practical Christian living, and better pastoral formation.",
+  "why": "Pietism encouraged personal renewal within Protestant churches and influenced Moravians, Methodists, and later revivals.",
+  "facts": [
+   "Spener worked as a Lutheran pastor in Frankfurt.",
+   "Small gatherings studied Scripture and encouraged Christian living.",
+   "Pietism emphasized personal renewal without forming one new denomination."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://e-revistas.uc3m.es/index.php/REVHISTO/article/view/2581",
+   "https://www.persee.fr/doc/rhpr_0035-2403_1991_num_71_2_5135_t1_0263_0000_2"
+  ]
+ },
+ {
+  "id": "herrnhut-renewal",
+  "type": "event",
+  "name": "Herrnhut Renewal",
+  "start": 1727,
+  "end": 1727,
+  "on": "moravian",
+  "summary": "Members of Herrnhut's divided refugee community experienced reconciliation and spiritual renewal during a Communion service on August 13, 1727.",
+  "why": "A Communion service helped reconcile Herrnhut's divided community, which sustained prayer and sent missionaries abroad.",
+  "facts": [
+   "Count Zinzendorf supported the community on his Saxon estate.",
+   "The service took place at nearby Berthelsdorf's Lutheran parish church.",
+   "Moravians remember the day as their spiritual birthday."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.moravian.org/2020/08/august-13th-the-spiritual-birthday-of-the-moravian-church/",
+   "https://www.moravianchurcharchives.org/digital-access/digital-access-1066/"
+  ]
+ },
+ {
+  "id": "methodist",
+  "type": "tradition",
+  "name": "Methodist",
+  "start": 1729,
+  "end": null,
+  "parents": [
+   "anglican"
+  ],
+  "summary": "John and Charles Wesley organized renewal within Anglicanism through disciplined devotion, preaching, and societies. Methodist churches later gained separate ministries and sacramental authority.",
+  "why": "Methodists grew from Anglican renewal into separate churches that emphasize grace, conversion, and holy living.",
+  "facts": [
+   "The Oxford Holy Club began in 1729.",
+   "John Wesley experienced assurance at Aldersgate in 1738.",
+   "Charles Wesley wrote hymns for worship and teaching.",
+   "American Methodists formed an independent church in 1784. English separation developed through 1795."
+  ],
+  "sacraments": "Two sacraments: baptism, including infants, and Holy Communion. Both are means of grace. Methodists affirm Christ's real spiritual presence without transubstantiation.",
+  "today": "Over 80 million in World Methodist Council churches, including united churches.",
+  "disputed": "1729 dates the renewal movement. Separate churches emerged later. Wesley resisted treating English Methodism as a new denomination.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://worldmethodistcouncil.org/about-us/",
+   "https://www.umc.org/en/content/renewing-waters-how-united-methodists-understand-%20baptism",
+   "https://www.umc.org/en/content/ask-the-umc-what-do-i-need-to-know-about-holy-communion-in-the-united-methodist-church",
+   "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf",
+   "https://www.umc.org/en/content/glossary-christmas-conference"
+  ]
+ },
+ {
+  "id": "first-great-awakening",
+  "type": "event",
+  "name": "First Great Awakening",
+  "start": 1730,
+  "end": 1745,
+  "on": "congregationalist",
+  "summary": "Revivals spread through British North America during the 1730s and 1740s. Jonathan Edwards and George Whitefield preached conversion and renewed Christian commitment.",
+  "why": "Revival preachers spread evangelical emphasis on personal conversion across existing Protestant churches.",
+  "facts": [
+   "Edwards led revival preaching in Northampton, Massachusetts.",
+   "Whitefield's preaching tours linked churches across the colonies.",
+   "Revivals divided supporters and critics within established churches.",
+   "Presbyterians and Baptists also took part and gained converts."
+  ],
+  "disputed": "Dates approximate the revival period. The Congregationalist link reflects Edwards, but the movement crossed several Protestant branches.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.nps.gov/articles/the-joseph-bellamy-house-the-great-awakening-in-puritan-new-england-teaching-with-historic-places.htm",
+   "https://open.bu.edu/bitstreams/91e0a19e-ed8f-4f0a-8b2f-fd7b731a4c14/download"
+  ]
+ },
+ {
+  "id": "aldersgate",
+  "type": "event",
+  "name": "Wesley at Aldersgate",
+  "start": 1738,
+  "end": 1738,
+  "on": "anglican",
+  "summary": "On May 24, 1738, John Wesley attended a London religious meeting and experienced assurance that Christ had saved him.",
+  "why": "Wesley's experience of assurance became central to Methodist teaching while he remained an Anglican priest.",
+  "facts": [
+   "Wesley described his heart as \"strangely warmed.\"",
+   "The meeting heard Luther's preface to Romans.",
+   "Moravian contacts influenced Wesley's search for assurance.",
+   "Wesley continued to identify as an Anglican."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.methodist.org.uk/about/podcasts/the-methodist-podcast-episode-84-aldersgate-sunday/",
+   "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf"
+  ]
+ },
+ {
+  "id": "methodist-separation",
+  "type": "schism",
+  "name": "Methodist Separation",
+  "start": 1784,
+  "end": 1795,
+  "on": "anglican",
+  "splits": [
+   "methodist"
+  ],
+  "summary": "American Methodists organized an independent church in 1784. England's 1795 Plan of Pacification permitted Methodist sacramental ministry, consolidating a gradual break from Anglicanism.",
+  "why": "Authority to ordain ministers and administer sacraments helped Methodist societies become separate churches.",
+  "facts": [
+   "The Christmas Conference organized the Methodist Episcopal Church in Baltimore.",
+   "Thomas Coke and Francis Asbury led the American church.",
+   "England's Plan allowed local societies to approve Methodist Communion services."
+  ],
+  "sacraments": "The dispute concerned authority to ordain ministers and administer baptism and Communion. Methodists retained the two gospel sacraments.",
+  "disputed": "England's separation unfolded gradually. In 1795, Methodist societies gained greater sacramental authority, but no single date defines the break.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.umc.org/en/content/glossary-christmas-conference",
+   "https://www.umc.org/en/content/the-christmas-conference-10-days-that-started-a-church",
+   "https://media.methodist.org.uk/media/documents/faith_and_order_statements_vol2_part1_0409_XyqQqqD.pdf"
+  ]
+ },
+ {
+  "id": "episcopal-church-us",
+  "type": "event",
+  "name": "US Episcopal Church",
+  "start": 1789,
+  "end": 1789,
+  "on": "anglican",
+  "summary": "American Anglicans adopted the Episcopal Church's constitution and prayer book in 1789, organizing national church life after the American Revolution.",
+  "why": "American Anglicans established their own church government while retaining Anglican worship and sacramental teaching.",
+  "facts": [
+   "The church retained bishops and Anglican worship.",
+   "Samuel Seabury became its first bishop in 1784 through Scottish consecration.",
+   "William White helped shape representative national governance.",
+   "The constitution and General Convention joined bishops, clergy, and lay representatives."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.episcopalarchives.org/governance-documents/constitution-and-canons",
+   "https://www.episcopalchurch.org/who-we-are/our-history/timeline-of-the-episcopal-church/",
+   "https://www.episcopalchurch.org/who-we-are/our-history/past-presiding-bishops/"
+  ]
+ },
+ {
+  "id": "second-great-awakening",
+  "type": "event",
+  "name": "Second Great Awakening",
+  "start": 1800,
+  "end": 1840,
+  "on": "methodist",
+  "summary": "American revivals spread personal conversion, camp meetings, and lay preaching. Methodists and Baptists expanded, while new restoration and holiness movements emerged.",
+  "why": "These revivals helped make conversion experiences and preaching central to American Protestant life alongside baptism and Communion.",
+  "facts": [
+   "The revival began in the 1790s. Dates vary by region.",
+   "Barton Stone hosted the Cane Ridge camp meeting in Kentucky in 1801.",
+   "Presbyterian, Methodist, and Baptist preachers participated.",
+   "Early camp meetings grew from Presbyterian Communion gatherings."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.thearda.com/us-religion/history/timelines/entry?eid=239&etype=1",
+   "https://www.govinfo.gov/content/pkg/GOVPUB-S20-PURL-gpo39912/pdf/GOVPUB-S20-PURL-gpo39912.pdf"
+  ]
+ },
+ {
+  "id": "african-methodist-episcopal",
+  "type": "tradition",
+  "name": "African Methodist Episcopal Church",
+  "start": 1816,
+  "end": null,
+  "parents": [
+   "methodist"
+  ],
+  "summary": "Richard Allen united Black Methodist congregations in Philadelphia after racial discrimination in white churches. The AME Church joined Christian worship with education and freedom struggles.",
+  "why": "Black Methodists formed their own churches to protect their dignity, leadership, and freedom.",
+  "facts": [
+   "Mother Bethel began in 1794. The denomination organized in 1816.",
+   "Allen became its first bishop.",
+   "AME congregations supported abolition, schools, and civil rights.",
+   "WCC lists about 2.5M members without a census year. Current-size confidence low."
+  ],
+  "sacraments": "Two sacraments, baptism and the Lord's Supper. The church baptizes infants. Believers receive Christ spiritually in Communion through faith, following Methodist teaching.",
+  "today": "Roughly 2.5M reported. United States, Africa, and Caribbean.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.ame-church.com/founders-day-2018/",
+   "https://www.ame-church.com/our-church/our-beliefs/",
+   "https://oikoumene.org/member-churches/african-methodist-episcopal-church"
+  ]
+ },
+ {
+  "id": "latter-day-saints",
+  "type": "tradition",
+  "name": "Latter-day Saints",
+  "start": 1830,
+  "end": null,
+  "parents": [
+   "methodist",
+   "reformed"
+  ],
+  "summary": "Joseph Smith organized a church in New York claiming restored apostolic authority. Its scriptures, priesthood, and understanding of the Godhead differ from Nicene Christianity.",
+  "why": "Churches use words such as baptism, sacrament, and restoration for different beliefs about God and church authority.",
+  "facts": [
+   "Smith organized the church on April 6, 1830.",
+   "Its largest body is the Church of Jesus Christ of Latter-day Saints.",
+   "Father, Son, and Holy Ghost are distinct beings united in purpose.",
+   "2025 registered membership was 17.9M. Confidence high for the church's reported count."
+  ],
+  "sacraments": "Ordinances have no fixed sacrament count. Baptism uses immersion from age eight. Weekly bread and water remember Christ and renew covenants. Temples have additional ordinances.",
+  "today": "LDS church reports 17.9M in 2025. Americas and worldwide.",
+  "disputed": "Parents represent Smith's religious environment. Saints identify as Christian. Nicene churches reject their Godhead doctrine.",
+  "outsideNicene": true,
+  "importance": 2,
+  "sources": [
+   "https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/chapter-11?lang=eng",
+   "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
+   "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng",
+   "https://www.churchofjesuschrist.org/study/history/topics/sacrament-meetings?lang=eng",
+   "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report"
+  ]
+ },
+ {
+  "id": "restorationist",
+  "type": "tradition",
+  "name": "Stone-Campbell churches",
+  "start": 1832,
+  "end": null,
+  "parents": [
+   "reformed",
+   "baptist"
+  ],
+  "summary": "Barton Stone's and Alexander Campbell's movements united around 1832 to restore New Testament Christianity and Christian unity. Later divisions produced Churches of Christ, Christian Churches, and Disciples.",
+  "why": "Weekly Communion and believers' baptism can accompany a strong rejection of denominational creeds and centralized authority.",
+  "facts": [
+   "Stone's movement began in 1804. Campbell's organized reform began in 1809.",
+   "Churches of Christ became a separate US census category in 1906.",
+   "Disciples of Christ organized their present denominational structure in 1968.",
+   "Several million worldwide is a broad estimate. Confidence low without uniform membership counts."
+  ],
+  "sacraments": "Baptism and Communion are ordinances or sacraments. Believers' immersion commonly relates to forgiveness. Weekly Communion generally commemorates Christ. Disciples also emphasize Christ's presence.",
+  "today": "Several million worldwide. Strongest in United States and Africa.",
+  "disputed": "Many Churches of Christ reject denominational labels. The branches differ over instruments, church cooperation, and how baptism relates to salvation.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://discipleshistory.org/history/",
+   "https://discipleshistory.org/wiki/christian-church-disciples-of-christ/",
+   "https://www.oikoumene.org/organization/world-convention-of-churches-of-christ",
+   "https://www.lytlechurchofchrist.org/questions-answers"
+  ]
+ },
+ {
+  "id": "oxford-movement",
+  "type": "event",
+  "name": "Oxford Movement",
+  "start": 1833,
+  "end": 1845,
+  "on": "anglican",
+  "summary": "John Keble, John Henry Newman, and Edward Pusey defended Anglican continuity with the ancient church. Their teaching helped shape Anglo-Catholic worship and sacramental practice.",
+  "why": "Its teaching helped give some Anglican churches Catholic forms of worship and a strong emphasis on sacramental grace.",
+  "facts": [
+   "Tracts for the Times appeared from 1833 to 1841.",
+   "Tractarians emphasized bishops, apostolic succession, and the early church.",
+   "Newman joined the Roman Catholic Church in 1845.",
+   "Anglo-Catholic influence continued after the original movement."
+  ],
+  "sacraments": "The movement renewed Anglican teaching on baptismal regeneration and Christ's real presence. It promoted confirmation, frequent Communion, and Eucharistic sacrifice.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://academic.oup.com/edited-volume/61883/chapter-abstract/547767906?login=false",
+   "https://academic.oup.com/book/5718/chapter-abstract/148841086",
+   "https://www.newadvent.org/cathen/11370a.htm"
+  ]
+ },
+ {
+  "id": "holiness",
+  "type": "tradition",
+  "name": "Holiness churches",
+  "start": 1837,
+  "end": null,
+  "parents": [
+   "methodist"
+  ],
+  "summary": "Wesleyan Christians taught entire sanctification, God's grace enabling holy love and living. Phoebe Palmer's meetings spread the movement beyond Methodist institutions.",
+  "why": "Methodist teaching about holiness shaped later revival churches and Pentecostal beliefs about spiritual experiences after conversion.",
+  "facts": [
+   "The movement developed in the 1830s. 1837 marks Palmer's leadership of the Tuesday meetings.",
+   "Entire sanctification concerns devotion and freedom from sin's rule, not immunity from mistakes.",
+   "The Church of the Nazarene united holiness groups in 1907 and 1908.",
+   "Nazarenes report 2.76M members in 2025. Confidence high for that denomination, low for family totals."
+  ],
+  "sacraments": "Usually two sacraments or ordinances. Baptism practices vary. Wesleyan churches treat Communion as a means of grace. The Salvation Army omits outward sacraments.",
+  "today": "Millions worldwide. Nazarenes alone about 2.8M in 2025.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://nazarene.org/our-history/",
+   "https://nazarene.org/historical-statement/",
+   "https://nazarene.org/what-we-believe/",
+   "https://nazarene.org/news/general-secretary-releases-2025-statistics/"
+  ]
+ },
+ {
+  "id": "millerite-disappointment",
+  "type": "event",
+  "name": "Great Disappointment",
+  "start": 1844,
+  "end": 1844,
+  "on": "baptist",
+  "summary": "Followers of Baptist preacher William Miller expected Christ's return on October 22, 1844. The failed expectation divided the movement and shaped several Adventist churches.",
+  "why": "Adventist churches grew from an American revival movement, then developed different explanations of prophecy and Christian practice.",
+  "facts": [
+   "Miller first expected the return in 1843 or 1844.",
+   "Samuel Snow promoted the October 22 date.",
+   "Sabbatarian Adventists later interpreted the date as a heavenly event.",
+   "Other Adventists rejected that interpretation."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://adventist.org/identity/history",
+   "https://encyclopedia.adventist.org/article?highlight=Division&id=B8SX",
+   "https://www.adventist.org/who-are-seventh-day-adventists/united-for-mission-one-hundred-and-fifty-years/"
+  ]
+ },
+ {
+  "id": "adventist",
+  "type": "tradition",
+  "name": "Adventist churches",
+  "start": 1844,
+  "end": null,
+  "parents": [
+   "baptist",
+   "methodist"
+  ],
+  "summary": "Several churches grew from Millerite expectations of Christ's return. Seventh-day Adventists organized in 1863, teaching Saturday Sabbath observance, Christ's return, and health reform.",
+  "why": "Seventh-day Adventists share second-advent roots with other movements, including Jehovah's Witnesses, but teach different beliefs about God and Christian practice.",
+  "facts": [
+   "Seventh-day Adventists formed their General Conference in May 1863.",
+   "Ellen White influenced their teaching and institutions.",
+   "The present Seventh-day Adventist Church explicitly teaches the Trinity.",
+   "SDA reported 23.68M baptized members at year-end 2024. Confidence high for its reported count."
+  ],
+  "sacraments": "Seventh-day Adventists practice believers' immersion baptism and Communion as ordinances. Bread and grape juice symbolize Christ's body and blood. Foot washing precedes Communion.",
+  "today": "SDA alone 23.7M members in 2024. Worldwide, especially Global South.",
+  "disputed": "This branch covers broader Adventist origins. The sacramental and population details describe Seventh-day Adventists.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.adventist.org/who-are-seventh-day-adventists/united-for-mission-one-hundred-and-fifty-years/",
+   "https://adventist.org/beliefs",
+   "https://adventist.org/beliefs/official/the-lords-supper",
+   "https://news.eud.adventist.org/all-news/adventists-grow-worldwide-to-23.6-million-members"
+  ]
+ },
+ {
+  "id": "southern-baptist",
+  "type": "tradition",
+  "name": "Southern Baptist Convention",
+  "start": 1845,
+  "end": null,
+  "parents": [
+   "baptist"
+  ],
+  "summary": "Southern Baptists formed a convention in Augusta, Georgia, after disputes over appointing slaveholders as missionaries. The split defended slavery. Both sides retained Baptist beliefs about baptism and Communion.",
+  "why": "Church divisions sometimes follow racial and political conflicts while preserving almost identical baptism and Communion practices.",
+  "facts": [
+   "The convention formed in 1845.",
+   "Its founders defended slaveholding against restrictions by national Baptist mission boards.",
+   "The convention apologized for supporting slavery and racism in 1995.",
+   "2025 membership was 12.33M. Confidence high for the Annual Church Profile's reported total."
+  ],
+  "sacraments": "Two ordinances. Believers' baptism by immersion publicly expresses faith. Bread and cup symbolically remember Christ's death. Local churches decide who may participate.",
+  "today": "12.3M reported members in 2025. Chiefly United States.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.sbc.net/resource-library/resolutions/resolution-on-racial-reconciliation-on-the-150th-anniversary-of-the-southern-baptist-convention/",
+   "https://bfm.sbc.net/bfm2000/",
+   "https://research.lifeway.com/wp-content/uploads/2026/05/2025_ACP_Summary.pdf"
+  ]
+ },
+ {
+  "id": "salvation-army",
+  "type": "tradition",
+  "name": "Salvation Army",
+  "start": 1865,
+  "end": null,
+  "parents": [
+   "methodist",
+   "holiness"
+  ],
+  "summary": "William and Catherine Booth's London mission combined evangelical preaching with practical help for poor people. It became the Salvation Army in 1878 and discontinued outward sacraments.",
+  "why": "A Christian church can affirm grace and holy living while choosing to practice neither water baptism nor Communion.",
+  "facts": [
+   "The Booths began the Christian Mission in London's East End in 1865.",
+   "The mission adopted the name Salvation Army in 1878.",
+   "It stopped administering baptism and Communion in 1883.",
+   "Its 2025 report lists 1.26M senior soldiers. Confidence high for that membership category."
+  ],
+  "sacraments": "No outward sacraments. Salvationists practice neither water baptism nor bread-and-cup Communion. They emphasize inward grace, Christ's presence, and holiness in everyday life.",
+  "today": "About 1.3M senior soldiers. Work spans 134 countries and territories.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.salvationarmy.org.au/scribe/sites/bellarinepeninsula/files/podcast/WorshipBeliefsPractices.pdf",
+   "https://www.salvationarmy.org/sites/default/files/2025-12/Annual_Report-2025.pdf",
+   "https://www.salvationarmy.org/global-presence"
+  ]
+ },
+ {
+  "id": "vatican-i",
+  "type": "council",
+  "name": "Vatican I",
+  "start": 1869,
+  "end": 1870,
+  "on": "catholic",
+  "summary": "Pope Pius IX's council defined papal jurisdiction and infallibility for formal definitions of faith or morals addressed to the whole church. Opponents formed Old Catholic churches.",
+  "why": "The council defined the pope's teaching authority. Some Catholics rejected that authority and formed separate churches while keeping seven sacraments.",
+  "facts": [
+   "The council opened in December 1869.",
+   "Pastor Aeternus defined papal infallibility on July 18, 1870.",
+   "Infallibility concerns defined teaching, not every papal statement or personal conduct.",
+   "War and Rome's capture interrupted the council in 1870."
+  ],
+  "disputed": "Catholics call the definition a development of apostolic teaching. Old Catholics, Orthodox, and Protestants reject the claimed authority.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.vatican.va/content/pius-ix/en/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html",
+   "https://www.catholicculture.org/culture/library/view.cfm?recnum=5413",
+   "https://www.oikoumene.org/church-families/old-catholic-churches"
+  ]
+ },
+ {
+  "id": "jehovahs-witnesses",
+  "type": "tradition",
+  "name": "Jehovah's Witnesses",
+  "start": 1870,
+  "end": null,
+  "parents": [
+   "adventist"
+  ],
+  "summary": "Charles Taze Russell's Bible study movement developed in the 1870s. Its main successor adopted the name Jehovah's Witnesses in 1931 and rejects Nicene teaching about God.",
+  "why": "Their baptism and annual remembrance of Jesus differ from the theology and Communion practice of Nicene churches.",
+  "facts": [
+   "Russell began publishing Zion's Watch Tower in 1879.",
+   "Witnesses teach that Jesus is God's first creation and the Spirit is God's active force.",
+   "Most attend the annual Memorial without eating its bread or drinking its wine.",
+   "2025 peak active publishers numbered 9.21M. Confidence high for the reported category."
+  ],
+  "sacraments": "Immersion baptism dedicates believers to Jehovah. The annual Memorial uses symbolic bread and wine. Only those claiming heavenly anointing partake. Witnesses have no seven-sacrament system.",
+  "today": "About 9.2M peak active publishers in 2025. Worldwide.",
+  "disputed": "The Adventist parent represents second-advent influences. Witnesses identify as Christian. Nicene churches reject their doctrine of Christ.",
+  "outsideNicene": true,
+  "importance": 2,
+  "sources": [
+   "https://www.jw.org/en/library/brochures/Jehovahs-Witnesses-Unitedly-Doing-Gods-Will-Worldwide/Jehovah-Gathers-and-Equips-His-People-for-Work/",
+   "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/An-Association-of-Brothers/Meetings-for-Worship-Instruction-and-Encouragement/",
+   "https://www.jw.org/en/library/books/2025-Service-Year-Report-of-Jehovahs-Witnesses-Worldwide/2025-Grand-Totals/"
+  ]
+ },
+ {
+  "id": "old-catholic",
+  "type": "tradition",
+  "name": "Old Catholic churches",
+  "start": 1871,
+  "end": null,
+  "parents": [
+   "catholic"
+  ],
+  "summary": "German, Swiss, and Austrian Catholics who rejected Vatican I organized separate churches. They joined the older Utrecht church in a communion retaining bishops and seven sacraments.",
+  "why": "Rejecting papal infallibility did not require abandoning Catholic sacramental worship or apostolic succession.",
+  "facts": [
+   "Utrecht's separate episcopal history dates to 1723 and 1724.",
+   "The Union of Utrecht formed in 1889.",
+   "Old Catholics entered full communion with Anglicans in 1931.",
+   "WCC's roughly 115,000 figure lacks a census year. Current-size confidence low."
+  ],
+  "sacraments": "Seven sacraments. Churches baptize infants and teach Christ's true presence in the Eucharist. They retain apostolic succession without requiring Rome's definition of transubstantiation.",
+  "today": "Roughly 115,000 in Utrecht communion. Chiefly continental Europe. Estimate dated.",
+  "disputed": "Many independent groups call themselves Old Catholic. This node describes the historic Utrecht communion.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.oikoumene.org/church-families/old-catholic-churches",
+   "https://www.oikoumene.org/organization/international-old-catholic-bishops-conference",
+   "https://www.utrechter-union.org/en/about-us/what-is-the-ibc/history/"
+  ]
+ },
+ {
+  "id": "orthodox-autocephalies",
+  "type": "event",
+  "name": "Orthodox national churches",
+  "start": 1872,
+  "end": 1945,
+  "on": "eastern-orthodox",
+  "summary": "Eastern Orthodox churches formed self-governing national bodies. Disputes over territory and ethnic boundaries sometimes interrupted communion while the churches retained shared sacramental doctrines.",
+  "why": "Autocephaly lets an Orthodox church govern itself while retaining Orthodox beliefs and sacraments.",
+  "facts": [
+   "Moscow's patriarchate dates to 1589, before this era.",
+   "Constantinople's 1872 council condemned ethnic church organization and declared the Bulgarian hierarchy schismatic.",
+   "Not every Orthodox church accepted that judgment.",
+   "Constantinople recognized Bulgarian autocephaly and ended the schism in 1945."
+  ],
+  "disputed": "Orthodox churches disagree over who may grant autocephaly and how territorial boundaries should operate.",
+  "outsideNicene": false,
+  "importance": 3,
+  "sources": [
+   "https://www.orthodoxhistory.org/2020/02/18/the-bulgarian-schism-began-150-years-ago/",
+   "https://www.oikoumene.org/resources/documents/dictionary-of-the-ecumenical-movement-orthodoxy"
+  ]
+ },
+ {
+  "id": "national-baptist-convention",
+  "type": "tradition",
+  "name": "National Baptist Convention",
+  "start": 1895,
+  "end": null,
+  "parents": [
+   "baptist"
+  ],
+  "summary": "Black Baptist organizations united in Atlanta in 1895 for missions, education, and publishing. Their churches sustained Black leadership and later supplied major civil rights leaders.",
+  "why": "Black Baptist churches preserved Baptist ordinances while building institutions beyond white control.",
+  "facts": [
+   "Three national Black Baptist organizations merged in 1895.",
+   "Later divisions produced several National Baptist conventions.",
+   "Martin Luther King Jr. worked within this tradition before the Progressive National Baptist split.",
+   "Self-reports and religious censuses differ. Confidence low for a precise current membership total."
+  ],
+  "sacraments": "Two ordinances. Believers' immersion publicly confesses faith. The Lord's Supper remembers Christ with symbolic bread and cup. Congregations decide who may participate.",
+  "today": "Several million, chiefly African American congregations in United States.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://kinginstitute.stanford.edu/national-baptist-convention-nbc",
+   "https://baptistworld.org/members/",
+   "https://baptistworld.org/beliefs/"
+  ]
+ },
+ {
+  "id": "global-south-shift",
+  "type": "event",
+  "name": "Global South growth",
+  "start": 1900,
+  "end": 2026,
+  "summary": "Christian populations grew in Africa, Latin America, and Asia. Africa now has the largest continental Christian population. Europe has lost its former numerical dominance.",
+  "why": "Growing churches in Africa, Latin America, and Asia shape Christian worship, mission, and debates worldwide.",
+  "facts": [
+   "Pew's 2025 study places 31% of 2020 Christians in sub-Saharan Africa, ahead of every other region.",
+   "The 2026 World Christian Database estimates about 780M Christians in Africa, the largest continent.",
+   "It estimates 69% of Christians live in the Global South in 2026.",
+   "Confidence high for Africa's leading position. Medium for current modeled population estimates."
+  ],
+  "disputed": "Pew measures religious identification. Church databases use broader affiliation and estimates. Their absolute totals differ, but both show Africa's growth.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.pewresearch.org/2025/06/09/christian-population-change/",
+   "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
+  ]
+ },
+ {
+  "id": "pentecostal",
+  "type": "tradition",
+  "name": "Pentecostal churches",
+  "start": 1906,
+  "end": null,
+  "parents": [
+   "holiness",
+   "baptist"
+  ],
+  "summary": "William Seymour's Azusa Street revival spread Pentecostal worship internationally. Pentecostals emphasize the Holy Spirit's power, healing, and spiritual gifts, including speaking in tongues.",
+  "why": "Most Pentecostal churches practice water baptism and Communion. They also teach Spirit baptism as a distinct experience of spiritual power.",
+  "facts": [
+   "Azusa Street began in Los Angeles in 1906. Interracial worship marked its early years.",
+   "Earlier roots include Charles Parham's Topeka school in 1901.",
+   "The Assemblies of God organized in Hot Springs, Arkansas, in 1914.",
+   "2026 Pentecostal-charismatic total is about 676M across churches. Confidence medium. The categories overlap."
+  ],
+  "sacraments": "Usually two ordinances, believers' immersion and symbolic Communion. Spirit baptism is a distinct experience of spiritual power. Some churches also practice foot washing.",
+  "today": "Hundreds of millions worldwide. Especially Africa, Latin America, and Asia.",
+  "disputed": "1906 marks international expansion. Pentecostals had earlier roots. Most are Trinitarian. Oneness churches appear separately.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://ag.org/About/About-the-AG/History",
+   "https://news.ag.org/en/article-repository/news/2016/04/what-azusa-had-and-we-need",
+   "https://ag.org/Beliefs/Statement-of-Fundamental-truths",
+   "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
+  ]
+ },
+ {
+  "id": "edinburgh-1910",
+  "type": "event",
+  "name": "Edinburgh missionary conference",
+  "start": 1910,
+  "end": 1910,
+  "on": "anglican",
+  "summary": "Protestant and Anglican mission leaders met in Edinburgh to coordinate evangelism. Their cooperation helped launch the modern ecumenical movement and later interchurch organizations.",
+  "why": "Churches began seeking practical cooperation and visible unity without first settling every doctrinal or sacramental disagreement.",
+  "facts": [
+   "Most delegates came from Western Protestant mission agencies.",
+   "Catholic and Orthodox churches did not participate as partner churches.",
+   "The meeting created a continuation committee.",
+   "The conference helped prepare the way for the World Council of Churches."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.oikoumene.org/about-the-wcc/history",
+   "https://www.oikoumene.org/news/world-churches-to-mark-100-years-of-landmark-mission-event"
+  ]
+ },
+ {
+  "id": "oneness-pentecostal",
+  "type": "tradition",
+  "name": "Oneness Pentecostals",
+  "start": 1916,
+  "end": null,
+  "parents": [
+   "pentecostal"
+  ],
+  "summary": "Pentecostals who taught God's oneness and baptism in Jesus' name separated from Trinitarian colleagues. Their theology rejects the Nicene distinction of three eternal divine persons.",
+  "why": "Baptism in Jesus' name expresses these churches' beliefs about God and salvation.",
+  "facts": [
+   "The Jesus' name controversy began in 1913.",
+   "The Assemblies of God's Trinitarian statement prompted a major separation in 1916.",
+   "The United Pentecostal Church International formed in 1945.",
+   "UPCI reports 5.75M constituents in a 2024 release. Confidence medium. Other Oneness groups add more."
+  ],
+  "sacraments": "Ordinances include baptism, Communion, and often foot washing. Immersion in Jesus' name relates to forgiveness. UPCI links salvation with Spirit baptism and tongues.",
+  "today": "UPCI alone reports about 5.8M constituents worldwide. Broader total uncertain.",
+  "disputed": "Oneness believers identify as Christian and reject the label modalist. Nicene churches reject their doctrine of divine persons.",
+  "outsideNicene": true,
+  "importance": 2,
+  "sources": [
+   "https://upci.org/about-the-upci/",
+   "https://upci.org/our-beliefs/",
+   "https://upci.org/one-million-constituents/",
+   "https://mycac.net/welcome/believe/articles-of-faith/",
+   "https://ag.org/About/About-the-AG/History"
+  ]
+ },
+ {
+  "id": "fundamentalist-modernist",
+  "type": "event",
+  "name": "Fundamentalist-modernist controversy",
+  "start": 1920,
+  "end": 1936,
+  "on": "reformed",
+  "summary": "American Protestants fought over biblical authority, miracles, and adapting theology to modern scholarship. The conflict divided denominations and helped distinguish later evangelical and mainline networks.",
+  "why": "Disagreements over reading Scripture divided modern Protestants even when they shared beliefs about baptism and Communion.",
+  "facts": [
+   "Harry Emerson Fosdick preached Shall the Fundamentalists Win? in 1922.",
+   "J. Gresham Machen argued that liberal Christianity changed the faith itself.",
+   "Machen helped establish Westminster Seminary in 1929.",
+   "The Orthodox Presbyterian Church formed in 1936."
+  ],
+  "disputed": "Conservatives defended doctrinal continuity. Modernists sought credible Christian teaching alongside historical criticism and science. Neither camp represented all Protestants.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://pcusa.org/news-storytelling/blogs/historical-society-blog/journal-interview-bradley-longfield-fundamentalist-modernist-conflict",
+   "https://pcusa.org/es/news-storytelling/blogs/historical-society-blog/fighting-right-fundamentalist-modernist-controversy-and-west-jersey-presbytery"
+  ]
+ },
+ {
+  "id": "world-council-churches",
+  "type": "event",
+  "name": "World Council of Churches",
+  "start": 1948,
+  "end": 1948,
+  "summary": "Churches founded the World Council of Churches in Amsterdam as a fellowship for unity, witness, and service. Orthodox and Protestant churches cooperate without merging their denominations.",
+  "why": "Ecumenical cooperation can include shared study of baptism and Eucharist while churches retain different sacramental rules.",
+  "facts": [
+   "The first assembly brought together 147 member churches.",
+   "The WCC is a fellowship. Member churches retain their own authority.",
+   "The Catholic Church cooperates but is not a member.",
+   "Churches widely discussed its 1982 text Baptism, Eucharist and Ministry."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.oikoumene.org/about-the-wcc/history",
+   "https://www.oikoumene.org/about-the-wcc/faq"
+  ]
+ },
+ {
+  "id": "evangelical-nondenom",
+  "type": "tradition",
+  "name": "Independent evangelical churches",
+  "start": 1950,
+  "end": null,
+  "parents": [
+   "baptist",
+   "reformed"
+  ],
+  "summary": "Independent evangelical churches expanded through Bible teaching, conversion preaching, church planting, and contemporary worship. Some grew into megachurches, while others remained small congregations.",
+  "why": "A church's lack of a denominational name does not imply a single theology of baptism or Communion.",
+  "facts": [
+   "1950 marks postwar growth, not the first independent church.",
+   "Megachurches commonly have at least 2,000 weekly worshippers and can also belong to denominations.",
+   "Pew found nondenominational Protestants were 7% of US adults in 2023-24. Confidence high for this survey.",
+   "Worldwide evangelical-independent totals lack one definition. Confidence low."
+  ],
+  "sacraments": "Usually two ordinances, believers' baptism and symbolic Communion. Frequency varies. Some churches retain infant baptism or Christ's spiritual presence. Charismatic churches emphasize spiritual gifts.",
+  "today": "Millions worldwide. Strongest in Americas, Africa, and Asia.",
+  "disputed": "Parents represent common influences. Independent, evangelical, charismatic, and megachurch labels overlap, but each describes something different.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.pewresearch.org/religion/2025/02/26/religious-landscape-study-religious-identity/",
+   "https://hirr.hartfordinternational.edu/research/megachurch-research/",
+   "https://web01.hartfordinternational.edu/megachurch/2020_megachurch_report.pdf"
+  ]
+ },
+ {
+  "id": "mainline-mergers",
+  "type": "event",
+  "name": "US mainline mergers",
+  "start": 1957,
+  "end": 1988,
+  "summary": "American Protestant denominations reunited older branches or joined related traditions. These mergers created the UCC, United Methodist Church, PCUSA, and ELCA. Each retained its own sacramental tradition.",
+  "why": "The family tree includes branches joining together as well as splitting apart.",
+  "facts": [
+   "1957 UCC joined Congregational Christian Churches with the Evangelical and Reformed Church.",
+   "1968 United Methodist Church joined Methodists with the Evangelical United Brethren.",
+   "1983 PCUSA reunited the Presbyterian Church in the US with the United Presbyterian Church in the USA.",
+   "1988 ELCA united the ALC, LCA, and Association of Evangelical Lutheran Churches."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.ucc.org/who-we-are/about/history/",
+   "https://www.umc.org/en/content/methodist-history-the-uniting-conference-of-1968",
+   "https://pcusa.org/historical-society/history-online/history/history-church",
+   "https://www.elca.org/about-the-elca/who-we-are/history"
+  ]
+ },
+ {
+  "id": "charismatic",
+  "type": "tradition",
+  "name": "Charismatic renewal",
+  "start": 1960,
+  "end": null,
+  "parents": [
+   "pentecostal"
+  ],
+  "summary": "Christians brought Pentecostal-style prayer, healing, and spiritual gifts into existing denominations. Protestant renewal gained attention in 1960. Catholic renewal spread from Duquesne University in 1967.",
+  "why": "Spiritual gifts can coexist with Catholic, Anglican, Lutheran, or other established sacramental teaching.",
+  "facts": [
+   "Episcopal priest Dennis Bennett publicized his experience of tongues in 1960.",
+   "The Duquesne Weekend helped begin Catholic charismatic renewal in February 1967.",
+   "Many participants stayed within their existing churches.",
+   "Charismatics share the 2026 combined 676M Pentecostal-charismatic estimate. Separate total uncertain. Confidence medium."
+  ],
+  "sacraments": "Participants retain their churches' sacrament counts, baptism practices, and Eucharistic beliefs. Spirit baptism means spiritual renewal. Catholics do not count it as an additional sacrament.",
+  "today": "Hundreds of millions across denominations worldwide. Counts overlap Pentecostals.",
+  "disputed": "Participants belong to different denominations. The Pentecostal parent represents influence on their worship.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.christianitytoday.com/1975/02/profile-of-charismatic-movement/",
+   "https://dioceseofraleigh.org/charismatic-renewal/history",
+   "https://doi.org/10.3366/swc.2019.0267",
+   "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"
+  ]
+ },
+ {
+  "id": "vatican-ii",
+  "type": "council",
+  "name": "Vatican II",
+  "start": 1962,
+  "end": 1965,
+  "on": "catholic",
+  "summary": "The Catholic council renewed worship, encouraged lay participation, and committed Catholics to dialogue with other Christians. It permitted wider use of local languages. Later reforms changed the Mass.",
+  "why": "The council allowed wider use of local languages in Catholic worship and encouraged dialogue with other Christians.",
+  "facts": [
+   "John XXIII opened the council. Paul VI completed it.",
+   "Sacrosanctum Concilium authorized expanded vernacular use while preserving Latin in principle.",
+   "Unitatis Redintegratio addressed Christian unity in 1964.",
+   "The reformed Roman Missal followed in 1969 and 1970."
+  ],
+  "sacraments": "The council retained seven sacraments, baptismal grace, transubstantiation, and Eucharistic sacrifice. It promoted active participation, Scripture readings, and approved liturgy in local languages.",
+  "disputed": "Catholics dispute some later interpretations and reforms. The council itself did not abolish Latin or redefine the Eucharist as merely symbolic.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+   "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html"
+  ]
+ },
+ {
+  "id": "excommunications-lifted",
+  "type": "event",
+  "name": "1054 excommunications lifted",
+  "start": 1965,
+  "end": 1965,
+  "on": "catholic",
+  "summary": "Pope Paul VI and Patriarch Athenagoras removed the 1054 excommunications from church memory. Their joint declaration encouraged Catholic-Orthodox reconciliation. The churches remained divided.",
+  "why": "Reconciliation gestures and theological dialogue can advance without making Catholic and Orthodox Communion interchangeable.",
+  "facts": [
+   "The declaration appeared on December 7, 1965.",
+   "The original censures targeted particular people, not every member of both churches.",
+   "Both sides regretted the words and actions that deepened estrangement.",
+   "Lifting the censures did not end the schism or restore shared Eucharistic communion."
+  ],
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+   "https://www.christianunity.va/content/unitacristiani/it/dialoghi/sezione-orientale/chiese-ortodosse-di-tradizione-bizantina/relazioni-bilaterali/patriarcato-ecumenico/dichiarazioni-comuni/1965-dichiarazione-comune-di-papa-paolo-vi-e-del-patriarca-ecume/testo-in-inglese.pdf"
+  ]
+ },
+ {
+  "id": "joint-declaration-justification",
+  "type": "event",
+  "name": "Joint declaration on justification",
+  "start": 1999,
+  "end": 1999,
+  "on": "lutheran",
+  "summary": "The Lutheran World Federation and Catholic Church agreed on basic truths about justification by God's grace through faith. They judged earlier condemnations inapplicable to the agreed teaching.",
+  "why": "A central Reformation disagreement narrowed, while differences about church authority, ministry, and sacraments remained.",
+  "facts": [
+   "Representatives signed the declaration in Augsburg on October 31, 1999.",
+   "The agreement describes a consensus in basic truths, not identical theology on every point.",
+   "It did not create full church communion or general permission for shared Eucharist.",
+   "Some Lutheran churches outside the federation reject the agreement."
+  ],
+  "disputed": "Supporters see doctrinal agreement. Critics argue that important differences remain or that the document weakens Lutheran teaching.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://lutheranworld.org/what-we-do/unity-church/joint-declaration-doctrine-justification-jddj",
+   "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-occidentale/luterani/dialogo/documenti-di-dialogo/1999-dichiarazione-congiunta-sulla-dottrina-della-giustificazion/en3.html"
+  ]
+ },
+ {
+  "id": "gafcon-realignment",
+  "type": "schism",
+  "name": "GAFCON Anglican realignment",
+  "start": 2008,
+  "end": 2026,
+  "on": "anglican",
+  "splits": [
+   "acna"
+  ],
+  "summary": "Conservative Anglican leaders organized GAFCON amid conflicts over sexuality and biblical authority. They supported ACNA and later claimed to reorganize global Anglican communion beyond Canterbury's institutions.",
+  "why": "Anglican identity now depends on disputed relationships between provinces, shared doctrine, and Communion institutions.",
+  "facts": [
+   "GAFCON met in Jerusalem and issued its declaration in 2008.",
+   "It supported ACNA's formation in 2009.",
+   "GAFCON announced its Global Anglican Communion initiative in October 2025.",
+   "The March 2026 Abuja Affirmation rejected Canterbury's governing instruments. Confidence high for GAFCON's stated position."
+  ],
+  "disputed": "GAFCON claims to restore historic Anglican faith. Other Anglicans dispute its authority and its claim to speak for the Communion.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://gafcon.org/communique-updates/the-abuja-affirmation/",
+   "https://anglicanchurch.net/welcome/"
+  ]
+ },
+ {
+  "id": "acna",
+  "type": "tradition",
+  "name": "ACNA",
+  "start": 2009,
+  "end": null,
+  "parents": [
+   "anglican"
+  ],
+  "summary": "The Anglican Church in North America united conservative Anglican groups, including congregations leaving Episcopal and Canadian Anglican churches. Several overseas Anglican provinces recognized the new body.",
+  "why": "An Anglican church can retain its liturgy and sacraments while changing which bishops and provinces it recognizes.",
+  "facts": [
+   "ACNA formed in 2009.",
+   "Conflicts included sexuality, biblical authority, and episcopal oversight.",
+   "Recognition by overseas provinces does not equal membership in Canterbury's Anglican Communion institutions.",
+   "Its current official welcome page reports over 130,000 members. Confidence medium for this rounded claim."
+  ],
+  "sacraments": "Two principal sacraments, baptism and Eucharist, plus five sacramental rites. Churches baptize infants. Eucharistic teaching ranges from Reformed spiritual presence to Anglo-Catholic real presence.",
+  "today": "Over 130,000 reported members. United States, Canada, and Latin America.",
+  "disputed": "ACNA calls itself an Anglican province. Its status within the wider Communion remains contested.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://anglicanchurch.net/welcome/",
+   "https://anglicanchurch.net/structure/"
+  ]
+ },
+ {
+  "id": "moscow-constantinople-break",
+  "type": "schism",
+  "name": "Moscow-Constantinople communion break",
+  "start": 2018,
+  "end": 2018,
+  "on": "eastern-orthodox",
+  "splits": [
+   "orthodox-church-ukraine"
+  ],
+  "summary": "Moscow ended Eucharistic communion with Constantinople over its decisions concerning Ukraine. The Orthodox Church of Ukraine's later independence deepened disputes over church boundaries and recognition.",
+  "why": "Orthodox churches can share sacramental beliefs while refusing Eucharistic communion because they dispute who has authority over a territory.",
+  "facts": [
+   "Moscow's Holy Synod announced the break on October 15, 2018.",
+   "Constantinople had moved toward Ukrainian autocephaly and restored previously excluded Ukrainian hierarchs.",
+   "The OCU formed in December 2018 and received its tomos in January 2019.",
+   "This was a jurisdictional rupture inside Orthodoxy, not a new creed or sacramental system."
+  ],
+  "sacraments": "Both retain Orthodox baptism and Eucharistic real presence. Moscow forbids its clergy and faithful from receiving Communion in Constantinople's churches.",
+  "disputed": "Moscow claims authority in Ukraine. Constantinople disputes that claim and asserts authority to grant church independence. Orthodox churches differ over recognition.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://old.mospat.ru/en/2018/10/15/news165263/",
+   "https://ec-patr.org/en/resources/autocephaly-of-the-orthodox-church-of-ukraine/",
+   "https://www.ecupatria.org/2019/01/14/autocephaly-of-the-orthodox-church-in-ukraine/"
+  ]
+ },
+ {
+  "id": "orthodox-church-ukraine",
+  "type": "tradition",
+  "name": "Orthodox Church of Ukraine",
+  "start": 2018,
+  "end": null,
+  "parents": [
+   "eastern-orthodox"
+  ],
+  "summary": "A Kyiv council united Ukrainian Orthodox groups in December 2018. Patriarch Bartholomew granted the new church independence in January 2019. Moscow rejects that decision.",
+  "why": "A self-governing Orthodox church retains Orthodox beliefs and sacraments. Disputes over its independence affect which churches share Communion with it.",
+  "facts": [
+   "The unification council elected Metropolitan Epiphanius in December 2018.",
+   "Bartholomew signed the tomos on January 5 and presented it on January 6, 2019.",
+   "It is distinct from the Ukrainian Orthodox Church historically linked to Moscow.",
+   "Razumkov's 2024 survey found 35% identifying with OCU. Confidence medium. This is identification, not membership."
+  ],
+  "sacraments": "Orthodox mysteries, commonly counted as seven. Infants receive baptism, chrismation, and Communion. The church teaches Eucharistic real presence. Church independence concerns governance.",
+  "today": "Millions identify with OCU in Ukraine. Exact membership uncertain.",
+  "disputed": "Constantinople recognizes its autocephaly. Moscow rejects it. Orthodox recognition is partial, so communion depends on the particular church.",
+  "outsideNicene": false,
+  "importance": 3,
+  "sources": [
+   "https://www.ecupatria.org/2019/01/14/autocephaly-of-the-orthodox-church-in-ukraine/",
+   "https://old.mospat.ru/en/2018/10/15/news165263/",
+   "https://razumkov.org.ua/en/surveys/religiosity-trust-in-the-church-confessional-division-and-inter-church-relations-in-ukrainian-society-october-2024"
+  ]
+ },
+ {
+  "id": "united-methodist-split",
+  "type": "schism",
+  "name": "United Methodist split",
+  "start": 2019,
+  "end": 2024,
+  "on": "methodist",
+  "splits": [
+   "global-methodist"
+  ],
+  "summary": "Disputes over sexuality, biblical authority, and enforcing church rules led thousands of congregations to leave the United Methodist Church. Many joined the Global Methodist Church.",
+  "why": "Both churches kept Methodist sacraments. The split chiefly changed church affiliation and rules about marriage and ordination.",
+  "facts": [
+   "The 2019 General Conference strengthened restrictions and authorized a temporary US disaffiliation process.",
+   "The Global Methodist Church launched on May 1, 2022.",
+   "About 7,600 US congregations left in 2019-2023. Not all joined the GMC.",
+   "UMC removed bans on gay clergy and same-sex weddings in 2024. Confidence high."
+  ],
+  "disputed": "Conservatives emphasize biblical authority and continuity. Supporters of inclusion emphasize equal participation. Departing congregations chose several destinations.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.umnews.org/news/may-1-wrap-up-gay-clergy-ban-lifted-new-retirement-plan-approved",
+   "https://www.umc.org/en/content/timeline-of-the-united-methodist-church",
+   "https://www.globalmethodist.org/launch-information",
+   "https://apnews.com/article/ef5755c84d49896c520b5835e6169317"
+  ]
+ },
+ {
+  "id": "global-methodist",
+  "type": "tradition",
+  "name": "Global Methodist Church",
+  "start": 2022,
+  "end": null,
+  "parents": [
+   "methodist"
+  ],
+  "summary": "Conservative Methodists formed a new denomination as United Methodist divisions widened. The Global Methodist Church retains Wesleyan theology and teaches marriage between a man and a woman.",
+  "why": "Its doctrinal separation concerns authority and sexual ethics more than baptism or Eucharistic presence.",
+  "facts": [
+   "The denomination launched on May 1, 2022.",
+   "Its convening General Conference met in Costa Rica in September 2024. Confidence high.",
+   "Its doctrine retains infant baptism and two sacraments as means of grace.",
+   "Reviewed official sources provide no verified global adherent total. Current-size confidence low."
+  ],
+  "sacraments": "Two sacraments, infant or adult baptism and Holy Communion. Communion conveys grace and Christ's body and blood spiritually through faith. Bread and wine remain unchanged.",
+  "today": "Adherent total unverified. Congregations in Americas, Africa, Europe, and Asia.",
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.globalmethodist.org/launch-information",
+   "https://www.globalmethodist.org/articles-of-faith",
+   "https://globalmethodist.org/wp-content/uploads/2024/11/2024-GMC-BOOK-OF-DOCTRINES-FINAL.pdf"
+  ]
+ },
+ {
+  "id": "nicaea-anniversary",
+  "type": "event",
+  "name": "Nicaea 1700th anniversary",
+  "start": 2025,
+  "end": 2025,
+  "summary": "Pope Leo XIV, Patriarch Bartholomew, and other Christian leaders prayed at Iznik on November 28, 2025. They commemorated 1,700 years since the first Council of Nicaea.",
+  "why": "The Nicene faith remains shared across major Christian traditions even where church government and Eucharistic communion remain divided.",
+  "facts": [
+   "Iznik in Türkiye is ancient Nicaea, the council's meeting place in 325.",
+   "Leaders gathered near the archaeological remains of Saint Neophytos Basilica.",
+   "They commemorated shared faith and prayed for Christian unity.",
+   "Vatican and independent reports confirm the completed November 2025 gathering. Confidence high."
+  ],
+  "outsideNicene": false,
+  "importance": 2,
+  "sources": [
+   "https://www.vaticannews.va/en/pope/news/2025-11/pope-leo-xiv-ecumenical-prayer-turkiye-iznik-nicaea.html",
+   "https://apnews.com/article/841635be753e7ec904ec00f1d4c2e93b"
+  ]
+ },
+ {
+  "id": "christianity-today",
+  "type": "event",
+  "name": "Christianity today",
+  "start": 2026,
+  "end": 2026,
+  "summary": "Catholic, Protestant, independent, Eastern Orthodox, and Oriental Orthodox churches remain distinct in October 2026. Counts differ by membership definitions, reference year, and how researchers count overlapping movements.",
+  "why": "These figures give an approximate sense of size. Membership totals do not measure agreement about Christian beliefs.",
+  "facts": [
+   "The Vatican reports 1.422B baptized Catholics for 2024. Confidence is high for its reported count.",
+   "2026 Protestant and independent estimates total 1.06B, including Pentecostal churches. Confidence is medium.",
+   "Eastern Orthodox estimates range between 220M and 260M. Oriental Orthodox estimates approach 60M. Confidence is medium.",
+   "Pentecostal and charismatic counts overlap denominations. These totals use different sources and cannot form a consistent global sum."
+  ],
+  "disputed": "WCD counts 293M Eastern and Oriental Orthodox combined. Subtracting about 60M Oriental Orthodox gives an inferred 233M Eastern Orthodox. Counting methods differ.",
+  "outsideNicene": false,
+  "importance": 1,
+  "sources": [
+   "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
+   "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+   "https://www.oikoumene.org/church-families/orthodox-churches-oriental"
+  ]
+ }
+]

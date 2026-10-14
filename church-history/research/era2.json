@@ -1,0 +1,694 @@
+{
+  "era": "After Chalcedon to the eve of the Reformation, 451 to 1516",
+  "nodes": [
+    {
+      "id": "chalcedonian",
+      "type": "tradition",
+      "name": "Chalcedonian church",
+      "start": 451,
+      "end": 1054,
+      "parents": [
+        "early-church"
+      ],
+      "summary": "Churches accepting Chalcedon share a broad communion across Rome and the Byzantine East. Their gradual separation produces Catholic and Eastern Orthodox branches.",
+      "why": "Catholics and Eastern Orthodox inherit much of their worship and sacramental teaching from the church before their separation.",
+      "facts": [
+        "Chalcedon teaches one Christ in two natures, fully divine and fully human.",
+        "Rome and Constantinople develop different languages, customs, and ideas of authority.",
+        "1054 marks a gradual separation, not the founding of either church."
+      ],
+      "sacraments": "No fixed universal sacramental count. Baptism, including infants, brings new birth. In the Eucharist, believers receive Christ's body and blood.",
+      "today": "Catholic and Orthodox churches continue this shared inheritance.",
+      "disputed": "Regional churches differed within this communion. Catholics and Orthodox both claim continuity with the apostolic church.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism",
+        "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
+      ]
+    },
+    {
+      "id": "benedict-of-nursia",
+      "type": "figure",
+      "name": "Benedict of Nursia",
+      "start": 480,
+      "end": 547,
+      "on": "chalcedonian",
+      "summary": "Benedict writes a rule for monks that shapes Western monasteries. Monks follow a shared pattern of prayer, work, obedience, and community life.",
+      "why": "Monasteries sustain worship, learning, care for travelers, and Christian missions throughout medieval Europe.",
+      "facts": [
+        "His life dates are approximate.",
+        "Tradition dates his move to Monte Cassino to about 529.",
+        "Christian monasticism already existed in Egypt, Palestine, and Asia Minor.",
+        "Monasteries following his rule preserve books and learning."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://archive.osb.org/gen/benedict.html"
+      ]
+    },
+    {
+      "id": "constantinople-ii",
+      "type": "council",
+      "name": "Constantinople II",
+      "start": 553,
+      "end": 553,
+      "on": "chalcedonian",
+      "summary": "Emperor Justinian calls the fifth ecumenical council. It condemns the Three Chapters to clarify Chalcedon and seek reconciliation with Christians rejecting it.",
+      "why": "Disagreements about Jesus continue after Chalcedon, and this council fails to reunite the divided churches.",
+      "facts": [
+        "The Three Chapters concern Theodore of Mopsuestia and selected writings of Theodoret and Ibas.",
+        "The council affirms Christ as one person, fully divine and fully human.",
+        "Catholics and Eastern Orthodox accept this council.",
+        "The effort does not restore communion with the Oriental Orthodox churches."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians",
+        "https://www.newadvent.org/cathen/04423f.htm"
+      ]
+    },
+    {
+      "id": "filioque-dispute",
+      "type": "event",
+      "name": "Filioque dispute",
+      "start": 589,
+      "end": 1014,
+      "on": "chalcedonian",
+      "summary": "Western Christians add \"and the Son\" to the creed's account of the Holy Spirit. Eastern Christians dispute both the teaching and the alteration.",
+      "why": "A short phrase becomes a lasting disagreement about the Trinity and who may change the church's creed.",
+      "facts": [
+        "Filioque means \"and the Son\" in Latin.",
+        "Its use spreads in the West after Toledo in 589.",
+        "Rome first includes it in the creed during worship in 1014.",
+        "The dispute continues beyond this period of adoption."
+      ],
+      "disputed": "Catholics defend the Latin teaching. Orthodox reject the unilateral change to the creed and generally reject its teaching about the Spirit's origin.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism"
+      ]
+    },
+    {
+      "id": "gregory-the-great",
+      "type": "figure",
+      "name": "Gregory the Great",
+      "start": 590,
+      "end": 604,
+      "on": "chalcedonian",
+      "summary": "Gregory leads the Roman church as pope, organizes relief, strengthens pastoral care, and sends monks to evangelize Anglo-Saxon England.",
+      "why": "Gregory's relief work and missions help make bishops and monasteries central to daily life and Christianity's spread in Western Europe.",
+      "facts": [
+        "590 to 604 marks his papacy, not his lifespan.",
+        "A former Roman official, Gregory becomes a monk before becoming pope.",
+        "He sends Augustine of Canterbury and other monks to England.",
+        "His Pastoral Rule guides clergy in caring for their congregations."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080528.html",
+        "https://www.newadvent.org/cathen/06780a.htm"
+      ]
+    },
+    {
+      "id": "rise-of-islam",
+      "type": "event",
+      "name": "Rise of Islam",
+      "start": 622,
+      "end": 698,
+      "on": "chalcedonian",
+      "summary": "Islam arises in Arabia. Muslim armies conquer Syria, Palestine, Egypt, and much of North Africa. Ancient Christian centers come under Muslim rule.",
+      "why": "Many early Christian homelands pass from Byzantine to Muslim rule, while their churches continue to worship.",
+      "facts": [
+        "622 marks Muhammad's migration from Mecca to Medina.",
+        "Byzantium loses Antioch, Jerusalem, and Alexandria to Muslim rule.",
+        "Christians continue worshiping under changing restrictions and conditions.",
+        "Conversions unfold over centuries, not immediately after conquest."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/the-rise-of-islam",
+        "https://orthinc.oca.org/article/A%2BHistory%2Bof%2Bthe%2BOrthodox%2BChurch"
+      ]
+    },
+    {
+      "id": "constantinople-iii",
+      "type": "council",
+      "name": "Constantinople III",
+      "start": 680,
+      "end": 681,
+      "on": "chalcedonian",
+      "summary": "The sixth ecumenical council rejects monothelitism, the claim that Christ has one will. It affirms both his divine and human wills.",
+      "why": "Christ's human will matters to the teaching that Jesus is fully human as well as fully divine.",
+      "facts": [
+        "The council affirms two wills and two activities in one Christ.",
+        "Christ's human will freely follows his divine will.",
+        "It condemns Pope Honorius I among supporters of the rejected teaching.",
+        "Catholics and Eastern Orthodox accept this council."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/monoenergism-monothelitism",
+        "https://www.newadvent.org/cathen/04423f.htm"
+      ]
+    },
+    {
+      "id": "nicaea-ii",
+      "type": "council",
+      "name": "Nicaea II",
+      "start": 787,
+      "end": 787,
+      "on": "chalcedonian",
+      "summary": "The seventh ecumenical council permits honoring icons of Christ and the saints. It distinguishes veneration from worship owed to God.",
+      "why": "This council gives Orthodox and Catholic Christians a basis for honoring sacred images in worship.",
+      "facts": [
+        "Empress Irene supports the council against opponents of religious images.",
+        "Honor shown to an image refers to the person depicted.",
+        "This is the last council both Catholics and Eastern Orthodox generally accept as ecumenical.",
+        "Further conflict ends with the Byzantine restoration of icons in 843."
+      ],
+      "disputed": "Many Protestants reject or restrict honoring religious images. Catholics and Orthodox distinguish this honor from worship of God.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm",
+        "https://www.newadvent.org/cathen/04423f.htm"
+      ]
+    },
+    {
+      "id": "charlemagne-coronation",
+      "type": "event",
+      "name": "Charlemagne crowned emperor",
+      "start": 800,
+      "end": 800,
+      "on": "chalcedonian",
+      "summary": "Pope Leo III crowns Charlemagne emperor in Rome on Christmas Day. The coronation ties the papacy to Frankish power and challenges Byzantine imperial claims.",
+      "why": "Competing emperors and church alliances deepen the division between Rome and Constantinople.",
+      "facts": [
+        "Charlemagne already rules the Franks.",
+        "The coronation creates a western rival to the emperor in Constantinople.",
+        "Frankish rulers support monasteries, church schools, and religious reforms."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/the-west2",
+        "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
+      ]
+    },
+    {
+      "id": "photian-schism",
+      "type": "event",
+      "name": "Photian schism",
+      "start": 863,
+      "end": 867,
+      "on": "chalcedonian",
+      "summary": "Rome and Constantinople break relations over Photius's appointment, church jurisdiction, and the Filioque. This temporary rupture anticipates the later East-West separation.",
+      "why": "Papal authority and changes to the creed divide Rome and Constantinople long before 1054.",
+      "facts": [
+        "Pope Nicholas I rejects Photius as patriarch in 863.",
+        "A Constantinople council condemns Nicholas and the Filioque in 867.",
+        "The 879 to 880 council later restores communion with Photius."
+      ],
+      "disputed": "Catholic and Orthodox histories differ over responsibility, Photius's legitimacy, and which subsequent council deserves recognition.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
+      ]
+    },
+    {
+      "id": "catholic",
+      "type": "tradition",
+      "name": "Catholic church",
+      "start": 1054,
+      "end": null,
+      "parents": [
+        "chalcedonian"
+      ],
+      "summary": "Churches in communion with the bishop of Rome develop as a distinct branch after the East-West separation, preserving apostolic succession and sacramental worship.",
+      "why": "The Catholic branch is the setting for medieval councils and the later Protestant Reformation.",
+      "facts": [
+        "1054 marks a map division, not Catholicism's claimed founding date.",
+        "The pope holds universal authority in Catholic teaching.",
+        "The communion includes the Latin church and Eastern Catholic churches.",
+        "The Vatican reports 1.422 billion baptized Catholics for 2024."
+      ],
+      "sacraments": "Seven sacraments convey grace. Baptism, including infants, brings new birth. Eucharistic bread and wine become Christ's body and blood through transubstantiation.",
+      "today": "About 1.42 billion worldwide, especially the Americas, Europe, and Africa.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.vatican.va/content/catechism/en.html",
+        "https://www.usccb.org/catechism/pt2sect2",
+        "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
+        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+      ]
+    },
+    {
+      "id": "eastern-orthodox",
+      "type": "tradition",
+      "name": "Eastern Orthodox churches",
+      "start": 1054,
+      "end": null,
+      "parents": [
+        "chalcedonian"
+      ],
+      "summary": "Self-governing churches share Orthodox faith, bishops, liturgy, and sacramental communion. They honor Constantinople's patriarch as first among equals rather than a universal pope.",
+      "why": "Eastern Orthodoxy shares roots and sacramental beliefs with Catholicism, while differing over papal authority. It is also distinct from Oriental Orthodoxy.",
+      "facts": [
+        "1054 marks a map division, not Orthodoxy's claimed founding date.",
+        "Greek, Russian, Romanian, and other churches belong to this tradition.",
+        "Orthodox churches accept the first seven ecumenical councils.",
+        "The population estimate excludes the separate Oriental Orthodox churches."
+      ],
+      "sacraments": "Usually seven holy mysteries, though other rites also convey grace. Baptism, including infants, brings new birth. The Eucharist is truly Christ's body and blood.",
+      "today": "Roughly 200 million, mainly Eastern Europe, Russia, and communities abroad.",
+      "disputed": "Pew's 2010 figures imply about 208 million Eastern Orthodox. This rounded estimate is not a 2026 census.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
+        "https://www.oca.org/questions/sevensacraments/the-sacraments"
+      ]
+    },
+    {
+      "id": "great-schism-1054",
+      "type": "schism",
+      "name": "Great Schism",
+      "start": 1054,
+      "end": 1054,
+      "on": "chalcedonian",
+      "summary": "Roman legates and Constantinople's patriarch exchange excommunications. Their dispute becomes a conventional marker for the gradual separation of Catholic and Eastern Orthodox churches.",
+      "why": "Catholics and Eastern Orthodox remain divided despite sharing many beliefs about baptism and Communion.",
+      "facts": [
+        "Disputes include papal authority, the Filioque, and worship customs.",
+        "The 1054 sentences target named church leaders, not every believer.",
+        "Paul VI and Athenagoras lift the mutual excommunications in 1965.",
+        "The 1965 gesture does not restore full communion."
+      ],
+      "splits": [
+        "catholic",
+        "eastern-orthodox"
+      ],
+      "disputed": "Both traditions claim apostolic continuity and dispute responsibility for the split. Their separation developed over centuries.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+        "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
+        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+      ]
+    },
+    {
+      "id": "crusades",
+      "type": "event",
+      "name": "Crusades",
+      "start": 1095,
+      "end": 1291,
+      "on": "catholic",
+      "summary": "Popes call military expeditions to the Holy Land. Crusaders establish Latin states, fight Muslim rulers, and sometimes attack Jewish communities and fellow Christians.",
+      "why": "Crusading links warfare to penance, pilgrimage, and church authority. Its violence leaves lasting distrust between religious communities.",
+      "facts": [
+        "Urban II calls the First Crusade in 1095.",
+        "Crusaders capture Jerusalem in 1099.",
+        "Church authorities offer penitential benefits to participants.",
+        "Acre falls in 1291. Other crusading campaigns continue elsewhere."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://guides.loc.gov/crusades",
+        "https://sourcebooks.web.fordham.edu/source/urban2-5vers.asp",
+        "https://sourcebooks.web.fordham.edu/source/cde-privs.asp"
+      ]
+    },
+    {
+      "id": "waldensians",
+      "type": "tradition",
+      "name": "Waldensians",
+      "start": 1170,
+      "end": null,
+      "parents": [
+        "catholic"
+      ],
+      "summary": "Waldo's followers preach poverty and Scripture in ordinary language. Church authorities condemn their unauthorized preaching. The movement survives and later joins the Reformed tradition.",
+      "why": "Calls for biblical preaching and church reform existed centuries before Luther.",
+      "facts": [
+        "The approximate founding date is the 1170s in Lyon, France.",
+        "Both women and men preach in the medieval movement.",
+        "Waldensians join the Swiss Reformation in 1532.",
+        "Waldensian churches still exist in Italy and South America."
+      ],
+      "sacraments": "Today, two sacraments are signs of grace. Baptism includes infants. Communion emphasizes Christ's spiritual presence. Medieval Waldensian views differed.",
+      "today": "Tens of thousands, mainly Italy, Uruguay, and Argentina.",
+      "disputed": "Medieval Waldensian communities did not all share the beliefs of modern Reformed churches.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.waldensian.org/history/waldo/",
+        "https://www.waldensian.org/history/role-of-women-in-the-middle-ages/",
+        "https://chiesavaldese.org/chi-siamo/storia/valdesi/",
+        "https://chiesavaldese.org/cosa-crediamo/",
+        "https://www.oikoumene.org/member-churches/waldensian-church"
+      ]
+    },
+    {
+      "id": "maronite-roman-communion",
+      "type": "event",
+      "name": "Maronites and Rome",
+      "start": 1182,
+      "end": 1182,
+      "on": "catholic",
+      "summary": "Maronites formally confirm communion with Rome in 1182. They retain their Syriac liturgy within the Catholic communion.",
+      "why": "Eastern Catholic churches share communion with the pope while keeping their own liturgical traditions.",
+      "facts": [
+        "Maronites trace their spiritual roots to Saint Maron in the fourth and fifth centuries.",
+        "Their church develops in Syria and Lebanon.",
+        "They retain a West Syriac liturgical tradition.",
+        "Maronites form one church within today's Eastern Catholic family."
+      ],
+      "disputed": "Maronites maintain that communion with Rome never broke. The 1182 date records confirmation, not an agreed founding or reunion.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/churches-with-no-orthodox-counterpart/the-maronite-catholic-church/",
+        "https://www.vaticannews.va/en/church/news/2025-05/rome-hosts-jubilee-of-eastern-churches-may.html"
+      ]
+    },
+    {
+      "id": "sack-of-constantinople-1204",
+      "type": "event",
+      "name": "Constantinople sacked",
+      "start": 1204,
+      "end": 1204,
+      "on": "eastern-orthodox",
+      "summary": "Fourth Crusade armies sack Constantinople, loot churches, and impose Latin rule. The attack makes reunion with Rome far harder for Byzantine Christians.",
+      "why": "The attack leaves Orthodox Christians with memories of violence and occupation that deepen their distrust of Rome.",
+      "facts": [
+        "The attackers are Western Christians, not Muslim armies.",
+        "They plunder an Orthodox Christian capital.",
+        "A Latin empire and Latin patriarch replace Byzantine authorities.",
+        "Byzantines recover Constantinople in 1261, but distrust persists."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://cup.columbia.edu/book/the-conquest-of-constantinople/9780231136686/",
+        "https://www.newadvent.org/cathen/04543c.htm",
+        "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
+      ]
+    },
+    {
+      "id": "lateran-iv",
+      "type": "council",
+      "name": "Fourth Lateran Council",
+      "start": 1215,
+      "end": 1215,
+      "on": "catholic",
+      "summary": "Innocent III's council defines Eucharistic transubstantiation and requires annual confession and Easter Communion for believers who have reached the age of discernment.",
+      "why": "Annual confession and Easter Communion become obligations for Western Christians. Transubstantiation becomes a focus of later Reformation debates.",
+      "facts": [
+        "Transubstantiation names the change of bread and wine into Christ's body and blood.",
+        "Canon 21 requires confession at least once a year.",
+        "The same canon requires Communion at least at Easter.",
+        "Priests must keep confessions secret."
+      ],
+      "sacraments": "The council defines transubstantiation and requires annual confession and Easter Communion. These rites already existed.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.papalencyclicals.net/councils/ecum12-2.htm",
+        "https://sourcebooks.web.fordham.edu/basis/lateran4.asp"
+      ]
+    },
+    {
+      "id": "thomas-aquinas",
+      "type": "figure",
+      "name": "Thomas Aquinas",
+      "start": 1225,
+      "end": 1274,
+      "on": "catholic",
+      "summary": "Aquinas, a Dominican theologian, uses philosophy to explain Christian teaching. His Summa explains how sacraments convey grace and how bread and wine become Christ's body and blood.",
+      "why": "His explanations shape Catholic sacramental language that Protestant reformers later debate.",
+      "facts": [
+        "He writes the Summa Theologiae.",
+        "He teaches that sacraments receive their power from Christ.",
+        "Transubstantiation changes substance while bread and wine retain their observable properties.",
+        "He composes texts for Eucharistic worship."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.op.org/saints/festum-s-thomae-de-aquino/",
+        "https://ccel.org/ccel/aquinas/summa.TP_Q60.html",
+        "https://english.op.org/godzdogz/sacraments-the-eucharist-presence/"
+      ]
+    },
+    {
+      "id": "lyon-ii",
+      "type": "council",
+      "name": "Lyon II",
+      "start": 1274,
+      "end": 1274,
+      "on": "catholic",
+      "summary": "A profession of faith accepted at Lyon lists seven sacraments. Byzantine representatives agree to union with Rome, but the reunion fails to endure.",
+      "why": "The formal list of seven sacraments classifies rites Christians already practiced.",
+      "facts": [
+        "The list names baptism, confirmation, Eucharist, penance, orders, marriage, and anointing of the sick.",
+        "The profession also affirms transubstantiation.",
+        "Emperor Michael VIII supports reunion partly for political protection.",
+        "Opposition in the Byzantine church prevents lasting union."
+      ],
+      "sacraments": "The profession of faith lists seven sacraments and affirms transubstantiation. Its count classifies older rites.",
+      "disputed": "Catholics recognize Lyon II as ecumenical. Eastern Orthodox churches reject its authority and the attempted union.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
+        "https://www.newadvent.org/cathen/09476c.htm"
+      ]
+    },
+    {
+      "id": "avignon-papacy",
+      "type": "event",
+      "name": "Avignon papacy",
+      "start": 1309,
+      "end": 1377,
+      "on": "catholic",
+      "summary": "Seven successive popes base their court in Avignon rather than Rome. Strong French influence and a costly administration fuel criticism of papal leadership.",
+      "why": "French influence and the cost of papal administration fuel distrust of church leadership before the Western Schism and Reformation.",
+      "facts": [
+        "Clement V settles in Avignon in 1309.",
+        "Avignon becomes a major center of papal administration.",
+        "Gregory XI returns to Rome in January 1377.",
+        "The later rival Avignon popes belong to a separate crisis."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://provence-alpes-cotedazur.com/que-faire/culture-et-patrimoine/monuments/palais-des-papes/papes-en-avignon/",
+        "https://westernciv.com/syllabus/birth-of-europe/spring/the-crisis-of-the-medieval-church/"
+      ]
+    },
+    {
+      "id": "western-schism",
+      "type": "event",
+      "name": "Western Schism",
+      "start": 1378,
+      "end": 1417,
+      "on": "catholic",
+      "summary": "Rival claimants in Rome and Avignon, later joined by Pisa, each claim the papacy. European rulers and churches divide their allegiance.",
+      "why": "Rival popes weaken trust in Catholic leadership. The crisis ends without creating permanent denominational branches.",
+      "facts": [
+        "Rival elections follow Gregory XI's death in 1378.",
+        "The Council of Pisa in 1409 adds a third claimant.",
+        "The Council of Constance resolves the main crisis.",
+        "Martin V's election in 1417 restores broad recognition of one pope."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
+        "https://www.newadvent.org/cathen/04288a.htm"
+      ]
+    },
+    {
+      "id": "wycliffe-lollards",
+      "type": "event",
+      "name": "Wycliffe and Lollards",
+      "start": 1382,
+      "end": 1382,
+      "on": "catholic",
+      "summary": "English church authorities condemn Wycliffe's teachings, including his rejection of transubstantiation. Lollard followers spread calls for biblical authority, preaching, and church reform.",
+      "why": "Wycliffe challenges transubstantiation, and his followers press for biblical authority and church reform more than a century before Luther.",
+      "facts": [
+        "1382 marks condemnation, not the movement's beginning or end.",
+        "Wycliffe supports Scripture's authority over corrupt clergy.",
+        "His followers circulate English Scripture and criticize church wealth.",
+        "Lollard communities persist into the sixteenth century."
+      ],
+      "disputed": "Wycliffe rejects transubstantiation but retains Christ's Eucharistic presence. Lollard beliefs vary, and some affirm more than a symbolic Communion.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://chaucer.fas.harvard.edu/pages/john-wycliffe-and-lollards",
+        "https://plato.stanford.edu/entries/wyclif/",
+        "https://www.newadvent.org/cathen/09333a.htm"
+      ]
+    },
+    {
+      "id": "constance",
+      "type": "council",
+      "name": "Council of Constance",
+      "start": 1414,
+      "end": 1418,
+      "on": "catholic",
+      "summary": "The council ends the Western Schism by securing one recognized pope. It also condemns Jan Hus, whom secular authorities burn in 1415.",
+      "why": "The council restores one recognized pope but condemns reformers, including Hus, whom secular authorities execute.",
+      "facts": [
+        "The council elects Martin V in 1417.",
+        "It asserts council authority over popes in resolving the crisis.",
+        "It condemns Hus and hands him to secular authorities on July 6, 1415.",
+        "It also condemns Wycliffe's teachings."
+      ],
+      "sacraments": "The council restricts the Eucharistic cup for laypeople, a practice contested by Hussites.",
+      "disputed": "Catholics reject permanent council authority over popes. Many Protestants honor Hus as a reformer and reject his condemnation.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.newadvent.org/cathen/04288a.htm",
+        "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
+        "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf"
+      ]
+    },
+    {
+      "id": "hussite-movement",
+      "type": "event",
+      "name": "Hussite reform",
+      "start": 1415,
+      "end": 1436,
+      "on": "catholic",
+      "summary": "After Hus's execution, Bohemian reformers demand preaching, moral reform, and Communion in both bread and wine. War and negotiations produce several Hussite groups.",
+      "why": "The Hussites make access to the Communion cup a central demand for church reform.",
+      "facts": [
+        "Hussites take their name from Jan Hus.",
+        "Moderate Utraquists emphasize Communion under both bread and wine.",
+        "Radical groups hold differing doctrines and political aims.",
+        "The 1436 settlement does not end all Hussite traditions."
+      ],
+      "disputed": "Hus did not adopt every teaching of Wycliffe. Later Hussite groups also differed from one another.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf",
+        "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/",
+        "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45763"
+      ]
+    },
+    {
+      "id": "florence",
+      "type": "council",
+      "name": "Council of Florence",
+      "start": 1438,
+      "end": 1445,
+      "on": "catholic",
+      "summary": "Eastern and Western delegates sign a reunion agreement in 1439. Most Orthodox communities reject it. A separate Armenian decree explains the seven sacraments.",
+      "why": "Catholics inherit detailed sacramental teaching from this council, but its reunion agreement fails to overcome Orthodox opposition.",
+      "facts": [
+        "The council moves from Ferrara to Florence in 1439.",
+        "The Greek agreement addresses the Filioque, purgatory, and papal primacy.",
+        "Mark of Ephesus refuses to sign the Greek union agreement.",
+        "The 1439 Armenian decree lists seven sacraments and describes their administration."
+      ],
+      "sacraments": "The Armenian decree describes seven sacraments. Baptism brings new birth. Eucharistic bread and wine become Christ's body and blood. It specifies materials, words, and ministers.",
+      "disputed": "Catholics accept the council as ecumenical. Orthodox churches reject it. Political pressure and opposition within Orthodox churches help explain the failed reunion.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.papalencyclicals.net/councils/ecum17.htm",
+        "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
+        "https://www.oca.org/reflections/fr.-lawrence-farley/patience-and-reception",
+        "https://www.newadvent.org/cathen/06111a.htm"
+      ]
+    },
+    {
+      "id": "moscow-orthodox-center",
+      "type": "event",
+      "name": "Moscow rises",
+      "start": 1448,
+      "end": 1448,
+      "on": "eastern-orthodox",
+      "summary": "Russian bishops elect their own metropolitan in 1448. Moscow's rulers expand their power and increasingly present their realm as a defender of Orthodox Christianity.",
+      "why": "Moscow becomes a major Orthodox center as Byzantine power declines and Constantinople later falls.",
+      "facts": [
+        "Jonah becomes metropolitan through an election by Russian bishops in 1448.",
+        "Moscow rejects the Florence reunion agreement.",
+        "Ivan III marries Byzantine princess Sophia Palaiologina in 1472.",
+        "The formal Moscow patriarchate begins later, in 1589."
+      ],
+      "disputed": "Russian bishops elect their own metropolitan in 1448. Moscow becomes a patriarchate later. The explicit \"Third Rome\" claim chiefly dates to the sixteenth century.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.oca.org/saints/lives/2018/06/15/101725-saint-jonah-metropolitan-of-moscow",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixteenth-century/russia3"
+      ]
+    },
+    {
+      "id": "fall-of-constantinople",
+      "type": "event",
+      "name": "Constantinople falls",
+      "start": 1453,
+      "end": 1453,
+      "on": "eastern-orthodox",
+      "summary": "Ottoman Sultan Mehmed II captures Constantinople on May 29, ending the Byzantine Empire. Orthodox church life continues under Ottoman rule.",
+      "why": "Orthodox churches lose Byzantine imperial protection and face the coming Reformation under Ottoman rule.",
+      "facts": [
+        "Constantinople falls after a sustained Ottoman siege.",
+        "The Byzantine emperor Constantine XI dies during the capture.",
+        "The patriarchate survives under Ottoman authority.",
+        "Moscow grows in influence but does not replace every Orthodox center."
+      ],
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/the-fall-of-byzantium",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2"
+      ]
+    },
+    {
+      "id": "unitas-fratrum-founded",
+      "type": "event",
+      "name": "Unity of Brethren",
+      "start": 1457,
+      "end": 1457,
+      "on": "catholic",
+      "summary": "Reformers inspired by Hus organize the Unity of Brethren at Kunvald in Bohemia. This church is the historical ancestor of the Moravian tradition.",
+      "why": "The Moravian church traces its roots to this medieval Bohemian reform movement, which it renews in the eighteenth century.",
+      "facts": [
+        "Unitas Fratrum means Unity of Brethren.",
+        "The community begins in 1457, decades before Luther.",
+        "It emphasizes following Christ in daily life.",
+        "The later renewed Moravian church carries forward this tradition."
+      ],
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/",
+        "https://www.unitasfratrum.org/about-unitas-fratrum/our-origin-growth"
+      ]
+    }
+  ]
+}

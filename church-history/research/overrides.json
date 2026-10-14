@@ -1,0 +1,62 @@
+{
+ "_note": "Hand fixes applied on top of the per-era research files.",
+ "patch": {
+  "chalcedonian-separation": {
+   "facts": [
+    "The AD 451 date marks the council, rather than an immediate complete institutional split.",
+    "Egyptian and Syrian opposition helped form lasting non-Chalcedonian churches.",
+    "Armenian rejection developed later.",
+    "Modern dialogues have found substantial agreement about Christ's divinity and humanity."
+   ]
+  },
+  "global-south-shift": {
+   "on": null
+  },
+  "world-council-churches": {
+   "on": null
+  },
+  "mainline-mergers": {
+   "on": null
+  },
+  "nicaea-anniversary": {
+   "on": null
+  },
+  "christianity-today": {
+   "on": null
+  },
+  "catholic": {
+   "why": "It is the largest Christian church, about 1.4 billion people, and the line most Protestant churches broke from in the 1500s."
+  }
+ },
+ "add": [
+  {
+   "id": "eastern-catholic",
+   "type": "tradition",
+   "name": "Eastern Catholic churches",
+   "start": 1596,
+   "end": null,
+   "parents": [
+    "eastern-orthodox",
+    "catholic"
+   ],
+   "summary": "Eastern churches in full communion with the pope that keep their own liturgies, clergy, and church law. The largest, the Ukrainian Greek Catholic Church, came out of the Union of Brest in 1596.",
+   "why": "They show Catholic unity does not require the Latin Mass. Orthodox churches see these unions as an obstacle to reunion.",
+   "facts": [
+    "There are 23 Eastern Catholic churches alongside the Latin Church.",
+    "The Maronites of Lebanon confirmed their ties with Rome in 1182.",
+    "Many of them ordain married men as priests.",
+    "Each uses an Eastern rite such as Byzantine, Syriac, or Coptic."
+   ],
+   "sacraments": "Seven sacraments, often called holy mysteries. Infants receive baptism, chrismation, and first communion together. The Byzantine rite uses leavened bread.",
+   "today": "About 18 million, mostly in Ukraine, India, and the Middle East",
+   "disputed": "Orthodox critics call these unions uniatism. The 1993 Balamand statement, signed by Catholic and Orthodox theologians, rejected it as a path to reunion.",
+   "outsideNicene": false,
+   "importance": 2,
+   "sources": [
+    "https://www.britannica.com/topic/Eastern-rite-church",
+    "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
+    "https://www.britannica.com/event/Union-of-Brest-Litovsk"
+   ]
+  }
+ ]
+}

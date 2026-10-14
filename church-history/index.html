@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Church History Map</title>
+<meta name="description" content="A 3D branching timeline of the Christian church from Jesus to today: the councils, the splits, and where each tradition came from.">
+<meta name="theme-color" content="#0b1530">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The church, from Jesus to today">
+<meta property="og:description" content="A 3D map of two thousand years of Christian history: the councils, the splits, and where each church came from.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://church-history.onemany.workers.dev/">
+<meta property="og:image" content="https://church-history.onemany.workers.dev/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<div class="app" id="app">
+  <div id="stage" class="stage" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <header class="top">
+    <h1>The church, from Jesus to today</h1>
+    <p class="sub">Two thousand years of Christian history at a glance.</p>
+    <nav class="views" id="views" aria-label="Views">
+      <button type="button" data-view="timeline" aria-current="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18"/><circle cx="12" cy="12" r="3"/></svg>Timeline</button>
+      <button type="button" data-view="explore" aria-current="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>Explore</button>
+      <button type="button" data-view="church" aria-current="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v5M10 4h4"/><path d="M5 21V12l7-5 7 5v9z"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/></svg>My church</button>
+      <button type="button" data-view="sacraments" aria-current="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>Sacraments</button>
+    </nav>
+    <section class="legend" id="legend" aria-label="Communion views" hidden></section>
+  </header>
+
+  <div class="tools">
+    <div class="search" id="search">
+      <button type="button" class="search-btn" id="search-btn" aria-label="Find a church or council"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg></button>
+      <input id="q" type="search" placeholder="Find a church or council" autocomplete="off" spellcheck="false" aria-label="Find a church or council">
+      <ul id="results" class="results" role="listbox" hidden></ul>
+    </div>
+    <div class="seg" role="group" aria-label="Color the lines by">
+      <button type="button" data-mode="family" aria-pressed="true">Family</button>
+      <button type="button" data-mode="eucharist" aria-pressed="false">View of communion</button>
+    </div>
+  </div>
+
+  <aside class="panel" id="panel" hidden aria-live="polite">
+    <div class="grab" aria-hidden="true"></div>
+    <button type="button" class="close" id="close" aria-label="Close">×</button>
+    <div class="panel-body" id="panel-body"></div>
+  </aside>
+
+  <section class="screen" id="screen-church" aria-label="My church" hidden></section>
+  <section class="screen" id="screen-sacraments" aria-label="Sacraments" hidden></section>
+
+  <section class="story" id="story" aria-label="The story in chapters">
+    <button type="button" class="story-toggle" id="story-toggle" aria-expanded="true" aria-controls="story-body" aria-label="Hide the text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="story-body" id="story-body"></div>
+    <div class="story-nav">
+      <button type="button" id="prev" aria-label="Previous chapter">‹</button>
+      <ol class="dots" id="dots"></ol>
+      <button type="button" id="next" aria-label="Next chapter">›</button>
+    </div>
+  </section>
+
+  <div class="corner">
+    <label class="detail">
+      <input type="checkbox" id="detail">
+      <span class="switch" aria-hidden="true"></span>
+      More detail
+    </label>
+    <p class="hint" id="hint">Scroll or drag to move through time. Click any line.</p>
+  </div>
+
+  <div class="loading" id="loading" aria-hidden="true"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c4-6.5 11.5-6.5 17 3M2.5 12c4 6.5 11.5 6.5 17-3"/></svg>Loading the map</div></div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

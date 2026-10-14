@@ -15,6 +15,7 @@ A collection of focused apps built to solve problems I have.
 | [JellyTV](jellytv/) | tvOS | A Live-TV-first Jellyfin client for Apple TV. |
 | [Puddle Cup](backyard-regatta/) | Web | A 90-second Three.js toy sailboat race through a flooded backyard. |
 | [Micro Gains](micro-gains/) | iOS and Cloudflare Worker | Tiny bodyweight sets pinged to you through the day. |
+| [Church History Map](church-history/) | Web | A 3D branching timeline of the Christian church from Jesus to today. |
 
 Each app owns its project files, documentation, and license. Run development
 commands from the app directory unless its README says otherwise.
