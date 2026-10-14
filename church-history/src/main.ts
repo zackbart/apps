@@ -31,6 +31,29 @@ const sideSheetQuery = matchMedia('(max-height: 520px) and (min-width: 560px)');
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+/** Book citations are stored as "Pelikan <vol>:<pages>", for example "Pelikan 2:146-157". */
+const pelikanCite = (s: string) => {
+  const m = /^Pelikan ([1-5]):(\d+(?:-\d+)?)$/.exec(s);
+  if (!m) return null;
+  return `Pelikan, <i>The Christian Tradition</i>, vol. ${m[1]}, ${m[2].includes('-') ? 'pp.' : 'p.'} ${m[2]}`;
+};
+/** Damick has no page numbers, so citations name a chapter and section: "Damick ch3: Lutheranism". */
+const damickCite = (s: string) => {
+  const m = /^Damick (intro|ch[1-8]|epilogue|appendix[1-4]): (.+)$/.exec(s);
+  if (!m) return null;
+  const part = m[1].replace(/^ch/, 'ch. ').replace(/^appendix/, 'appendix ').replace(/^intro$/, 'introduction');
+  // Top-level section headings are in capitals in the book.
+  const small = new Set(['a', 'an', 'and', 'as', 'at', 'for', 'in', 'of', 'on', 'or', 'the', 'to']);
+  const title =
+    m[2] === m[2].toUpperCase()
+      ? m[2]
+          .toLowerCase()
+          .split(' ')
+          .map((w, i) => (i > 0 && small.has(w) ? w : w.replace(/\p{L}/u, (c) => c.toUpperCase())))
+          .join(' ')
+      : m[2];
+  return `Damick, <i>Orthodoxy and Heterodoxy</i>, ${part}, "${esc(title)}"`;
+};
 const nameOf = (n: HistoryNode) => SHORT_NAME[n.id] ?? n.name;
 const isTradId = (id: string | undefined) => !!id && byId.get(id)?.type === 'tradition';
 
@@ -1074,6 +1097,8 @@ function renderPanel(n: HistoryNode) {
   if (n.sources?.length) {
     const links = n.sources
       .map((u) => {
+        const book = pelikanCite(u) ?? damickCite(u);
+        if (book) return `<cite>${book}</cite>`;
         let host = u;
         try {
           host = new URL(u).hostname.replace(/^www\./, '');
@@ -1082,7 +1107,7 @@ function renderPanel(n: HistoryNode) {
         }
         return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host)}</a>`;
       })
-      .join(', ');
+      .join(' · ');
     more.push(`<div class="sources">Sources: ${links}</div>`);
   }
   if (more.length) parts.push(`<details class="more"><summary>More about ${esc(nameOf(n))}</summary>${more.join('')}</details>`);
@@ -1169,8 +1194,23 @@ function renderLegend() {
   legend.innerHTML = `<button type="button" class="legend-toggle" aria-expanded="${!legendFolded}" aria-label="${legendFolded ? 'Show the key' : 'Hide the key'}">${CHEVRON}</button><h4>What happens at communion</h4><ul>${Object.entries(EUCHARIST)
     .filter(([k]) => used.has(k))
     .map(([, s]) => `<li style="--c:${s.color}"><i></i><span>${esc(s.name)}${s.note ? `<small>${esc(s.note)}</small>` : ''}</span></li>`)
-    .join('')}</ul>`;
+    .join('')}</ul><p class="legend-note">Colors show each tradition's main emphasis. Many views overlap.</p>`;
+  fitLegend();
 }
+// On wide screens the key sits above the story card. Stop it there and let it scroll.
+function fitLegend() {
+  legend.style.maxHeight = '';
+  legend.style.overflowY = '';
+  const card = document.getElementById('story');
+  if (legend.hidden || !card || card.hidden) return;
+  const l = legend.getBoundingClientRect();
+  const c = card.getBoundingClientRect();
+  const sideBySide = l.right <= c.left || c.right <= l.left;
+  if (sideBySide || c.top <= l.top || l.bottom <= c.top - 12) return;
+  legend.style.maxHeight = `${Math.max(120, c.top - l.top - 12)}px`;
+  legend.style.overflowY = 'auto';
+}
+addEventListener('resize', fitLegend);
 
 document.querySelectorAll<HTMLButtonElement>('.seg button').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -1244,6 +1284,8 @@ dots.addEventListener('click', (e) => {
 
 // Phones can fold the story down to its title and arrows to give the map more room.
 const story = $<HTMLElement>('story');
+// The card's height changes with each chapter.
+new ResizeObserver(fitLegend).observe(story);
 const storyToggle = $<HTMLButtonElement>('story-toggle');
 function toggleStory() {
   const open = story.classList.toggle('collapsed') === false;

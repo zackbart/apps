@@ -21,6 +21,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:13",
+        "Pelikan 1:163",
         "https://bible.usccb.org/bible/acts/2",
         "https://bible.usccb.org/bible/1corinthians/11"
       ]
@@ -42,6 +44,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:108",
         "https://bible.usccb.org/bible/acts/2"
       ]
     },
@@ -62,6 +65,8 @@
       "importance": 2,
       "outsideNicene": false,
       "sources": [
+        "Pelikan 1:13",
+        "Pelikan 1:162-163",
         "https://www.vatican.va/various/basiliche/san_paolo/en/san_paolo/viaggi.htm",
         "https://bible.usccb.org/bible/1corinthians/11"
       ]
@@ -83,8 +88,10 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://bible.usccb.org/bible/acts/15",
-        "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Council-Jerusalem"
+        "Pelikan 1:13-14",
+        "Pelikan 2:23",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://bible.usccb.org/bible/acts/15"
       ]
     },
     {
@@ -104,8 +111,9 @@
       "importance": 2,
       "outsideNicene": false,
       "sources": [
-        "https://www.worldhistory.org/article/1993/the-siege-of-jerusalem-in-70-ce/",
-        "https://bible.usccb.org/bible/acts/2"
+        "Pelikan 1:13",
+        "Pelikan 1:20-21",
+        "https://www.newadvent.org/fathers/250103.htm"
       ]
     },
     {
@@ -130,9 +138,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:69-70",
+        "Pelikan 1:107",
+        "Pelikan 1:159-168",
         "https://www.newadvent.org/fathers/0714.htm",
-        "https://www.newadvent.org/fathers/0126.htm",
-        "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+        "https://www.newadvent.org/fathers/0126.htm"
       ]
     },
     {
@@ -153,6 +163,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:158",
         "https://assets.press.princeton.edu/chapters/s10056.pdf",
         "https://sourcebooks.web.fordham.edu/source/edict-milan.asp"
       ]
@@ -176,6 +187,8 @@
       "disputed": "Scholars debate its date and whether some meal prayers describe Eucharist, a fellowship meal, or both.",
       "outsideNicene": false,
       "sources": [
+        "Pelikan 1:126",
+        "Pelikan 1:156",
         "https://www.newadvent.org/fathers/0714.htm",
         "https://www.newadvent.org/cathen/04779a.htm"
       ]
@@ -198,6 +211,8 @@
       "importance": 2,
       "outsideNicene": false,
       "sources": [
+        "Pelikan 1:159-160",
+        "Pelikan 1:168",
         "https://www.newadvent.org/fathers/0109.htm",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/second-century/the-apostolic-fathers"
       ]
@@ -220,9 +235,10 @@
       "disputed": "Catholic and Orthodox churches trace bishops to the apostles. Many Protestants distinguish later rule by bishops from New Testament leadership.",
       "outsideNicene": false,
       "sources": [
+        "Pelikan 1:98-99",
+        "Pelikan 1:159-161",
         "https://www.newadvent.org/fathers/0109.htm",
-        "https://www.newadvent.org/fathers/0714.htm",
-        "https://www.churchsociety.org/wp-content/uploads/2021/05/Cman_062_2_Chadwick.pdf"
+        "https://www.newadvent.org/fathers/0714.htm"
       ]
     },
     {
@@ -244,8 +260,10 @@
       "outsideNicene": true,
       "disputed": "Scholars debate which groups count as Gnostic. This node covers ancient Christian Gnostic schools, rather than every religion emphasizing spiritual knowledge.",
       "sources": [
-        "https://www.encyclopedia.com/philosophy-and-religion/ancient-religions/ancient-religion/gnosticism",
-        "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/gnosticism"
+        "Pelikan 1:82-86",
+        "Pelikan 1:116",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://www.newadvent.org/fathers/0103101.htm"
       ]
     },
     {
@@ -266,7 +284,10 @@
       "importance": 2,
       "outsideNicene": true,
       "sources": [
-        "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/marcionism",
+        "Pelikan 1:72",
+        "Pelikan 1:79-81",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://www.newadvent.org/fathers/03121.htm",
         "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Marcion_and_the_Marcionite_Churches"
       ]
     },
@@ -288,7 +309,8 @@
       "importance": 2,
       "outsideNicene": false,
       "sources": [
-        "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/montanism",
+        "Pelikan 1:97-101",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
         "https://www.newadvent.org/cathen/10521a.htm"
       ]
     },
@@ -311,6 +333,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:114",
+        "Damick intro: A BRIEF OVERVIEW OF CHRISTIAN HISTORY",
         "https://www.newadvent.org/fathers/2806039.htm",
         "https://www.newadvent.org/cathen/03274a.htm"
       ]
@@ -333,6 +357,9 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:40",
+        "Pelikan 1:202",
+        "Pelikan 2:23",
         "https://sourcebooks.web.fordham.edu/source/edict-milan.asp",
         "https://www.goarch.org/-/the-first-ecumenical-council"
       ]
@@ -356,8 +383,11 @@
       "outsideNicene": true,
       "disputed": "Arianism groups several differing anti-Nicene positions. Their followers did not all teach precisely what Arius taught.",
       "sources": [
-        "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/arius-and-arianism",
-        "https://www.encyclopedia.com/philosophy-and-religion/christianity/christianity-general/arianism"
+        "Pelikan 1:193",
+        "Pelikan 1:200-202",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://www.newadvent.org/fathers/3801.htm",
+        "https://www.newadvent.org/cathen/01707c.htm"
       ]
     },
     {
@@ -378,8 +408,10 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://www.goarch.org/-/the-first-ecumenical-council",
-        "https://www.newadvent.org/cathen/11049a.htm"
+        "Pelikan 1:201-202",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://www.newadvent.org/fathers/3801.htm",
+        "https://www.goarch.org/-/the-first-ecumenical-council"
       ]
     },
     {
@@ -401,6 +433,9 @@
       "disputed": "Catholics and Protestants draw different conclusions from Augustine. Eastern traditions receive his theology with different emphases.",
       "outsideNicene": false,
       "sources": [
+        "Pelikan 1:292-294",
+        "Pelikan 1:310-311",
+        "Pelikan 1:313-315",
         "https://plato.stanford.edu/entries/augustine/",
         "https://www.newadvent.org/fathers/14087.htm"
       ]
@@ -445,6 +480,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:25-27",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-second-ecumenical-council",
         "https://www.newadvent.org/cathen/11049a.htm"
       ]
@@ -468,9 +505,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:260-262",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
         "https://www.oca.org/saints/lives/1949/09/09/102555-commemoration-of-the-holy-fathers-of-the-third-ecumenical-counci",
         "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
-        "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils"
+        "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html"
       ]
     },
     {
@@ -495,6 +534,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:37",
+        "Pelikan 2:43",
         "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
         "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf"
       ]
@@ -522,6 +563,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:40-43",
         "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
         "https://www.assyrianchurch.org.au/the-church",
         "https://www.assyrianchurch.org/sacraments/",
@@ -547,6 +589,9 @@
       "disputed": "Rome rejected Chalcedon's decision to raise Constantinople's rank. Catholics and Orthodox Christians disagree about Rome's authority and the five patriarchates.",
       "outsideNicene": false,
       "sources": [
+        "Pelikan 2:162-165",
+        "Damick intro: A BRIEF OVERVIEW OF CHRISTIAN HISTORY",
+        "https://www.newadvent.org/fathers/3801.htm",
         "https://www.newadvent.org/cathen/11549a.htm",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates"
       ]
@@ -570,6 +615,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:263-266",
+        "Damick ch2: Papal Supremacy",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
         "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/"
       ]
@@ -597,8 +644,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:266-267",
+        "Pelikan 2:37",
         "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
-        "https://czasopisma.kul.pl/index.php/vp/article/view/4125"
+        "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/the-armenian-apostolic-church/",
+        "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-orientale/chiese-ortodosse-orientali/relazioni-bilaterali/chiesa-malankarese-siro-ortodossa/joint-international-commission-between-the-roman-catholic-church/declarations-of-agreement/en.html"
       ]
     },
     {
@@ -624,9 +674,10 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 1:271",
+        "Pelikan 2:52-57",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
         "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
-        "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
-        "https://ukmidcopts.org/coptic/sacraments/",
         "https://www.copticchurch.net/introduction-to-the-coptic-church/sacraments/4_eucharist"
       ]
     },
@@ -639,7 +690,7 @@
       "parents": [
         "early-church"
       ],
-      "summary": "Churches accepting Chalcedon shared communion centered on Rome and eastern patriarchates. Catholic and Eastern Orthodox churches developed from this shared history.",
+      "summary": "Churches accepting Chalcedon confessed one Christ in two natures. Catholic and Eastern Orthodox churches inherit this tradition, whose unity faced repeated disputes.",
       "why": "Catholic and Eastern Orthodox baptism and Eucharistic worship grew from a shared history before their medieval separation.",
       "facts": [
         "They accept Christ as one person in two complete natures.",
@@ -653,10 +704,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
-        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/five-patriarchates",
-        "https://www.newadvent.org/fathers/0714.htm",
-        "https://www.newadvent.org/fathers/0126.htm"
+        "Pelikan 1:263-264",
+        "Pelikan 1:275",
+        "Pelikan 1:163-168",
+        "Pelikan 2:147",
+        "https://www.newadvent.org/fathers/3811.htm"
       ]
     }
   ]

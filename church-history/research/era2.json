@@ -10,22 +10,25 @@
       "parents": [
         "early-church"
       ],
-      "summary": "Churches accepting Chalcedon share a broad communion across Rome and the Byzantine East. Their gradual separation produces Catholic and Eastern Orthodox branches.",
-      "why": "Catholics and Eastern Orthodox inherit much of their worship and sacramental teaching from the church before their separation.",
+      "summary": "Churches accepting Chalcedon confessed one Christ in two natures. Catholic and Eastern Orthodox churches inherit this tradition, whose unity faced repeated disputes.",
+      "why": "Catholic and Eastern Orthodox baptism and Eucharistic worship grew from a shared history before their medieval separation.",
       "facts": [
-        "Chalcedon teaches one Christ in two natures, fully divine and fully human.",
-        "Rome and Constantinople develop different languages, customs, and ideas of authority.",
-        "1054 marks a gradual separation, not the founding of either church."
+        "They accept Christ as one person in two complete natures.",
+        "Rome and Constantinople remained major centers alongside the other patriarchal sees.",
+        "East and West developed different liturgies and approaches to authority.",
+        "The AD 1054 endpoint marks a gradual medieval separation."
       ],
-      "sacraments": "No fixed universal sacramental count. Baptism, including infants, brings new birth. In the Eucharist, believers receive Christ's body and blood.",
-      "today": "Catholic and Orthodox churches continue this shared inheritance.",
-      "disputed": "Regional churches differed within this communion. Catholics and Orthodox both claim continuity with the apostolic church.",
+      "sacraments": "No universally fixed count. Baptism gives new birth. Eucharist gives Christ's body and blood. Confirmation, penance, ordination, marriage, and anointing develop. Seven becomes standard later.",
+      "today": "Catholic and Eastern Orthodox churches continue this inheritance. No separate membership.",
+      "disputed": "Catholic and Orthodox churches each claim continuity with these churches. Neither describes itself as a new church founded in 1054.",
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
-        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism",
-        "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
+        "Pelikan 1:263-264",
+        "Pelikan 1:275",
+        "Pelikan 1:163-168",
+        "Pelikan 2:147",
+        "https://www.newadvent.org/fathers/3811.htm"
       ]
     },
     {
@@ -46,6 +49,8 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Pelikan 3:106",
+        "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080409.html",
         "https://archive.osb.org/gen/benedict.html"
       ]
     },
@@ -67,6 +72,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Pelikan 1:275-277",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians",
         "https://www.newadvent.org/cathen/04423f.htm"
       ]
@@ -90,6 +96,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:183-187",
+        "Damick ch2: The Filioque",
         "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism"
       ]
@@ -134,6 +142,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:4",
+        "Damick ch8: ISLAM",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/the-rise-of-islam",
         "https://orthinc.oca.org/article/A%2BHistory%2Bof%2Bthe%2BOrthodox%2BChurch"
       ]
@@ -153,11 +163,15 @@
         "It condemns Pope Honorius I among supporters of the rejected teaching.",
         "Catholics and Eastern Orthodox accept this council."
       ],
+      "disputed": "Orthodox writers cite Honorius against papal infallibility. Catholics distinguish his condemned letters from an infallible papal definition.",
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:72-74",
+        "Pelikan 2:151-152",
+        "Damick ch2: Papal Infallibility",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/monoenergism-monothelitism",
-        "https://www.newadvent.org/cathen/04423f.htm"
+        "https://www.newadvent.org/cathen/07452b.htm"
       ]
     },
     {
@@ -179,8 +193,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm",
-        "https://www.newadvent.org/cathen/04423f.htm"
+        "Pelikan 2:103",
+        "Pelikan 2:126",
+        "Pelikan 2:145",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm"
       ]
     },
     {
@@ -223,9 +240,11 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Pelikan 2:174",
+        "Pelikan 2:186",
+        "Damick ch2: The Filioque",
         "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
-        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople",
-        "https://churchmotherofgod.org/histories/great-schism/"
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
       ]
     },
     {
@@ -250,10 +269,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:147",
+        "Pelikan 3:203-204",
+        "Pelikan 4:172",
         "https://www.vatican.va/content/catechism/en.html",
-        "https://www.usccb.org/catechism/pt2sect2",
-        "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
-        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+        "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html"
       ]
     },
     {
@@ -279,9 +299,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
+        "Pelikan 2:25",
+        "Pelikan 2:147",
+        "Pelikan 2:291-292",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
-        "https://www.oca.org/questions/sevensacraments/the-sacraments"
+        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
       ]
     },
     {
@@ -307,9 +329,10 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:147",
+        "Damick ch2: THE GREAT SCHISM",
         "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
-        "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
-        "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+        "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
       ]
     },
     {
@@ -330,6 +353,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 3:245",
+        "Pelikan 4:134",
         "https://guides.loc.gov/crusades",
         "https://sourcebooks.web.fordham.edu/source/urban2-5vers.asp",
         "https://sourcebooks.web.fordham.edu/source/cde-privs.asp"
@@ -358,10 +383,9 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
-        "https://www.waldensian.org/history/waldo/",
-        "https://www.waldensian.org/history/role-of-women-in-the-middle-ages/",
         "https://chiesavaldese.org/chi-siamo/storia/valdesi/",
         "https://chiesavaldese.org/cosa-crediamo/",
+        "https://chiesavaldese.org/atto_sinodo/pastorato-femminile/",
         "https://www.oikoumene.org/member-churches/waldensian-church"
       ]
     },
@@ -406,8 +430,9 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:271",
+        "Damick ch2: CLOSER YET FURTHER APART: THEOLOGY, LITURGICS, AND REUNION",
         "https://cup.columbia.edu/book/the-conquest-of-constantinople/9780231136686/",
-        "https://www.newadvent.org/cathen/04543c.htm",
         "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
       ]
     },
@@ -430,6 +455,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 3:203-204",
+        "Pelikan 4:129",
         "https://www.papalencyclicals.net/councils/ecum12-2.htm",
         "https://sourcebooks.web.fordham.edu/basis/lateran4.asp"
       ]
@@ -452,9 +479,11 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
-        "https://www.op.org/saints/festum-s-thomae-de-aquino/",
-        "https://ccel.org/ccel/aquinas/summa.TP_Q60.html",
-        "https://english.op.org/godzdogz/sacraments-the-eucharist-presence/"
+        "Pelikan 3:268-269",
+        "Pelikan 3:208",
+        "https://www.newadvent.org/summa/4062.htm",
+        "https://www.newadvent.org/summa/4075.htm",
+        "https://www.op.org/saints/festum-s-thomae-de-aquino/"
       ]
     },
     {
@@ -477,6 +506,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:271",
+        "Pelikan 3:209-210",
         "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
         "https://www.newadvent.org/cathen/09476c.htm"
       ]
@@ -499,8 +530,10 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
-        "https://provence-alpes-cotedazur.com/que-faire/culture-et-patrimoine/monuments/palais-des-papes/papes-en-avignon/",
-        "https://westernciv.com/syllabus/birth-of-europe/spring/the-crisis-of-the-medieval-church/"
+        "Pelikan 4:117",
+        "https://www.newadvent.org/cathen/02158a.htm",
+        "https://www.newadvent.org/cathen/04020a.htm",
+        "https://www.newadvent.org/cathen/06799a.htm"
       ]
     },
     {
@@ -521,7 +554,9 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
+        "Pelikan 4:72-73",
+        "Damick ch2: Papal Supremacy",
+        "https://www.papalencyclicals.net/councils/ecum16.htm",
         "https://www.newadvent.org/cathen/04288a.htm"
       ]
     },
@@ -544,6 +579,8 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Pelikan 4:58",
+        "Pelikan 4:111",
         "https://chaucer.fas.harvard.edu/pages/john-wycliffe-and-lollards",
         "https://plato.stanford.edu/entries/wyclif/",
         "https://www.newadvent.org/cathen/09333a.htm"
@@ -569,9 +606,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "https://www.newadvent.org/cathen/04288a.htm",
-        "https://english.op.org/godzdogz/councils-of-faith-constance-1414-18/",
-        "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf"
+        "Pelikan 4:69",
+        "Pelikan 4:112",
+        "Pelikan 4:124",
+        "https://www.papalencyclicals.net/councils/ecum16.htm",
+        "https://www.newadvent.org/cathen/04288a.htm"
       ]
     },
     {
@@ -593,8 +632,10 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Pelikan 4:58-59",
+        "Pelikan 4:93-94",
+        "Pelikan 4:123",
         "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf",
-        "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/",
         "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45763"
       ]
     },
@@ -618,10 +659,11 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:271-280",
+        "Pelikan 4:291-292",
+        "Damick ch2: Papal Supremacy",
         "https://www.papalencyclicals.net/councils/ecum17.htm",
-        "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
-        "https://www.oca.org/reflections/fr.-lawrence-farley/patience-and-reception",
-        "https://www.newadvent.org/cathen/06111a.htm"
+        "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
       ]
     },
     {
@@ -643,7 +685,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
-        "https://www.oca.org/saints/lives/2018/06/15/101725-saint-jonah-metropolitan-of-moscow",
+        "Pelikan 2:297-298",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixteenth-century/russia3"
       ]
@@ -666,6 +708,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
+        "Pelikan 2:271",
+        "Pelikan 2:253",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/the-fall-of-byzantium",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifteenth-century/russia2"
       ]
@@ -688,6 +732,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
+        "Damick ch4: Moravians",
         "https://www.moravian.org/2018/07/a-brief-history-of-the-moravian-church/",
         "https://www.unitasfratrum.org/about-unitas-fratrum/our-origin-growth"
       ]

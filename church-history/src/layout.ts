@@ -88,13 +88,13 @@ export const FAMILY_OF: Record<string, string> = {
 
 /** How each tradition understands communion (the Lord's Supper, the Eucharist). */
 export const EUCHARIST: Record<string, Swatch> = {
-  early: { name: 'Christ\'s body and blood', note: 'Held by the early church before anyone defined how', color: '#eee4c8' },
-  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox and other ancient Eastern churches, and Old Catholics', color: '#a48df0' },
+  early: { name: 'Christ\'s body and blood', note: 'Confessed by the early church before later disputes defined how', color: '#eee4c8' },
+  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox, other ancient Eastern churches, and Old Catholics. Some Eastern confessions also say transubstantiation. Priestless Old Believers cannot celebrate the Eucharist', color: '#a48df0' },
   transub: { name: 'Transubstantiation', note: 'The bread and wine become Christ\'s body and blood. Their outward appearances remain', color: '#f0cb63' },
   union: { name: 'Real presence: in, with, and under', note: 'Lutheran. Bread and wine remain, and Christ is truly there', color: '#62a9f5' },
-  varied: { name: 'Real presence, views vary', note: 'Anglican and Moravian. Affirmed without one fixed explanation', color: '#f58ea6' },
-  spiritual: { name: 'Real spiritual presence', note: 'Reformed and Methodist. Christ is truly present and received by faith through the Spirit', color: '#6fd08f' },
-  memorial: { name: 'Memorial', note: 'An act of remembrance and obedience, often called an ordinance', color: '#58d3e0' },
+  varied: { name: 'Views of presence vary', note: 'Anglican and Moravian affirm real presence without one fixed explanation. Charismatics follow their own church\'s teaching', color: '#f58ea6' },
+  spiritual: { name: 'Real spiritual presence', note: 'Reformed and Methodist. Through the Spirit, Christ is truly present, and faith receives him', color: '#6fd08f' },
+  memorial: { name: 'Memorial', note: 'An act of remembrance, often called an ordinance. Some also teach Christ\'s spiritual presence or his presence in the gathered church', color: '#58d3e0' },
   none: { name: 'No outward sacraments', note: 'Most Quakers and the Salvation Army. Some evangelical Friends do use outward baptism and communion', color: '#c9b6a0' },
   outside: { name: 'Outside the historic creeds', color: '#8891a8' },
 };
@@ -227,7 +227,7 @@ export const CHAPTERS: Chapter[] = [
     focus: 400,
     from: 300,
     to: 480,
-    text: 'Once Rome legalized Christianity in 313, bishops met in councils to settle who Jesus is. Nicaea in 325 and Constantinople in 381 gave us the Nicene Creed. The Persian church declared its independence in 424. Disputes over Ephesus in 431 and Chalcedon in 451 slowly set the Church of the East and the Oriental Orthodox on their own paths.',
+    text: 'After Rome legalized Christianity in 313, emperors backed councils of bishops on Christ and the Trinity. Nicaea in 325 adopted a creed. Constantinople in 381 affirmed the Spirit\'s divinity, and tradition credits it with the Nicene Creed said today. The Persian church declared independence in 424. Ephesus in 431 and Chalcedon in 451 slowly set the Church of the East and the Oriental Orthodox on their own paths.',
   },
   {
     title: 'East and West',
@@ -241,7 +241,7 @@ export const CHAPTERS: Chapter[] = [
     focus: 1540,
     from: 1480,
     to: 1620,
-    text: 'In 1517 Martin Luther challenged the sale of indulgences. Within twenty years the Lutheran, Reformed, Anabaptist, and Anglican churches had formed. Rome answered at the Council of Trent.',
+    text: 'In 1517 Martin Luther challenged the sale of indulgences. Over the next decades the Lutheran, Reformed, Anabaptist, and Anglican churches took shape. Catholics defined their teaching at the Council of Trent.',
   },
   {
     title: 'New branches',
@@ -255,7 +255,7 @@ export const CHAPTERS: Chapter[] = [
     focus: 1960,
     from: 1880,
     to: 2026,
-    text: 'The World Christian Database counts about 2.7 billion Christians in 2026. Roughly half are Catholic, two in five are Protestant or independent, and one in ten is Orthodox.',
+    text: 'The World Christian Database estimates about 2.7 billion Christians in 2026. Roughly half are Catholic, two in five are Protestant or independent, and one in ten is Eastern or Oriental Orthodox.',
   },
 ];
 

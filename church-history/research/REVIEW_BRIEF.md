@@ -44,3 +44,61 @@ Every claim should rest on the best available source. Use this order, with Pelik
 **Second cross-check: Damick.** Use Fr. Andrew Stephen Damick, *Orthodoxy and Heterodoxy: Finding the Way to Christ in a Complex Religious Landscape* (Ancient Faith Publishing, 2nd ed. 2017), and the Ancient Faith Radio podcast series it grew from, as a comparative cross-check. It surveys the traditions in this map and how they differ on the church, salvation, and the sacraments. Note that it is written from an Eastern Orthodox perspective. Where Damick's description of another tradition differs from that tradition's own documents, follow the tradition's own documents for the main text, and consider whether the difference belongs in the `disputed` field. Cite Damick (book or podcast episode URL) where it supports a claim. Record in your log any place where Damick and the map disagree, and how you resolved it.
 
 **Replace weak sources.** Remove or replace tourism sites, single parish or congregation pages, personal blogs, popular ministry sites, aggregators such as encyclopedia.com when a primary or scholarly source exists, and general news for anything older than a few years. Never use Wikipedia as a cited source. Every node and grid row should end with at least one Tier 1 or Tier 2 source. Keep 2 to 4 sources per item.
+
+## Pelikan rebase (round 2 onward)
+
+We now have the full text of all five Pelikan volumes. This replaces the "cite by volume and chapter" fallback above. Every historical claim on the map gets checked against the book itself and cited to the page.
+
+**The text.** `research/books/pelikan/text/` holds one plain-text file per volume (vol1 to vol5). Each page starts with a `=== PDF page N ===` marker. The printed book page number is in the running header on the next line (for example `The Orthodoxy of Old Rome    153`). Cite the printed page, never the PDF page. The source PDF is `research/books/pelikan/pelikan-christian-tradition-vols1-5.pdf` if a page's text looks garbled. This folder is not in git. Never copy more than a short quote from it into any tracked file.
+
+Search it with `grep -n -i` (try several spellings and synonyms, since this is scanned text: "Filioque", "procession", "transubstantiation", "Chalcedon", and so on). Then read the surrounding pages before you rely on a passage. Use the margin notes (primary-source references in the left column) only as context.
+
+**What counts as a historical claim.** Dates, names, councils and what they decided, schisms and their causes, who taught what, where a tradition came from, and how doctrine developed (especially sacramental doctrine). Present-day facts are not historical claims: membership numbers, 2018 to 2026 events, and current church structures keep their current sources and standard.
+
+**The process for each claim you own:**
+1. Find what Pelikan says about it. Read the relevant pages, not just one matching line.
+2. If the map agrees with Pelikan, add the citation.
+3. If the map departs from Pelikan, rewrite it to follow Pelikan, unless the tradition's own documents (for "what X teaches today") or clearly newer scholarship contradict him. In that case keep the map's version and log why.
+4. If Pelikan does not cover the claim, keep its current sources and log it as "not in Pelikan". Do not stretch a loosely related passage to cover it.
+5. Pelikan is a history of doctrine. Do not add claims just because he discusses them. Fix and source what the map already says, keeping the 30,000 ft view.
+
+**Citation format (strict).** Add Pelikan citations to `sources` as plain strings in exactly this form: `Pelikan 1:172` or `Pelikan 4:183-189` (volume:printed pages, at most 30 pages, hyphen not dash). The app shows them as book citations. Put the most specific range you actually read. Keep 2 to 5 sources per item: the Pelikan citation(s) first, then the best tier 1 source. Drop weak sources (see above) when Pelikan or a primary source covers the claim.
+
+**Proof in the log.** For every Pelikan citation you add, the log entry gives the node id and field, the citation, and a short exact quote from that page (25 words at most) that supports the claim. The lead will check the quotes against the text, so copy them exactly as they appear in the text file, including any scan errors. Never invent a quote or a page.
+
+**Damick** is not available locally yet. Do not cite it in this round.
+
+**Validate** at the end: your JSON parses, `node scripts/merge-data.mjs` reports no broken references, and `node scripts/check-pelikan.mjs` reports no problems.
+
+## Verification rounds (round 3 onward)
+
+Round 2 added Pelikan citations and logged a quote for each in `research/rebase-1.md` to `rebase-5.md`. The lead has confirmed that every logged quote really is on its cited page. What has not been checked is whether each cited passage supports the specific claim it is attached to. That is the job now. You are a skeptical second reader.
+
+For every item you own:
+1. **Support.** For each Pelikan citation, read the cited pages in full. Decide whether they support what the item's text actually says, field by field. A passage that only mentions the topic is not support. If a citation does not support anything in the item, remove it. If the range is wider than needed, narrow it. If Pelikan on those pages contradicts the item's text, fix the text to follow him (same rules as round 2).
+2. **Missed coverage.** For items or claims logged as "not in Pelikan", search again. Each volume ends with an index of names and subjects (search the last 20 or so pages of each text file), and terms can be spelled differently in a scan. Add a citation only if you find a passage that directly supports the claim.
+3. **Text.** Read every text field with fresh eyes against Pelikan. Fix anything wrong or misleading at the 30,000 ft level. Do not polish wording that is already accurate.
+4. **Present-day facts** (membership, current structures, 2018 to 2026 events) stay outside the Pelikan check. Flag one only if it is plainly wrong.
+
+**Log format (strict, one line per quote):** `- <id>.<field>: <what you did>. `Pelikan 2:183-187`, printed page 183: "exact quote"`. Quotes must be copied exactly from the text file, 25 words at most. Also list every citation you removed or narrowed, and why.
+
+**Clean round.** End your log with a line `Result: CLEAN` if you made no text changes and removed no citations (narrowing a range or adding a well-supported citation still counts as clean), otherwise `Result: CHANGES` and a count.
+
+Validate as in round 2: your JSON parses, `node scripts/merge-data.mjs` shows no broken references, `node scripts/check-pelikan.mjs` and `node scripts/check-pelikan-quotes.mjs <your log>` report no problems.
+
+## Damick pass
+
+We now have the full text of Fr. Andrew Stephen Damick, *Orthodoxy and Heterodoxy: Finding the Way to Christ in a Complicated Religious Landscape* (2nd ed., Ancient Faith, 2017). This replaces the earlier "Damick is not available" note.
+
+**The text.** `research/books/damick/text/` has one file per part: `introduction.txt`, `ch1.txt` to `ch8.txt`, `epilogue.txt`, `appendix1.txt` to `appendix4.txt`. Section headings appear as lines like `=== H4 Lutheranism ===`. Chapters: 1 Orthodoxy, heterodoxy, heresy and history (including the ancient heresies), 2 Roman Catholicism, 3 the Magisterial Reformation (Lutheran, Reformed, Anglican), 4 the Radical Reformation (Anabaptists, Moravians, Puritans, Quakers, Baptists), 5 Evangelicalism and revivalism (Restorationism, Adventism, Holiness, and more), 6 Pentecostalism, 7 non-mainstream groups (Latter-day Saints, Jehovah's Witnesses, and others), 8 non-Christian religions. Not in git. Never copy more than a short quote into a tracked file.
+
+**What Damick is for.** He is an Eastern Orthodox priest comparing the traditions on the church, salvation, and the sacraments. Use him in three ways:
+1. **Cross-check.** Where Damick and the map disagree on a fact, find out who is right. Pelikan and the tradition's own documents outrank Damick. Fix the map only if it is actually wrong.
+2. **"Seen differently".** Where Damick gives the Orthodox view of a tradition's teaching, and the map's `disputed` field would be clearer for including it, add or adjust a short neutral sentence that names it as the Orthodox view (for example "Orthodox writers see ..."). Never state Damick's judgment as fact in `summary`, `why`, `facts`, or `sacraments`. Keep the map neutral between traditions. Do not add polemic. Use plain words and the field's length limit.
+3. **Support.** Where Damick directly supports a claim already on the map, cite him.
+
+**Citation format (strict).** `Damick ch3: Lutheranism`, that is `Damick <part>: <section heading>`, where part is `intro`, `ch1` to `ch8`, `epilogue`, or `appendix1` to `appendix4`, and the heading is copied exactly from a `=== H3 ...` or `=== H4 ...` line in that file (keep its capitalization). Use the most specific section that holds the passage. Pelikan citations stay first in `sources`, then Damick, then others. Keep 2 to 5 sources per item.
+
+**Proof in the log.** For every Damick citation, write one line: `- <id>.<field>: <what you did>. `Damick ch3: Lutheranism`, quote: "exact words from that section"` (25 words at most, copied exactly). Also log every place Damick and the map disagree, and how you resolved it.
+
+**Validate:** JSON parses, `node scripts/merge-data.mjs` shows no broken references, and `node scripts/check-damick.mjs` and `node scripts/check-pelikan.mjs` report no problems.

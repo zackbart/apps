@@ -95,6 +95,7 @@ button { cursor: pointer; }
 .legend li { display: flex; gap: 9px; align-items: baseline; padding: 3px 0; font-size: 13px; line-height: 1.35; }
 .legend li i { flex: none; width: 16px; height: 3px; border-radius: 2px; background: var(--c); transform: translateY(-3px); }
 .legend li small { display: block; color: var(--muted); font-size: 11.5px; }
+.legend-note { margin: 8px 0 0; color: var(--muted); font-size: 11.5px; line-height: 1.35; }
 
 /* Tools */
 .tools {
@@ -601,7 +602,8 @@ button { cursor: pointer; }
   .legend-toggle svg { width: 20px; height: 20px; transform: rotate(180deg); }
   .legend.folded .legend-toggle svg { transform: none; }
   .legend.folded h4 { margin: 0; }
-  .legend.folded ul { display: none; }
+  .legend.folded ul,
+  .legend.folded .legend-note { display: none; }
   .legend h4 { margin-bottom: 4px; font-size: 12px; }
   .legend ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; }
   .legend li { padding: 2px 0; font-size: 12px; line-height: 1.3; }

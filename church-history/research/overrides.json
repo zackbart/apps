@@ -25,14 +25,7 @@
    "on": null
   },
   "catholic": {
-   "why": "The largest Christian church, with about 1.42 billion baptized members. Most Protestant traditions trace their separation from Rome to the Reformation.",
-   "sources": [
-    "https://www.vatican.va/content/catechism/en.html",
-    "https://www.usccb.org/catechism/pt2sect2",
-    "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
-    "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
-    "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
-   ]
+   "why": "The largest Christian church, about 1.42 billion baptized members in 2024. Most Protestant traditions trace their separation from Rome to the Reformation."
   },
   "anglican": {
    "sacraments": "Two Gospel sacraments, baptism and the Eucharist. Baptism includes infants. Anglicans differ over counting five other rites and explain Christ's real presence in several ways."
@@ -63,18 +56,15 @@
     "Each uses an Eastern rite such as Byzantine, Syriac, or Coptic."
    ],
    "sacraments": "Seven sacraments, often called holy mysteries. Eastern tradition joins baptism, chrismation, and communion, including for infants. Practices differ across churches. Byzantine churches use leavened Eucharistic bread.",
-   "today": "About 18 million, mostly in Ukraine, India, and the Middle East",
+   "today": "About 18 million in CNEWA's 2017 Annuario Pontificio figures",
    "disputed": "The 1993 Balamand dialogue rejected uniatism as a model for reunion, while affirming Eastern Catholic churches' right to exist.",
    "outsideNicene": false,
    "importance": 2,
    "sources": [
-    "https://www.britannica.com/topic/Eastern-rite-church",
-    "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
-    "https://www.britannica.com/event/Union-of-Brest-Litovsk",
     "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/",
-    "https://www.usccb.org/resources/who-are-catholics-middle-east",
-    "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/iii_how_is_the_sacrament_of_baptism_celebrated.index.html",
-    "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
+    "https://cnewa.org/eastern-christian-churches/the-catholic-eastern-churches/from-the-orthodox-church/the-ukrainian-catholic-church/",
+    "https://cnewa.org/wp-content/uploads/2020/03/2017-Statistics.pdf",
+    "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html",
     "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-orientale/chiese-ortodosse-di-tradizione-bizantina/commissione-mista-internazionale-per-il-dialogo-teologico-tra-la/documenti-di-dialogo/testo-in-lingua-inglese.html"
    ]
   }
