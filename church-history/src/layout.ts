@@ -92,9 +92,9 @@ export const EUCHARIST: Record<string, Swatch> = {
   mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox, other ancient Eastern churches, and Old Catholics. Some Eastern confessions also say transubstantiation', color: '#a48df0' },
   transub: { name: 'Transubstantiation', note: 'The bread and wine become Christ\'s body and blood. Their outward appearances remain', color: '#f0cb63' },
   union: { name: 'Real presence: in, with, and under', note: 'Lutheran. Bread and wine remain, and Christ is truly there', color: '#62a9f5' },
-  varied: { name: 'Real presence, views vary', note: 'Anglican and Moravian. Affirmed without one fixed explanation', color: '#f58ea6' },
+  varied: { name: 'Views of presence vary', note: 'Anglican and Moravian affirm real presence without one fixed explanation. Charismatics follow their own church\'s teaching', color: '#f58ea6' },
   spiritual: { name: 'Real spiritual presence', note: 'Reformed and Methodist. Through the Spirit, Christ is truly present, and faith receives him', color: '#6fd08f' },
-  memorial: { name: 'Memorial', note: 'An act of remembrance, often called an ordinance. Some also teach Christ\'s spiritual presence', color: '#58d3e0' },
+  memorial: { name: 'Memorial', note: 'An act of remembrance, often called an ordinance. Some also teach Christ\'s spiritual presence or his presence in the gathered church', color: '#58d3e0' },
   none: { name: 'No outward sacraments', note: 'Most Quakers and the Salvation Army. Some evangelical Friends do use outward baptism and communion', color: '#c9b6a0' },
   outside: { name: 'Outside the historic creeds', color: '#8891a8' },
 };

@@ -23,8 +23,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "Pelikan 1:263-266",
-        "Pelikan 1:274-275",
+        "Pelikan 1:263-264",
+        "Pelikan 1:275",
         "Pelikan 1:163-168",
         "Pelikan 2:147",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council"
@@ -71,7 +71,7 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
-        "Pelikan 1:274-277",
+        "Pelikan 1:275-277",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians",
         "https://www.newadvent.org/cathen/04423f.htm"
       ]
@@ -140,7 +140,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "Pelikan 2:4-5",
+        "Pelikan 2:4",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/the-rise-of-islam",
         "https://orthinc.oca.org/article/A%2BHistory%2Bof%2Bthe%2BOrthodox%2BChurch"
       ]
@@ -189,7 +189,7 @@
       "importance": 1,
       "sources": [
         "Pelikan 2:103",
-        "Pelikan 2:125-126",
+        "Pelikan 2:126",
         "Pelikan 2:145",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm",
         "https://www.newadvent.org/cathen/04423f.htm"
@@ -265,7 +265,7 @@
       "sources": [
         "Pelikan 2:147",
         "Pelikan 3:203-204",
-        "Pelikan 3:209-210",
+        "Pelikan 4:172",
         "https://www.vatican.va/content/catechism/en.html",
         "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html"
       ]
@@ -295,7 +295,7 @@
       "sources": [
         "Pelikan 2:25",
         "Pelikan 2:147",
-        "Pelikan 2:291-293",
+        "Pelikan 2:291-292",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
         "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
       ]
@@ -346,7 +346,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "Pelikan 3:243-245",
+        "Pelikan 3:245",
+        "Pelikan 4:134",
         "https://guides.loc.gov/crusades",
         "https://sourcebooks.web.fordham.edu/source/urban2-5vers.asp",
         "https://sourcebooks.web.fordham.edu/source/cde-privs.asp"
@@ -447,6 +448,7 @@
       "importance": 1,
       "sources": [
         "Pelikan 3:203-204",
+        "Pelikan 4:129",
         "https://www.papalencyclicals.net/councils/ecum12-2.htm",
         "https://sourcebooks.web.fordham.edu/basis/lateran4.asp"
       ]
@@ -544,7 +546,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "Pelikan 4:72-74",
+        "Pelikan 4:72-73",
         "https://www.papalencyclicals.net/councils/ecum16.htm",
         "https://www.newadvent.org/cathen/04288a.htm"
       ]
@@ -621,9 +623,9 @@
       "outsideNicene": false,
       "importance": 2,
       "sources": [
-        "Pelikan 4:53-59",
+        "Pelikan 4:58-59",
         "Pelikan 4:93-94",
-        "Pelikan 4:123-125",
+        "Pelikan 4:123",
         "https://mzv.gov.cz/file/1445081/Jan_Hus_leaflet.pdf",
         "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45763"
       ]

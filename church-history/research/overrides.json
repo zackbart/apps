@@ -7,11 +7,6 @@
     "Egyptian and Syrian opposition helped form lasting non-Chalcedonian churches.",
     "Armenian rejection developed later.",
     "Modern dialogues have found substantial agreement about Christ's divinity and humanity."
-   ],
-   "sources": [
-    "Pelikan 1:266-267",
-    "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
-    "https://czasopisma.kul.pl/index.php/vp/article/view/4125"
    ]
   },
   "global-south-shift": {
@@ -30,33 +25,13 @@
    "on": null
   },
   "catholic": {
-   "why": "The largest Christian church, about 1.42 billion baptized members in 2024. Most Protestant traditions trace their separation from Rome to the Reformation.",
-   "sources": [
-    "Pelikan 4:172",
-    "https://www.vatican.va/content/catechism/en.html",
-    "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html",
-    "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/",
-    "https://2017.lutheranworld.org/sites/default/files/documents/From%20Conflict%20to%20Communion%20EN_0.pdf"
-   ]
+   "why": "The largest Christian church, about 1.42 billion baptized members in 2024. Most Protestant traditions trace their separation from Rome to the Reformation."
   },
   "anglican": {
-   "sacraments": "Two Gospel sacraments, baptism and the Eucharist. Baptism includes infants. Anglicans differ over counting five other rites and explain Christ's real presence in several ways.",
-   "sources": [
-    "Pelikan 5:51",
-    "Pelikan 5:284-285",
-    "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
-    "https://ecphilippines.org/catechism/",
-    "https://www.anglicancatholic.org.uk/history/"
-   ]
+   "sacraments": "Two Gospel sacraments, baptism and the Eucharist. Baptism includes infants. Anglicans differ over counting five other rites and explain Christ's real presence in several ways."
   },
   "pentecostal": {
-   "sacraments": "Usually two ordinances, believers' baptism and communion. Many distinguish Spirit baptism from conversion. Oneness churches link water and Spirit baptism to new birth. Some practice foot washing.",
-   "sources": [
-    "https://ag.org/Beliefs/Statement-of-Fundamental-truths",
-    "https://ag.org/beliefs/position-papers/divine-healing",
-    "https://iphc.org/beliefs/",
-    "https://upci.org/our-beliefs/"
-   ]
+   "sacraments": "Usually two ordinances, believers' baptism and communion. Many distinguish Spirit baptism from conversion. Oneness churches link water and Spirit baptism to new birth. Some practice foot washing."
   }
  },
  "add": [

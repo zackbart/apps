@@ -69,3 +69,19 @@ Search it with `grep -n -i` (try several spellings and synonyms, since this is s
 **Damick** is not available locally yet. Do not cite it in this round.
 
 **Validate** at the end: your JSON parses, `node scripts/merge-data.mjs` reports no broken references, and `node scripts/check-pelikan.mjs` reports no problems.
+
+## Verification rounds (round 3 onward)
+
+Round 2 added Pelikan citations and logged a quote for each in `research/rebase-1.md` to `rebase-5.md`. The lead has confirmed that every logged quote really is on its cited page. What has not been checked is whether each cited passage supports the specific claim it is attached to. That is the job now. You are a skeptical second reader.
+
+For every item you own:
+1. **Support.** For each Pelikan citation, read the cited pages in full. Decide whether they support what the item's text actually says, field by field. A passage that only mentions the topic is not support. If a citation does not support anything in the item, remove it. If the range is wider than needed, narrow it. If Pelikan on those pages contradicts the item's text, fix the text to follow him (same rules as round 2).
+2. **Missed coverage.** For items or claims logged as "not in Pelikan", search again. Each volume ends with an index of names and subjects (search the last 20 or so pages of each text file), and terms can be spelled differently in a scan. Add a citation only if you find a passage that directly supports the claim.
+3. **Text.** Read every text field with fresh eyes against Pelikan. Fix anything wrong or misleading at the 30,000 ft level. Do not polish wording that is already accurate.
+4. **Present-day facts** (membership, current structures, 2018 to 2026 events) stay outside the Pelikan check. Flag one only if it is plainly wrong.
+
+**Log format (strict, one line per quote):** `- <id>.<field>: <what you did>. `Pelikan 2:183-187`, printed page 183: "exact quote"`. Quotes must be copied exactly from the text file, 25 words at most. Also list every citation you removed or narrowed, and why.
+
+**Clean round.** End your log with a line `Result: CLEAN` if you made no text changes and removed no citations (narrowing a range or adding a well-supported citation still counts as clean), otherwise `Result: CHANGES` and a count.
+
+Validate as in round 2: your JSON parses, `node scripts/merge-data.mjs` shows no broken references, `node scripts/check-pelikan.mjs` and `node scripts/check-pelikan-quotes.mjs <your log>` report no problems.

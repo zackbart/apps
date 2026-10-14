@@ -26,7 +26,7 @@ const STEPS = stepData.steps as Record<string, string>;
 export const STATUS_TEXT: Record<Status, string> = {
   sacrament: 'Sacrament',
   ordinance: 'Ordinance',
-  rite: 'A rite, not a sacrament',
+  rite: 'A rite, not counted as a sacrament',
   none: 'Not a formal rite',
   varies: 'Varies by church',
 };

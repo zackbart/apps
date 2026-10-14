@@ -22,7 +22,7 @@
       "importance": 1,
       "sources": [
         "Pelikan 1:13",
-        "Pelikan 1:162-163",
+        "Pelikan 1:163",
         "https://bible.usccb.org/bible/acts/2",
         "https://bible.usccb.org/bible/1corinthians/11"
       ]
@@ -306,7 +306,7 @@
       "importance": 2,
       "outsideNicene": false,
       "sources": [
-        "Pelikan 1:97-102",
+        "Pelikan 1:97-101",
         "https://www.newadvent.org/cathen/10521a.htm"
       ]
     },
@@ -329,7 +329,7 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "Pelikan 1:114-115",
+        "Pelikan 1:114",
         "https://www.newadvent.org/fathers/2806039.htm",
         "https://www.newadvent.org/cathen/03274a.htm"
       ]
@@ -354,6 +354,7 @@
       "sources": [
         "Pelikan 1:40",
         "Pelikan 1:202",
+        "Pelikan 2:23",
         "https://sourcebooks.web.fordham.edu/source/edict-milan.asp",
         "https://www.goarch.org/-/the-first-ecumenical-council"
       ]
@@ -427,6 +428,7 @@
       "sources": [
         "Pelikan 1:292-294",
         "Pelikan 1:310-311",
+        "Pelikan 1:313-315",
         "https://plato.stanford.edu/entries/augustine/",
         "https://www.newadvent.org/fathers/14087.htm"
       ]
@@ -633,7 +635,8 @@
         "Pelikan 1:266-267",
         "Pelikan 2:37",
         "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
-        "https://czasopisma.kul.pl/index.php/vp/article/view/4125"
+        "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/the-armenian-apostolic-church/",
+        "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-orientale/chiese-ortodosse-orientali/relazioni-bilaterali/chiesa-malankarese-siro-ortodossa/joint-international-commission-between-the-roman-catholic-church/declarations-of-agreement/en.html"
       ]
     },
     {
@@ -660,7 +663,7 @@
       "importance": 1,
       "sources": [
         "Pelikan 1:271",
-        "Pelikan 2:52-54",
+        "Pelikan 2:52-57",
         "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
         "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
         "https://www.copticchurch.net/introduction-to-the-coptic-church/sacraments/4_eucharist"
@@ -689,8 +692,8 @@
       "outsideNicene": false,
       "importance": 1,
       "sources": [
-        "Pelikan 1:263-266",
-        "Pelikan 1:274-275",
+        "Pelikan 1:263-264",
+        "Pelikan 1:275",
         "Pelikan 1:163-168",
         "Pelikan 2:147",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council"
