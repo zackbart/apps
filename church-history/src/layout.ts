@@ -5,35 +5,45 @@
 export const TRUNK = ['apostolic', 'early-church', 'chalcedonian'];
 
 /**
- * Lane order from back (far from the camera) to front. Traditions missing from
- * this list are placed right after their first parent.
+ * Lane order from top to bottom. Families stay together, and most later branches
+ * sit closer to their parent than earlier ones, so few lines cross. Traditions
+ * missing from this list are placed right after their first parent.
  */
 export const LANE_ORDER = [
   'church-of-east',
   'oriental-orthodox',
   'old-believers',
+  'orthodox-church-ukraine',
   'eastern-orthodox',
   '__trunk__',
+  'waldensians',
+  'moravian',
   'eastern-catholic',
   'catholic',
   'old-catholic',
-  'waldensians',
-  'hussites',
-  'moravian',
   'lutheran',
+  'reformed',
+  'anabaptist',
+  'restorationist',
+  'congregationalist',
   'anglican',
+  'acna',
   'methodist',
+  'global-methodist',
+  'salvation-army',
   'holiness',
   'pentecostal',
   'charismatic',
-  'evangelical-nondenom',
-  'baptist',
-  'adventist',
-  'restorationist',
-  'congregationalist',
+  'oneness-pentecostal',
+  'latter-day-saints',
+  'african-methodist-episcopal',
   'quaker',
-  'reformed',
-  'anabaptist',
+  'baptist',
+  'evangelical-nondenom',
+  'national-baptist-convention',
+  'southern-baptist',
+  'adventist',
+  'jehovahs-witnesses',
 ];
 
 export interface Swatch {
@@ -43,16 +53,16 @@ export interface Swatch {
 }
 
 export const FAMILIES: Record<string, Swatch> = {
-  early: { name: 'Shared early church', color: '#eee4c8' },
-  east: { name: 'Church of the East', color: '#4fbdae' },
-  oriental: { name: 'Oriental Orthodox', color: '#e7a052' },
-  orthodox: { name: 'Eastern Orthodox', color: '#a48df0' },
-  catholic: { name: 'Catholic', color: '#f0cb63' },
-  magisterial: { name: 'Lutheran, Reformed, Anglican', color: '#62a9f5' },
-  free: { name: 'Anabaptist, Baptist, Quaker', color: '#6fd08f' },
-  revival: { name: 'Methodist, Holiness, Pentecostal', color: '#f58ea6' },
-  restoration: { name: 'Restorationist, Adventist', color: '#58d3e0' },
-  outside: { name: 'Outside the historic creeds', color: '#8891a8' },
+  early: { name: 'Shared early church', color: '#3d3d3d' },
+  east: { name: 'Church of the East', color: '#0e8a80' },
+  oriental: { name: 'Oriental Orthodox', color: '#d17a1e' },
+  orthodox: { name: 'Eastern Orthodox', color: '#7a4fcf' },
+  catholic: { name: 'Catholic', color: '#b88a00' },
+  magisterial: { name: 'Lutheran, Reformed, Anglican', color: '#2c6cd4' },
+  free: { name: 'Anabaptist, Baptist, Quaker', color: '#2f9447' },
+  revival: { name: 'Methodist, Holiness, Pentecostal', color: '#d1405a' },
+  restoration: { name: 'Restorationist, Adventist', color: '#1593a6' },
+  outside: { name: 'Outside the historic creeds', color: '#8a8f9c' },
 };
 
 export const FAMILY_OF: Record<string, string> = {
@@ -88,15 +98,15 @@ export const FAMILY_OF: Record<string, string> = {
 
 /** How each tradition understands communion (the Lord's Supper, the Eucharist). */
 export const EUCHARIST: Record<string, Swatch> = {
-  early: { name: 'Christ\'s body and blood', note: 'Confessed by the early church before later disputes defined how', color: '#eee4c8' },
-  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox, other ancient Eastern churches, and Old Catholics. Some Eastern confessions also say transubstantiation. Priestless Old Believers cannot celebrate the Eucharist', color: '#a48df0' },
-  transub: { name: 'Transubstantiation', note: 'The bread and wine become Christ\'s body and blood. Their outward appearances remain', color: '#f0cb63' },
-  union: { name: 'Real presence: in, with, and under', note: 'Lutheran. Bread and wine remain, and Christ is truly there', color: '#62a9f5' },
-  varied: { name: 'Views of presence vary', note: 'Anglican and Moravian affirm real presence without one fixed explanation. Charismatics follow their own church\'s teaching', color: '#f58ea6' },
-  spiritual: { name: 'Real spiritual presence', note: 'Reformed and Methodist. Through the Spirit, Christ is truly present, and faith receives him', color: '#6fd08f' },
-  memorial: { name: 'Memorial', note: 'An act of remembrance, often called an ordinance. Some also teach Christ\'s spiritual presence or his presence in the gathered church', color: '#58d3e0' },
-  none: { name: 'No outward sacraments', note: 'Most Quakers and the Salvation Army. Some evangelical Friends do use outward baptism and communion', color: '#c9b6a0' },
-  outside: { name: 'Outside the historic creeds', color: '#8891a8' },
+  early: { name: 'Christ\'s body and blood', note: 'Confessed by the early church before later disputes defined how', color: '#3d3d3d' },
+  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox, other ancient Eastern churches, and Old Catholics. Some Eastern confessions also say transubstantiation. Priestless Old Believers cannot celebrate the Eucharist', color: '#7a4fcf' },
+  transub: { name: 'Transubstantiation', note: 'The bread and wine become Christ\'s body and blood. Their outward appearances remain', color: '#b88a00' },
+  union: { name: 'Real presence: in, with, and under', note: 'Lutheran. Bread and wine remain, and Christ is truly there', color: '#2c6cd4' },
+  varied: { name: 'Views of presence vary', note: 'Anglican and Moravian affirm real presence without one fixed explanation. Charismatics follow their own church\'s teaching', color: '#c2408a' },
+  spiritual: { name: 'Real spiritual presence', note: 'Reformed and Methodist. Through the Spirit, Christ is truly present, and faith receives him', color: '#2f9447' },
+  memorial: { name: 'Memorial', note: 'An act of remembrance, often called an ordinance. Some also teach Christ\'s spiritual presence or his presence in the gathered church', color: '#1593a6' },
+  none: { name: 'No outward sacraments', note: 'Most Quakers and the Salvation Army. Some evangelical Friends do use outward baptism and communion', color: '#9a8466' },
+  outside: { name: 'Outside the historic creeds', color: '#8a8f9c' },
 };
 
 export const EUCHARIST_OF: Record<string, string> = {
@@ -162,7 +172,7 @@ export const SIMPLE_MARKERS = [
   'vatican-ii',
 ];
 
-/** Lane order for the simple view, back to front. Branches sit beside the line they came from. */
+/** Lane order for the simple view, top to bottom. Branches sit beside the line they came from. */
 export const SIMPLE_ORDER = [
   'church-of-east',
   'oriental-orthodox',
@@ -200,9 +210,7 @@ export interface Chapter {
   from: number;
   to: number;
   text: string;
-  /** Used instead of text on tall screens, where time runs down the page. */
-  tallText?: string;
-  /** The year the timeline view centers on for this chapter. */
+  /** The year that stands for the chapter, shown beside its title. */
   focus: number;
 }
 
@@ -212,8 +220,7 @@ export const CHAPTERS: Chapter[] = [
     focus: 30,
     from: 30,
     to: 2026,
-    text: 'Every line is a church tradition. They all start with Jesus on the left and run to today on the right. Gold halos are councils. Red rings are splits.',
-    tallText: 'Every line is a church tradition. They all start with Jesus at the top and run down to today. Gold halos are councils. Red rings are splits.',
+    text: 'Every line is a church tradition. Time runs left to right, from Jesus to today. Filled dots are councils. Open rings are splits.',
   },
   {
     title: 'One church',

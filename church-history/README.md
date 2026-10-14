@@ -1,20 +1,20 @@
 # Church History Map
 
-A 3D branching timeline of the Christian church from Jesus to today. Built with Three.js, TypeScript, and Vite.
+A map of the Christian church from Jesus to today. Built with TypeScript, SVG, and Vite.
 
 Four views:
 
-- **Timeline.** Scroll or swipe to move through time. The story chapters change as you go.
-- **Explore.** The free 3D map. Drag to turn, scroll to zoom.
-- **My church.** Pick a tradition and follow its line back to Jesus.
+- **Story.** Read the history in chapters. A pinned map zooms to each chapter's years and draws the lines as you scroll.
+- **Map.** The full map. Drag to move through time, scroll or pinch to zoom, or jump to an era. "More detail" adds the minor branches and events.
+- **My church.** Pick a tradition and follow its line back to Jesus. Add a second church to see where the two part ways and how their sacraments compare.
 - **Sacraments.** Twelve traditions against seven rites, with a note for every cell.
 
 ## Use
 
-- Left and right arrow keys move between chapters. `/` opens search. `Esc` clears the selection.
-- "View of communion" recolors every line by what that tradition believes happens at the Lord's Supper.
-- "More detail" adds the minor branches and events.
-- Links like `/#baptist` open straight to a tradition.
+- On the map, "Family" and "Communion" color every line. "Communion" shows what each tradition believes happens at the Lord's Supper.
+- `/` opens search. `Esc` clears the selection. On the map, the arrow keys move through time and `+` and `-` zoom. In the story, the left and right arrow keys move between chapters.
+- Links like `/#baptist` open the map on a tradition. `/#compare=baptist,catholic` opens a comparison. `/#map`, `/#church`, and `/#sacraments` open a view.
+- The church you pick in "My church" is remembered and drawn in red on the maps.
 
 ## Data
 
@@ -24,7 +24,9 @@ Four views:
 node scripts/merge-data.mjs
 ```
 
-The script writes `src/data/nodes.json` and lists any broken references. Lane order and colors live in `src/layout.ts`.
+The script writes `src/data/nodes.json` and lists any broken references. Lane order, colors, and the story chapters live in `src/layout.ts`.
+
+`research/pelikan-basis-*.md` hold the review of how Pelikan's *The Christian Tradition* could serve as the basis for the map's structure.
 
 ## Develop
 
