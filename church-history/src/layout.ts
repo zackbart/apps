@@ -89,7 +89,7 @@ export const FAMILY_OF: Record<string, string> = {
 /** How each tradition understands communion (the Lord's Supper, the Eucharist). */
 export const EUCHARIST: Record<string, Swatch> = {
   early: { name: 'Christ\'s body and blood', note: 'Confessed by the early church before later disputes defined how', color: '#eee4c8' },
-  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox, other ancient Eastern churches, and Old Catholics. Some Eastern confessions also say transubstantiation. Priestless Old Believers have no Eucharist', color: '#a48df0' },
+  mystery: { name: 'Truly his body and blood, a mystery', note: 'Orthodox, other ancient Eastern churches, and Old Catholics. Some Eastern confessions also say transubstantiation. Priestless Old Believers cannot celebrate the Eucharist', color: '#a48df0' },
   transub: { name: 'Transubstantiation', note: 'The bread and wine become Christ\'s body and blood. Their outward appearances remain', color: '#f0cb63' },
   union: { name: 'Real presence: in, with, and under', note: 'Lutheran. Bread and wine remain, and Christ is truly there', color: '#62a9f5' },
   varied: { name: 'Views of presence vary', note: 'Anglican and Moravian affirm real presence without one fixed explanation. Charismatics follow their own church\'s teaching', color: '#f58ea6' },
