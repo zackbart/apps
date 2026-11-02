@@ -235,6 +235,11 @@ export function setCompare(a: string, b: string | null) {
 
 let picked: { row: string; rite: string } | null = null;
 
+const NOTE_CLOSE = `<button type="button" class="note-close" data-close aria-label="Close">&times;</button>`;
+
+// Lets the longest name break at a real boundary in the narrow phone column.
+const breakableName = (name: string) => esc(name).replace('Nondenominational', 'Non&shy;denominational');
+
 function noteHtml() {
   if (!picked) {
     return `<p class="hint-note">Tap any mark to see what that church does. Tap a church's name for its full story.</p>`;
@@ -242,10 +247,10 @@ function noteHtml() {
   const rite = RITES.find((r) => r.id === picked!.rite);
   const row = ROWS.find((r) => r.id === picked!.row);
   if (!rite) return '';
-  if (!row) return `<h4>${esc(rite.name)}</h4><p>${esc(rite.what)}</p>`;
+  if (!row) return `${NOTE_CLOSE}<h4>${esc(rite.name)}</h4><p>${esc(rite.what)}</p>`;
   const n = byId.get(row.id)!;
   const cell = row.cells[rite.id];
-  return `<div class="note-head">${emblem(row.id)}<div><small>${esc(nameOf(n))}</small><h4>${esc(rite.name)}</h4></div></div><span class="status ${cell.status}">${mark(cell.status)}${STATUS_TEXT[cell.status]}</span><p>${esc(cell.note)}</p><p class="what">${esc(rite.name)}: ${esc(rite.what)}</p>`;
+  return `${NOTE_CLOSE}<div class="note-head">${emblem(row.id)}<div><small>${esc(nameOf(n))}</small><h4>${esc(rite.name)}</h4></div></div><span class="status ${cell.status}">${mark(cell.status)}${STATUS_TEXT[cell.status]}</span><p>${esc(cell.note)}</p><p class="what">${esc(rite.name)}: ${esc(rite.what)}</p>`;
 }
 
 export function renderSacraments(root: HTMLElement, focus?: string) {
@@ -259,7 +264,7 @@ export function renderSacraments(root: HTMLElement, focus?: string) {
       const on = picked?.row === row.id && picked.rite === r.id;
       return `<td><button type="button" data-cell="${row.id}|${r.id}" aria-pressed="${on}" aria-label="${esc(nameOf(n))}, ${esc(r.name)}: ${STATUS_TEXT[c.status]}">${mark(c.status)}</button></td>`;
     }).join('');
-    return `<tr class="${row.id === mine ? 'mine' : ''}"><th scope="row"><button type="button" data-open="${row.id}">${emblem(row.id)}<span>${esc(nameOf(n))}</span></button></th>${cells}</tr>`;
+    return `<tr class="${row.id === mine ? 'mine' : ''}"><th scope="row"><button type="button" data-open="${row.id}">${emblem(row.id)}<span>${breakableName(nameOf(n))}</span></button></th>${cells}</tr>`;
   }).join('');
   const key = (Object.keys(STATUS_TEXT) as Status[]).map((s) => `<span>${mark(s)}${STATUS_TEXT[s]}</span>`).join('');
 
@@ -269,25 +274,43 @@ export function renderSacraments(root: HTMLElement, focus?: string) {
     <div class="key">${key}</div>
     <div class="sac-layout">
       <div class="grid-wrap"><table class="sac-grid"><thead><tr><th></th>${head}</tr></thead><tbody>${body}</tbody></table></div>
-      <aside class="cell-note" aria-live="polite">${noteHtml()}</aside>
+      <aside class="cell-note${picked ? ' open' : ''}" aria-live="polite">${noteHtml()}</aside>
     </div>
   </div>`;
   if (mine) root.querySelector('tr.mine')?.scrollIntoView({ block: 'nearest' });
 }
 
+function showNote(root: HTMLElement, cell: HTMLElement | null) {
+  root.querySelectorAll('[data-cell]').forEach((b) => b.setAttribute('aria-pressed', String(b === cell)));
+  const note = root.querySelector<HTMLElement>('.cell-note')!;
+  note.innerHTML = noteHtml();
+  note.classList.toggle('open', picked !== null);
+  return note;
+}
+
 export function bindSacraments(root: HTMLElement, deps: ScreenDeps) {
   root.addEventListener('click', (e) => {
     const t = e.target as HTMLElement;
+    if (t.closest('[data-close]')) {
+      picked = null;
+      showNote(root, null);
+      return;
+    }
     const cell = t.closest<HTMLElement>('[data-cell]');
     const rite = t.closest<HTMLElement>('[data-rite]');
     if (cell || rite) {
       const [row, r] = cell ? cell.dataset.cell!.split('|') : ['', rite!.dataset.rite!];
       picked = { row, rite: r };
-      root.querySelectorAll('[data-cell]').forEach((b) => b.setAttribute('aria-pressed', String(b === cell)));
-      const note = root.querySelector<HTMLElement>('.cell-note')!;
-      note.innerHTML = noteHtml();
-      // Wide screens keep the note beside the grid. Narrow ones scroll down to it.
-      if (getComputedStyle(note).position !== 'sticky') note.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      const note = showNote(root, cell);
+      const position = getComputedStyle(note).position;
+      if (position === 'fixed') {
+        // Phones show the note as a sheet, so keep the tapped mark visible above it.
+        const hidden = cell ? cell.getBoundingClientRect().bottom - note.getBoundingClientRect().top + 12 : 0;
+        if (hidden > 0) root.scrollBy({ top: hidden, behavior: 'smooth' });
+      } else if (position !== 'sticky') {
+        // Wide screens keep the note beside the grid. Short ones scroll down to it.
+        note.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
       return;
     }
     const open = t.closest<HTMLElement>('[data-open]');
