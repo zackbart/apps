@@ -2,12 +2,14 @@
 
 A map of the Christian church from Jesus to today. Built with TypeScript, SVG, and Vite.
 
-Four views:
+Five views:
 
 - **Story.** Read the history in chapters. A pinned map zooms to each chapter's years and draws the lines as you scroll.
 - **Map.** The full map. Drag to move through time, scroll or pinch to zoom, or jump to an era. "More detail" adds the minor branches and events.
 - **My church.** Pick a tradition and follow its line back to Jesus. Add a second church to see where the two part ways and how their sacraments compare.
 - **Sacraments.** Twelve traditions against seven rites, with a note for every cell.
+
+- **Councils.** Search 28 councils and synods, including all 21 Catholic ecumenical councils. Read the controversy, decisions, aftermath, reception and linked sources. `/#councils` opens the index; `/#councils=nicaea-i` opens an entry.
 
 ## Use
 
@@ -31,17 +33,14 @@ The script writes `src/data/nodes.json` and lists any broken references. Lane or
 
 ## Develop
 
-```sh
-npm install
-npm run dev
-```
-
-Run the checks with `npm run build`.
+Use `pnpm install` and `pnpm run dev`. Run `pnpm run build` to typecheck and build.
 
 ## Deploy
 
-The app uses Cloudflare Workers Static Assets.
+The live site is hosted in the research store. Follow the publication instructions below; the old standalone Worker deployment script is historical.
 
-```sh
-npm run deploy
-```
+## Councils research
+
+`src/data/councils.json` contains the council dossiers. Each entry has a stable id, dates, Catholic number where applicable, scope group, question, context, decisions, aftermath, reception and linked sources. Existing map nodes remain unchanged; `nodeId` connects a dossier to its map entry. The 869 and 879 Constantinople assemblies are separate dossiers linked to the map’s combined node. This collection covers the complete Catholic list and selected other assemblies, not every historical local synod.
+
+The live site is the `church-history` project at https://research.seraphim.studio/church-history/. Build with `pnpm exec tsc --noEmit` and `pnpm exec vite build --base=/church-history/`, then use the research store API to upload assets before `index.html`. Do not deploy the retired standalone Worker.

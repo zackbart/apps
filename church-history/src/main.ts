@@ -8,6 +8,7 @@ import './style.css';
 import { CHAPTERS, CLAIMS, EUCHARIST, FAMILIES, FIRST_YEAR, NOW } from './layout';
 import { FlatMap, type Highlight } from './map';
 import { createStory } from './story';
+import { councils, createCouncils } from './councils';
 import { bindChurch, bindSacraments, renderChurch, renderSacraments, setCompare } from './screens';
 import { panelHtml } from './panel';
 import { showWelcome } from './onboarding';
@@ -31,8 +32,8 @@ import {
   type Mode,
 } from './model';
 
-type View = 'story' | 'map' | 'church' | 'sacraments';
-const VIEWS: View[] = ['story', 'map', 'church', 'sacraments'];
+type View = 'story' | 'map' | 'church' | 'sacraments' | 'councils';
+const VIEWS: View[] = ['story', 'map', 'church', 'sacraments', 'councils'];
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const app = $<HTMLDivElement>('app');
@@ -57,7 +58,10 @@ const viewEl: Record<View, HTMLElement> = {
   map: $('view-map'),
   church: $('view-church'),
   sacraments: $('view-sacraments'),
+  councils: $('view-councils'),
 };
+
+const councilView = createCouncils(viewEl.councils);
 
 const story = createStory(viewEl.story, {
   onSelect: (id) => select(id),
@@ -84,10 +88,12 @@ bindSacraments(viewEl.sacraments, screenDeps);
 
 function setView(v: View, focus?: string) {
   const from = view;
+  if (v === 'councils' && selected) select(null);
   view = v;
   app.dataset.view = v;
   document.querySelectorAll<HTMLButtonElement>('#views [data-view]').forEach((b) => b.setAttribute('aria-current', String(b.dataset.view === v)));
   for (const k of VIEWS) viewEl[k].hidden = k !== v;
+  if (v === 'councils') councilView.show(focus);
   if (v === 'church') renderChurch(viewEl.church);
   if (v === 'sacraments') renderSacraments(viewEl.sacraments, focus);
   if (v === 'story') requestAnimationFrame(story.update);
@@ -408,7 +414,11 @@ addEventListener('keydown', (e) => {
 function route() {
   const hash = decodeURIComponent(location.hash.slice(1));
   const compare = /^compare=([\w-]+)(?:,([\w-]+))?$/.exec(hash);
-  if (compare && CHOICES.includes(compare[1])) {
+  const council = /^councils=([\w-]+)$/.exec(hash);
+  if (council && councils.some(c => c.id === council[1])) {
+    setView('councils', council[1]);
+    history.replaceState(null, '', `#councils=${council[1]}`);
+  } else if (compare && CHOICES.includes(compare[1])) {
     setCompare(compare[1], compare[2] && CHOICES.includes(compare[2]) ? compare[2] : null);
     setView('church');
   } else if (VIEWS.includes(hash as View)) {

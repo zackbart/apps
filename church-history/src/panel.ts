@@ -1,6 +1,7 @@
 // The detail panel for one tradition, council, split, event, or person.
 
 import type { HistoryNode } from './types';
+import { councils } from './councils';
 import { EMBLEMS } from './emblems';
 import { CLAIMS, EUCHARIST } from './layout';
 import {
@@ -56,6 +57,8 @@ export function panelHtml(n: HistoryNode, ctx: PanelContext) {
     `<div class="head" style="--c:${color}">${emblem ? `<i class="emb big">${emblem}</i>` : ''}<div><div class="kind">${KIND_TEXT[n.type]}, ${yearText(n)}</div><h2>${esc(nameOf(n))}</h2></div></div>`,
   );
   parts.push(`<p class="summary">${esc(n.summary)}</p>`);
+  const dossiers = councils.filter(c => c.nodeId === n.id);
+  if (dossiers.length) parts.push(`<p>${dossiers.map(c => `<a href="#councils=${c.id}">Read the ${esc(c.name)} deep dive</a>`).join("<br>")}</p>`);
   if (n.why) parts.push(`<h3>Why it matters</h3><p class="why">${esc(n.why)}</p>`);
   if (n.self) {
     const c = CLAIMS[n.claim ?? 'other'];
