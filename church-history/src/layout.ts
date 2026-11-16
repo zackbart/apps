@@ -261,6 +261,8 @@ export interface Chapter {
   text: string;
   /** The year that stands for the chapter, shown beside its title. */
   focus: number;
+  /** Node ids for the chapter's chips. Without it, the first seven major nodes in its years. */
+  moments?: string[];
 }
 
 export const CHAPTERS: Chapter[] = [
@@ -287,10 +289,27 @@ export const CHAPTERS: Chapter[] = [
   },
   {
     title: 'East and West',
-    focus: 1054,
+    focus: 600,
     from: 450,
+    to: 800,
+    text: 'After Chalcedon, the Greek East and the Latin West were still one church, but they drifted apart over language, politics, and the Filioque, which Western churches began adding to the creed. Muslim armies took Jerusalem, Antioch, and Alexandria. Constantinople III in 680 settled that Christ has a human and a divine will, and Nicaea II in 787 allowed honoring icons. It is the last council Catholics and Orthodox both accept.',
+  },
+  {
+    title: 'The road to 1054',
+    focus: 1054,
+    from: 787,
     to: 1120,
-    text: "The Greek East and the Latin West drifted apart over language, politics, the pope's authority, and the Filioque. The excommunications of 1054 became the marker of a split that took centuries to harden. Eastern Orthodox and Catholic churches both claim unbroken continuity with the apostles.",
+    text: "The Franks rejected Nicaea II at Frankfurt in 794, and Constantinople ended its fight over icons in 843. Rival councils over Patriarch Photius left the churches counting different eighth councils. Missionaries carried Byzantine worship to the Slavs and the Rus'. Rome sang the creed with the Filioque in 1014, and reforming popes pressed Rome's authority. In 1054 papal legates and Constantinople's patriarch excommunicated each other, the marker of a split that took centuries to harden. Eastern Orthodox and Catholic churches both claim unbroken continuity with the apostles.",
+    moments: [
+      'nicaea-ii',
+      'council-of-frankfurt',
+      'triumph-of-orthodoxy',
+      'disputed-eighth-council',
+      'baptism-of-rus',
+      'reform-papacy',
+      'azymes-dispute',
+      'great-schism-1054',
+    ],
   },
   {
     title: 'The Reformation',

@@ -201,6 +201,35 @@
       ]
     },
     {
+      "id": "council-of-frankfurt",
+      "type": "council",
+      "name": "Council of Frankfurt",
+      "start": 794,
+      "end": 794,
+      "on": "chalcedonian",
+      "summary": "A synod called by Charlemagne condemns Adoptionism. It also rejects Nicaea II, which it knew only through a faulty Latin translation of the council's acts.",
+      "why": "Frankish churches now differ from Constantinople on icons and the creed. Both disputes feed the later split between Catholics and Orthodox.",
+      "facts": [
+        "Its first canon condemns Adoptionism, the claim that Christ is God's adopted Son in his humanity.",
+        "The Latin text wrongly made Nicaea II seem to demand for images the worship owed to God.",
+        "The Caroline Books, issued in Charlemagne's name, refuse both to smash images and to adore them.",
+        "Charlemagne backs the Filioque, but Pope Leo III declines to add it to the creed."
+      ],
+      "disputed": "Catholics and Orthodox both accept Nicaea II today. Historians debate how much bad translation, and how much rivalry with Byzantium, drove Frankfurt's rejection.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "Pelikan 2:167",
+        "Pelikan 2:176",
+        "Pelikan 2:186-187",
+        "Pelikan 3:52",
+        "Pelikan 3:58",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://www.newadvent.org/cathen/06236a.htm",
+        "https://www.newadvent.org/cathen/03371b.htm"
+      ]
+    },
+    {
       "id": "charlemagne-coronation",
       "type": "event",
       "name": "Charlemagne crowned emperor",
@@ -219,6 +248,32 @@
       "sources": [
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/the-west2",
         "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
+      ]
+    },
+    {
+      "id": "triumph-of-orthodoxy",
+      "type": "event",
+      "name": "Triumph of Orthodoxy",
+      "start": 843,
+      "end": 843,
+      "on": "chalcedonian",
+      "summary": "Empress Theodora, ruling for her young son, ends the second wave of iconoclasm. Icons return to the churches on the first Sunday of Lent, 843.",
+      "why": "Orthodox churches still keep this day each year as the Sunday of Orthodoxy. They treat honoring icons as part of right belief.",
+      "facts": [
+        "The second wave of iconoclasm begins in 815 under Emperor Leo V.",
+        "Theodora replaces the iconoclast patriarch with Methodius, who had spent seven years in prison for icons.",
+        "The feast's Synodicon, a statement of the restored faith, is still read in the liturgy.",
+        "Empress Irene restored icons in 787, and Empress Theodora restores them in 843."
+      ],
+      "disputed": "Many Protestants reject honoring icons. Orthodox treat the 843 restoration as a defining victory for true worship.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "Pelikan 2:134",
+        "Pelikan 2:145",
+        "Pelikan 2:168",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/the-end-of-iconoclasm"
       ]
     },
     {
@@ -245,6 +300,210 @@
         "Damick ch2: The Filioque",
         "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue",
         "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
+      ]
+    },
+    {
+      "id": "cyril-and-methodius",
+      "type": "event",
+      "name": "Cyril and Methodius",
+      "start": 863,
+      "end": 885,
+      "on": "chalcedonian",
+      "summary": "Moravia's prince asks Constantinople for missionaries. The brothers Cyril and Methodius translate the liturgy and church books into Slavonic for his people.",
+      "why": "Slavic peoples gain worship in their own language, while Western missions use Latin. Later Slavic Orthodox churches build on this.",
+      "facts": [
+        "Constantine, later called Cyril, creates the Glagolitic alphabet for Slavonic before reaching Moravia in 863.",
+        "Pope Hadrian II approves Slavonic worship, but Frankish clergy later imprison Methodius.",
+        "Rome and Constantinople both claim Moravia, which ends up under Western church authority.",
+        "After Methodius dies in 885, his expelled disciples carry Slavonic worship to Bulgaria."
+      ],
+      "disputed": "Rome and Constantinople both claimed Moravia. Catholic and Orthodox accounts still differ over which church rightly held authority there.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "Pelikan 2:158",
+        "Pelikan 2:296-297",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saints-cyril-and-methodiusevangelizers-of-the-slavs-and-equal-to-the-apostl"
+      ]
+    },
+    {
+      "id": "conversion-of-bulgaria",
+      "type": "event",
+      "name": "Conversion of Bulgaria",
+      "start": 864,
+      "end": 870,
+      "on": "chalcedonian",
+      "summary": "Prince Boris of Bulgaria is baptized and turns to both Rome and Constantinople for a church hierarchy. In 870 Byzantine church leaders assign Bulgaria to Constantinople.",
+      "why": "The contest over Bulgaria feeds the Photian quarrel and the larger dispute over papal authority that later splits the churches.",
+      "facts": [
+        "Boris is baptized by Byzantine clergy in 864 or early 865.",
+        "His alliance with the Frankish ruler Louis raises fears in Constantinople of a Roman-led Bulgarian church.",
+        "Pope Nicholas I claims church authority over the Balkans, based on Christ's words to Peter.",
+        "Latin clergy must leave Bulgaria after 870, and papal protests fail to bring them back."
+      ],
+      "disputed": "Older Catholic writers call the 870 transfer an injustice to Rome. Orthodox writers call Pope Nicholas's role in Bulgaria interference.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "Pelikan 2:158",
+        "Pelikan 2:296",
+        "https://www.newadvent.org/cathen/03046a.htm",
+        "https://www.newadvent.org/cathen/04310b.htm"
+      ]
+    },
+    {
+      "id": "disputed-eighth-council",
+      "type": "council",
+      "name": "Disputed eighth council",
+      "start": 869,
+      "end": 880,
+      "on": "chalcedonian",
+      "summary": "Two Constantinople councils rule opposite ways on Photius. Catholics count the 869 to 870 council as the eighth ecumenical council. Some Orthodox honor the 879 to 880 council instead.",
+      "why": "Because the churches disagree over which council came eighth, Nicaea II in 787 is the last council both accept as ecumenical.",
+      "facts": [
+        "The 869 to 870 council deposes Photius and restores Ignatius, with papal legates presiding.",
+        "At that council, Emperor Basil says God built the church on five patriarchs.",
+        "John VIII's legates join the 879 to 880 council, which restores Photius and forbids creed changes.",
+        "Some Orthodox writers call the 879 to 880 council the eighth ecumenical council."
+      ],
+      "disputed": "Catholics regard the 869 to 870 council as ecumenical. Many Orthodox reject it and honor the 879 to 880 council, which restored Photius.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "Pelikan 2:166-167",
+        "Pelikan 2:174",
+        "Damick ch1: MAJOR HISTORICAL HERESIES",
+        "Damick ch2: The Filioque",
+        "https://www.newadvent.org/cathen/04310b.htm",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
+      ]
+    },
+    {
+      "id": "cluny-founded",
+      "type": "event",
+      "name": "Cluny founded",
+      "start": 910,
+      "end": 910,
+      "on": "chalcedonian",
+      "summary": "Duke William of Aquitaine founds a monastery at Cluny in Burgundy. Its monks keep a strict Benedictine rule, and hundreds of houses adopt its reforms.",
+      "why": "Cluny's houses become a major force for Western church reform, which later targets the buying of church offices and lay control.",
+      "facts": [
+        "Berno, the first abbot, restores strict observance of Saint Benedict's Rule.",
+        "The monastery claims independence from lay control and supports itself.",
+        "Under abbots Odo and Odilo, hundreds of French and Italian monasteries adopt its standards.",
+        "Abbot Odo writes that the whole world's salvation lies in the Eucharist."
+      ],
+      "disputed": "Supporters credit Cluny with renewing monastic discipline. Critics note that its central rule under one abbot broke older Benedictine custom.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "Pelikan 3:185",
+        "Pelikan 3:212",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/tenth-century/the-west4",
+        "https://www.newadvent.org/cathen/04073a.htm"
+      ]
+    },
+    {
+      "id": "baptism-of-rus",
+      "type": "event",
+      "name": "Baptism of Rus'",
+      "start": 988,
+      "end": 988,
+      "on": "chalcedonian",
+      "summary": "Prince Vladimir of Kyiv accepts baptism from the Byzantine church and has his people baptized in the Dnieper. Byzantine Christianity takes root among the Rus'.",
+      "why": "Russian and Ukrainian Orthodox Christians trace their church's beginning to this baptism at Kyiv.",
+      "facts": [
+        "Vladimir's grandmother Olga had been baptized around 957.",
+        "Vladimir's envoys say of Byzantine worship, \"We knew not whether we were in heaven or on earth.\"",
+        "Vladimir is baptized at Cherson and marries Anna, sister of the Byzantine emperors.",
+        "Early Rus' writings against the Latins are translations from Greek or works by Greeks."
+      ],
+      "disputed": "Scholars debate how much early Rus' Christianity copied Byzantium and how much it formed a new national outlook.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "Pelikan 2:176",
+        "Pelikan 2:296-297",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/tenth-century/saint-vladimir-of-kiev"
+      ]
+    },
+    {
+      "id": "filioque-in-roman-creed",
+      "type": "event",
+      "name": "Filioque sung in Rome",
+      "start": 1014,
+      "end": 1014,
+      "on": "chalcedonian",
+      "summary": "At Henry II's coronation as emperor in 1014, Rome uses the creed with the Filioque in worship for the first time. Popes had long declined to add it.",
+      "why": "Once Rome itself sings the added words, the creed becomes a direct dispute between Rome and Constantinople.",
+      "facts": [
+        "Pope Leo III accepts the teaching but declines to add it to the sung creed.",
+        "Pope John VIII rejected the addition in the ninth century.",
+        "In 1009 Constantinople drops the pope from its prayer lists over his Filioque confession.",
+        "Most scholars place Rome's change in the reign of Pope Benedict VIII."
+      ],
+      "disputed": "Catholics see a rightful papal act that states the faith more fully. Orthodox see one patriarch changing an ecumenical creed alone.",
+      "outsideNicene": false,
+      "importance": 2,
+      "sources": [
+        "Pelikan 2:186-187",
+        "Pelikan 3:21",
+        "Damick ch2: The Filioque",
+        "Damick ch2: Papal Infallibility",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism",
+        "https://www.newadvent.org/cathen/06073a.htm"
+      ]
+    },
+    {
+      "id": "reform-papacy",
+      "type": "event",
+      "name": "Leo IX's reform papacy",
+      "start": 1049,
+      "end": 1054,
+      "on": "chalcedonian",
+      "summary": "Pope Leo IX takes office in 1049 and holds synods against buying church offices. His circle, including Cardinal Humbert, presses papal claims in West and East.",
+      "why": "The papal claims that drive reform in the West collide with Constantinople and lead directly to 1054.",
+      "facts": [
+        "Emperor Henry III picks the German bishop Bruno, who takes the name Leo IX.",
+        "An April 1049 synod in Rome condemns simony, the buying of church offices.",
+        "Humbert argues that Rome, founded on Peter, has never yielded to any heresy.",
+        "Gregory VII later carries the reform into a fight over rulers appointing bishops."
+      ],
+      "disputed": "Catholics see a needed cleanup and rightful papal leadership. Orthodox see its claims of universal papal authority as the schism's main cause.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "Pelikan 2:156-157",
+        "Pelikan 2:174",
+        "Pelikan 3:212",
+        "Damick ch2: THE GREAT SCHISM",
+        "https://www.newadvent.org/cathen/09160c.htm",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism"
+      ]
+    },
+    {
+      "id": "azymes-dispute",
+      "type": "event",
+      "name": "Unleavened bread dispute",
+      "start": 1053,
+      "end": 1054,
+      "on": "chalcedonian",
+      "summary": "Archbishop Leo of Ohrid condemns the Latin use of unleavened bread at Communion. Patriarch Michael Cerularius presses Constantinople's Latin churches to change and closes them.",
+      "why": "A dispute over Communion bread turns differences in worship into charges of heresy on the eve of 1054.",
+      "facts": [
+        "Leo's 1053 letter to Bishop John of Trani targets the pope and all Frankish bishops.",
+        "Leo calls those who keep the Sabbath and unleavened bread \"neither genuine Jews nor genuine Christians.\"",
+        "Humbert answers that no leavened bread was available in Israel at the Last Supper.",
+        "Some Eastern theologians accept both breads, since the apostles seem to have used both."
+      ],
+      "disputed": "Catholic accounts blame Cerularius for starting the quarrel. Orthodox accounts say he answered Norman suppression of Greek customs in southern Italy.",
+      "outsideNicene": false,
+      "importance": 1,
+      "sources": [
+        "Pelikan 2:170-171",
+        "Pelikan 2:177-178",
+        "https://www.newadvent.org/cathen/10273a.htm",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism"
       ]
     },
     {
@@ -316,10 +575,10 @@
       "summary": "Roman legates and Constantinople's patriarch exchange excommunications. Their dispute becomes a conventional marker for the gradual separation of Catholic and Eastern Orthodox churches.",
       "why": "Catholics and Eastern Orthodox remain divided despite sharing many beliefs about baptism and Communion.",
       "facts": [
-        "Disputes include papal authority, the Filioque, and worship customs.",
+        "On 16 July 1054, Cardinal Humbert lays a bull excommunicating Patriarch Michael Cerularius on Hagia Sophia's altar.",
+        "Cerularius answers by excommunicating Humbert and those responsible for the bull.",
         "The 1054 sentences target named church leaders, not every believer.",
-        "Paul VI and Athenagoras lift the mutual excommunications in 1965.",
-        "The 1965 gesture does not restore full communion."
+        "Paul VI and Athenagoras lift the excommunications in 1965 without restoring full communion."
       ],
       "splits": [
         "catholic",
@@ -331,6 +590,8 @@
       "sources": [
         "Pelikan 2:147",
         "Damick ch2: THE GREAT SCHISM",
+        "https://www.newadvent.org/cathen/10273a.htm",
+        "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism",
         "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
         "https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue"
       ]

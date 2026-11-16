@@ -704,6 +704,7 @@ export class FlatMap {
     if (n.id === this.hl.own) r -= 30;
     else if (this.hl.lit?.has(n.id) || this.hl.personal?.has(n.id)) r -= 15;
     if (n.type === 'tradition') r -= 3;
+    else if (KEY_MOMENTS.has(n.id)) r -= 2;
     else if (n.type === 'council' || n.type === 'schism') r -= 1;
     return r + n.start / 10000;
   }

@@ -2,9 +2,9 @@
 // Scrolling is the timeline. Each chapter zooms the map to its years and draws the
 // lines up to the point the reader has reached.
 
-import { CHAPTERS, NOW } from './layout';
+import { CHAPTERS, NOW, type Chapter } from './layout';
 import { FlatMap } from './map';
-import { esc, KIND_TEXT, nameOf, nodes } from './model';
+import { byId, esc, KIND_TEXT, nameOf, nodes } from './model';
 
 export interface StoryDeps {
   onSelect: (id: string | null) => void;
@@ -13,7 +13,8 @@ export interface StoryDeps {
 }
 
 /** The big moments of a chapter, for the chips under its text. */
-function momentsIn(from: number, to: number) {
+function momentsIn({ from, to, moments }: Chapter) {
+  if (moments) return moments.map((id) => byId.get(id)!);
   return nodes
     .filter((n) => n.importance === 1 && n.start >= from && n.start <= to && n.id !== 'early-church' && n.id !== 'chalcedonian')
     .sort((a, b) => a.start - b.start)
@@ -28,7 +29,7 @@ export function createStory(root: HTMLElement, deps: StoryDeps) {
     const chips =
       i === 0
         ? `<p class="scroll-cue">Scroll to begin with Jesus and the apostles.</p>`
-        : `<ul class="moments">${momentsIn(c.from, c.to)
+        : `<ul class="moments">${momentsIn(c)
             .map((n) => `<li><button type="button" data-open="${n.id}"><span class="yr">${n.start}</span>${esc(nameOf(n))}<small>${KIND_TEXT[n.type]}</small></button></li>`)
             .join('')}</ul>`;
     return `<article class="chapter" data-ch="${i}"><div class="ch-label"><span>${label}</span>${years}</div><h2>${esc(c.title)}</h2><p>${esc(c.text)}</p>${chips}</article>`;
