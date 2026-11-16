@@ -3,7 +3,7 @@
 // from the page's scroll position.
 
 import type { HistoryNode } from './types';
-import { FIRST_YEAR, LANE_ORDER, NOW, SIMPLE_ORDER, TRUNK } from './layout';
+import { DRIFT, EAST_WEST, FIRST_YEAR, LANE_ORDER, NOW, SIMPLE_ORDER, TRUNK } from './layout';
 import { ACCENT, ACCENT_SOFT, hueOf, INK, nameOf, nodes, parentIn, visibleSet, yearText, KIND_TEXT, type Mode } from './model';
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -56,6 +56,8 @@ interface Line {
   tip: SVGCircleElement;
   /** The lighter red over the part of this line that a chosen church traces back through. */
   trace: SVGPathElement;
+  /** In the claims view, a dotted arc from a restoration church back to the apostles. */
+  arc: SVGPathElement;
   label?: SVGTextElement;
   y: number;
   /** Where the line starts, bends, and ends on screen, from the last render. */
@@ -70,8 +72,12 @@ interface Mark {
   kind: 'council' | 'schism' | 'event';
   g: SVGGElement;
   dot: SVGCircleElement;
+  /** Joins the East and West strands at a council or split they shared. */
+  tie: SVGLineElement;
   label: SVGTextElement;
   y: number;
+  /** How far the label must clear above and below the dot, past any tie. */
+  reach: [number, number];
 }
 
 export interface Highlight {
@@ -82,8 +88,8 @@ export interface Highlight {
   selected?: string | null;
   /** The line from Jesus to the reader's church. It never dims the rest. */
   personal?: Set<string> | null;
-  /** Earlier churches on the chosen line, and the year the next step branched off each one. */
-  trace?: Map<string, number> | null;
+  /** Earlier churches on the chosen line, with the next step and the year it branched off. */
+  trace?: Map<string, { until: number; next: string }> | null;
 }
 
 export interface MapOptions {
@@ -116,6 +122,27 @@ const FONT_NARROW = { line: '600 11.5px Inter, system-ui, sans-serif', minor: '5
 
 const ease = (k: number) => 1 - Math.pow(1 - k, 3);
 const KEY_MOMENTS = visibleSet(true);
+const smooth = (k: number) => k * k * (3 - 2 * k);
+
+/**
+ * A line that leaves y0 at x0, eases into its lane y1 over `bend` pixels, and runs on
+ * straight. Everything past clipX is cut off, so a line can grow as the story moves on.
+ */
+function easePath(x0: number, y0: number, y1: number, bend: number, clipX: number) {
+  const end = Math.max(clipX, x0 + 0.5);
+  if (!bend || Math.abs(y1 - y0) < 0.5) return `M${x0} ${y1}L${end} ${y1}`;
+  const n = Math.max(6, Math.min(40, Math.round(bend / 4)));
+  const stop = Math.min(end, x0 + bend);
+  const pts: string[] = [];
+  for (let i = 0; i < n; i++) {
+    const x = x0 + (bend * i) / n;
+    if (x >= stop) break;
+    pts.push(`${x.toFixed(1)} ${(y0 + (y1 - y0) * smooth((x - x0) / bend)).toFixed(1)}`);
+  }
+  pts.push(`${stop.toFixed(1)} ${(y0 + (y1 - y0) * smooth((stop - x0) / bend)).toFixed(1)}`);
+  if (end > x0 + bend) pts.push(`${end.toFixed(1)} ${y1}`);
+  return `M${pts.join('L')}`;
+}
 
 export class FlatMap {
   readonly root: HTMLElement;
@@ -194,9 +221,10 @@ export class FlatMap {
       const hit = el('path', { class: 'hit', 'data-id': t.id }, g);
       const path = el('path', { class: 'stroke' }, g);
       const trace = el('path', { class: 'trace' }, g);
+      const arc = el('path', { class: 'arc' }, g);
       const tip = el('circle', { class: 'tip', r: 2.6 }, g);
       el('title', {}, g).textContent = `${nameOf(t)}, ${yearText(t)}`;
-      const line: Line = { node: t, parent: parentIn(t, this.visible), path, hit, tip, trace, y: 0, sx: 0, ex: 0, bend: 0 };
+      const line: Line = { node: t, parent: parentIn(t, this.visible), path, hit, tip, trace, arc, y: 0, sx: 0, ex: 0, bend: 0 };
       // The trunk is one line in three parts. Only its first part is named.
       if (!TRUNK.includes(t.id) || t.id === 'apostolic') {
         line.label = el('text', { class: 'line-label', 'data-id': t.id }, this.gLabels) as SVGTextElement;
@@ -214,12 +242,13 @@ export class FlatMap {
       const year = m.type === 'figure' && span ? Math.round((m.start + (m.end as number)) / 2) : m.start;
       const g = el('g', { class: `mark ${kind}`, 'data-id': m.id }, this.gMarks);
       el('circle', { class: 'hit', r: 10, 'data-id': m.id }, g);
+      const tie = el('line', { class: 'tie' }, g);
       const dot = el('circle', { class: 'dot', r: kind === 'council' ? 4.6 : kind === 'schism' ? 5.4 : 3.2, 'data-id': m.id }, g);
       el('title', {}, g).textContent = `${nameOf(m)}, ${yearText(m)} (${KIND_TEXT[m.type].toLowerCase()})`;
       const label = el('text', { class: `mark-label ${kind}`, 'data-id': m.id }, this.gLabels) as SVGTextElement;
       label.textContent = nameOf(m);
       el('tspan', { class: 'yr', dx: 4 }, label).textContent = m.type === 'figure' ? '' : String(m.start);
-      this.marks.push({ node: m, host, year, kind, g, dot, label, y: 0 });
+      this.marks.push({ node: m, host, year, kind, g, dot, tie, label, y: 0, reach: [0, 0] });
     }
     this.layoutLanes();
     this.render();
@@ -247,9 +276,12 @@ export class FlatMap {
     // Short screens and the pinned story map, which cannot scroll, pack the lanes tighter.
     const floor = this.simple ? (this.h < 440 || !this.opts.interactive ? 16 : 24) : 13;
     const gap = Math.min(max, Math.max(floor, avail / (present.length + 0.1)));
-    const used = gap * (present.length - 1);
+    // The lanes either side of the trunk sit closer, so the East and West strands stay a pair.
+    const steps = present.map((id, i) => (i === 0 ? 0 : id === '__trunk__' || present[i - 1] === '__trunk__' ? gap * 0.6 : gap));
+    const used = steps.reduce((a, b) => a + b, 0);
     const y0 = top + Math.max(0, (avail - used) / 2) - gap * 0.2;
-    const target = new Map(present.map((id, i) => [id, y0 + i * gap]));
+    let acc = y0;
+    const target = new Map(present.map((id, i) => [id, (acc += steps[i])]));
     // Lines without a lane yet wait on their parent's lane, so they grow out of it later.
     for (const l of this.lines) if (!target.has(l.node.id) && !TRUNK.includes(l.node.id)) target.set(l.node.id, this.laneIn(target, l.parent));
     const offRow = y0 + used + gap * 0.75;
@@ -473,6 +505,7 @@ export class FlatMap {
 
     // Lines.
     for (const l of this.lines) l.y = this.laneOf(l.node.id);
+    const braid = this.lineById.has(EAST_WEST.line) && this.lineById.has(EAST_WEST.east) && this.lineById.has(EAST_WEST.west);
     const tipLabels: Line[] = [];
     const startLabels: Line[] = [];
     for (const l of this.lines) {
@@ -485,11 +518,12 @@ export class FlatMap {
       const endYear = Math.min(t.end ?? NOW, reveal);
       const ex = Math.max(sx + 0.5, this.X(endYear));
       const p = l.parent;
-      const py = p ? this.lineById.get(p)!.y : l.y;
-      const bend = Math.abs(py - l.y) < 0.5 ? 0 : Math.min(30, Math.max(10, Math.abs(py - l.y) * 0.6));
-      const d = bend
-        ? `M${sx} ${py}C${sx + bend * 0.55} ${py} ${sx + bend * 0.45} ${l.y} ${sx + bend} ${l.y}L${Math.max(ex, sx + bend)} ${l.y}`
-        : `M${sx} ${l.y}L${ex} ${l.y}`;
+      // East and West run straight on from their strands instead of bending away at 1054.
+      const straight = braid && (t.id === EAST_WEST.east || t.id === EAST_WEST.west);
+      const py = p && !straight ? this.lineById.get(p)!.y : l.y;
+      let bend = Math.abs(py - l.y) < 0.5 ? 0 : Math.min(30, Math.max(10, Math.abs(py - l.y) * 0.6));
+      if (bend && DRIFT[t.id]) bend = Math.max(bend, this.X(DRIFT[t.id]) - sx);
+      const d = braid && t.id === EAST_WEST.line ? this.braidPath(l.y, sx, ex) : easePath(sx, py, l.y, bend, ex);
       l.path.setAttribute('d', d);
       l.hit.setAttribute('d', d);
       const until = this.hl.trace?.get(t.id);
@@ -505,18 +539,30 @@ export class FlatMap {
       else l.path.removeAttribute('stroke-dasharray');
       l.path.parentElement!.classList.toggle('selected', selected === t.id);
       if (until != null) {
-        const tx = this.X(Math.min(until, endYear));
-        l.trace.setAttribute('d', bend ? d.replace(/L[^L]*$/, `L${Math.max(tx, sx + bend)} ${l.y}`) : `M${sx} ${l.y}L${tx} ${l.y}`);
+        const tx = this.X(Math.min(until.until, endYear));
+        l.trace.setAttribute(
+          'd',
+          braid && t.id === EAST_WEST.line ? this.braidPath(l.y, sx, tx, until.next) : easePath(sx, py, l.y, bend, tx),
+        );
         l.trace.setAttribute('stroke', ACCENT_SOFT);
         l.trace.setAttribute('stroke-width', String(width + 0.6));
       }
       // A dot at the tip while the line is still growing.
-      const growing = (t.end == null || t.end > reveal) && reveal < NOW;
+      const growing = (t.end == null || t.end > reveal) && reveal < NOW && !(braid && t.id === EAST_WEST.line);
       l.tip.style.display = growing ? '' : 'none';
       if (growing) {
         l.tip.setAttribute('cx', String(ex));
         l.tip.setAttribute('cy', String(l.y));
         l.tip.setAttribute('fill', color);
+      }
+      const reaching = this.mode === 'claims' && t.claim === 'restoration' && state !== 'dim';
+      l.arc.style.display = reaching ? '' : 'none';
+      if (reaching) {
+        const tx = this.X(65);
+        const ty = this.laneOf('apostolic');
+        l.arc.setAttribute('d', `M${sx} ${l.y}Q${(sx + tx) / 2} ${Math.max(l.y, ty) + 36} ${tx} ${ty}`);
+        l.arc.setAttribute('stroke', color);
+        l.arc.setAttribute('opacity', this.simple ? '0.75' : '0.4');
       }
       l.sx = sx;
       l.ex = ex;
@@ -572,6 +618,13 @@ export class FlatMap {
       m.y = onHost ? host!.y : this.offRowY;
       const x = this.X(m.year);
       m.g.setAttribute('transform', `translate(${x} ${m.y})`);
+      const strands = braid && onHost && m.host === EAST_WEST.line ? this.strandsAt(m.year) : null;
+      m.tie.style.display = strands ? '' : 'none';
+      m.reach = strands ? [Math.max(0, m.y - strands[0]), Math.max(0, strands[1] - m.y)] : [0, 0];
+      if (strands) {
+        m.tie.setAttribute('y1', String(strands[0] - m.y));
+        m.tie.setAttribute('y2', String(strands[1] - m.y));
+      }
       const lit = this.hl.lit;
       const touches = (set: Set<string>) =>
         set.has(m.host ?? '') || set.has(m.node.on ?? '') || (m.node.splits ?? []).some((id) => set.has(id));
@@ -593,14 +646,15 @@ export class FlatMap {
         const { m, x } = item;
         // The year sits 4px after the name.
         const w = textWidth(m.label.textContent!, this.font('mark')) + 6;
-        const above: [number, number, number, number] = [x - w / 2 - 2, m.y - 22, x + w / 2 + 2, m.y - 8];
-        const below: [number, number, number, number] = [x - w / 2 - 2, m.y + 9, x + w / 2 + 2, m.y + 23];
+        const [up, down] = m.reach;
+        const above: [number, number, number, number] = [x - w / 2 - 2, m.y - up - 22, x + w / 2 + 2, m.y - up - 8];
+        const below: [number, number, number, number] = [x - w / 2 - 2, m.y + down + 9, x + w / 2 + 2, m.y + down + 23];
         const b = free(above) ? above : free(below) ? below : selected === m.node.id ? above : null;
         if (!b) continue;
         take(b);
         m.label.setAttribute('x', String(x));
         m.label.setAttribute('text-anchor', 'middle');
-        m.label.setAttribute('y', String(b === above ? m.y - 11 : m.y + 20));
+        m.label.setAttribute('y', String(b === above ? m.y - up - 11 : m.y + down + 20));
         m.label.style.display = '';
       } else {
         const l = item.l;
@@ -616,6 +670,31 @@ export class FlatMap {
         l.label!.style.display = '';
       }
     }
+  }
+
+  /**
+   * The shared line after 600: one trunk until then, and from then two strands, East and West,
+   * easing apart until 1054 where they run on as the Eastern Orthodox and Catholic lines.
+   * With `only`, draw just the strand that leads to that line.
+   */
+  private braidPath(y: number, sx: number, clipX: number, only?: string) {
+    const from = this.X(EAST_WEST.from);
+    const to = this.X(this.lineById.get(EAST_WEST.line)!.node.end ?? NOW);
+    let d = `M${sx} ${y}L${Math.max(sx + 0.5, Math.min(clipX, from))} ${y}`;
+    if (clipX <= from) return d;
+    for (const id of [EAST_WEST.east, EAST_WEST.west]) {
+      if (only && only !== id) continue;
+      d += easePath(from, y, this.lineById.get(id)!.y, to - from, clipX);
+    }
+    return d;
+  }
+  /** Where the East and West strands are in a given year. */
+  private strandsAt(year: number): [number, number] {
+    const from = this.X(EAST_WEST.from);
+    const to = this.X(this.lineById.get(EAST_WEST.line)!.node.end ?? NOW);
+    const y = this.lineById.get(EAST_WEST.line)!.y;
+    const k = smooth(Math.min(1, Math.max(0, (this.X(year) - from) / Math.max(1, to - from))));
+    return [y + (this.lineById.get(EAST_WEST.east)!.y - y) * k, y + (this.lineById.get(EAST_WEST.west)!.y - y) * k];
   }
 
   /** Lower ranks win label space. */

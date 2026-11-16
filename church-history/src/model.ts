@@ -3,6 +3,7 @@
 import rawNodes from './data/nodes.json';
 import type { HistoryNode } from './types';
 import {
+  CLAIMS,
   EUCHARIST,
   EUCHARIST_OF,
   FAMILIES,
@@ -108,7 +109,7 @@ export function momentsOn(ids: string[]) {
 // ---------------------------------------------------------------------------
 // Color
 
-export type Mode = 'plain' | 'family' | 'eucharist';
+export type Mode = 'plain' | 'family' | 'eucharist' | 'claims';
 
 function inherit(map: Record<string, string>, t: HistoryNode, fallback: string) {
   let cur: HistoryNode | undefined = t;
@@ -151,6 +152,7 @@ const SIMPLE_COLOR: Record<string, string> = {
 /** A tradition's own color, used by the family and communion modes and by the emblems. */
 export function hueOf(t: HistoryNode, mode: Mode = 'family') {
   if (mode === 'eucharist') return EUCHARIST[eucharistKey(t)].color;
+  if (mode === 'claims') return TRUNK.includes(t.id) ? '#b9b9b9' : CLAIMS[t.claim ?? 'other'].color;
   if (TRUNK.includes(t.id)) return FAMILIES.early.color;
   return SIMPLE_COLOR[t.id] ?? FAMILIES[familyKey(t)].color;
 }

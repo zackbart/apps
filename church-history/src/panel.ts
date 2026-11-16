@@ -2,7 +2,7 @@
 
 import type { HistoryNode } from './types';
 import { EMBLEMS } from './emblems';
-import { EUCHARIST } from './layout';
+import { CLAIMS, EUCHARIST } from './layout';
 import {
   byId,
   damickCite,
@@ -57,6 +57,10 @@ export function panelHtml(n: HistoryNode, ctx: PanelContext) {
   );
   parts.push(`<p class="summary">${esc(n.summary)}</p>`);
   if (n.why) parts.push(`<h3>Why it matters</h3><p class="why">${esc(n.why)}</p>`);
+  if (n.self) {
+    const c = CLAIMS[n.claim ?? 'other'];
+    parts.push(`<h3>How it sees itself</h3><p class="self">${esc(n.self)}</p><p class="claim-tag" style="--c:${c.color}"><i></i>${esc(c.name)}</p>`);
+  }
 
   if (n.sacraments) {
     let cat = '';

@@ -1,7 +1,7 @@
 // Hand-tuned layout for the map. Data lives in data/nodes.json; this file
 // decides where each tradition sits and how it is colored.
 
-/** The shared line from the apostles to 1054. Catholic and Orthodox both fork from it. */
+/** The shared line from the apostles to 1054. From 600 it runs as two strands, East and West. */
 export const TRUNK = ['apostolic', 'early-church', 'chalcedonian'];
 
 /**
@@ -16,11 +16,11 @@ export const LANE_ORDER = [
   'orthodox-church-ukraine',
   'eastern-orthodox',
   '__trunk__',
-  'waldensians',
-  'moravian',
-  'eastern-catholic',
   'catholic',
   'old-catholic',
+  'eastern-catholic',
+  'moravian',
+  'waldensians',
   'lutheran',
   'reformed',
   'anabaptist',
@@ -45,6 +45,26 @@ export const LANE_ORDER = [
   'adventist',
   'jehovahs-witnesses',
 ];
+
+/**
+ * Splits that took generations. These lines drift away from their parent's lane until
+ * the given year instead of turning sharply.
+ * - Church of the East: the Persian synod of 486 made its Christology official (Pelikan vol. 2, p. 43).
+ * - Oriental Orthodox: Jacob Baradaeus, made bishop about 542, filled a separate hierarchy,
+ *   "the establishment of a new church" (Pelikan vol. 2, p. 50; the year is from Britannica).
+ */
+export const DRIFT: Record<string, number> = {
+  'church-of-east': 486,
+  'oriental-orthodox': 542,
+};
+
+/**
+ * East and West. By about 600, Greek and Latin Christianity, "still parts of one and the same
+ * church," were going their separate ways (Pelikan vol. 1, p. 340). From that year the shared
+ * line is drawn as two strands that run straight on into the Eastern Orthodox and Catholic
+ * lines, so neither one bends away from the other in 1054. 1054 is a marker on both.
+ */
+export const EAST_WEST = { line: 'chalcedonian', from: 600, east: 'eastern-orthodox', west: 'catholic' };
 
 export interface Swatch {
   name: string;
@@ -94,6 +114,19 @@ export const FAMILY_OF: Record<string, string> = {
   'evangelical-nondenom': 'revival',
   restorationist: 'restoration',
   adventist: 'restoration',
+};
+
+/**
+ * How each tradition describes its own relation to the apostolic church. These are the
+ * traditions' claims about themselves, side by side. The map does not judge between them, so in
+ * this view the shared trunk is a plain gray that no claim's color matches.
+ */
+export const CLAIMS: Record<string, Swatch> = {
+  continuity: { name: 'Continues the church Christ founded', note: 'Claims an unbroken line from the apostles', color: '#9a5b1e' },
+  reform: { name: 'The same church, reformed', note: 'Claims continuity while correcting errors', color: '#2c6cd4' },
+  renewal: { name: 'A renewal movement', note: 'Began as renewal inside another church', color: '#d1405a' },
+  restoration: { name: 'Restores the early church', note: 'Claims to recover what others lost. Dotted arcs reach back to the apostles', color: '#2f9447' },
+  other: { name: 'Another self-understanding', color: '#8a8f9c' },
 };
 
 /** How each tradition understands communion (the Lord's Supper, the Eucharist). */

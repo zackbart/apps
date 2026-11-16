@@ -26,6 +26,17 @@ for (const [id, patch] of Object.entries(overrides.patch ?? {})) {
     else n[k] = v;
   }
 }
+// How each tradition sees itself, from research/claims-*.json.
+for (const f of readdirSync(dir).filter((f) => /^claims-.+\.json$/.test(f)).sort()) {
+  const { claims } = JSON.parse(readFileSync(new URL(f, dir), 'utf8'));
+  for (const [id, c] of Object.entries(claims)) {
+    const n = byId.get(id);
+    if (!n) throw new Error(`${f}: claim for unknown node ${id}`);
+    n.self = c.self;
+    n.claim = c.claim;
+    n.sources = [...new Set([...(n.sources ?? []), ...(c.sources ?? [])])];
+  }
+}
 const nodes = [...byId.values()].sort((a, b) => a.start - b.start);
 // Book citations first (Pelikan, then Damick), then the other sources in their researched order.
 const rank = (s) => (/^Pelikan /.test(s) ? 0 : /^Damick /.test(s) ? 1 : 2);

@@ -1,0 +1,109 @@
+{
+  "claims": {
+    "waldensians": {
+      "self": "Sees itself as a Reformed church rooted in a Gospel renewal movement of the 1100s that joined the Reformation in 1532.",
+      "claim": "reform",
+      "sources": ["https://chiesavaldese.org/chi-siamo/storia/valdesi/", "https://www.oikoumene.org/member-churches/waldensian-church"]
+    },
+    "moravian": {
+      "self": "Sees itself as the Unity of Brethren, born of the Hussite reform before Luther, and one visible part of the body of Christ.",
+      "claim": "reform",
+      "sources": ["Pelikan 5:54", "Damick ch4: Moravians", "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/"]
+    },
+    "congregationalist": {
+      "self": "Sees itself as a Reformed tradition of churches gathered by covenant, each governed under Christ according to Scripture.",
+      "claim": "reform",
+      "sources": ["Damick ch4: Puritans", "https://www.ccel.org/ccel/schaff/creeds3.v.i.i.html", "https://www.congregational.org.uk/downloads/resources/finance/church-constitution-sample.pdf"]
+    },
+    "eastern-catholic": {
+      "self": "Sees itself as keeping the apostolic traditions of the ancient Eastern churches, handed down through the Fathers, in full communion with Rome.",
+      "claim": "continuity",
+      "sources": ["Pelikan 5:293-294", "Pelikan 5:332", "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_orientalium-ecclesiarum_en.html"]
+    },
+    "quaker": {
+      "self": "Sees itself as reviving early Christianity through direct guidance from Christ, with baptism and communion understood as inward experiences.",
+      "claim": "restoration",
+      "sources": ["Pelikan 5:169", "https://www.friendsunitedmeeting.org/about-friends/faqs", "https://inwardlight.org/resources/writings/primitive-christianity-revived/"]
+    },
+    "old-believers": {
+      "self": "Holds that it keeps the Orthodox faith and rites handed down from the holy fathers, unchanged by the Russian reforms of the 1600s.",
+      "claim": "continuity",
+      "sources": ["Pelikan 5:33", "https://rpsc.ru/publications/mir/ivanova_istinnoe_pravoslavie/"]
+    },
+    "african-methodist-episcopal": {
+      "self": "Sees itself as part of Christ's universal church in the Methodist tradition, keeping its doctrine and worship despite separation over racial injustice.",
+      "claim": "renewal",
+      "sources": ["https://www.ame-church.com/our-church/our-beliefs/"]
+    },
+    "latter-day-saints": {
+      "self": "Holds that after a widespread apostasy, the true Church of Jesus Christ was restored through Joseph Smith, with priesthood authority from heavenly messengers.",
+      "claim": "restoration",
+      "sources": ["Damick ch7: MORMONISM", "https://www.churchofjesuschrist.org/study/manual/gospel-topics/restoration-of-the-church?lang=eng"]
+    },
+    "restorationist": {
+      "self": "Sees itself as restoring the New Testament church, uniting Christians on the Bible alone without creeds or denominational names.",
+      "claim": "restoration",
+      "sources": ["Pelikan 5:313", "Damick ch5: Restorationism", "https://discipleshistory.org/history/"]
+    },
+    "holiness": {
+      "self": "Sees itself as recovering John Wesley's teaching of Christian perfection, calling believers to entire sanctification as a second work of grace.",
+      "claim": "renewal",
+      "sources": ["Pelikan 5:148-149", "Damick ch5: The Holiness Movement", "https://nazarene.org/our-history/"]
+    },
+    "adventist": {
+      "self": "Holds that, for Seventh Day Adventists, God calls a remnant to keep his commandments and the faith of Jesus amid widespread apostasy.",
+      "claim": "restoration",
+      "sources": ["Damick ch5: Adventism", "https://www.adventist.org/remnant-and-its-mission/"]
+    },
+    "southern-baptist": {
+      "self": "Holds that a New Testament church is an independent congregation of baptized believers, keeping Christ's two ordinances under his lordship.",
+      "claim": "restoration",
+      "sources": ["Damick ch4: Baptists", "https://bfm.sbc.net/bfm2000/"]
+    },
+    "salvation-army": {
+      "self": "Sees itself as an international movement and an evangelical part of the universal Christian Church, preaching Christ and meeting human need.",
+      "claim": "renewal",
+      "sources": ["https://www.salvationarmy.org/sites/default/files/2025-06/Handbook%2Bof%2BDoctrine.pdf"]
+    },
+    "jehovahs-witnesses": {
+      "self": "Holds that a great apostasy followed the apostles and that its own worldwide work is the foretold restoration of true worship.",
+      "claim": "restoration",
+      "sources": ["https://www.jw.org/en/library/brochures/Jehovahs-Witnesses-Unitedly-Doing-Gods-Will-Worldwide/The-First-Century-Christian-Congregation/"]
+    },
+    "old-catholic": {
+      "self": "Holds that it keeps the faith of the undivided church of the first millennium, with apostolic succession, and rejects Vatican I's papal dogmas.",
+      "claim": "continuity",
+      "sources": ["https://www.utrechter-union.org/en/about-us/what-is-the-union-of-utrecht/the-declaration-of-utrecht/", "https://www.oikoumene.org/church-families/old-catholic-churches"]
+    },
+    "national-baptist-convention": {
+      "self": "Holds that churches are congregations of baptized believers under Christ, with believers' baptism by immersion as the biblical pattern.",
+      "claim": "restoration",
+      "sources": ["Damick ch4: Baptists", "https://baptistworld.org/beliefs/", "https://baptistworld.org/member/national-baptist-convention-usa-inc/"]
+    },
+    "oneness-pentecostal": {
+      "self": "Holds that it preaches the apostles' message of Acts 2:38, one God revealed in Jesus and baptism in Jesus' name, as the Bible standard.",
+      "claim": "restoration",
+      "sources": ["Damick ch6: The Azusa Street Revival: The Spread of Pentecostalism", "https://dmc.upci.org/wp-content/uploads/2023/03/2023-UPCI-ARTICLES-OF-FAITH.pdf"]
+    },
+    "charismatic": {
+      "self": "Sees itself as a renewal inside the existing churches, spreading baptism in the Holy Spirit and spiritual gifts without forming a new church.",
+      "claim": "renewal",
+      "sources": ["Damick ch6: THE CHARISMATIC MOVEMENT", "https://www.charis.international/en/"]
+    },
+    "acna": {
+      "self": "Sees itself as part of the one, holy, catholic and apostolic church, keeping the Anglican Way of Scripture, creeds, bishops and the 1662 Prayer Book.",
+      "claim": "reform",
+      "sources": ["https://anglicanchurch.net/wp-content/uploads/2026/07/ACNA-CC-RATIFIED-2026-06-25.pdf"]
+    },
+    "orthodox-church-ukraine": {
+      "self": "Sees itself as the historic Orthodox Church of Kyiv, now independent, keeping apostolic succession and communion with the Ecumenical Patriarchate.",
+      "claim": "continuity",
+      "sources": ["https://www.ecupatria.org/2019/01/14/autocephaly-of-the-orthodox-church-in-ukraine/"]
+    },
+    "global-methodist": {
+      "self": "Sees itself as part of the one, holy, catholic and apostolic church, preserving the historic Christian faith in the Wesleyan tradition.",
+      "claim": "renewal",
+      "sources": ["https://irp.cdn-website.com/1876eae9/files/uploaded/25.09.12+BDD+Text+and+Cover.pdf", "https://www.globalmethodist.org/launch-information"]
+    }
+  }
+}
