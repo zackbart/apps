@@ -1,0 +1,999 @@
+[
+  {
+    "id": "council-of-jerusalem",
+    "name": "Jerusalem",
+    "start": 49,
+    "end": 49,
+    "number": null,
+    "group": "other",
+    "question": "Must Gentiles become Jews to follow Jesus?",
+    "context": "Acts 15 describes a dispute over circumcision and observance of the law of Moses. Paul and Barnabas brought the question from Antioch; Peter recalled the admission of Gentiles, and James proposed a judgment grounded in the prophets.",
+    "decisions": [
+      "Gentile converts were not required to undergo circumcision.",
+      "The letter asked them to abstain from idolatrous food, blood, strangled animals and sexual immorality.",
+      "Judas and Silas accompanied Paul and Barnabas to deliver the decision."
+    ],
+    "aftermath": "The assembly became a model for resolving disagreement together. Its practical restrictions addressed a mixed Jewish and Gentile church; Christians differ over their continuing application.",
+    "reception": "Apostolic precedent across Christian traditions, not numbered among the later ecumenical councils. The date is approximate; the relationship between Acts 15 and Galatians 2 remains debated.",
+    "reading": "Acts 15:1–35",
+    "sources": [
+      {
+        "label": "Acts 15:1–35",
+        "url": "https://bible.usccb.org/bible/acts/15"
+      }
+    ],
+    "nodeId": "council-of-jerusalem",
+    "background": "Gentiles could become Christians without circumcision. The council gave churches an early example of settling disputes together.",
+    "facts": [
+      "The meeting probably occurred around AD 48 or 49.",
+      "Peter, James, Paul, and Barnabas appear in Acts 15.",
+      "The council rejected circumcision as a requirement for Gentile salvation."
+    ],
+    "caution": ""
+  },
+  {
+    "id": "nicaea-i",
+    "name": "Nicaea I",
+    "start": 325,
+    "end": 325,
+    "number": 1,
+    "group": "early",
+    "question": "Is the Son fully God, or a creature?",
+    "context": "Constantine sought unity after the dispute between Arius and Alexander of Alexandria spread. Bishops had to explain how the Son could be distinct from the Father without being a lesser deity.",
+    "decisions": [
+      "The creed confessed the Son as begotten, not created, and of the same divine being as the Father: homoousios.",
+      "It rejected the claim that the Son once did not exist.",
+      "Twenty canons addressed ordination, episcopal jurisdiction, reconciliation and worship; the synodal letter also addressed Easter."
+    ],
+    "aftermath": "A creed did not end the controversy. Disputes about its language, imperial interventions and rival episcopal appointments continued for decades. The longer creed commonly recited today is associated with Constantinople in 381.",
+    "reception": "Recognized by Catholic, Eastern Orthodox, Oriental Orthodox and Church of the East traditions. Most Protestant churches receive its Trinitarian teaching, though they understand conciliar authority differently.",
+    "reading": "Creed; canons 4–6; synodal letter",
+    "sources": [
+      {
+        "label": "Creed; canons 4–6; synodal letter",
+        "url": "https://www.papalencyclicals.net/councils/ecum01.htm"
+      },
+      {
+        "label": "Nicaea I: creed, canons and synodal letter",
+        "url": "https://www.newadvent.org/fathers/3801.htm"
+      },
+      {
+        "label": "Greek Orthodox Archdiocese: First Ecumenical Council",
+        "url": "https://www.goarch.org/-/the-first-ecumenical-council"
+      }
+    ],
+    "nodeId": "nicaea-i",
+    "background": "Catholics, Orthodox Christians, and most Protestants share Nicaea's confession that Jesus is fully divine.",
+    "facts": [
+      "The creed calls the Son begotten, rather than created.",
+      "Homoousios means the Son shares the Father's divine essence.",
+      "Nicaea also addressed Easter and church discipline.",
+      "The council did not select the books of the Bible."
+    ],
+    "caution": ""
+  },
+  {
+    "id": "constantinople-i",
+    "name": "Constantinople I",
+    "start": 381,
+    "end": 381,
+    "number": 2,
+    "group": "early",
+    "question": "How do Christians confess the Holy Spirit?",
+    "context": "Theodosius I convened an eastern episcopal assembly after decades of conflict over Nicaea. The debate now included the Spirit and whether the incarnate Christ possessed a complete human life.",
+    "decisions": [
+      "It reaffirmed Nicene faith and rejected several rival teachings, including denial of the Spirit’s divinity.",
+      "The creed attributed to it confesses the Spirit with the Father and Son and expands the articles on the church, baptism and resurrection.",
+      "Canon 3 ranked Constantinople after Rome because it was the imperial capital."
+    ],
+    "aftermath": "Chalcedon in 451 explicitly received the creed as the faith of the 150 fathers. Its precise drafting history is less certain than this later reception. The ranking of Constantinople became a continuing jurisdictional issue.",
+    "reception": "Received as ecumenical by Catholic, Eastern Orthodox, Oriental Orthodox and Church of the East traditions. Its creed also belongs to many Protestant liturgies. Reception of doctrine does not imply identical reception of every canon.",
+    "reading": "Creed; canons 1 and 3",
+    "sources": [
+      {
+        "label": "Creed; canons 1 and 3",
+        "url": "https://www.papalencyclicals.net/councils/ecum02.htm"
+      },
+      {
+        "label": "OCA: Second Ecumenical Council",
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-second-ecumenical-council"
+      },
+      {
+        "label": "Catholic Encyclopedia: Nicene Creed",
+        "url": "https://www.newadvent.org/cathen/11049a.htm"
+      }
+    ],
+    "nodeId": "constantinople-i",
+    "background": "Its creed still guides worship and teaching about the Trinity. It joins baptism with forgiveness and the hope of resurrection.",
+    "facts": [
+      "The council rejected teachings that denied the Holy Spirit's full divinity.",
+      "The creed confesses one baptism for forgiveness of sins.",
+      "Chalcedon's records in 451 explicitly attribute the expanded creed to 381.",
+      "Bishops ranked Constantinople after Rome because it was New Rome."
+    ],
+    "caution": "Scholars debate how the expanded creed was drafted. Chalcedon's surviving records explicitly attribute it to this council."
+  },
+  {
+    "id": "ephesus",
+    "name": "Ephesus",
+    "start": 431,
+    "end": 431,
+    "number": 3,
+    "group": "early",
+    "question": "Who is the person born of Mary?",
+    "context": "Nestorius of Constantinople and Cyril of Alexandria disputed how to describe Christ’s divine and human reality. The title Theotokos, God-bearer, tested whether the one born of Mary was truly the eternal Son.",
+    "decisions": [
+      "Cyril’s assembly deposed Nestorius and received Cyril’s teaching on the unity of Christ.",
+      "The council upheld Theotokos as a confession about Christ, not a claim that Mary originated divinity.",
+      "It prohibited composing a rival faith to Nicaea for converts."
+    ],
+    "aftermath": "Rival assemblies and imperial decisions complicated the outcome. A reconciliation formula followed in 433, but the conflict helped shape durable differences between the Church of the East and churches within the Roman Empire.",
+    "reception": "Catholic, Eastern Orthodox and Oriental Orthodox churches receive Ephesus. The Church of the East does not. Later dialogue cautions against reducing its Christology to belief in two unrelated persons.",
+    "reading": "Cyril’s second letter; judgment against Nestorius; canon 7",
+    "sources": [
+      {
+        "label": "Cyril’s second letter; judgment against Nestorius; canon 7",
+        "url": "https://www.papalencyclicals.net/councils/ecum03.htm"
+      },
+      {
+        "label": "OCA: Fathers of the Third Ecumenical Council",
+        "url": "https://www.oca.org/saints/lives/1949/09/09/102555-commemoration-of-the-holy-fathers-of-the-third-ecumenical-counci"
+      },
+      {
+        "label": "CNEWA: Assyrian Church of the East",
+        "url": "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/"
+      },
+      {
+        "label": "Catholic–Assyrian Common Christological Declaration (1994)",
+        "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html"
+      }
+    ],
+    "nodeId": "ephesus",
+    "background": "Calling Mary Mother of God affirms that Jesus is one divine person. Disagreement over this teaching divided eastern Christians.",
+    "facts": [
+      "Nestorius objected to unqualified use of Theotokos.",
+      "The council affirmed one Christ, rather than two separately acting subjects.",
+      "Theotokos does not mean Mary originated God's divine nature.",
+      "Rival episcopal assemblies and imperial politics complicated the proceedings."
+    ],
+    "caution": "The Church of the East disputes traditional accounts of Nestorius' teaching. Later dialogue recognizes shared belief in Christ's divinity and humanity."
+  },
+  {
+    "id": "chalcedon",
+    "name": "Chalcedon",
+    "start": 451,
+    "end": 451,
+    "number": 4,
+    "group": "early",
+    "question": "How can one Christ be fully divine and fully human?",
+    "context": "Marcian called the council after the contested assembly at Ephesus in 449. Bishops examined the teaching of Eutyches, the conduct of Dioscorus and Leo of Rome’s Tome.",
+    "decisions": [
+      "The definition confessed one and the same Christ in two natures, preserving both their distinction and the unity of his person.",
+      "The council received the creeds of 325 and 381 and judged Leo’s Tome consistent with the faith.",
+      "Canon 28 granted Constantinople privileges on the basis of its imperial standing; Rome opposed this canon."
+    ],
+    "aftermath": "Reception fractured Christian communities, particularly in Egypt and Syria. The later separation of Oriental Orthodox and Chalcedonian churches developed through contested appointments, imperial enforcement and successive attempts at reconciliation.",
+    "reception": "Catholic and Eastern Orthodox churches receive it; many Protestants affirm its Christology. Oriental Orthodox churches reject the council while confessing Christ as fully divine and fully human. Calling them simply deniers of Christ’s humanity misrepresents their faith.",
+    "reading": "Definition of faith; canon 28",
+    "sources": [
+      {
+        "label": "Definition of faith; canon 28",
+        "url": "https://www.papalencyclicals.net/councils/ecum04.htm"
+      },
+      {
+        "label": "OCA: Fourth Ecumenical Council",
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council"
+      },
+      {
+        "label": "CNEWA: Oriental Orthodox Churches",
+        "url": "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/"
+      }
+    ],
+    "nodeId": "chalcedon",
+    "background": "Catholics, Eastern Orthodox Christians, and most Protestants accept its teaching about Christ. Oriental Orthodox churches reject its wording.",
+    "facts": [
+      "Emperor Marcian convened the council.",
+      "Its definition preserves Christ's divine and human natures without confusion or separation.",
+      "The council reaffirmed the creeds associated with 325 and 381.",
+      "Many Christians in Egypt and Syria rejected the council."
+    ],
+    "caution": "Oriental Orthodox churches reject Chalcedon's wording while affirming Christ's full divinity and humanity. Both sides claim continuity with Cyril of Alexandria."
+  },
+  {
+    "id": "constantinople-ii",
+    "name": "Constantinople II",
+    "start": 553,
+    "end": 553,
+    "number": 5,
+    "group": "early",
+    "question": "Did Chalcedon leave room for dividing Christ?",
+    "context": "Justinian sought reconciliation with opponents of Chalcedon by condemning the Three Chapters: Theodore of Mopsuestia and specified writings associated with Theodoret and Ibas.",
+    "decisions": [
+      "The council condemned the Three Chapters.",
+      "It interpreted Chalcedon through the unity of the incarnate Word, rejecting a division into two personal subjects.",
+      "Its anathemas defended both Christ’s complete humanity and the identity of the suffering Christ as the divine Son incarnate."
+    ],
+    "aftermath": "Pope Vigilius resisted before accepting the council. Some western churches broke communion over the condemnation, while the hoped-for reconciliation with non-Chalcedonian churches did not follow.",
+    "reception": "The fifth ecumenical council for Catholics and Eastern Orthodox. It did not become an accepted council of the Oriental Orthodox churches. Questions about texts associated with the condemnation of Origen require separate treatment from its surviving formal decrees.",
+    "reading": "Sentence against the Three Chapters; anathemas",
+    "sources": [
+      {
+        "label": "Sentence against the Three Chapters; anathemas",
+        "url": "https://www.papalencyclicals.net/councils/ecum05.htm"
+      },
+      {
+        "label": "OCA: Justinian I and the Non-Chalcedonians",
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians"
+      },
+      {
+        "label": "Catholic Encyclopedia: Second Council of Constantinople",
+        "url": "https://www.newadvent.org/cathen/04308b.htm"
+      }
+    ],
+    "nodeId": "constantinople-ii",
+    "background": "Disagreements about Jesus continue after Chalcedon, and this council fails to reunite the divided churches.",
+    "facts": [
+      "The Three Chapters concern Theodore of Mopsuestia and selected writings of Theodoret and Ibas.",
+      "The council affirms Christ as one person, fully divine and fully human.",
+      "Catholics and Eastern Orthodox accept this council.",
+      "The effort does not restore communion with the Oriental Orthodox churches."
+    ],
+    "caution": ""
+  },
+  {
+    "id": "constantinople-iii",
+    "name": "Constantinople III",
+    "start": 680,
+    "end": 681,
+    "number": 6,
+    "group": "early",
+    "question": "Does Christ possess a human will?",
+    "context": "Monothelitism proposed one will in Christ as a way of holding together his unity and his two natures. Opponents argued that salvation required a complete humanity, including human willing.",
+    "decisions": [
+      "The council confessed two natural wills and two natural operations in the one Christ.",
+      "Christ’s human will was described as freely harmonious with the divine will, not opposed to it.",
+      "It condemned advocates of one will, including Pope Honorius I for his role in the controversy."
+    ],
+    "aftermath": "The decision made explicit an implication of Chalcedon: humanity is not merely a body through which divinity acts. Honorius’s condemnation later became central to disputes about the scope of papal infallibility.",
+    "reception": "Received as the sixth ecumenical council by Catholic and Eastern Orthodox churches. Catholic explanations distinguish Honorius’s letters from an ex cathedra definition; critics dispute the adequacy of that distinction.",
+    "reading": "Definition of faith and condemnation of Monothelitism",
+    "sources": [
+      {
+        "label": "Definition of faith and condemnation of Monothelitism",
+        "url": "https://www.papalencyclicals.net/councils/ecum06.htm"
+      },
+      {
+        "label": "OCA: Monoenergism and Monothelitism",
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/monoenergism-monothelitism"
+      },
+      {
+        "label": "Catholic Encyclopedia: Pope Honorius I",
+        "url": "https://www.newadvent.org/cathen/07452b.htm"
+      }
+    ],
+    "nodeId": "constantinople-iii",
+    "background": "Christ's human will matters to the teaching that Jesus is fully human as well as fully divine.",
+    "facts": [
+      "The council affirms two wills and two activities in one Christ.",
+      "Christ's human will freely follows his divine will.",
+      "It condemns Pope Honorius I among supporters of the rejected teaching.",
+      "Catholics and Eastern Orthodox accept this council."
+    ],
+    "caution": "Orthodox writers cite Honorius against papal infallibility. Catholics distinguish his condemned letters from an infallible papal definition."
+  },
+  {
+    "id": "trullo",
+    "name": "Trullo / Quinisext",
+    "start": 692,
+    "end": 692,
+    "number": null,
+    "group": "other",
+    "question": "Should East and West share the same church discipline?",
+    "context": "Justinian II convened bishops to supply disciplinary canons for the fifth and sixth councils, whose main work had been doctrinal. Quinisext means fifth-sixth.",
+    "decisions": [
+      "Its 102 canons regulated clergy, marriage, fasting, worship and ecclesiastical order.",
+      "Canon 13 defended married priests and deacons continuing married life, with liturgical continence.",
+      "Canon 82 directed that Christ be depicted in human form rather than only as the symbolic lamb."
+    ],
+    "aftermath": "Several canons explicitly challenged western practices. The dispute shows how liturgical and disciplinary differences could become claims about apostolic fidelity.",
+    "reception": "Eastern Orthodox tradition receives Trullo as completing the fifth and sixth councils. Rome did not accept its canons as a whole; it is not a separate council in the Catholic list of 21.",
+    "reading": "Canons 13, 55 and 82",
+    "sources": [
+      {
+        "label": "Canons 13, 55 and 82",
+        "url": "https://www.newadvent.org/fathers/3814.htm"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "nicaea-ii",
+    "name": "Nicaea II",
+    "start": 787,
+    "end": 787,
+    "number": 7,
+    "group": "early",
+    "question": "Can Christians venerate images without worshipping them?",
+    "context": "After imperial iconoclasm and the council of Hieria in 754, Irene and Constantine VI convened a new assembly. Its defense of icons connected visible images to the reality of the incarnation.",
+    "decisions": [
+      "The definition permitted images of Christ, Mary, angels and saints in churches and homes.",
+      "It distinguished reverent honor from the worship owed to God alone.",
+      "Honor offered to an image was understood as passing to the person represented."
+    ],
+    "aftermath": "Iconoclasm returned in the ninth century; the restoration of icons in 843 became a major Orthodox commemoration. Frankish readers objected to the council in a controversy complicated by translation and political rivalry.",
+    "reception": "The last council jointly numbered ecumenical by Catholics and Eastern Orthodox. Protestant traditions vary: some accept religious art but reject the council’s account of veneration. Agreement on the first four councils should not be mistaken for universal Protestant acceptance of all seven.",
+    "reading": "Definition on images; disciplinary canons",
+    "sources": [
+      {
+        "label": "Definition on images; disciplinary canons",
+        "url": "https://www.papalencyclicals.net/councils/ecum07.htm"
+      },
+      {
+        "label": "OCA: Iconoclasm",
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm"
+      }
+    ],
+    "nodeId": "nicaea-ii",
+    "background": "This council gives Orthodox and Catholic Christians a basis for honoring sacred images in prayer and liturgy.",
+    "facts": [
+      "Empress Irene supports the council against opponents of religious images.",
+      "Honor shown to an image refers to the person depicted.",
+      "This is the last council both Catholics and Eastern Orthodox generally accept as ecumenical.",
+      "Further conflict ends with the Byzantine restoration of icons in 843."
+    ],
+    "caution": "Many Protestants reject or restrict honoring religious images. Catholics and Orthodox distinguish this honor from worship of God."
+  },
+  {
+    "id": "council-of-frankfurt",
+    "name": "Frankfurt",
+    "start": 794,
+    "end": 794,
+    "number": null,
+    "group": "other",
+    "question": "What did the Franks think Nicaea II had required?",
+    "context": "Charlemagne assembled a Frankish synod amid disputes over Spanish Adoptionism and the place of images. The western reception of Nicaea II was complicated by an inadequate Latin translation.",
+    "decisions": [
+      "It condemned Adoptionist accounts of Christ’s sonship.",
+      "It rejected what it understood to be Nicaea II’s demand for worship of images.",
+      "The Frankish position allowed images while resisting both their destruction and their adoration."
+    ],
+    "aftermath": "The disagreement exposed how different theological vocabularies and imperial ambitions impeded communication. Rome’s acceptance of Nicaea II means Frankfurt cannot simply be read as the permanent Catholic position on icons.",
+    "reception": "A regional Frankish council, not an ecumenical council. The significance of translation errors relative to substantive theological disagreement remains debated.",
+    "reading": "Historical account: Council of Frankfurt",
+    "sources": [
+      {
+        "label": "Historical account: Council of Frankfurt",
+        "url": "https://www.newadvent.org/cathen/06236a.htm"
+      },
+      {
+        "label": "Catholic Encyclopedia: Caroline Books",
+        "url": "https://www.newadvent.org/cathen/03371b.htm"
+      }
+    ],
+    "nodeId": "council-of-frankfurt",
+    "background": "Frankfurt shows how disagreements over images and their translation strained relations between the Frankish and Byzantine churches. The later Frankish dispute over the Filioque was distinct from this council.",
+    "facts": [
+      "Its first canon condemns Adoptionism, the claim that Christ is God's adopted Son in his humanity.",
+      "The Latin text wrongly made Nicaea II seem to demand for images the worship owed to God.",
+      "The Caroline Books, issued in Charlemagne's name, refuse both to smash images and to adore them.",
+      "Later, after the Frankish synod at Aachen in 809, Pope Leo III declined to add the Filioque to the creed."
+    ],
+    "caution": "Catholics and Orthodox both accept Nicaea II today. Historians debate how much bad translation, and how much rivalry with Byzantium, drove Frankfurt's rejection."
+  },
+  {
+    "id": "constantinople-iv",
+    "name": "Constantinople, 869–870",
+    "start": 869,
+    "end": 870,
+    "number": 8,
+    "group": "catholic",
+    "question": "Who was the legitimate patriarch: Ignatius or Photius?",
+    "context": "After Basil I came to power, an assembly with papal legates addressed the contested replacement of Ignatius by Photius. Episcopal legitimacy and relations with Rome were inseparable from imperial politics.",
+    "decisions": [
+      "The council condemned and deposed Photius and supported Ignatius.",
+      "It legislated on ordinations and ecclesiastical order.",
+      "It defended religious images and the standing of the patriarchal sees."
+    ],
+    "aftermath": "After Ignatius died, Photius returned. A new council in 879–880, also attended by Roman legates, reversed the settlement. These are two distinct assemblies, not a single eleven-year meeting.",
+    "reception": "Counted eighth in the Catholic ecumenical list. Eastern Orthodox churches reject its condemnation of Photius; some Orthodox writers instead call the 879–880 council the eighth. The OCA’s historical account notes that John VIII accepted the 879–880 council and that Rome’s later preference for 869–870 emerged in the eleventh century; the present numbering should not be projected back unchanged onto the ninth.",
+    "reading": "Definition and canons",
+    "sources": [
+      {
+        "label": "Definition and canons",
+        "url": "https://www.papalencyclicals.net/councils/ecum08.htm"
+      },
+      {
+        "label": "Catholic Encyclopedia: Fourth Council of Constantinople",
+        "url": "https://www.newadvent.org/cathen/04310b.htm"
+      },
+      {
+        "label": "OCA: Saint Photius, Patriarch of Constantinople",
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
+      }
+    ],
+    "nodeId": "disputed-eighth-council",
+    "background": "Because the churches disagree over which council came eighth, Nicaea II in 787 is the last council both accept as ecumenical.",
+    "facts": [
+      "The 869 to 870 council condemns Photius and confirms Ignatius, restored in 867, with papal legates presiding.",
+      "Canon 21 of the 869–870 council ranks the five patriarchal sees, with Rome first.",
+      "John VIII's legates join the 879 to 880 council, which recognizes Photius, who returned in 877, and forbids creed changes.",
+      "Some Orthodox writers call the 879 to 880 council the eighth ecumenical council."
+    ],
+    "caution": "The present Catholic and Orthodox receptions differ. The history of papal acceptance and the later numbering of these councils is more complex than a continuous division from 869 onward."
+  },
+  {
+    "id": "constantinople-879",
+    "name": "Constantinople, 879–880",
+    "start": 879,
+    "end": 880,
+    "number": null,
+    "group": "other",
+    "question": "Could Rome and Constantinople restore communion around Photius?",
+    "context": "Following Ignatius’s death, Photius returned as patriarch. A new assembly met with representatives of Pope John VIII to restore ecclesial peace.",
+    "decisions": [
+      "The assembly recognized Photius and overturned the earlier settlement against him.",
+      "It reaffirmed the creed without additions.",
+      "Its proceedings brought eastern bishops and papal legates into a common act of reconciliation."
+    ],
+    "aftermath": "The councils of 869 and 879 came to carry rival memories of authority. Later use of 879 in the Filioque dispute should distinguish the council’s wording from subsequent arguments about it.",
+    "reception": "Honored in Eastern Orthodox tradition; some call it the eighth ecumenical council. That numbering is not uniform across Orthodoxy. It is not the eighth council in the Catholic enumeration. The OCA’s historical account notes that John VIII accepted the 879–880 council and that Rome’s later preference for 869–870 emerged in the eleventh century; the present numbering should not be projected back unchanged onto the ninth.",
+    "reading": "OCA history: Saint Photius",
+    "sources": [
+      {
+        "label": "OCA history: Saint Photius",
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
+      },
+      {
+        "label": "Catholic Encyclopedia: Fourth Council of Constantinople",
+        "url": "https://www.newadvent.org/cathen/04310b.htm"
+      }
+    ],
+    "nodeId": "disputed-eighth-council",
+    "background": "Because the churches disagree over which council came eighth, Nicaea II in 787 is the last council both accept as ecumenical.",
+    "facts": [
+      "The 869 to 870 council condemns Photius and confirms Ignatius, restored in 867, with papal legates presiding.",
+      "Canon 21 of the 869–870 council ranks the five patriarchal sees, with Rome first.",
+      "John VIII's legates join the 879 to 880 council, which recognizes Photius, who returned in 877, and forbids creed changes.",
+      "Some Orthodox writers call the 879 to 880 council the eighth ecumenical council."
+    ],
+    "caution": "The present Catholic and Orthodox receptions differ. The history of papal acceptance and the later numbering of these councils is more complex than a continuous division from 869 onward."
+  },
+  {
+    "id": "lateran-i",
+    "name": "Lateran I",
+    "start": 1123,
+    "end": 1123,
+    "number": 9,
+    "group": "catholic",
+    "question": "Who may appoint and invest a bishop?",
+    "context": "Callistus II convened a western council after the Concordat of Worms of 1122 addressed the long conflict between emperors and popes over investiture.",
+    "decisions": [
+      "The council reinforced the settlement separating spiritual investiture from the ruler’s temporal role.",
+      "It prohibited simony, the purchase of spiritual office.",
+      "Canons addressed clerical discipline, church property, pilgrimage and crusading commitments."
+    ],
+    "aftermath": "The settlement did not remove rulers from ecclesiastical politics. It clarified a distinction between spiritual office and the lands or political responsibilities attached to it.",
+    "reception": "Counted ninth by the Catholic Church. Eastern Orthodox and Protestant churches do not receive it as an ecumenical council; its immediate constituency was the Latin West.",
+    "reading": "Introduction; canons on simony and investiture",
+    "sources": [
+      {
+        "label": "Introduction; canons on simony and investiture",
+        "url": "https://www.papalencyclicals.net/councils/ecum09.htm"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "lateran-ii",
+    "name": "Lateran II",
+    "start": 1139,
+    "end": 1139,
+    "number": 10,
+    "group": "catholic",
+    "question": "How could a divided papacy restore church order?",
+    "context": "Innocent II called the council after the schism associated with the rival claimant Anacletus II. Reunification required decisions about offices held under the competing obediences.",
+    "decisions": [
+      "It rejected ordinations associated with the schismatic leadership.",
+      "Canons strengthened prohibitions on simony and clerical marriage.",
+      "It addressed violence, usury and the protection of ecclesiastical life."
+    ],
+    "aftermath": "The council consolidated Innocent’s position and advanced the western reform of clergy. Its rules belong to a longer history of Latin discipline, not the creation of celibacy from nothing.",
+    "reception": "Catholic ecumenical council number ten. Its disciplinary settlement is not a universal Christian agreement, and eastern practice concerning married clergy differs.",
+    "reading": "Introduction; canons 1–7 and 30",
+    "sources": [
+      {
+        "label": "Introduction; canons 1–7 and 30",
+        "url": "https://www.papalencyclicals.net/councils/ecum10.htm"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "lateran-iii",
+    "name": "Lateran III",
+    "start": 1179,
+    "end": 1179,
+    "number": 11,
+    "group": "catholic",
+    "question": "How could disputed papal elections be prevented?",
+    "context": "Alexander III assembled the council after a prolonged struggle with Frederick Barbarossa and rival papal claimants. Reform included election rules, clerical qualifications and education.",
+    "decisions": [
+      "A two-thirds majority of cardinals was required to elect a pope.",
+      "Canons regulated episcopal age and qualifications and condemned abuses in church offices.",
+      "Cathedral churches were to provide support for a teacher to instruct clergy and poor scholars."
+    ],
+    "aftermath": "The election rule provided an enduring mechanism for reducing rival claims. The disciplinary program connected institutional reform with pastoral competence and education.",
+    "reception": "Catholic ecumenical council number eleven. Its authority is received within Catholic tradition, rather than across all churches descended from the early councils.",
+    "reading": "Canons 1–3 and 18",
+    "sources": [
+      {
+        "label": "Canons 1–3 and 18",
+        "url": "https://www.papalencyclicals.net/councils/ecum11.htm"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "lateran-iv",
+    "name": "Lateran IV",
+    "start": 1215,
+    "end": 1215,
+    "number": 12,
+    "group": "catholic",
+    "question": "What should belief and parish life look like in the Latin church?",
+    "context": "Innocent III’s council joined a broad reform program to the suppression of heresy and plans for crusade. It addressed both theological definitions and ordinary religious practice.",
+    "decisions": [
+      "Its first constitution used transubstantiation to describe the Eucharistic change.",
+      "Canon 21 required annual confession and Easter communion for the faithful who had reached discretion.",
+      "Other canons regulated preaching, education and religious orders, while imposing discriminatory restrictions on Jews and Muslims."
+    ],
+    "aftermath": "Its sacramental and pastoral legislation shaped medieval Catholic life. Its coercive and discriminatory measures also belong to its history; doctrinal influence should not conceal those harms.",
+    "reception": "Catholic ecumenical council number twelve. Orthodox and Protestant churches do not receive it as ecumenical, even where particular beliefs or practices overlap.",
+    "reading": "Constitutions 1, 21 and 68",
+    "sources": [
+      {
+        "label": "Constitutions 1, 21 and 68",
+        "url": "https://www.papalencyclicals.net/councils/ecum12-2.htm"
+      },
+      {
+        "label": "Fordham: Fourth Lateran Council canons",
+        "url": "https://sourcebooks.web.fordham.edu/basis/lateran4.asp"
+      }
+    ],
+    "nodeId": "lateran-iv",
+    "background": "Annual confession and Easter Communion become obligations for Western Christians. Transubstantiation becomes a focus of later Reformation debates.",
+    "facts": [
+      "Transubstantiation names the change of bread and wine into Christ's body and blood.",
+      "Canon 21 requires confession at least once a year.",
+      "The same canon requires Communion at least at Easter.",
+      "Priests must keep confessions secret."
+    ],
+    "caution": ""
+  },
+  {
+    "id": "lyon-i",
+    "name": "Lyon I",
+    "start": 1245,
+    "end": 1245,
+    "number": 13,
+    "group": "catholic",
+    "question": "Could a pope depose an emperor?",
+    "context": "Innocent IV convened the council at Lyon during his conflict with Emperor Frederick II. The agenda joined ecclesiastical reform to threats against Latin Christendom.",
+    "decisions": [
+      "The council issued a sentence deposing Frederick II.",
+      "It legislated on ecclesiastical litigation and judicial procedure.",
+      "It addressed support for the Holy Land and responses to military threats."
+    ],
+    "aftermath": "The sentence did not simply settle the political conflict. It illustrates the high medieval papacy’s claim to judge a ruler and the practical resistance such a claim could encounter.",
+    "reception": "Catholic ecumenical council number thirteen. Its political judgments should be distinguished from creedal definitions; other Christian traditions do not recognize it as universally authoritative.",
+    "reading": "Sentence against Frederick II; constitutions",
+    "sources": [
+      {
+        "label": "Sentence against Frederick II; constitutions",
+        "url": "https://www.papalencyclicals.net/councils/ecum13.htm"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "lyon-ii",
+    "name": "Lyon II",
+    "start": 1274,
+    "end": 1274,
+    "number": 14,
+    "group": "catholic",
+    "question": "Could a negotiated agreement reunite Greek and Latin churches?",
+    "context": "Gregory X sought reunion with the Byzantine church. Michael VIII supported an agreement in circumstances shaped by western threats to his restored empire.",
+    "decisions": [
+      "Greek representatives accepted a union involving Roman primacy and the Latin teaching on the Spirit’s procession.",
+      "The council enacted rules for papal conclaves.",
+      "Its legislation also addressed crusade financing and religious orders."
+    ],
+    "aftermath": "The agreement lacked durable reception among Byzantine clergy and faithful. Imperial assent and episcopal signatures did not produce lasting communion.",
+    "reception": "Catholic ecumenical council number fourteen. Eastern Orthodox churches reject the union as a binding settlement. The council is a case study in the difference between an agreement and its reception.",
+    "reading": "Constitutions on the Trinity and papal election",
+    "sources": [
+      {
+        "label": "Constitutions on the Trinity and papal election",
+        "url": "https://www.papalencyclicals.net/councils/ecum14.htm"
+      },
+      {
+        "label": "Fordham: Michael VIII’s profession and the Decree for the Armenians",
+        "url": "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
+      },
+      {
+        "label": "Catholic Encyclopedia: Second Council of Lyons",
+        "url": "https://www.newadvent.org/cathen/09476c.htm"
+      }
+    ],
+    "nodeId": "lyon-ii",
+    "background": "Lyon’s failed reunion shows why diplomatic agreement alone could not restore communion. Michael VIII’s profession of faith, prepared under Clement IV in 1267 and read at the council, also included a list of seven sacraments.",
+    "facts": [
+      "Michael VIII’s profession of faith, read at the council, lists seven sacraments: baptism, confirmation, Eucharist, penance, orders, marriage and anointing of the sick.",
+      "The profession also affirms transubstantiation.",
+      "Emperor Michael VIII supports reunion partly for political protection.",
+      "Opposition in the Byzantine church prevents lasting union."
+    ],
+    "caution": "Catholics recognize Lyon II as ecumenical. Eastern Orthodox churches reject its authority and the attempted union."
+  },
+  {
+    "id": "vienne",
+    "name": "Vienne",
+    "start": 1311,
+    "end": 1312,
+    "number": 15,
+    "group": "catholic",
+    "question": "What should happen to the Knights Templar?",
+    "context": "Clement V assembled the council under intense pressure surrounding accusations against the Templars. The wider agenda included reform and disputes over Franciscan life.",
+    "decisions": [
+      "The order of the Templars was suppressed by papal provision rather than a definitive judicial verdict of heresy against the whole order.",
+      "A doctrinal constitution affirmed the rational soul as the form of the human body.",
+      "The council addressed poverty, education and ecclesiastical reform."
+    ],
+    "aftermath": "Templar property was largely assigned to the Hospitallers, subject to regional complications. The proceedings reveal how secular pressure and ecclesiastical judgment could become intertwined.",
+    "reception": "Catholic ecumenical council number fifteen. Suppression of an institution is not equivalent to proving every accusation against its members.",
+    "reading": "Vox in excelso; Fidei catholicae",
+    "sources": [
+      {
+        "label": "Vox in excelso; Fidei catholicae",
+        "url": "https://www.papalencyclicals.net/councils/ecum15.htm"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "constance",
+    "name": "Constance",
+    "start": 1414,
+    "end": 1418,
+    "number": 16,
+    "group": "catholic",
+    "question": "Who could resolve a church with rival popes?",
+    "context": "The Western Schism had produced competing papal obediences. The council gathered under Sigismund’s sponsorship to restore unity and address reform and disputed teaching.",
+    "decisions": [
+      "The process removed or secured the resignation of rival claimants and elected Martin V.",
+      "Haec sancta asserted conciliar authority; Frequens required future councils.",
+      "The council condemned teachings associated with Wyclif and Hus; Hus was executed by secular authority in 1415."
+    ],
+    "aftermath": "The schism ended, but the relationship between pope and council remained contested. Hussite resistance continued, and promised institutional reform proved difficult.",
+    "reception": "Catholics count Constance as ecumenical, with qualifications about particular sessions and decrees. Its recognition does not mean Catholic acceptance of every conciliarist claim. Hus is remembered very differently in Czech and Protestant traditions.",
+    "reading": "Sessions 5, 15 and 39",
+    "sources": [
+      {
+        "label": "Sessions 5, 15 and 39",
+        "url": "https://www.papalencyclicals.net/councils/ecum16.htm"
+      },
+      {
+        "label": "Catholic Encyclopedia: Council of Constance",
+        "url": "https://www.newadvent.org/cathen/04288a.htm"
+      }
+    ],
+    "nodeId": "constance",
+    "background": "The council restores one recognized pope but condemns reformers, including Hus, whom secular authorities execute.",
+    "facts": [
+      "The council elects Martin V in 1417.",
+      "It asserts council authority over popes in resolving the crisis.",
+      "It condemns Hus and hands him to secular authorities on July 6, 1415.",
+      "It also condemns Wycliffe's teachings."
+    ],
+    "caution": "Catholics reject permanent council authority over popes. Many Protestants honor Hus as a reformer and reject his condemnation."
+  },
+  {
+    "id": "florence",
+    "name": "Basel–Ferrara–Florence",
+    "start": 1431,
+    "end": 1445,
+    "number": 17,
+    "group": "catholic",
+    "question": "Could doctrinal agreements heal the divisions?",
+    "context": "A council began at Basel, then divided over papal authority and its transfer to Ferrara and Florence. Greek delegates negotiated amid the Byzantine Empire’s increasingly precarious position.",
+    "decisions": [
+      "The 1439 decree of union addressed the Filioque, purgatory, Eucharistic bread and papal primacy.",
+      "Further decrees addressed union with Armenian and other eastern delegations.",
+      "The rival continuation at Basel contested the pope and elected an antipope."
+    ],
+    "aftermath": "The Greek union did not achieve lasting acceptance in the East. Mark of Ephesus opposed it, and reception beyond the negotiating delegates proved decisive.",
+    "reception": "Counted as one council in the Catholic list, with limits on recognition of Basel’s rival continuation. Eastern Orthodox churches reject Florence’s union. Agreements with particular delegations did not mean entire eastern traditions entered communion with Rome.",
+    "reading": "Laetentur caeli; decree for the Armenians",
+    "sources": [
+      {
+        "label": "Laetentur caeli; decree for the Armenians",
+        "url": "https://www.papalencyclicals.net/councils/ecum17.htm"
+      },
+      {
+        "label": "Fordham: Michael VIII’s profession and the Decree for the Armenians",
+        "url": "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
+      }
+    ],
+    "nodeId": "florence",
+    "background": "Catholics inherit detailed sacramental teaching from this council, but its reunion agreement fails to overcome Orthodox opposition.",
+    "facts": [
+      "The council moves from Ferrara to Florence in 1439.",
+      "The Greek agreement addresses the Filioque, purgatory, and papal primacy.",
+      "Mark of Ephesus refuses to sign the Greek union agreement.",
+      "The 1439 Armenian decree lists seven sacraments and describes their administration."
+    ],
+    "caution": "Catholics accept the council as ecumenical. Orthodox churches reject it. Political pressure and opposition within Orthodox churches help explain the failed reunion."
+  },
+  {
+    "id": "lateran-v",
+    "name": "Lateran V",
+    "start": 1512,
+    "end": 1517,
+    "number": 18,
+    "group": "catholic",
+    "question": "Could papal reform answer conciliar opposition?",
+    "context": "Julius II called the council against the rival assembly at Pisa; Leo X continued it. The council addressed church reform shortly before the Reformation.",
+    "decisions": [
+      "It rejected the rival council and reinforced papal authority.",
+      "It affirmed the immortality of the individual rational soul.",
+      "Decrees addressed preaching, printing and clerical reform."
+    ],
+    "aftermath": "The reform program did not avert the approaching upheaval. Its close in 1517 places it immediately before Luther’s indulgence controversy, but proximity alone does not explain the Reformation.",
+    "reception": "Catholic ecumenical council number eighteen. Its model of authority differed from the conciliarist position it opposed and the Protestant movements that soon emerged.",
+    "reading": "Sessions 8–11",
+    "sources": [
+      {
+        "label": "Sessions 8–11",
+        "url": "https://www.papalencyclicals.net/councils/ecum18.htm"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "schleitheim-confession",
+    "name": "Schleitheim",
+    "start": 1527,
+    "end": 1527,
+    "number": null,
+    "group": "other",
+    "question": "What makes a voluntary Christian community?",
+    "context": "Swiss Brethren gathered amid persecution and disagreement within the radical Reformation. The articles associated with Michael Sattler sought a common pattern of church life.",
+    "decisions": [
+      "Seven articles covered believers’ baptism, discipline, the Lord’s Supper, separation, shepherds, the sword and oaths.",
+      "Baptism followed repentance and professed faith.",
+      "The community rejected participation in violence and the swearing of oaths."
+    ],
+    "aftermath": "The confession became a formative Anabaptist witness. It did not speak for every radical reformer or later Anabaptist group, whose positions differed.",
+    "reception": "A confessional gathering rather than an ecumenical council. Especially important to Swiss Brethren and related Mennonite traditions; rejected as binding by churches practicing infant baptism or supporting Christian use of civil force.",
+    "reading": "The Schleitheim Articles, 1527",
+    "sources": [
+      {
+        "label": "The Schleitheim Articles, 1527",
+        "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/an-anabaptist-confession-of-faith-the-schleitheim-articles-1527.pdf"
+      },
+      {
+        "label": "GAMEO: Schleitheim Confession",
+        "url": "https://gameo.org/index.php?title=Schleitheim_Confession"
+      }
+    ],
+    "nodeId": "schleitheim-confession",
+    "background": "The Swiss Brethren tied baptism to voluntary church membership and rejected violence, separating church life from political power.",
+    "facts": [
+      "The gathering met on February 24, 1527.",
+      "Michael Sattler helped draft the articles.",
+      "These articles did not represent every Anabaptist group."
+    ],
+    "caution": "The Swiss Brethren differed from both Catholic and magisterial Reformation churches over baptism and the use of coercion. Michael Sattler was executed at Rottenburg in May 1527."
+  },
+  {
+    "id": "council-of-trent",
+    "name": "Trent",
+    "start": 1545,
+    "end": 1563,
+    "number": 19,
+    "group": "catholic",
+    "question": "How should Catholicism respond to the Reformation?",
+    "context": "The council met in interrupted periods under several popes. It combined definitions on disputed doctrine with reform of bishops, clergy and pastoral care.",
+    "decisions": [
+      "It addressed Scripture and tradition, original sin and justification.",
+      "It affirmed seven sacraments, transubstantiation and the sacrificial character of the Mass.",
+      "Reforms included seminaries and duties of episcopal residence; marriage legislation aimed to prevent clandestine unions."
+    ],
+    "aftermath": "Implementation continued through catechesis, liturgical books, seminaries and episcopal reform after the council. Trent shaped Catholic identity for centuries but did not restore communion with Protestant churches.",
+    "reception": "Catholic ecumenical council number nineteen. Protestant traditions reject its condemnations of their teachings, while later dialogues have clarified both genuine disagreements and past misunderstandings. Eastern Orthodox churches also do not receive Trent as ecumenical.",
+    "reading": "Sessions 4, 6, 7, 13, 22–24",
+    "sources": [
+      {
+        "label": "Sessions 4, 6, 7, 13, 22–24",
+        "url": "https://www.papalencyclicals.net/councils/trent.htm"
+      },
+      {
+        "label": "Catechism: The Seven Sacraments of the Church",
+        "url": "https://www.vatican.va/content/catechism/en/part_two/section_two.html"
+      }
+    ],
+    "nodeId": "council-of-trent",
+    "background": "Trent defined Catholic sacramental teaching in response to Protestant challenges, preserving differences that still divide churches.",
+    "facts": [
+      "The council met in several sessions between 1545 and 1563.",
+      "It reaffirmed seven sacraments in 1547.",
+      "It reaffirmed transubstantiation and Christ's real presence in 1551.",
+      "It required seminaries to improve priestly formation."
+    ],
+    "caution": ""
+  },
+  {
+    "id": "synod-of-dort",
+    "name": "Dort",
+    "start": 1618,
+    "end": 1619,
+    "number": null,
+    "group": "other",
+    "question": "How does saving grace relate to human response?",
+    "context": "Dutch Reformed and international delegates considered the Remonstrant challenge to established teaching. Political conflict in the Dutch Republic intensified the theological dispute.",
+    "decisions": [
+      "The Canons defended unconditional election, the efficacy of Christ’s redemption and the necessity of regenerating grace.",
+      "They taught that God preserves believers to final salvation.",
+      "Their five disputed points form four sections because the third and fourth points are combined."
+    ],
+    "aftermath": "The Canons became a Reformed confessional standard. The later English acronym TULIP is a summary device, not the council’s own organization or a complete statement of Reformed theology.",
+    "reception": "Authoritative in churches subscribing to the Canons, not in Christianity as a whole. Remonstrant and Wesleyan/Arminian traditions contest its account of election and grace.",
+    "reading": "Canons of Dort: five heads of doctrine (III/IV combined)",
+    "sources": [
+      {
+        "label": "Canons of Dort: five heads of doctrine (III/IV combined)",
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort"
+      }
+    ],
+    "nodeId": "synod-of-dort",
+    "background": "Calvinists and Arminians disagree about how God’s grace relates to human response. Dort established the position of churches subscribing to its Canons.",
+    "facts": [
+      "Delegates met at Dordrecht in the Netherlands.",
+      "The Remonstrants followed Jacob Arminius's challenge to Reformed teaching.",
+      "The Canons address five disputed points, not all Christian doctrine."
+    ],
+    "caution": "Reformed churches accepted the Canons as faithful teaching. Remonstrants rejected the verdict and faced political suppression."
+  },
+  {
+    "id": "jerusalem-1672",
+    "name": "Jerusalem / Bethlehem",
+    "start": 1672,
+    "end": 1672,
+    "number": null,
+    "group": "other",
+    "question": "Was the Calvinizing confession attributed to Cyril Lucaris Orthodox?",
+    "context": "Dositheus of Jerusalem presided at a synod held at Bethlehem. It responded to a confession published under Cyril Lucaris’s name and to western claims about Orthodox belief.",
+    "decisions": [
+      "The synod repudiated the Calvinizing confession as an expression of the Eastern Church’s faith.",
+      "It issued its own confession to explain Orthodox doctrine in relation to western controversies.",
+      "It distinguished the church’s faith from the contested authorship and personal beliefs of one patriarch."
+    ],
+    "aftermath": "The acts and confession became an influential witness in later Orthodox encounters with Protestant theology. Their polemical setting matters when interpreting their vocabulary.",
+    "reception": "An important Orthodox local synod, not one of the universally enumerated seven ecumenical councils. Its historical influence should not be confused with universal agreement about every later use of its formulations.",
+    "reading": "Acts and decrees: editor’s introduction",
+    "sources": [
+      {
+        "label": "J. N. W. B. Robertson, Acts and Decrees of the Synod of Jerusalem (1899): introduction",
+        "url": "https://royalarchives.org/synod_of_jerusalem/acts_and_decrees/editors_introduction/"
+      }
+    ],
+    "nodeId": null,
+    "background": "",
+    "facts": [],
+    "caution": ""
+  },
+  {
+    "id": "vatican-i",
+    "name": "Vatican I",
+    "start": 1869,
+    "end": 1870,
+    "number": 20,
+    "group": "catholic",
+    "question": "What authority does the pope possess?",
+    "context": "Pius IX convened the council amid disputes about modern thought, revelation and ecclesiastical authority. Italian unification and war interrupted its work.",
+    "decisions": [
+      "Dei Filius addressed faith, reason and revelation.",
+      "Pastor aeternus defined universal papal jurisdiction and infallibility under specified conditions.",
+      "Infallibility concerned definitive ex cathedra teaching on faith or morals for the whole church, not all papal opinions or personal conduct."
+    ],
+    "aftermath": "Opposition contributed to the formation of Old Catholic churches. The interruption left a broader treatment of the episcopate unfinished; Vatican II returned to that subject.",
+    "reception": "Catholic ecumenical council number twenty. Orthodox, Protestant and Old Catholic churches reject its claims about papal authority. Catholics understand the definitions as articulating an existing apostolic office.",
+    "reading": "Dei Filius; Pastor aeternus, chapter 4",
+    "sources": [
+      {
+        "label": "Dei Filius; Pastor aeternus, chapter 4",
+        "url": "https://www.papalencyclicals.net/councils/ecum20.htm"
+      },
+      {
+        "label": "Vatican I: Pastor aeternus",
+        "url": "https://www.vatican.va/content/pius-ix/en/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html"
+      },
+      {
+        "label": "World Council of Churches: Old Catholic Churches",
+        "url": "https://www.oikoumene.org/church-families/old-catholic-churches"
+      }
+    ],
+    "nodeId": "vatican-i",
+    "background": "Resistance to the definitions helped form new Old Catholic churches in Germany and Switzerland. They later joined the older independent church of Utrecht, whose separation dated to 1723, in the Union of Utrecht (1889).",
+    "facts": [
+      "The council opened in December 1869.",
+      "Pastor Aeternus defined papal infallibility on July 18, 1870.",
+      "Infallibility concerns defined teaching, not every papal statement or personal conduct.",
+      "War and Rome's capture interrupted the council in 1870."
+    ],
+    "caution": "Catholics call the definition a development of apostolic teaching. Old Catholics, Orthodox, and Protestants reject the claimed authority."
+  },
+  {
+    "id": "vatican-ii",
+    "name": "Vatican II",
+    "start": 1962,
+    "end": 1965,
+    "number": 21,
+    "group": "catholic",
+    "question": "How should the Catholic Church live and teach in the modern world?",
+    "context": "John XXIII opened the council and Paul VI continued it. Bishops addressed worship, the nature of the church, revelation, religious freedom and relations with other Christians and religions.",
+    "decisions": [
+      "Lumen gentium described the church and the episcopal college in communion with its head, the pope.",
+      "Sacrosanctum concilium promoted active participation and authorized wider vernacular use.",
+      "Other documents treated Scripture, ecumenism, religious liberty, non-Christian religions and the church’s public responsibilities."
+    ],
+    "aftermath": "Implementation transformed Catholic pastoral and liturgical life. The revised Roman Missal followed after the council; the council’s texts and every later reform or interpretation are not interchangeable.",
+    "reception": "Catholic ecumenical council number twenty-one. Other Christian representatives attended as observers, not voting council fathers. Dialogue increased without erasing differences over authority, sacraments or doctrine.",
+    "reading": "Council documents: four constitutions, nine decrees, three declarations",
+    "sources": [
+      {
+        "label": "Council documents: four constitutions, nine decrees, three declarations",
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm"
+      },
+      {
+        "label": "Vatican II: Sacrosanctum concilium (liturgy)",
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html"
+      },
+      {
+        "label": "Vatican II: Unitatis redintegratio (ecumenism)",
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html"
+      }
+    ],
+    "nodeId": "vatican-ii",
+    "background": "The council allowed wider use of local languages in Catholic worship and encouraged dialogue with other Christians.",
+    "facts": [
+      "John XXIII opened the council. Paul VI completed it.",
+      "Sacrosanctum Concilium authorized expanded vernacular use while preserving Latin in principle.",
+      "Unitatis Redintegratio addressed Christian unity in 1964.",
+      "The reformed Roman Missal followed in 1969 and 1970."
+    ],
+    "caution": "The council’s authorization of wider vernacular use did not abolish Latin. Distinguish the council’s texts from subsequent liturgical reforms and their interpretation."
+  }
+]
