@@ -1,0 +1,23 @@
+{
+  "contract": "runbp.development.v1",
+  "app": "deadbolt-ios",
+  "toolchain": {
+    "xcode": "27.0",
+    "iosRuntime": "27.0",
+    "profile": "medium",
+    "minFreeGb": 4
+  },
+  "checks": [],
+  "xctest": {
+    "default": [
+      "DeadboltTests"
+    ],
+    "defaultScope": "Vault session lifecycle, transaction safety, credential admission, matching, TOTP and CSV parser tests",
+    "allScope": "DeadboltTests"
+  },
+  "recipes": [],
+  "notes": [
+    "Compile RustBridge first using scripts/build-rust.sh. Real cryptography is linked in both targets.",
+    "UI verification starts through real onboarding; no launch hooks or pre-populated credentials."
+  ]
+}

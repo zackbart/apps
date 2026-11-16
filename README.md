@@ -12,6 +12,7 @@ A collection of focused apps built to solve problems I have.
 | [Livewall](livewall/) | macOS | Native live wallpapers for macOS. |
 | [MrMouse](mrmouse/) | macOS | A lightweight Logitech MX Master 3S driver. |
 | [Herdr iOS](herdr-ios/) | iOS | A SwiftUI client for Herdr. |
+| [Deadbolt iOS](deadbolt-ios/) | iOS | Native encrypted password vault with peer sync, system AutoFill, passkeys, and TOTP. |
 | [JellyTV](jellytv/) | tvOS | A Live-TV-first Jellyfin client for Apple TV. |
 | [Puddle Cup](backyard-regatta/) | Web | A 90-second Three.js toy sailboat race through a flooded backyard. |
 | [Micro Gains](micro-gains/) | iOS and Cloudflare Worker | Tiny bodyweight sets pinged to you through the day. |

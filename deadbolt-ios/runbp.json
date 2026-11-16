@@ -1,0 +1,13 @@
+{
+  "name": "deadbolt-ios",
+  "project": "Deadbolt.xcodeproj",
+  "scheme": "Deadbolt",
+  "bundleId": "com.cursorkittens.deadbolt",
+  "device": "iPhone 17 Pro",
+  "runtime": "27.0",
+  "golden": { "setup": "none" },
+  "usage": {
+    "summary": "Build and exercise Deadbolt's real encrypted vault in a disposable simulator. Navigate setup through the app UI.",
+    "notes": ["No launch hooks or seeded credentials. Create a vault through the visible onboarding.", "Simulator checks cannot prove device Face ID, Keychain passcode protection, or system AutoFill integration on hardware."]
+  }
+}

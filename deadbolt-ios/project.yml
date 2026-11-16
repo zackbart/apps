@@ -1,0 +1,62 @@
+name: Deadbolt
+options:
+  bundleIdPrefix: dev.zackbart
+  deploymentTarget:
+    iOS: "18.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": x86_64
+    SWIFT_OBJC_BRIDGING_HEADER: "$(PROJECT_DIR)/RustBridge/include/DeadboltBridge.h"
+    DEVELOPMENT_TEAM: F2J8ZU2NQJ
+    TARGETED_DEVICE_FAMILY: "1,2"
+    OTHER_LDFLAGS: ["$(inherited)", "-ldeadbolt_ios", "-lsqlite3", "-lz", "-liconv", "-framework", "Security", "-framework", "SystemConfiguration", "-framework", "Network"]
+    LIBRARY_SEARCH_PATHS: ["$(inherited)", "$(PROJECT_DIR)/RustBridge/lib/$(PLATFORM_NAME)"]
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "2"
+targets:
+  Deadbolt:
+    type: application
+    platform: iOS
+    sources: [App, Shared]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cursorkittens.deadbolt
+        INFOPLIST_FILE: Configuration/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_ENTITLEMENTS: Configuration/Deadbolt.entitlements
+    dependencies:
+      - target: DeadboltAutoFill
+  DeadboltAutoFill:
+    type: app-extension
+    platform: iOS
+    sources: [AutoFill, Shared]
+    preBuildScripts:
+      - name: Build Rust engine
+        script: '"$SRCROOT/scripts/build-rust.sh" "$PLATFORM_NAME"'
+        basedOnDependencyAnalysis: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cursorkittens.deadbolt.autofill
+        INFOPLIST_FILE: Configuration/AutoFill-Info.plist
+        CODE_SIGN_ENTITLEMENTS: Configuration/AutoFill.entitlements
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+  DeadboltTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [Tests]
+    dependencies:
+      - target: Deadbolt
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.cursorkittens.deadbolt.tests
+schemes:
+  Deadbolt:
+    build:
+      targets:
+        Deadbolt: all
+    test:
+      targets: [DeadboltTests]
