@@ -5,7 +5,7 @@ import '@fontsource/inter/latin-400.css';
 import '@fontsource/inter/latin-500.css';
 import '@fontsource/inter/latin-600.css';
 import './style.css';
-import { CHAPTERS, EUCHARIST, FAMILIES, FIRST_YEAR, NOW } from './layout';
+import { CHAPTERS, CLAIMS, EUCHARIST, FAMILIES, FIRST_YEAR, NOW } from './layout';
 import { FlatMap, type Highlight } from './map';
 import { createStory } from './story';
 import { bindChurch, bindSacraments, renderChurch, renderSacraments, setCompare } from './screens';
@@ -106,7 +106,7 @@ $('views').addEventListener('click', (e) => {
 /** Each earlier church on this line, with the year the next step branched off it. */
 function traceOf(id: string, visible: Set<string>) {
   const line = lineageIn(id, visible);
-  return new Map(line.slice(0, -1).map((a, i) => [a, byId.get(line[i + 1])!.start]));
+  return new Map(line.slice(0, -1).map((a, i) => [a, { until: byId.get(line[i + 1])!.start, next: line[i + 1] }]));
 }
 
 /** What to light up on a map that shows these nodes. */
@@ -272,12 +272,20 @@ function renderLegend() {
   legend.hidden = mode === 'plain';
   if (legend.hidden) return;
   const traditions = nodes.filter((n) => n.type === 'tradition' && visibleSet(mapView.simple).has(n.id));
-  const used = new Set(traditions.map((t) => (mode === 'eucharist' ? eucharistKey(t) : familyKey(t))));
-  const swatches = Object.entries(mode === 'eucharist' ? EUCHARIST : FAMILIES).filter(([k]) => used.has(k) || (mode === 'family' && k === 'early'));
-  const title = mode === 'eucharist' ? 'What happens at communion' : 'Church families';
-  const note = mode === 'eucharist' ? `<p class="legend-note">Colors show each tradition's main emphasis. Many views overlap.</p>` : '';
+  const keyOf = (t: (typeof traditions)[number]) => (mode === 'eucharist' ? eucharistKey(t) : mode === 'claims' ? t.claim ?? 'other' : familyKey(t));
+  const used = new Set(traditions.map(keyOf));
+  const table = mode === 'eucharist' ? EUCHARIST : mode === 'claims' ? CLAIMS : FAMILIES;
+  const swatches = Object.entries(table).filter(([k]) => used.has(k) || (mode === 'family' && k === 'early'));
+  if (mode === 'claims') swatches.unshift(['shared', { name: 'Shared history, claimed by all', color: '#b9b9b9' }]);
+  const title = mode === 'eucharist' ? 'What happens at communion' : mode === 'claims' ? 'How each church sees itself' : 'Church families';
+  const note =
+    mode === 'eucharist'
+      ? `<p class="legend-note">Colors show each tradition's main emphasis. Many views overlap.</p>`
+      : mode === 'claims'
+        ? `<p class="legend-note">Each church's own claim, side by side. The map does not judge between them.</p>`
+        : '';
   legend.innerHTML = `<h4>${title}</h4><ul>${swatches
-    .map(([, s]) => `<li style="--c:${s.color}"><i></i><span>${esc(s.name)}${mode === 'eucharist' && s.note ? `<small>${esc(s.note)}</small>` : ''}</span></li>`)
+    .map(([, s]) => `<li style="--c:${s.color}"><i></i><span>${esc(s.name)}${mode !== 'family' && s.note ? `<small>${esc(s.note)}</small>` : ''}</span></li>`)
     .join('')}</ul>${note}`;
 }
 document.querySelectorAll<HTMLButtonElement>('.seg button').forEach((btn) => {

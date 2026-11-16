@@ -127,6 +127,7 @@ function compareTable(a: string, b: string) {
     <div class="table-wrap"><table>
       <thead><tr><th></th><th scope="col">${emblem(a)}${na}</th><th scope="col">${emblem(b)}${nb}</th></tr></thead>
       <tbody>
+        <tr><th scope="row">How it sees itself</th>${td(ra, `<p>${esc(byId.get(a)!.self ?? '')}</p>`)}${td(rb, `<p>${esc(byId.get(b)!.self ?? '')}</p>`)}</tr>
         <tr><th scope="row">In brief</th>${td(ra, `<p>${esc(ra.summary)}</p>`)}${td(rb, `<p>${esc(rb.summary)}</p>`)}</tr>
         <tr class="${ea === eb ? '' : 'differs'}"><th scope="row">View of communion${ea === eb ? '' : '<small>Differs</small>'}</th>${td(ra, `<span class="cat" style="--c:${ea.color}"><i></i>${esc(ea.name)}</span>`)}${td(rb, `<span class="cat" style="--c:${eb.color}"><i></i>${esc(eb.name)}</span>`)}</tr>
         ${rows}

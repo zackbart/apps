@@ -147,6 +147,8 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 .flatmap .hit { fill: none; stroke: transparent; stroke-width: 16; pointer-events: stroke; cursor: pointer; }
 .flatmap .line.hover .stroke { filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.35)); }
 .flatmap .tip { pointer-events: none; }
+.flatmap .mark .tie { stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 2 2; pointer-events: none; }
+.flatmap .arc { fill: none; stroke-width: 1.2; stroke-dasharray: 2 4; stroke-linecap: round; pointer-events: none; }
 .flatmap .trace { fill: none; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
 
 .flatmap .mark .hit { fill: transparent; stroke: none; pointer-events: all; cursor: pointer; }
@@ -369,6 +371,9 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 .cat i { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--c); transform: translateY(1px); }
 .panel .cat { margin-top: 8px; padding: 10px 12px; background: var(--wash); border-radius: 8px; }
 .today { font-size: 14px; color: var(--ink-2); }
+.panel .self { font-size: 15px; color: #222; }
+.claim-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); margin: -2px 0 0 !important; }
+.claim-tag i { width: 14px; height: 4px; border-radius: 2px; background: var(--c); }
 .lineage { list-style: none; margin: 0; padding: 0 0 0 4px; }
 .lineage li { position: relative; padding: 0 0 6px 18px; }
 .lineage li::before { content: ''; position: absolute; left: 3px; top: 7px; width: 7px; height: 7px; border-radius: 50%; background: #bdbdbd; }
