@@ -5,7 +5,7 @@ export const councils = councilData;
 const groups = { all: 'All councils', early: 'First seven', catholic: 'Later Catholic councils', other: 'Regional & disputed' };
 type Group = keyof typeof groups;
 const years = (c: (typeof councils)[number]) => `${c.start === 49 ? 'c. ' : ''}${c.start}${c.end !== c.start ? `–${c.end}` : ''}`;
-const standing = (c: (typeof councils)[number]) => c.number ? `${c.number <= 7 ? 'Early ecumenical council' : 'Catholic ecumenical council'} · ${c.number}` : 'Regional, apostolic or disputed assembly';
+const standing = (c: (typeof councils)[number]) => c.number ? `${c.number <= 7 ? 'Early ecumenical council' : 'Catholic ecumenical council'} · ${c.number}` : 'Apostolic, regional, confessional or disputed assembly';
 
 export function createCouncils(el: HTMLElement) {
   let active = 'nicaea-i';
@@ -15,7 +15,7 @@ export function createCouncils(el: HTMLElement) {
     <h2>Councils</h2>
     <p class="lede">What the church debated, what it decided, and why Christians still disagree about the answers.</p>
     <details class="council-scope"><summary>Which councils are included?</summary>
-      <p>All 21 councils recognized as ecumenical by the Catholic Church, plus seven apostolic, regional or disputed assemblies. Every council already on this map is included. This is not an inventory of every local synod in Christian history.</p>
+      <p>All 21 councils recognized as ecumenical by the Catholic Church, plus seven apostolic, regional, confessional or disputed assemblies. Every council already on this map is included. This is not an inventory of every local synod in Christian history.</p>
       <p>Eastern Orthodox churches receive the first seven; Oriental Orthodox churches receive the first three; the Church of the East receives the first two. Protestant reception varies by tradition and by teaching. Recognizing a council’s doctrine does not necessarily mean accepting every disciplinary canon.</p>
       <p>The two Constantinople assemblies of 869–870 and 879–880 have separate entries. Neither signatures nor imperial support alone tells us how a decision was received.</p>
       <p>Read the <a href="https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils" target="_blank" rel="noopener noreferrer">Orthodox account</a> and the <a href="https://www.papalencyclicals.net/councils" target="_blank" rel="noopener noreferrer">Catholic enumeration</a>. Council texts express their authors’ positions; the reception notes distinguish those claims from agreement across traditions.</p>
@@ -58,7 +58,7 @@ export function createCouncils(el: HTMLElement) {
       <section class="council-reception"><h4>Who receives it?</h4><p>${esc(c.reception)}</p></section>
       ${c.background ? `<section><h4>Why it still matters</h4><p>${esc(c.background)}</p></section>` : ''}
       ${c.facts.length ? `<details><summary>More from the map’s research</summary><ul>${c.facts.map(f => `<li>${esc(f)}</li>`).join('')}</ul>${c.caution ? `<p>${esc(c.caution)}</p>` : ''}</details>` : ''}
-      <section class="council-sources"><h4>Read the sources</h4><p>Start with ${esc(c.reading)}.</p><ol>${c.sources.map((s,i) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${i === 0 ? esc(s.label) : esc(new URL(s.url).hostname.replace('www.', '')) + ' — further reading'}</a></li>`).join('')}</ol></section>
+      <section class="council-sources"><h4>Read the sources</h4><p>Start with ${esc(c.reading)}.</p><ol>${c.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a></li>`).join('')}</ol></section>
       <div class="council-actions"><a href="#councils=${c.id}">Link to this council</a>${c.nodeId ? `<a href="#${c.nodeId}">See on the map</a>` : ''}</div>
       <nav class="council-pagination" aria-label="Read councils chronologically">${index > 0 ? `<button type="button" data-council="${councils[index-1].id}">Previous: ${esc(councils[index-1].name)}</button>` : '<span></span>'}${index < councils.length-1 ? `<button type="button" data-council="${councils[index+1].id}">Next: ${esc(councils[index+1].name)}</button>` : ''}</nav>`;
   }

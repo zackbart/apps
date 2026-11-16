@@ -54,11 +54,11 @@
         "url": "https://www.papalencyclicals.net/councils/ecum01.htm"
       },
       {
-        "label": "https://www.newadvent.org/fathers/3801.htm",
+        "label": "Nicaea I: creed, canons and synodal letter",
         "url": "https://www.newadvent.org/fathers/3801.htm"
       },
       {
-        "label": "https://www.goarch.org/-/the-first-ecumenical-council",
+        "label": "Greek Orthodox Archdiocese: First Ecumenical Council",
         "url": "https://www.goarch.org/-/the-first-ecumenical-council"
       }
     ],
@@ -87,7 +87,7 @@
       "Canon 3 ranked Constantinople after Rome because it was the imperial capital."
     ],
     "aftermath": "Chalcedon in 451 explicitly received the creed as the faith of the 150 fathers. Its precise drafting history is less certain than this later reception. The ranking of Constantinople became a continuing jurisdictional issue.",
-    "reception": "Received as ecumenical by Catholic, Eastern Orthodox and Oriental Orthodox churches; its creed also belongs to the Church of the East and many Protestant liturgies. Reception of doctrine does not imply identical reception of every canon.",
+    "reception": "Received as ecumenical by Catholic, Eastern Orthodox, Oriental Orthodox and Church of the East traditions. Its creed also belongs to many Protestant liturgies. Reception of doctrine does not imply identical reception of every canon.",
     "reading": "Creed; canons 1 and 3",
     "sources": [
       {
@@ -95,11 +95,11 @@
         "url": "https://www.papalencyclicals.net/councils/ecum02.htm"
       },
       {
-        "label": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-second-ecumenical-council",
+        "label": "OCA: Second Ecumenical Council",
         "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-second-ecumenical-council"
       },
       {
-        "label": "https://www.newadvent.org/cathen/11049a.htm",
+        "label": "Catholic Encyclopedia: Nicene Creed",
         "url": "https://www.newadvent.org/cathen/11049a.htm"
       }
     ],
@@ -136,15 +136,15 @@
         "url": "https://www.papalencyclicals.net/councils/ecum03.htm"
       },
       {
-        "label": "https://www.oca.org/saints/lives/1949/09/09/102555-commemoration-of-the-holy-fathers-of-the-third-ecumenical-counci",
+        "label": "OCA: Fathers of the Third Ecumenical Council",
         "url": "https://www.oca.org/saints/lives/1949/09/09/102555-commemoration-of-the-holy-fathers-of-the-third-ecumenical-counci"
       },
       {
-        "label": "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/",
+        "label": "CNEWA: Assyrian Church of the East",
         "url": "https://cnewa.org/eastern-christian-churches/the-assyrian-church-of-the-east/"
       },
       {
-        "label": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html",
+        "label": "Catholic–Assyrian Common Christological Declaration (1994)",
         "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html"
       }
     ],
@@ -181,11 +181,11 @@
         "url": "https://www.papalencyclicals.net/councils/ecum04.htm"
       },
       {
-        "label": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
+        "label": "OCA: Fourth Ecumenical Council",
         "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council"
       },
       {
-        "label": "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/",
+        "label": "CNEWA: Oriental Orthodox Churches",
         "url": "https://cnewa.org/eastern-christian-churches/oriental-orthodox-churches/"
       }
     ],
@@ -222,12 +222,12 @@
         "url": "https://www.papalencyclicals.net/councils/ecum05.htm"
       },
       {
-        "label": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians",
+        "label": "OCA: Justinian I and the Non-Chalcedonians",
         "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/sixth-century/emperor-justinian-i-and-the-non-chalcedonians"
       },
       {
-        "label": "https://www.newadvent.org/cathen/04423f.htm",
-        "url": "https://www.newadvent.org/cathen/04423f.htm"
+        "label": "Catholic Encyclopedia: Second Council of Constantinople",
+        "url": "https://www.newadvent.org/cathen/04308b.htm"
       }
     ],
     "nodeId": "constantinople-ii",
@@ -263,11 +263,11 @@
         "url": "https://www.papalencyclicals.net/councils/ecum06.htm"
       },
       {
-        "label": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/monoenergism-monothelitism",
+        "label": "OCA: Monoenergism and Monothelitism",
         "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventh-century/monoenergism-monothelitism"
       },
       {
-        "label": "https://www.newadvent.org/cathen/07452b.htm",
+        "label": "Catholic Encyclopedia: Pope Honorius I",
         "url": "https://www.newadvent.org/cathen/07452b.htm"
       }
     ],
@@ -332,12 +332,12 @@
         "url": "https://www.papalencyclicals.net/councils/ecum07.htm"
       },
       {
-        "label": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm",
+        "label": "OCA: Iconoclasm",
         "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eighth-century/iconoclasm"
       }
     ],
     "nodeId": "nicaea-ii",
-    "background": "This council gives Orthodox and Catholic Christians a basis for honoring sacred images in worship.",
+    "background": "This council gives Orthodox and Catholic Christians a basis for honoring sacred images in prayer and liturgy.",
     "facts": [
       "Empress Irene supports the council against opponents of religious images.",
       "Honor shown to an image refers to the person depicted.",
@@ -369,17 +369,17 @@
         "url": "https://www.newadvent.org/cathen/06236a.htm"
       },
       {
-        "label": "https://www.newadvent.org/cathen/03371b.htm",
+        "label": "Catholic Encyclopedia: Caroline Books",
         "url": "https://www.newadvent.org/cathen/03371b.htm"
       }
     ],
     "nodeId": "council-of-frankfurt",
-    "background": "Frankish churches now differ from Constantinople on icons and the creed. Both disputes feed the later split between Catholics and Orthodox.",
+    "background": "Frankfurt shows how disagreements over images and their translation strained relations between the Frankish and Byzantine churches. The later Frankish dispute over the Filioque was distinct from this council.",
     "facts": [
       "Its first canon condemns Adoptionism, the claim that Christ is God's adopted Son in his humanity.",
       "The Latin text wrongly made Nicaea II seem to demand for images the worship owed to God.",
       "The Caroline Books, issued in Charlemagne's name, refuse both to smash images and to adore them.",
-      "Charlemagne backs the Filioque, but Pope Leo III declines to add it to the creed."
+      "Later, after the Frankish synod at Aachen in 809, Pope Leo III declined to add the Filioque to the creed."
     ],
     "caution": "Catholics and Orthodox both accept Nicaea II today. Historians debate how much bad translation, and how much rivalry with Byzantium, drove Frankfurt's rejection."
   },
@@ -398,7 +398,7 @@
       "It defended religious images and the standing of the patriarchal sees."
     ],
     "aftermath": "After Ignatius died, Photius returned. A new council in 879–880, also attended by Roman legates, reversed the settlement. These are two distinct assemblies, not a single eleven-year meeting.",
-    "reception": "Counted eighth in the Catholic ecumenical list. Eastern Orthodox churches reject its condemnation of Photius; some Orthodox writers instead call the 879–880 council the eighth.",
+    "reception": "Counted eighth in the Catholic ecumenical list. Eastern Orthodox churches reject its condemnation of Photius; some Orthodox writers instead call the 879–880 council the eighth. The OCA’s historical account notes that John VIII accepted the 879–880 council and that Rome’s later preference for 869–870 emerged in the eleventh century; the present numbering should not be projected back unchanged onto the ninth.",
     "reading": "Definition and canons",
     "sources": [
       {
@@ -406,23 +406,23 @@
         "url": "https://www.papalencyclicals.net/councils/ecum08.htm"
       },
       {
-        "label": "https://www.newadvent.org/cathen/04310b.htm",
+        "label": "Catholic Encyclopedia: Fourth Council of Constantinople",
         "url": "https://www.newadvent.org/cathen/04310b.htm"
       },
       {
-        "label": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople",
+        "label": "OCA: Saint Photius, Patriarch of Constantinople",
         "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
       }
     ],
     "nodeId": "disputed-eighth-council",
     "background": "Because the churches disagree over which council came eighth, Nicaea II in 787 is the last council both accept as ecumenical.",
     "facts": [
-      "The 869 to 870 council deposes Photius and restores Ignatius, with papal legates presiding.",
-      "At that council, Emperor Basil says God built the church on five patriarchs.",
-      "John VIII's legates join the 879 to 880 council, which restores Photius and forbids creed changes.",
+      "The 869 to 870 council condemns Photius and confirms Ignatius, restored in 867, with papal legates presiding.",
+      "Canon 21 of the 869–870 council ranks the five patriarchal sees, with Rome first.",
+      "John VIII's legates join the 879 to 880 council, which recognizes Photius, who returned in 877, and forbids creed changes.",
       "Some Orthodox writers call the 879 to 880 council the eighth ecumenical council."
     ],
-    "caution": "Catholics regard the 869 to 870 council as ecumenical. Many Orthodox reject it and honor the 879 to 880 council, which restored Photius."
+    "caution": "The present Catholic and Orthodox receptions differ. The history of papal acceptance and the later numbering of these councils is more complex than a continuous division from 869 onward."
   },
   {
     "id": "constantinople-879",
@@ -439,7 +439,7 @@
       "Its proceedings brought eastern bishops and papal legates into a common act of reconciliation."
     ],
     "aftermath": "The councils of 869 and 879 came to carry rival memories of authority. Later use of 879 in the Filioque dispute should distinguish the council’s wording from subsequent arguments about it.",
-    "reception": "Honored in Eastern Orthodox tradition; some call it the eighth ecumenical council. That numbering is not uniform across Orthodoxy. It is not the eighth council in the Catholic enumeration.",
+    "reception": "Honored in Eastern Orthodox tradition; some call it the eighth ecumenical council. That numbering is not uniform across Orthodoxy. It is not the eighth council in the Catholic enumeration. The OCA’s historical account notes that John VIII accepted the 879–880 council and that Rome’s later preference for 869–870 emerged in the eleventh century; the present numbering should not be projected back unchanged onto the ninth.",
     "reading": "OCA history: Saint Photius",
     "sources": [
       {
@@ -447,19 +447,19 @@
         "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saint-photius-patriarch-of-constantinople"
       },
       {
-        "label": "https://www.newadvent.org/cathen/04310b.htm",
+        "label": "Catholic Encyclopedia: Fourth Council of Constantinople",
         "url": "https://www.newadvent.org/cathen/04310b.htm"
       }
     ],
     "nodeId": "disputed-eighth-council",
     "background": "Because the churches disagree over which council came eighth, Nicaea II in 787 is the last council both accept as ecumenical.",
     "facts": [
-      "The 869 to 870 council deposes Photius and restores Ignatius, with papal legates presiding.",
-      "At that council, Emperor Basil says God built the church on five patriarchs.",
-      "John VIII's legates join the 879 to 880 council, which restores Photius and forbids creed changes.",
+      "The 869 to 870 council condemns Photius and confirms Ignatius, restored in 867, with papal legates presiding.",
+      "Canon 21 of the 869–870 council ranks the five patriarchal sees, with Rome first.",
+      "John VIII's legates join the 879 to 880 council, which recognizes Photius, who returned in 877, and forbids creed changes.",
       "Some Orthodox writers call the 879 to 880 council the eighth ecumenical council."
     ],
-    "caution": "Catholics regard the 869 to 870 council as ecumenical. Many Orthodox reject it and honor the 879 to 880 council, which restored Photius."
+    "caution": "The present Catholic and Orthodox receptions differ. The history of papal acceptance and the later numbering of these councils is more complex than a continuous division from 869 onward."
   },
   {
     "id": "lateran-i",
@@ -568,7 +568,7 @@
         "url": "https://www.papalencyclicals.net/councils/ecum12-2.htm"
       },
       {
-        "label": "https://sourcebooks.web.fordham.edu/basis/lateran4.asp",
+        "label": "Fordham: Fourth Lateran Council canons",
         "url": "https://sourcebooks.web.fordham.edu/basis/lateran4.asp"
       }
     ],
@@ -633,18 +633,18 @@
         "url": "https://www.papalencyclicals.net/councils/ecum14.htm"
       },
       {
-        "label": "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
+        "label": "Fordham: Michael VIII’s profession and the Decree for the Armenians",
         "url": "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
       },
       {
-        "label": "https://www.newadvent.org/cathen/09476c.htm",
+        "label": "Catholic Encyclopedia: Second Council of Lyons",
         "url": "https://www.newadvent.org/cathen/09476c.htm"
       }
     ],
     "nodeId": "lyon-ii",
-    "background": "The formal list of seven sacraments classifies rites Christians already practiced.",
+    "background": "Lyon’s failed reunion shows why diplomatic agreement alone could not restore communion. Michael VIII’s profession of faith, prepared under Clement IV in 1267 and read at the council, also included a list of seven sacraments.",
     "facts": [
-      "The list names baptism, confirmation, Eucharist, penance, orders, marriage, and anointing of the sick.",
+      "Michael VIII’s profession of faith, read at the council, lists seven sacraments: baptism, confirmation, Eucharist, penance, orders, marriage and anointing of the sick.",
       "The profession also affirms transubstantiation.",
       "Emperor Michael VIII supports reunion partly for political protection.",
       "Opposition in the Byzantine church prevents lasting union."
@@ -702,7 +702,7 @@
         "url": "https://www.papalencyclicals.net/councils/ecum16.htm"
       },
       {
-        "label": "https://www.newadvent.org/cathen/04288a.htm",
+        "label": "Catholic Encyclopedia: Council of Constance",
         "url": "https://www.newadvent.org/cathen/04288a.htm"
       }
     ],
@@ -739,7 +739,7 @@
         "url": "https://www.papalencyclicals.net/councils/ecum17.htm"
       },
       {
-        "label": "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp",
+        "label": "Fordham: Michael VIII’s profession and the Decree for the Armenians",
         "url": "https://sourcebooks.web.fordham.edu/source/1438sacraments.asp"
       }
     ],
@@ -804,8 +804,8 @@
         "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/an-anabaptist-confession-of-faith-the-schleitheim-articles-1527.pdf"
       },
       {
-        "label": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/baptism",
-        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/baptism"
+        "label": "GAMEO: Schleitheim Confession",
+        "url": "https://gameo.org/index.php?title=Schleitheim_Confession"
       }
     ],
     "nodeId": "schleitheim-confession",
@@ -813,10 +813,9 @@
     "facts": [
       "The gathering met on February 24, 1527.",
       "Michael Sattler helped draft the articles.",
-      "The seven articles are not seven sacraments.",
       "These articles did not represent every Anabaptist group."
     ],
-    "caution": "Orthodox Christians baptize infants to incorporate them into Christ. Swiss Brethren require repentance and a personal profession of faith."
+    "caution": "The Swiss Brethren differed from both Catholic and magisterial Reformation churches over baptism and the use of coercion. Michael Sattler was executed at Rottenburg in May 1527."
   },
   {
     "id": "council-of-trent",
@@ -833,7 +832,7 @@
       "Reforms included seminaries and duties of episcopal residence; marriage legislation aimed to prevent clandestine unions."
     ],
     "aftermath": "Implementation continued through catechesis, liturgical books, seminaries and episcopal reform after the council. Trent shaped Catholic identity for centuries but did not restore communion with Protestant churches.",
-    "reception": "Catholic ecumenical council number nineteen. Protestant traditions reject its condemnations of their teachings, while later dialogues have clarified both genuine disagreements and past misunderstandings.",
+    "reception": "Catholic ecumenical council number nineteen. Protestant traditions reject its condemnations of their teachings, while later dialogues have clarified both genuine disagreements and past misunderstandings. Eastern Orthodox churches also do not receive Trent as ecumenical.",
     "reading": "Sessions 4, 6, 7, 13, 22–24",
     "sources": [
       {
@@ -841,7 +840,7 @@
         "url": "https://www.papalencyclicals.net/councils/trent.htm"
       },
       {
-        "label": "https://www.vatican.va/content/catechism/en/part_two/section_two.html",
+        "label": "Catechism: The Seven Sacraments of the Church",
         "url": "https://www.vatican.va/content/catechism/en/part_two/section_two.html"
       }
     ],
@@ -871,15 +870,15 @@
     ],
     "aftermath": "The Canons became a Reformed confessional standard. The later English acronym TULIP is a summary device, not the council’s own organization or a complete statement of Reformed theology.",
     "reception": "Authoritative in churches subscribing to the Canons, not in Christianity as a whole. Remonstrant and Wesleyan/Arminian traditions contest its account of election and grace.",
-    "reading": "Canons of Dort: introduction and four heads",
+    "reading": "Canons of Dort: five heads of doctrine (III/IV combined)",
     "sources": [
       {
-        "label": "Canons of Dort: introduction and four heads",
+        "label": "Canons of Dort: five heads of doctrine (III/IV combined)",
         "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort"
       }
     ],
     "nodeId": "synod-of-dort",
-    "background": "Calvinists and Arminians disagree about how God's grace relates to human response. Dort established the Reformed position.",
+    "background": "Calvinists and Arminians disagree about how God’s grace relates to human response. Dort established the position of churches subscribing to its Canons.",
     "facts": [
       "Delegates met at Dordrecht in the Netherlands.",
       "The Remonstrants followed Jacob Arminius's challenge to Reformed teaching.",
@@ -906,7 +905,7 @@
     "reading": "Acts and decrees: editor’s introduction",
     "sources": [
       {
-        "label": "Acts and decrees: editor’s introduction",
+        "label": "J. N. W. B. Robertson, Acts and Decrees of the Synod of Jerusalem (1899): introduction",
         "url": "https://royalarchives.org/synod_of_jerusalem/acts_and_decrees/editors_introduction/"
       }
     ],
@@ -938,16 +937,16 @@
         "url": "https://www.papalencyclicals.net/councils/ecum20.htm"
       },
       {
-        "label": "https://www.vatican.va/content/pius-ix/en/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html",
+        "label": "Vatican I: Pastor aeternus",
         "url": "https://www.vatican.va/content/pius-ix/en/documents/constitutio-dogmatica-pastor-aeternus-18-iulii-1870.html"
       },
       {
-        "label": "https://www.oikoumene.org/church-families/old-catholic-churches",
+        "label": "World Council of Churches: Old Catholic Churches",
         "url": "https://www.oikoumene.org/church-families/old-catholic-churches"
       }
     ],
     "nodeId": "vatican-i",
-    "background": "The council defined the pope's teaching authority. Some Catholics rejected that authority and formed separate churches while keeping seven sacraments.",
+    "background": "Resistance to the definitions helped form new Old Catholic churches in Germany and Switzerland. They later joined the older independent church of Utrecht, whose separation dated to 1723, in the Union of Utrecht (1889).",
     "facts": [
       "The council opened in December 1869.",
       "Pastor Aeternus defined papal infallibility on July 18, 1870.",
@@ -979,11 +978,11 @@
         "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm"
       },
       {
-        "label": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+        "label": "Vatican II: Sacrosanctum concilium (liturgy)",
         "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html"
       },
       {
-        "label": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html",
+        "label": "Vatican II: Unitatis redintegratio (ecumenism)",
         "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html"
       }
     ],
@@ -995,6 +994,6 @@
       "Unitatis Redintegratio addressed Christian unity in 1964.",
       "The reformed Roman Missal followed in 1969 and 1970."
     ],
-    "caution": "Catholics dispute some later interpretations and reforms. The council itself did not abolish Latin or redefine the Eucharist as merely symbolic."
+    "caution": "The council’s authorization of wider vernacular use did not abolish Latin. Distinguish the council’s texts from subsequent liturgical reforms and their interpretation."
   }
 ]

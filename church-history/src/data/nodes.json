@@ -866,7 +866,7 @@
   "end": 787,
   "on": "chalcedonian",
   "summary": "The seventh ecumenical council permits honoring icons of Christ and the saints. It distinguishes veneration from worship owed to God.",
-  "why": "This council gives Orthodox and Catholic Christians a basis for honoring sacred images in worship.",
+  "why": "This council gives Orthodox and Catholic Christians a basis for honoring sacred images in prayer and liturgy.",
   "facts": [
    "Empress Irene supports the council against opponents of religious images.",
    "Honor shown to an image refers to the person depicted.",
@@ -892,12 +892,12 @@
   "end": 794,
   "on": "chalcedonian",
   "summary": "A synod called by Charlemagne condemns Adoptionism. It also rejects Nicaea II, which it knew only through a faulty Latin translation of the council's acts.",
-  "why": "Frankish churches now differ from Constantinople on icons and the creed. Both disputes feed the later split between Catholics and Orthodox.",
+  "why": "Frankfurt shows how disagreements over images and their translation strained relations between the Frankish and Byzantine churches. The later Frankish dispute over the Filioque was distinct from this council.",
   "facts": [
    "Its first canon condemns Adoptionism, the claim that Christ is God's adopted Son in his humanity.",
    "The Latin text wrongly made Nicaea II seem to demand for images the worship owed to God.",
    "The Caroline Books, issued in Charlemagne's name, refuse both to smash images and to adore them.",
-   "Charlemagne backs the Filioque, but Pope Leo III declines to add it to the creed."
+   "Later, after the Frankish synod at Aachen in 809, Pope Leo III declined to add the Filioque to the creed."
   ],
   "disputed": "Catholics and Orthodox both accept Nicaea II today. Historians debate how much bad translation, and how much rivalry with Byzantium, drove Frankfurt's rejection.",
   "outsideNicene": false,
@@ -1045,12 +1045,12 @@
   "summary": "Two Constantinople councils rule opposite ways on Photius. Catholics count the 869 to 870 council as the eighth ecumenical council. Some Orthodox honor the 879 to 880 council instead.",
   "why": "Because the churches disagree over which council came eighth, Nicaea II in 787 is the last council both accept as ecumenical.",
   "facts": [
-   "The 869 to 870 council deposes Photius and restores Ignatius, with papal legates presiding.",
-   "At that council, Emperor Basil says God built the church on five patriarchs.",
-   "John VIII's legates join the 879 to 880 council, which restores Photius and forbids creed changes.",
+   "The 869 to 870 council condemns Photius and confirms Ignatius, restored in 867, with papal legates presiding.",
+   "Canon 21 of the 869–870 council ranks the five patriarchal sees, with Rome first.",
+   "John VIII's legates join the 879 to 880 council, which recognizes Photius, who returned in 877, and forbids creed changes.",
    "Some Orthodox writers call the 879 to 880 council the eighth ecumenical council."
   ],
-  "disputed": "Catholics regard the 869 to 870 council as ecumenical. Many Orthodox reject it and honor the 879 to 880 council, which restored Photius.",
+  "disputed": "The present Catholic and Orthodox receptions differ. The history of papal acceptance and the later numbering of these councils is more complex than a continuous division from 869 onward.",
   "outsideNicene": false,
   "importance": 1,
   "sources": [
@@ -1451,9 +1451,9 @@
   "end": 1274,
   "on": "catholic",
   "summary": "A profession of faith accepted at Lyon lists seven sacraments. Byzantine representatives agree to union with Rome, but the reunion fails to endure.",
-  "why": "The formal list of seven sacraments classifies rites Christians already practiced.",
+  "why": "Lyon’s failed reunion shows why diplomatic agreement alone could not restore communion. Michael VIII’s profession of faith, prepared under Clement IV in 1267 and read at the council, also included a list of seven sacraments.",
   "facts": [
-   "The list names baptism, confirmation, Eucharist, penance, orders, marriage, and anointing of the sick.",
+   "Michael VIII’s profession of faith, read at the council, lists seven sacraments: baptism, confirmation, Eucharist, penance, orders, marriage and anointing of the sick.",
    "The profession also affirms transubstantiation.",
    "Emperor Michael VIII supports reunion partly for political protection.",
    "Opposition in the Byzantine church prevents lasting union."
@@ -1890,11 +1890,10 @@
   "facts": [
    "The gathering met on February 24, 1527.",
    "Michael Sattler helped draft the articles.",
-   "The seven articles are not seven sacraments.",
    "These articles did not represent every Anabaptist group."
   ],
   "sacraments": "Baptism follows repentance and confessed faith. The Lord's Supper belongs to the baptized community committed to shared discipline.",
-  "disputed": "Orthodox Christians baptize infants to incorporate them into Christ. Swiss Brethren require repentance and a personal profession of faith.",
+  "disputed": "The Swiss Brethren differed from both Catholic and magisterial Reformation churches over baptism and the use of coercion. Michael Sattler was executed at Rottenburg in May 1527.",
   "outsideNicene": false,
   "importance": 1,
   "sources": [
@@ -2346,7 +2345,7 @@
   "end": 1619,
   "on": "reformed",
   "summary": "Dutch and international Reformed delegates rejected Remonstrant teachings and issued canons on election, atonement, human corruption, grace, and perseverance.",
-  "why": "Calvinists and Arminians disagree about how God's grace relates to human response. Dort established the Reformed position.",
+  "why": "Calvinists and Arminians disagree about how God’s grace relates to human response. Dort established the position of churches subscribing to its Canons.",
   "facts": [
    "Delegates met at Dordrecht in the Netherlands.",
    "The Remonstrants followed Jacob Arminius's challenge to Reformed teaching.",
@@ -2987,7 +2986,7 @@
   "end": 1870,
   "on": "catholic",
   "summary": "Pope Pius IX's council defined papal jurisdiction and infallibility for formal definitions of faith or morals addressed to the whole church. Opponents formed Old Catholic churches.",
-  "why": "The council defined the pope's teaching authority. Some Catholics rejected that authority and formed separate churches while keeping seven sacraments.",
+  "why": "Resistance to the definitions helped form new Old Catholic churches in Germany and Switzerland. They later joined the older independent church of Utrecht, whose separation dated to 1723, in the Union of Utrecht (1889).",
   "facts": [
    "The council opened in December 1869.",
    "Pastor Aeternus defined papal infallibility on July 18, 1870.",
