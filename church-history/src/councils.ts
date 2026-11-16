@@ -27,6 +27,7 @@ export function createCouncils(el: HTMLElement) {
         <label for="council-group">Browse</label>
         <select id="council-group">${Object.entries(groups).map(([value,label]) => `<option value="${value}">${label}</option>`).join('')}</select>
         <p class="council-count" role="status"></p>
+        <a class="council-skip" href="#council-title">Skip to the selected council</a>
         <nav class="council-list" aria-label="Councils in chronological order"></nav>
       </aside>
       <article class="council-reading" aria-labelledby="council-title"></article>
@@ -39,12 +40,29 @@ export function createCouncils(el: HTMLElement) {
   const filter = el.querySelector<HTMLSelectElement>('#council-group')!;
   function matches() {
     const terms = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
-    return councils.filter(c => (group === 'all' || c.group === group) && terms.every(t => JSON.stringify(c).toLocaleLowerCase().includes(t)));
+    return councils.filter(c => (group === 'all' || c.group === group) && terms.every(t => [c.name, c.start, c.end, c.question, c.context, ...c.decisions, c.aftermath, c.reception, c.background, ...c.facts, c.caution].join(' ').toLocaleLowerCase().includes(t)));
   }
+  function fitList() {
+    if (el.hidden) return;
+    list.style.maxHeight = matchMedia('(max-width: 820px)').matches ? '230px' : `${Math.max(120, el.getBoundingClientRect().bottom - list.getBoundingClientRect().top - 24)}px`;
+    revealActive();
+  }
+  function revealActive() {
+    const row = list.querySelector<HTMLElement>('[aria-current="true"]');
+    if (!row) return;
+    const rowBox = row.getBoundingClientRect();
+    const listBox = list.getBoundingClientRect();
+    if (rowBox.top < listBox.top) list.scrollTop += rowBox.top - listBox.top;
+    else if (rowBox.bottom > listBox.bottom) list.scrollTop += rowBox.bottom - listBox.bottom;
+  }
+  el.addEventListener('scroll', fitList, { passive: true });
+  new ResizeObserver(() => { fitList(); revealActive(); }).observe(el);
   function renderList() {
     const found = matches();
     count.textContent = `${found.length} of ${councils.length} councils`;
     list.innerHTML = found.length ? found.map(c => `<button type="button" data-council="${c.id}" aria-current="${c.id === active}"><span>${esc(c.name)}</span><small>${years(c)}</small></button>`).join('') : '<p>No councils match. Try another term or choose “All councils”.</p>';
+    fitList();
+    revealActive();
   }
   function renderArticle() {
     const c = councils.find(c => c.id === active)!;
@@ -78,6 +96,11 @@ export function createCouncils(el: HTMLElement) {
   input.addEventListener('input', () => { query = input.value; renderList(); });
   filter.addEventListener('change', () => { group = filter.value as Group; renderList(); });
   el.addEventListener('click', e => {
+    if ((e.target as HTMLElement).closest('.council-skip')) {
+      e.preventDefault();
+      show(undefined, true);
+      return;
+    }
     const button = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-council]');
     if (!button) return;
     show(button.dataset.council, true);

@@ -811,3 +811,14 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   .council-list { max-height: 230px; border-bottom: 1px solid var(--hair); }
   .council-reading h3 { font-size: 32px; }
 }
+
+.council-actions a, .council-sources a, .council-pagination button, .council-deep-link { display: inline-block; min-height: 24px; padding: 4px 0; }
+.council-deep-link { color: var(--ink); text-underline-offset: 3px; }
+.council-skip { display: block; font-size: 12px; padding: 6px 0; }
+@media (max-width: 820px) {
+  .council-actions a, .council-sources a, .council-pagination button, .council-deep-link, .council-skip { min-height: 44px; padding: 12px 0; }
+}
+@media (max-width: 380px) {
+  .views { gap: 12px; }
+  .views button { font-size: 13px; }
+}

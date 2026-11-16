@@ -58,7 +58,7 @@ export function panelHtml(n: HistoryNode, ctx: PanelContext) {
   );
   parts.push(`<p class="summary">${esc(n.summary)}</p>`);
   const dossiers = councils.filter(c => c.nodeId === n.id);
-  if (dossiers.length) parts.push(`<p>${dossiers.map(c => `<a href="#councils=${c.id}">Read the ${esc(c.name)} deep dive</a>`).join("<br>")}</p>`);
+  if (dossiers.length) parts.push(`<p>${dossiers.map(c => `<a class="council-deep-link" href="#councils=${c.id}">Read the ${esc(c.name)} deep dive</a>`).join("<br>")}</p>`);
   if (n.why) parts.push(`<h3>Why it matters</h3><p class="why">${esc(n.why)}</p>`);
   if (n.self) {
     const c = CLAIMS[n.claim ?? 'other'];

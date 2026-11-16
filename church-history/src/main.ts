@@ -93,11 +93,12 @@ function setView(v: View, focus?: string) {
   app.dataset.view = v;
   document.querySelectorAll<HTMLButtonElement>('#views [data-view]').forEach((b) => b.setAttribute('aria-current', String(b.dataset.view === v)));
   for (const k of VIEWS) viewEl[k].hidden = k !== v;
-  if (v === 'councils') councilView.show(focus);
+  if (from !== v) viewEl[v].scrollTop = 0;
+  document.querySelector<HTMLElement>(`#views [data-view="${v}"]`)?.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+  if (v === 'councils') councilView.show(focus, Boolean(focus));
   if (v === 'church') renderChurch(viewEl.church);
   if (v === 'sacraments') renderSacraments(viewEl.sacraments, focus);
   if (v === 'story') requestAnimationFrame(story.update);
-  if (from !== v) viewEl[v].scrollTop = 0;
   if (!selected) history.replaceState(null, '', v === 'story' ? location.pathname : `#${v}`);
   applyHighlight();
 }
@@ -163,6 +164,7 @@ function panelContext() {
 }
 
 function select(id: string | null) {
+  if (!id && !selected) return;
   selected = id && byId.has(id) ? id : null;
   if (!selected) {
     panel.hidden = true;
@@ -396,8 +398,12 @@ addEventListener('keydown', (e) => {
   if (typing) return;
   if (e.key === '/') {
     e.preventDefault();
-    search.classList.add('open');
-    q.focus();
+    if (view === 'councils') {
+      document.getElementById('council-search')!.focus();
+    } else {
+      search.classList.add('open');
+      q.focus();
+    }
   } else if (e.key === 'Escape') {
     select(null);
   } else if (view === 'map' && !e.metaKey && !e.ctrlKey && mapView.key(e)) {
@@ -418,6 +424,8 @@ function route() {
   if (council && councils.some(c => c.id === council[1])) {
     setView('councils', council[1]);
     history.replaceState(null, '', `#councils=${council[1]}`);
+  } else if (hash.startsWith('councils=')) {
+    setView('councils');
   } else if (compare && CHOICES.includes(compare[1])) {
     setCompare(compare[1], compare[2] && CHOICES.includes(compare[2]) ? compare[2] : null);
     setView('church');
