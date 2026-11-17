@@ -15,7 +15,10 @@ A collection of focused apps built to solve problems I have.
 | [Deadbolt iOS](deadbolt-ios/) | iOS | Native encrypted password vault with peer sync, system AutoFill, passkeys, and TOTP. |
 | [JellyTV](jellytv/) | tvOS | A Live-TV-first Jellyfin client for Apple TV. |
 | [Micro Gains](micro-gains/) | iOS and Cloudflare Worker | Tiny bodyweight sets pinged to you through the day. |
-| [Church History Map](church-history/) | Web | A 3D branching timeline of the Christian church from Jesus to today. |
+
+Church History Map moved to Seraphim's research store on 2026-11-17: its code
+is the `church-history` research project's repo, and the site stays at
+https://research.seraphim.studio/church-history/.
 
 Each app owns its project files, documentation, and license. Run development
 commands from the app directory unless its README says otherwise.
